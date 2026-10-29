@@ -7,16 +7,17 @@ Pracujemy iteracyjnie. Obecny etap: poszukiwanie nazwy; żadna propozycja nie zo
 - [Nazwy, runda 02 — angielskie i własne](docs/rebranding/naming-round-02.md)
 - [Nazwy, runda 03 — jednosłowe gry słów i analiza strukturalna](docs/rebranding/naming-round-03.md)
 - [Nazwy, runda 04 — krótkie brzmienie i obraz](docs/rebranding/naming-round-04.md)
+- [Nazwy, runda 05 — poważne studio, nowy rozdział i AI](docs/rebranding/naming-round-05.md)
 
 ## Prototyp nazwy
 
-To jednorazowy materiał porównawczy, nie kod strony docelowej ani projekt logo. Zawiera cztery rundy nazw w jednakowej typografii, trzy konteksty użycia i filmografię przekazaną przez autora. W rundzie 03 można porównać mechanizmy filmu i innych dziedzin twórczych; runda 04 sprawdza krótsze brzmienie i wyraziste skojarzenia. Nie ma zewnętrznych zależności ani trwałego zapisu wyborów.
+To jednorazowy materiał porównawczy, nie kod strony docelowej ani projekt logo. Zawiera pięć rund nazw w jednakowej typografii, trzy konteksty użycia i filmografię przekazaną przez autora. Aktualna runda 05 sprawdza poważniejszy ton studia, nowy rozdział i mocne wykorzystanie AI. Nie ma zewnętrznych zależności ani trwałego zapisu wyborów.
 
 Podgląd na komputerze i telefonie po połączeniu z Tailscale:
 
-[Prototyp nazwy — runda 04, HTTPS w tailnecie](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=4&variant=A)
+[Prototyp nazwy — runda 05, HTTPS w tailnecie](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=5&variant=A)
 
-Parametr `round` przyjmuje 1, 2, 3 lub 4, a `variant` wybiera nazwę: A–D w rundzie 01, A–E w rundach 02–04. Dotychczasowe linki bez parametru `round` zachowują rundę 01. Strzałki w dolnym pasku i na klawiaturze przełączają nazwy. Kontekst i film pozostają wybrane do przeładowania strony.
+Parametr `round` przyjmuje wartości od 1 do 5, a `variant` wybiera nazwę: A–D w rundach 01 i 05, A–E w rundach 02–04. Dotychczasowe linki bez parametru `round` zachowują rundę 01. Strzałki w dolnym pasku i na klawiaturze przełączają nazwy. Kontekst i film pozostają wybrane do przeładowania strony.
 
 Serwer VPS i komputer użytkownika mają różne adresy `localhost`. Na tym VPS podgląd obsługuje Caddy na porcie `8766`, z nasłuchem wyłącznie na adresach Tailscale IPv4 i IPv6. Serwuje bezpośrednio pliki prototypów i notatki rebrandingu, więc nie wymaga procesu Pythona ani tunelu SSH. Dostęp urządzeń zależy też od reguł tailnetu.
 

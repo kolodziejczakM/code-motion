@@ -18,6 +18,8 @@ Status: faza 1, poszukiwanie nazwy. Żadna nowa nazwa ani identyfikacja nie zost
 - Nazwa nie powinna wskazywać liczby twórców.
 - Runda 03: preferencja nazw jednosłowych, gier słów i połączeń. Szukamy przez analizę wspólnych mechanizmów filmu i innych dziedzin twórczych, nie wyłącznie przez skojarzenia z thrillerem.
 - Feedback po rundzie 03: jedno słowo to dobry kierunek, ale propozycje nie wpadają w pamięć. W rundzie 04 priorytetem są samodzielne brzmienie, krótki rytm i jedno obrazowe skojarzenie. Gra słów ma być dodatkiem; nie może wymagać długiego wyjaśnienia.
+- Feedback po rundzie 04: nazwy brzmią jak postacie z bajek, a powinny jak poważne studio produkujące filmy. Aktualne osie poszukiwań: nowoczesność, nowy rozdział i mocne użycie AI w procesie tworzenia filmów. Jednosłowość pozostaje aktualna; rezygnujemy z maskotkowych skojarzeń i zdrobnień.
+- Mocne użycie AI jest kierunkiem dla rozwijanej marki i przyszłego procesu. Nie przypisujemy go wstecz filmom z lat 2021–2025. Zakres generowania obrazu i dźwięku pozostaje do doprecyzowania; zadano pytanie w rozmowie.
 - Pracujemy iteracyjnie: kilka opcji → uwagi autora → kolejna runda → wybór.
 - Pracujemy w tym repozytorium. Każdy push wymaga wcześniejszej zgody użytkownika.
 - Agent pracuje na VPS; podgląd ma działać na komputerze osobistym i telefonie przez Tailscale. Nie podajemy `localhost` VPS jako adresu dla użytkownika. Podgląd HTTPS: `https://vps.tailfb5686.ts.net:8766/`.
@@ -67,4 +69,5 @@ Nie wybieramy teraz technologii ani finalnej estetyki strony. Sprawdzenie adres�
 - Runda 02: angielskie zestawienia słów i nazwy własne. Stillfault wraca jako punkt porównania, bez założenia, że został zaakceptowany.
 - Runda 03: jednosłowe zbitki oparte na analogiach do iluzji, muzyki, literatury, gier narracyjnych i rzemiosła. Bez wyboru finalnej nazwy.
 - Runda 04: krótsze nazwy o wyraźnym brzmieniu. Wariant Crookoo odłożony po znalezieniu wcześniejszych użyć fotograficznych; w prototypie zastępuje go Krukoo. Żadna propozycja nie została zaakceptowana.
+- Runda 05: poważna nazwa studia na nowy etap, z silnym odniesieniem do AI jako części procesu. Cztery propozycje, bez wyboru finalnej nazwy.
 - Do następnej rundy: reakcje na konkretne propozycje. Pozostałe pytania nie blokują poszukiwań nazwy.
