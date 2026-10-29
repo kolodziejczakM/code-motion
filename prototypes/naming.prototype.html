@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- THROWAWAY: porównanie nazw w jednakowej oprawie, nie prototyp strony ani logo.
-     Runda 03: jednosłowe gry słów na styku różnych dziedzin twórczych.
-     ?round=3&variant=A..E; brak parametru round zachowuje rundę 01 dla wcześniejszych linków. -->
+     Runda 04: krótkie brzmienie i jedno obrazowe skojarzenie.
+     ?round=4&variant=A..E; brak parametru round zachowuje rundę 01 dla wcześniejszych linków. -->
 <html lang="pl">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,14 +48,14 @@
   <h1>Jak brzmi podpis pod Twoim filmem?</h1>
   <p class="intro">Ta sama typografia, różne skojarzenia. Zmieniaj kontekst i sprawdzaj brzmienie. To materiał do wyboru kierunku nazwy; wygląd tej planszy nie przesądza o logo ani stronie.</p>
   <div class="controls">
-    <label>Runda<select id="round"><option value="1">01 · Pierwsze kierunki</option><option value="2">02 · Angielska lub własna</option><option value="3">03 · Jedno słowo, dwie warstwy</option></select></label>
+    <label>Runda<select id="round"><option value="1">01 · Pierwsze kierunki</option><option value="2">02 · Angielska lub własna</option><option value="3">03 · Jedno słowo, dwie warstwy</option><option value="4">04 · Brzmienie i obraz</option></select></label>
     <label>Nazwa<select id="name"></select></label>
     <label>Kontekst<select id="context"><option value="title">Plansza otwierająca</option><option value="profile">Opis profilu</option><option value="credit">Podpis przy filmie</option></select></label>
     <label>Film<select id="film"><option value="0">Saturday cleaning</option><option value="1">Akabei</option><option value="2">Boundless, actually</option></select></label>
   </div>
   <section id="stage" aria-label="Przykład użycia nazwy"></section>
   <details id="construction" hidden>
-    <summary>Odkryj grę słów</summary>
+    <summary>Odkryj pomysł za nazwą</summary>
     <p id="construction-text"></p>
   </details>
   <div class="notes" aria-live="polite">
@@ -78,10 +78,14 @@
     </table>
     <p>Gra słów ma być dodatkową warstwą. Najpierw oceń samo brzmienie, potem sprawdź, czy odkrycie konstrukcji coś dodaje.</p>
   </details>
+  <details id="memory-exercise" hidden>
+    <summary>Które nazwy zostają w pamięci?</summary>
+    <p>Przeczytaj pięć nazw na głos, potem odłóż ekran na około minutę. Spróbuj przypomnieć sobie nazwy i ich zapis. Oddziel „pamiętam, ale nie lubię” od „podoba mi się, ale zapomniałem”. To próba do rozmowy, nie ranking skuteczności.</p>
+  </details>
   <div id="state" class="state" aria-live="polite"></div>
   <p class="footnote">Wstępne wyszukiwanie nie potwierdza dostępności nazwy, domeny ani uchwytów. Szczegóły i źródła są w <a id="round-notes" href="../docs/rebranding/naming-round-01.md">notatce z rundy</a>. Żadna propozycja nie jest zatwierdzona. Sformułowania opisów profili również są robocze.</p>
   <p class="footnote">Do kolejnej rundy wystarczy: maksymalnie dwie nazwy oraz „podoba mi się… / przeszkadza mi…”. Można odrzucić wszystkie. Strzałki ← → przełączają nazwy, o ile nie pracujesz w polu wyboru. Adres zachowuje rundę i nazwę; pozostałe wybory istnieją tylko do przeładowania strony.</p>
-  <noscript><p>Włącz JavaScript, aby przełączać nazwy. Propozycje są też opisane w <a href="../docs/rebranding/naming-round-03.md">notatce z rundy 03</a>.</p></noscript>
+  <noscript><p>Włącz JavaScript, aby przełączać nazwy. Propozycje są też opisane w <a href="../docs/rebranding/naming-round-04.md">notatce z rundy 04</a>.</p></noscript>
 </main>
 <nav aria-label="Przełączanie nazw prototypu"><button id="previous" aria-label="Poprzednia nazwa">←</button><span id="current"></span><button id="next" aria-label="Następna nazwa">→</button></nav>
 <script>
@@ -106,6 +110,13 @@
       C: { name: 'Staccut', language: 'en', blend: 'staccato + cut', bridge: 'Muzyka ↔ montaż', construction: 'Muzyczne staccato i filmowe cięcie. Rytm powstaje przez oddzielenie dźwięków lub ujęć; zbitka zachowuje początek stacc- i końcówkę cut.', meaning: 'Precyzyjnie odmierzony rytm sceny: obraz, dźwięk i pauza pracują razem.', strength: 'Siedem liter, mocne spółgłoski, czytelny związek montażu z muzyką. Nazwa ma własny rytm.', risk: 'Może sugerować szybki montaż, aplikację albo fryzjerstwo. Podwójne „c” trzeba zapamiętać. Roboczo „sta-kat”, z końcówką jak angielskie cut.', bio: 'Independent short films. Every cut counts.', screening: 'Wyniki głównie z włoskiego bloga z podobnym zapisem. Nie ujawniono jednoznacznej marki filmowej; dostępność niepotwierdzona.' },
       D: { name: 'Ruleverie', language: 'en', blend: 'rule + reverie', bridge: 'Gry narracyjne ↔ wyobraźnia', construction: 'Reguła spotyka marzenie na jawie. Świat ma własną logikę, a jej znajomość pozwala odbiorcy wejść w niezwykłą historię.', meaning: 'Wyobraźnia oparta na przemyślanej konstrukcji. Możliwy pomost między inżynierem a autorem filmów.', strength: 'Osobiste drugie znaczenie bez słowa code. Szeroki zakres gatunkowy i miększe, mniej ponure brzmienie.', risk: 'Najmniej oczywista wymowa; reverie może być nieznane. Ryzyko skojarzenia z grą fantasy. Roboczo „rul-eweri” — do próby na głos.', bio: 'Independent short films. Worlds with their own rules.', screening: 'Brak wyników dla dokładnej nazwy i zapytania z film studio. Dostępność domen i uchwytów niepotwierdzona.' },
       E: { name: 'Plotchemy', language: 'en', blend: 'plot + alchemy', bridge: 'Scenariopisarstwo ↔ rzemiosło', construction: 'Przemiana składników w opowieść. Alchemia jest tu metaforą procesu: znaczenie powstaje z relacji między częściami.', meaning: 'Aktor, lokacja, dźwięk i detal scenografii tworzą coś, czego nie oddaje sama lista składników.', strength: 'Rozpoznawalna gra słów o tworzeniu. Pasuje do starannie przygotowanych, kameralnych produkcji bez wskazywania liczby twórców.', risk: 'Może sugerować narzędzie lub warsztaty dla scenarzystów. Alchemia to częsta metafora kreatywna. Robocza wymowa: „plot-ke-mi”.', bio: 'Independent short films. Stories, carefully made.', screening: 'Brak wyników dla dokładnej nazwy i zapytania z film studio. Dostępność domen i uchwytów niepotwierdzona.' }
+    },
+    '4': {
+      A: { name: 'Krukoo', language: 'en', blend: 'kruk + echo cuckoo', bridge: 'Niepokój i absurd', construction: 'Wymyślona nazwa z jednym obrazem: kruk, który odzywa się inaczej, niż oczekujesz. Polski rdzeń spotyka dźwiękowe echo angielskiego cuckoo. Nie jest to angielskie słowo ani wymóg ptasiego logo.', meaning: 'Kruk z nietypowym głosem. Znajoma postać zachowuje się nieoczekiwanie.', strength: 'Sześć liter, dwie krótkie sylaby i powtórzone „ku”. Jedno wyraziste skojarzenie do przywołania. Roboczo: „kru-ku”.', risk: 'Może być zbyt zabawne lub dziecięce. Ze słuchu możliwe Crookoo / Kruku. Crookoo ma wcześniejsze użycia fotograficzne, więc podobieństwo trzeba zbadać.', bio: 'Independent short films. Something is off.', screening: 'Wyniki zawierały opis odgłosu ptaka i fora; bez jednoznacznej marki filmowej. Podobny zapis Crookoo używany fotograficznie. Dostępność niepotwierdzona.' },
+      B: { name: 'Smirrow', language: 'en', blend: 'echo smirk i mirror', bridge: 'Uśmieszek i odbicie', construction: 'Swobodna gra brzmieniem smirk i mirror z własnym zakończeniem -ow. To inspiracja, nie dosłowne sklejenie dwóch pełnych słów.', meaning: 'Uśmieszek w lustrze, który nie pasuje do sytuacji. Coś ludzkiego, znajomego i lekko niepokojącego.', strength: 'Siedem liter i dwie sylaby. Mocny początek przechodzi w miękkie zakończenie. Roboczo: „smir-oł”.', risk: 'Może przypominać nazwisko lub Smirnoff. Istnieją wcześniejsze użycia, w tym Smirrow Trading. Wymowa po polsku i angielsku może się różnić.', bio: 'Independent short films. Look again.', screening: 'Wyniki obejmowały profil Steam oraz Smirrow Trading w publikacji CIPC. To nie jest zapis bez wcześniejszych użyć komercyjnych. Dostępność niepotwierdzona.' },
+      C: { name: 'Rookle', language: 'en', blend: 'rook + własne zakończenie -le', bridge: 'Ptak lub szachowa wieża', construction: 'Krótka nazwa własna oparta na brzmieniu rook. Obraz czarnego ptaka lub wieży może zostać rozwinięty później, jeśli pasuje do autora. Zapis ma wcześniejsze użycia.', meaning: 'Niewielki znak z własnym charakterem: czarny ptak albo szachowa wieża.', strength: 'Sześć liter, dwie sylaby. Bardziej neutralne gatunkowo brzmienie, z prostym obrazem w tle. Roboczo: „ruk-el”.', risk: 'Może brzmieć jak aplikacja lub sympatyczna postać. Zapis występuje jako nazwisko i w nazwie firmy Rookle Ehitus OÜ.', bio: 'Independent short films. Stories with a turn.', screening: 'Wyniki obejmowały zapisy genealogiczne oraz firmę budowlaną Rookle Ehitus OÜ. Bez potwierdzonej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' },
+      D: { name: 'Snarlit', language: 'en', blend: 'snarl + lit', bridge: 'Opowieść z ukrytym warknięciem', construction: 'Snarl spotyka lit — z echem literatury i oświetlenia. Całość jest proponowaną nazwą, nie słownikowym terminem.', meaning: 'Historia, która odsłania zęby. Najbardziej drapieżne brzmienie w tej rundzie.', strength: 'Siedem liter i dwie sylaby. Wyraźne przejście od cięższego początku do krótkiej końcówki. Roboczo: „snar-lit”.', risk: 'Może przywołać metal, potwora albo grę. Początek „snarl” może być trudniejszy dla polskiego odbiorcy.', bio: 'Independent short films. Stories with teeth.', screening: 'Głównie szum OCR w gazecie i lista wymyślonych nazw. Bez jednoznacznej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' },
+      E: { name: 'Plotato', language: 'en', blend: 'plot + potato', bridge: 'Codzienność i absurd', construction: 'Ziemniak ze scenariuszem. Prosty żart, w którym zwykły przedmiot staje się bohaterem czegoś nieoczywistego.', meaning: 'Codzienność, która dostaje własną dziwną historię. Świadomie humorystyczny kandydat.', strength: 'Siedem liter, trzy rytmiczne sylaby i jeden konkretny obraz. Roboczo: „plo-tej-toł”.', risk: 'Może sugerować parodię lub kino robione dla żartu. To odważna próba granicy tonu, a nie rekomendacja komediowego pozycjonowania.', bio: 'Independent short films. Ordinary things, unusual stories.', screening: 'Istniejące pseudonimy graczy, m.in. Tales of Maj’Eyal i Hypixel. Nie zakładamy wolnego uchwytu ani domeny.' }
     }
   };
   const films = [
@@ -139,6 +150,7 @@
     construction.open = false;
     document.querySelector('#construction-text').textContent = c.blend ? c.blend + ' · ' + c.bridge + '. ' + c.construction : '';
     document.querySelector('#round-analysis').hidden = currentRound !== '3';
+    document.querySelector('#memory-exercise').hidden = currentRound !== '4';
     roundSelect.value = currentRound;
     nameSelect.replaceChildren(...keys.map(key => {
       const option = document.createElement('option');

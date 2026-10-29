@@ -17,6 +17,7 @@ Status: faza 1, poszukiwanie nazwy. Żadna nowa nazwa ani identyfikacja nie zost
 - Aktualny kierunek: nazwa angielska lub własna/wymyślona, która budzi skojarzenia. W drugiej rundzie odkładamy propozycje oparte wprost na polskim słownictwie. To zawężenie wcześniejszej otwartości na oba języki, nie wybór konkretnej nazwy.
 - Nazwa nie powinna wskazywać liczby twórców.
 - Runda 03: preferencja nazw jednosłowych, gier słów i połączeń. Szukamy przez analizę wspólnych mechanizmów filmu i innych dziedzin twórczych, nie wyłącznie przez skojarzenia z thrillerem.
+- Feedback po rundzie 03: jedno słowo to dobry kierunek, ale propozycje nie wpadają w pamięć. W rundzie 04 priorytetem są samodzielne brzmienie, krótki rytm i jedno obrazowe skojarzenie. Gra słów ma być dodatkiem; nie może wymagać długiego wyjaśnienia.
 - Pracujemy iteracyjnie: kilka opcji → uwagi autora → kolejna runda → wybór.
 - Pracujemy w tym repozytorium. Każdy push wymaga wcześniejszej zgody użytkownika.
 - Agent pracuje na VPS; podgląd ma działać na komputerze osobistym i telefonie przez Tailscale. Nie podajemy `localhost` VPS jako adresu dla użytkownika. Podgląd HTTPS: `https://vps.tailfb5686.ts.net:8766/`.
@@ -65,4 +66,5 @@ Nie wybieramy teraz technologii ani finalnej estetyki strony. Sprawdzenie adres�
 - Runda 01: rozpoznanie kierunków, bez wyboru nazwy.
 - Runda 02: angielskie zestawienia słów i nazwy własne. Stillfault wraca jako punkt porównania, bez założenia, że został zaakceptowany.
 - Runda 03: jednosłowe zbitki oparte na analogiach do iluzji, muzyki, literatury, gier narracyjnych i rzemiosła. Bez wyboru finalnej nazwy.
+- Runda 04: krótsze nazwy o wyraźnym brzmieniu. Wariant Crookoo odłożony po znalezieniu wcześniejszych użyć fotograficznych; w prototypie zastępuje go Krukoo. Żadna propozycja nie została zaakceptowana.
 - Do następnej rundy: reakcje na konkretne propozycje. Pozostałe pytania nie blokują poszukiwań nazwy.
