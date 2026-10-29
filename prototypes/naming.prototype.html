@@ -1,7 +1,7 @@
 <!doctype html>
-<!-- THROWAWAY: porównanie czterech nazw w jednakowej oprawie, nie prototyp strony ani logo.
-     Pytanie: polski neologizm, angielskie pęknięcie czy cierpliwe rzemiosło?
-     Parametr ?variant= A/B/C/D wybiera nazwę; pozostały stan istnieje tylko w pamięci. -->
+<!-- THROWAWAY: porównanie nazw w jednakowej oprawie, nie prototyp strony ani logo.
+     Runda 02: nazwa własna, przewrotna historia czy subtelny mechanizm niepokoju?
+     ?round=2&variant=A..E; brak parametru round zachowuje rundę 01 dla wcześniejszych linków. -->
 <html lang="pl">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,12 +39,13 @@
   .footnote { font-size: 13px; line-height: 1.6; color: #5c6058; margin-top: 24px; max-width: 850px; }
   @media (max-width: 680px) { .notes { grid-template-columns: 1fr; gap: 5px; } header { flex-direction: column; gap: 7px; } #stage { min-height: 290px; } #current { min-width: 165px; } }
 </style>
-<header><span>CODE-MOTION / poszukiwanie nazwy</span><span>01 · prototyp roboczy · do odrzucenia</span></header>
+<header><span>CODE-MOTION / poszukiwanie nazwy</span><span id="round-heading">Prototyp roboczy · do odrzucenia</span></header>
 <main>
   <h1>Jak brzmi podpis pod Twoim filmem?</h1>
-  <p class="intro">Cztery nazwy, ta sama typografia. Zmieniaj kontekst i sprawdzaj skojarzenia. To materiał do wyboru kierunku nazwy; wygląd tej planszy nie przesądza o logo ani stronie.</p>
+  <p class="intro">Ta sama typografia, różne skojarzenia. Zmieniaj kontekst i sprawdzaj brzmienie. To materiał do wyboru kierunku nazwy; wygląd tej planszy nie przesądza o logo ani stronie.</p>
   <div class="controls">
-    <label>Nazwa<select id="name"><option value="A">A · Niedocisza</option><option value="B">B · Stillfault</option><option value="C">C · Odmrok</option><option value="D">D · Patient Frame</option></select></label>
+    <label>Runda<select id="round"><option value="1">01 · Pierwsze kierunki</option><option value="2">02 · Angielska lub własna</option></select></label>
+    <label>Nazwa<select id="name"></select></label>
     <label>Kontekst<select id="context"><option value="title">Plansza otwierająca</option><option value="profile">Opis profilu</option><option value="credit">Podpis przy filmie</option></select></label>
     <label>Film<select id="film"><option value="0">Saturday cleaning</option><option value="1">Akabei</option><option value="2">Boundless, actually</option></select></label>
   </div>
@@ -55,29 +56,43 @@
     <section><h2>Co sprawdzić na głos</h2><p id="risk"></p></section>
   </div>
   <div id="state" class="state" aria-live="polite"></div>
-  <p class="footnote">Wstępne wyszukiwanie nie potwierdza dostępności nazwy, domeny ani uchwytów. Szczegóły i źródła są w <a href="../docs/rebranding/naming-round-01.md">notatce z pierwszej rundy</a>. Żadna propozycja nie jest zatwierdzona. Sformułowania opisów profili również są robocze.</p>
-  <p class="footnote">Do kolejnej rundy wystarczy: maksymalnie dwie nazwy oraz „podoba mi się… / przeszkadza mi…”. Można odrzucić wszystkie. Strzałki ← → przełączają nazwy, o ile nie pracujesz w polu wyboru. Wybory nie są zapisywane; parametr adresu zachowuje wyłącznie nazwę.</p>
-  <noscript><p>Włącz JavaScript, aby przełączać nazwy. Wszystkie propozycje są również opisane w pliku docs/rebranding/naming-round-01.md.</p></noscript>
+  <p class="footnote">Wstępne wyszukiwanie nie potwierdza dostępności nazwy, domeny ani uchwytów. Szczegóły i źródła są w <a id="round-notes" href="../docs/rebranding/naming-round-01.md">notatce z rundy</a>. Żadna propozycja nie jest zatwierdzona. Sformułowania opisów profili również są robocze.</p>
+  <p class="footnote">Do kolejnej rundy wystarczy: maksymalnie dwie nazwy oraz „podoba mi się… / przeszkadza mi…”. Można odrzucić wszystkie. Strzałki ← → przełączają nazwy, o ile nie pracujesz w polu wyboru. Adres zachowuje rundę i nazwę; pozostałe wybory istnieją tylko do przeładowania strony.</p>
+  <noscript><p>Włącz JavaScript, aby przełączać nazwy. Propozycje są też opisane w <a href="../docs/rebranding/naming-round-02.md">notatce z rundy 02</a>.</p></noscript>
 </main>
 <nav aria-label="Przełączanie nazw prototypu"><button id="previous" aria-label="Poprzednia nazwa">←</button><span id="current"></span><button id="next" aria-label="Następna nazwa">→</button></nav>
 <script>
-  const candidates = {
+  const firstRound = {
     A: { name: 'Niedocisza', language: 'pl', meaning: 'Cisza, która nie jest pełna. Coś zostaje poza kadrem. Polski neologizm o napięciu i niedopowiedzeniu.', strength: 'Charakterystyczny zapis bez polskich znaków. Pasuje również do dramatu i absurdu.', risk: 'Czy brzmi celowo, czy jak językowa niezręczność? Dla zagranicznego widza wymowa może być trudna.', bio: 'Autorskie krótkie filmy. Coś zostaje poza kadrem.', screening: 'Brak wyników dla dokładnej nazwy w wykonanych zapytaniach. Dostępność niepotwierdzona.' },
     B: { name: 'Stillfault', language: 'en', meaning: 'Bezruch lub filmowa stopklatka + pęknięcie, wina lub błąd. Spokój, który ma ukrytą skazę. Złożone słowo, nie wyrażenie słownikowe.', strength: 'Zwarty zapis i subtelne powiązanie z programowaniem. Opisuje mechanizm napięcia bez dosłownego „thrillera”.', risk: 'Czy zapamiętasz zapis razem? „Fault” może sugerować usterkę; angielskie brzmienie trzeba oswoić.', bio: 'Independent short films. Something is slightly wrong.', screening: 'Wyniki głównie techniczne, w tym fragmenty innych wyrazów. Brak jednoznacznej marki filmowej w zwróconych wynikach.' },
     C: { name: 'Odmrok', language: 'pl', meaning: 'Krótki neologizm wokół mroku: odsłanianie, wychodzenie z ciemności. Znaczenie budowane dopiero filmami.', strength: 'Sześć liter, prosty zapis bez znaków diakrytycznych. Dużo swobody dla przyszłego logotypu.', risk: 'Czy brzmi jak marka, czy tytuł horroru? Mało czytelna opowieść bez dodatkowego kontekstu.', bio: 'Krótkie filmy. Nieoczywiste historie.', screening: 'Wyniki głównie jako szum OCR w skanach. Nie ujawniły jednoznacznej marki; dostępność niepotwierdzona.' },
     D: { name: 'Patient Frame', language: 'en', meaning: 'Cierpliwy kadr. Nazwa oparta na długim przygotowaniu krótkiego filmu i dbałości o jego realizację.', strength: 'Prawdziwe odniesienie do sposobu pracy. Działa niezależnie od gatunku.', risk: 'Czy nie sugeruje zbyt powolnego kina? „Patient” oznacza też pacjenta; wyszukiwanie zawiera zastosowania medyczne.', bio: 'Independent short films, carefully made.', screening: 'Zastosowania medyczne, produktowe i opisowe w filmie. Najsłabsza odrębność w tej rundzie.' }
+  };
+  const rounds = {
+    '1': firstRound,
+    '2': {
+      A: { name: 'Elsewick', language: 'en', article: 'an', meaning: 'Nazwa własnego świata. „Else” przywołuje coś innego lub gdzie indziej; końcówka brzmi jak angielska nazwa miejsca. To interpretacja brzmienia, nie etymologia.', strength: 'Osiem liter, jeden wyraz, dużo miejsca na różne gatunki. Filmy mogą zbudować znaczenie nazwy.', risk: 'Możliwa pomyłka z Elswick lub Eastwick. Brzmi jak miejsce albo nazwisko. Spróbuj wymowy „els-łik”.', bio: 'Independent short films. Familiar places, unfamiliar turns.', screening: 'Wcześniejsze wystąpienia jako nazwa miejscowa i zapisy nazwisk. Nie ujawniono jednoznacznej marki filmowej; dostępność niepotwierdzona.' },
+      B: { name: 'Crooked Minute', language: 'en', meaning: 'Chwila, w której rzeczywistość skręca w nieoczekiwaną stronę. „Crooked” wnosi przewrotność i nieuczciwość, „minute” — krótki moment.', strength: 'Obrazowe, charakterystyczne połączenie. Mieści thriller, czarny humor i absurd, z odniesieniem do krótkiej formy.', risk: 'Może brzmieć jak tytuł lub sugerować filmy jednominutowe. „Crooked” ma tu dwie sylaby: „kruk-id”.', bio: 'Independent short films. Every moment can take a turn.', screening: 'Wyniki przybliżone z Crooked i Minute, bez potwierdzonej marki o dokładnym zapisie w zwróconych wynikach. Dostępność niepotwierdzona.' },
+      C: { name: 'Mild Alibi', language: 'en', meaning: 'Niewinna mina i niezbyt przekonująca wymówka. Łagodne „mild” zderzone z „alibi” daje przewrotny, lekko ironiczny ton. To połączenie autorskie, nie idiom.', strength: 'Łatwo wyobrazić sobie scenę i człowieka. Więcej dystansu i humoru, bez ponurej nazwy wprost.', risk: '„Mild” może sugerować brak intensywności, a „alibi” kieruje w kryminał. Angielska wymowa: „majld al-uh-baj”.', bio: 'Independent short films. Everyone has a story.', screening: 'Dokładna nazwa zwróciła głównie przybliżone wyniki i przewodniki wiekowe filmów z Alibi w tytule. Węższy przegląd niż dla pozostałych nazw; dostępność niepotwierdzona.' },
+      D: { name: 'Quiet Offset', language: 'en', meaning: 'Dyskretne przesunięcie, które zmienia odbiór całości. Skojarzenie z perspektywą, precyzją i obrazem; możliwe drugie znaczenie dla osoby zajmującej się UX.', strength: 'Subtelna więź z projektowaniem i myśleniem technicznym. Może oznaczać zarówno zmianę obrazu, jak i sensu opowieści.', risk: 'Chłodniejsza, abstrakcyjna nazwa: może przypominać studio projektowe. „Quiet” bywa mylone z „quite”. Wymowa: „kwaj-et of-set”.', bio: 'Independent short films. A slight shift changes everything.', screening: 'Fraza pojawiła się w tekście o artyście Offset; inne wyniki przybliżone. Nie ujawniono jednoznacznej marki filmowej; dostępność niepotwierdzona.' },
+      E: { ...firstRound.B, meaning: firstRound.B.meaning + ' Powrót z rundy 01 jako porównanie, bez domniemanej akceptacji.', risk: firstRound.B.risk + ' Robocza wymowa: „stil-folt”.' }
+    }
   };
   const films = [
     { title: 'Saturday cleaning', year: '2021', duration: 'ok. 2 min' },
     { title: 'Akabei', year: '2024', duration: '11:31' },
     { title: 'Boundless, actually', year: '2025', duration: '4:40' }
   ];
-  const keys = Object.keys(candidates);
+  const params = new URLSearchParams(location.search);
+  let currentRound = Object.hasOwn(rounds, params.get('round')) ? params.get('round') : '1';
+  let candidates = rounds[currentRound];
+  let keys = Object.keys(candidates);
+  const roundSelect = document.querySelector('#round');
   const nameSelect = document.querySelector('#name');
   const contextSelect = document.querySelector('#context');
   const filmSelect = document.querySelector('#film');
   const stage = document.querySelector('#stage');
-  const query = new URLSearchParams(location.search).get('variant');
+  const query = params.get('variant');
   let active = keys.includes(query) ? query : 'A';
   function add(tag, value, className) {
     const node = document.createElement(tag);
@@ -89,6 +104,13 @@
     const c = candidates[active];
     const f = films[Number(filmSelect.value)];
     const context = contextSelect.value;
+    roundSelect.value = currentRound;
+    nameSelect.replaceChildren(...keys.map(key => {
+      const option = document.createElement('option');
+      option.value = key;
+      option.textContent = key + ' · ' + candidates[key].name;
+      return option;
+    }));
     nameSelect.value = active;
     stage.className = context;
     stage.replaceChildren();
@@ -103,18 +125,21 @@
     } else {
       add('h2', f.title);
       add('p', f.year + ' · ' + f.duration, 'minor');
-      add('div', c.language === 'en' ? 'a ' + c.name + ' film' : c.name, 'brand');
+      add('div', c.language === 'en' ? (c.article ?? 'a') + ' ' + c.name + ' film' : c.name, 'brand');
     }
     document.querySelector('#meaning').textContent = c.meaning;
     document.querySelector('#strength').textContent = c.strength;
     document.querySelector('#risk').textContent = c.risk;
-    document.querySelector('#current').textContent = active + ' / D · ' + c.name;
-    document.querySelector('#state').textContent = 'STAN PROTOTYPU\n' + JSON.stringify({ variant: active, nazwa: c.name, kontekst: context, film: f, przeglad: c.screening, decyzja: 'brak', zapis: 'wyłącznie nazwa w URL' }, null, 2);
+    document.querySelector('#current').textContent = (keys.indexOf(active) + 1) + '/' + keys.length + ' · ' + c.name;
+    document.querySelector('#round-heading').textContent = 'Runda 0' + currentRound + ' · prototyp roboczy';
+    document.querySelector('#round-notes').href = '../docs/rebranding/naming-round-0' + currentRound + '.md';
+    document.querySelector('#state').textContent = 'STAN PROTOTYPU\n' + JSON.stringify({ runda: currentRound, variant: active, nazwa: c.name, kontekst: context, film: f, przeglad: c.screening, decyzja: 'brak', zapis: 'runda i nazwa w URL' }, null, 2);
     document.title = c.name + ' · prototyp nazwy';
   }
   function choose(key) {
     active = key;
     const url = new URL(location.href);
+    url.searchParams.set('round', currentRound);
     url.searchParams.set('variant', active);
     history.replaceState(null, '', url);
     render();
@@ -123,10 +148,20 @@
   document.querySelector('#previous').addEventListener('click', () => cycle(-1));
   document.querySelector('#next').addEventListener('click', () => cycle(1));
   nameSelect.addEventListener('change', () => choose(nameSelect.value));
+  roundSelect.addEventListener('change', () => {
+    currentRound = roundSelect.value;
+    candidates = rounds[currentRound];
+    keys = Object.keys(candidates);
+    choose('A');
+  });
   contextSelect.addEventListener('change', render);
   filmSelect.addEventListener('change', render);
   window.addEventListener('popstate', () => {
-    const value = new URLSearchParams(location.search).get('variant');
+    const params = new URLSearchParams(location.search);
+    currentRound = Object.hasOwn(rounds, params.get('round')) ? params.get('round') : '1';
+    candidates = rounds[currentRound];
+    keys = Object.keys(candidates);
+    const value = params.get('variant');
     active = keys.includes(value) ? value : 'A';
     render();
   });

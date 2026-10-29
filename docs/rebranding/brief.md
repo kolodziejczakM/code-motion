@@ -14,7 +14,7 @@ Status: faza 1, poszukiwanie nazwy. Żadna nowa nazwa ani identyfikacja nie zost
 
 ## Preferencje potwierdzone w rozmowie
 
-- Dopuszczalne są nazwy polskie i angielskie.
+- Aktualny kierunek: nazwa angielska lub własna/wymyślona, która budzi skojarzenia. W drugiej rundzie odkładamy propozycje oparte wprost na polskim słownictwie. To zawężenie wcześniejszej otwartości na oba języki, nie wybór konkretnej nazwy.
 - Nazwa nie powinna wskazywać liczby twórców.
 - Pracujemy iteracyjnie: kilka opcji → uwagi autora → kolejna runda → wybór.
 - Pracujemy w tym repozytorium. Każdy push wymaga wcześniejszej zgody użytkownika.
@@ -59,6 +59,8 @@ Nie wybieramy teraz technologii ani finalnej estetyki strony. Sprawdzenie adres�
 
 ## Rejestr decyzji
 
-- Potwierdzone: oba języki, bez wskazywania liczby twórców, push wyłącznie za zgodą.
+- Potwierdzone: nazwa angielska lub własna budząca skojarzenia, bez wskazywania liczby twórców, push wyłącznie za zgodą.
 - Otwarte: nazwa, identyfikacja, domena, języki strony, najważniejszy odbiorca i cel odwiedzin, technologia.
-- Do następnej rundy: reakcje na konkretne propozycje. Pozostałe pytania nie blokują pierwszej rundy.
+- Runda 01: rozpoznanie kierunków, bez wyboru nazwy.
+- Runda 02: angielskie zestawienia słów i nazwy własne. Stillfault wraca jako punkt porównania, bez założenia, że został zaakceptowany.
+- Do następnej rundy: reakcje na konkretne propozycje. Pozostałe pytania nie blokują poszukiwań nazwy.
