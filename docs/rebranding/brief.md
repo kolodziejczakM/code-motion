@@ -19,10 +19,20 @@ Status: faza 1, poszukiwanie nazwy. Żadna nowa nazwa ani identyfikacja nie zost
 - Runda 03: preferencja nazw jednosłowych, gier słów i połączeń. Szukamy przez analizę wspólnych mechanizmów filmu i innych dziedzin twórczych, nie wyłącznie przez skojarzenia z thrillerem.
 - Feedback po rundzie 03: jedno słowo to dobry kierunek, ale propozycje nie wpadają w pamięć. W rundzie 04 priorytetem są samodzielne brzmienie, krótki rytm i jedno obrazowe skojarzenie. Gra słów ma być dodatkiem; nie może wymagać długiego wyjaśnienia.
 - Feedback po rundzie 04: nazwy brzmią jak postacie z bajek, a powinny jak poważne studio produkujące filmy. Aktualne osie poszukiwań: nowoczesność, nowy rozdział i mocne użycie AI w procesie tworzenia filmów. Jednosłowość pozostaje aktualna; rezygnujemy z maskotkowych skojarzeń i zdrobnień.
-- Mocne użycie AI jest kierunkiem dla rozwijanej marki i przyszłego procesu. Nie przypisujemy go wstecz filmom z lat 2021–2025. Zakres generowania obrazu i dźwięku pozostaje do doprecyzowania; zadano pytanie w rozmowie.
+- Mocne użycie AI jest kierunkiem dla rozwijanej marki i przyszłego procesu. Nie przypisujemy go wstecz filmom z lat 2021–2025. Autor potwierdził model mieszany opisany poniżej.
 - Pracujemy iteracyjnie: kilka opcji → uwagi autora → kolejna runda → wybór.
 - Pracujemy w tym repozytorium. Każdy push wymaga wcześniejszej zgody użytkownika.
 - Agent pracuje na VPS; podgląd ma działać na komputerze osobistym i telefonie przez Tailscale. Nie podajemy `localhost` VPS jako adresu dla użytkownika. Podgląd HTTPS: `https://vps.tailfb5686.ts.net:8766/`.
+
+## Docelowy model produkcji — potwierdzony przez autora
+
+- Zdjęcia z ekipą pozostają fundamentem procesu; autor zamierza je kontynuować.
+- Część ujęć może być tworzona z AI na podstawie klatek kluczowych pochodzących z nagrań z planu. Część pracy na planie może wówczas przyjmować charakter zbliżony do sesji zdjęciowej.
+- AI będzie mocno wykorzystywane w efektach specjalnych oraz do wzbogacania scenografii.
+- Planowane jest również mocne wykorzystanie AI przy muzyce i marketingu.
+- To planowany model mieszany: materiał z planu stanowi punkt wyjścia, a generowanie i przetwarzanie poszerzają możliwości realizacyjne. Zastosowanie AI obejmuje także tworzenie części ujęć, więc określenie wyłącznie jako pomoc w postprodukcji byłoby zbyt wąskie.
+
+Wniosek dla marki: warto łączyć filmowe pochodzenie materiału, autorskie decyzje i rozszerzanie możliwości przez technologię. Roboczy podpis do oceny: **Live-action roots. Expanded by AI.** Nie jest jeszcze zatwierdzonym hasłem i nie opisuje wstecz procesu realizacji filmów archiwalnych.
 
 ## Filmografia — informacje od autora, bez niezależnej weryfikacji
 

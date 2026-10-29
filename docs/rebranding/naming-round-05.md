@@ -6,9 +6,9 @@ To korekta tonu i pozycjonowania. Wcześniejsze propozycje nie są zaakceptowany
 
 ## Rola AI — co wiemy
 
-AI ma mieć mocne miejsce w nowym procesie. Otwarte pozostaje, czy obejmie także generowanie obrazu i dźwięku do filmów, czy przede wszystkim pracę nad projektami kręconymi z ekipą. Zadano pytanie w rozmowie; wybór nazw nie musi czekać na odpowiedź, bo każda z czterech propozycji pozwala na różne modele pracy.
+Autor potwierdził model mieszany. Zdjęcia z ekipą pozostają fundamentem. Część ujęć może powstawać z AI na podstawie klatek kluczowych z nagrań z planu, a część pracy na planie może przypominać sesję zdjęciową. AI będzie również mocno wykorzystywane w VFX, wzbogacaniu scenografii, muzyce i marketingu.
 
-Robocze bio w prototypie **Independent cinema. Expanded by AI.** jest propozycją przyszłej komunikacji. Nie opisuje metody realizacji każdego filmu z archiwum. AI w tym zdaniu ma rozszerzać możliwości twórcze; zakres i konkretne sformułowanie wymagają potwierdzenia.
+Robocze bio w prototypie **Live-action roots. Expanded by AI.** jest propozycją przyszłej komunikacji. Podkreśla pochodzenie materiału z planu i poszerzanie możliwości przez AI. Nie opisuje metody realizacji każdego filmu z archiwum ani nie jest jeszcze zatwierdzonym hasłem.
 
 ## A · Syntake
 
@@ -63,7 +63,7 @@ Podkreśla zmianę warsztatu i nową interpretację. Dobrze mieści etap, w któ
 | Emerframe | wyłanianie obrazu | jasna wymowa i działalność filmowa |
 | Altertake | zmiana warsztatu | mocne wykorzystanie AI |
 
-Moimi pierwszymi kierunkami do rozwoju są **Syntake** i **Newacta**. To rekomendacja kreatywna, nie ranking dostępności. W obecnej rundzie poważny ton ma pierwszeństwo przed dowcipem słownym; nie skracamy nazwy za wszelką cenę.
+Po doprecyzowaniu modelu produkcji najmocniej rozwijałbym **Syntake** — połączenie materiału filmowego i syntezy — oraz **Altertake** — zmianę sposobu tworzenia ujęć. **Newacta** nadal najlepiej akcentuje nowy rozdział. To rekomendacja kreatywna, nie ranking dostępności ani wybór autora. W obecnej rundzie poważny ton ma pierwszeństwo przed dowcipem słownym; nie skracamy nazwy za wszelką cenę.
 
 ## Wstępne wyszukiwanie — 29 października 2026
 
