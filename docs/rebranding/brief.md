@@ -18,6 +18,7 @@ Status: faza 1, poszukiwanie nazwy. Żadna nowa nazwa ani identyfikacja nie zost
 - Nazwa nie powinna wskazywać liczby twórców.
 - Pracujemy iteracyjnie: kilka opcji → uwagi autora → kolejna runda → wybór.
 - Pracujemy w tym repozytorium. Każdy push wymaga wcześniejszej zgody użytkownika.
+- Agent pracuje na VPS; podgląd ma działać na komputerze osobistym i telefonie przez Tailscale. Nie podajemy `localhost` VPS jako adresu dla użytkownika. Podgląd HTTPS: `https://vps.tailfb5686.ts.net:8766/`.
 
 ## Filmografia — informacje od autora, bez niezależnej weryfikacji
 
