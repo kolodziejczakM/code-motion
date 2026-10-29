@@ -1,0 +1,142 @@
+<!doctype html>
+<!-- THROWAWAY: porównanie czterech nazw w jednakowej oprawie, nie prototyp strony ani logo.
+     Pytanie: polski neologizm, angielskie pęknięcie czy cierpliwe rzemiosło?
+     Parametr ?variant= A/B/C/D wybiera nazwę; pozostały stan istnieje tylko w pamięci. -->
+<html lang="pl">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prototyp nazwy · CODE-MOTION</title>
+<style>
+  * { box-sizing: border-box; }
+  :root { color-scheme: light; font-family: system-ui, sans-serif; color: #242622; background: #f3f1eb; }
+  body { margin: 0; padding: 32px clamp(18px, 5vw, 90px) 130px; }
+  header { display: flex; justify-content: space-between; gap: 20px; border-bottom: 1px solid #cac9c1; padding-bottom: 18px; }
+  header span, .eyebrow { font-size: 12px; letter-spacing: .09em; text-transform: uppercase; }
+  h1 { font-weight: 500; font-size: clamp(28px, 4vw, 44px); letter-spacing: -.04em; margin: 32px 0 10px; }
+  .intro { max-width: 760px; line-height: 1.6; color: #5c6058; }
+  .controls { display: flex; flex-wrap: wrap; align-items: end; gap: 16px 32px; margin: 24px 0; }
+  label { display: grid; gap: 7px; font-size: 13px; }
+  select, button { font: inherit; padding: 10px 14px; border: 1px solid #b5b8ac; background: #fffefa; color: #242622; border-radius: 5px; }
+  button { cursor: pointer; }
+  button:hover { background: #e5e8dc; }
+  button:focus-visible, select:focus-visible, a:focus-visible { outline: 3px solid #607c38; outline-offset: 4px; }
+  #stage { min-height: 320px; padding: clamp(25px, 5vw, 70px); background: #151713; color: #f6f3e9; display: flex; flex-direction: column; justify-content: center; text-align: center; }
+  #stage .brand { font-size: clamp(32px, 7vw, 88px); font-weight: 500; letter-spacing: .035em; overflow-wrap: anywhere; }
+  #stage .minor { margin: 18px 0 0; color: #bac0b1; font-size: 15px; line-height: 1.7; }
+  #stage h2 { font-size: clamp(25px, 4vw, 42px); font-weight: 400; margin: 12px 0; }
+  #stage.profile { align-items: start; text-align: left; background: #fffefa; color: #242622; border: 1px solid #cac9c1; }
+  #stage.profile .brand { font-size: clamp(30px, 5vw, 58px); letter-spacing: -.02em; }
+  #stage.profile .minor { color: #5c6058; }
+  #stage.credit .brand { font-size: clamp(24px, 4vw, 42px); }
+  .notes { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 28px; margin-top: 24px; }
+  .notes h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .09em; font-weight: 500; color: #5c6058; }
+  .notes p { font-size: 15px; line-height: 1.6; margin-top: 10px; }
+  .state { margin-top: 22px; padding-top: 16px; border-top: 1px solid #cac9c1; font: 12px/1.6 ui-monospace, monospace; white-space: pre-wrap; overflow-wrap: anywhere; color: #5c6058; }
+  nav { position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 12px; padding: 9px; background: #fffefa; border: 1px solid #969c8c; border-radius: 14px; box-shadow: 0 8px 30px #0002; width: max-content; max-width: calc(100vw - 24px); }
+  #current { min-width: 190px; text-align: center; font-size: 14px; }
+  nav button { font-size: 20px; min-width: 44px; }
+  a { color: #405927; }
+  .footnote { font-size: 13px; line-height: 1.6; color: #5c6058; margin-top: 24px; max-width: 850px; }
+  @media (max-width: 680px) { .notes { grid-template-columns: 1fr; gap: 5px; } header { flex-direction: column; gap: 7px; } #stage { min-height: 290px; } #current { min-width: 165px; } }
+</style>
+<header><span>CODE-MOTION / poszukiwanie nazwy</span><span>01 · prototyp roboczy · do odrzucenia</span></header>
+<main>
+  <h1>Jak brzmi podpis pod Twoim filmem?</h1>
+  <p class="intro">Cztery nazwy, ta sama typografia. Zmieniaj kontekst i sprawdzaj skojarzenia. To materiał do wyboru kierunku nazwy; wygląd tej planszy nie przesądza o logo ani stronie.</p>
+  <div class="controls">
+    <label>Nazwa<select id="name"><option value="A">A · Niedocisza</option><option value="B">B · Stillfault</option><option value="C">C · Odmrok</option><option value="D">D · Patient Frame</option></select></label>
+    <label>Kontekst<select id="context"><option value="title">Plansza otwierająca</option><option value="profile">Opis profilu</option><option value="credit">Podpis przy filmie</option></select></label>
+    <label>Film<select id="film"><option value="0">Saturday cleaning</option><option value="1">Akabei</option><option value="2">Boundless, actually</option></select></label>
+  </div>
+  <section id="stage" aria-label="Przykład użycia nazwy"></section>
+  <div class="notes" aria-live="polite">
+    <section><h2>Punkt wyjścia</h2><p id="meaning"></p></section>
+    <section><h2>Co zyskujemy</h2><p id="strength"></p></section>
+    <section><h2>Co sprawdzić na głos</h2><p id="risk"></p></section>
+  </div>
+  <div id="state" class="state" aria-live="polite"></div>
+  <p class="footnote">Wstępne wyszukiwanie nie potwierdza dostępności nazwy, domeny ani uchwytów. Szczegóły i źródła są w <a href="../docs/rebranding/naming-round-01.md">notatce z pierwszej rundy</a>. Żadna propozycja nie jest zatwierdzona. Sformułowania opisów profili również są robocze.</p>
+  <p class="footnote">Do kolejnej rundy wystarczy: maksymalnie dwie nazwy oraz „podoba mi się… / przeszkadza mi…”. Można odrzucić wszystkie. Strzałki ← → przełączają nazwy, o ile nie pracujesz w polu wyboru. Wybory nie są zapisywane; parametr adresu zachowuje wyłącznie nazwę.</p>
+  <noscript><p>Włącz JavaScript, aby przełączać nazwy. Wszystkie propozycje są również opisane w pliku docs/rebranding/naming-round-01.md.</p></noscript>
+</main>
+<nav aria-label="Przełączanie nazw prototypu"><button id="previous" aria-label="Poprzednia nazwa">←</button><span id="current"></span><button id="next" aria-label="Następna nazwa">→</button></nav>
+<script>
+  const candidates = {
+    A: { name: 'Niedocisza', language: 'pl', meaning: 'Cisza, która nie jest pełna. Coś zostaje poza kadrem. Polski neologizm o napięciu i niedopowiedzeniu.', strength: 'Charakterystyczny zapis bez polskich znaków. Pasuje również do dramatu i absurdu.', risk: 'Czy brzmi celowo, czy jak językowa niezręczność? Dla zagranicznego widza wymowa może być trudna.', bio: 'Autorskie krótkie filmy. Coś zostaje poza kadrem.', screening: 'Brak wyników dla dokładnej nazwy w wykonanych zapytaniach. Dostępność niepotwierdzona.' },
+    B: { name: 'Stillfault', language: 'en', meaning: 'Bezruch lub filmowa stopklatka + pęknięcie, wina lub błąd. Spokój, który ma ukrytą skazę. Złożone słowo, nie wyrażenie słownikowe.', strength: 'Zwarty zapis i subtelne powiązanie z programowaniem. Opisuje mechanizm napięcia bez dosłownego „thrillera”.', risk: 'Czy zapamiętasz zapis razem? „Fault” może sugerować usterkę; angielskie brzmienie trzeba oswoić.', bio: 'Independent short films. Something is slightly wrong.', screening: 'Wyniki głównie techniczne, w tym fragmenty innych wyrazów. Brak jednoznacznej marki filmowej w zwróconych wynikach.' },
+    C: { name: 'Odmrok', language: 'pl', meaning: 'Krótki neologizm wokół mroku: odsłanianie, wychodzenie z ciemności. Znaczenie budowane dopiero filmami.', strength: 'Sześć liter, prosty zapis bez znaków diakrytycznych. Dużo swobody dla przyszłego logotypu.', risk: 'Czy brzmi jak marka, czy tytuł horroru? Mało czytelna opowieść bez dodatkowego kontekstu.', bio: 'Krótkie filmy. Nieoczywiste historie.', screening: 'Wyniki głównie jako szum OCR w skanach. Nie ujawniły jednoznacznej marki; dostępność niepotwierdzona.' },
+    D: { name: 'Patient Frame', language: 'en', meaning: 'Cierpliwy kadr. Nazwa oparta na długim przygotowaniu krótkiego filmu i dbałości o jego realizację.', strength: 'Prawdziwe odniesienie do sposobu pracy. Działa niezależnie od gatunku.', risk: 'Czy nie sugeruje zbyt powolnego kina? „Patient” oznacza też pacjenta; wyszukiwanie zawiera zastosowania medyczne.', bio: 'Independent short films, carefully made.', screening: 'Zastosowania medyczne, produktowe i opisowe w filmie. Najsłabsza odrębność w tej rundzie.' }
+  };
+  const films = [
+    { title: 'Saturday cleaning', year: '2021', duration: 'ok. 2 min' },
+    { title: 'Akabei', year: '2024', duration: '11:31' },
+    { title: 'Boundless, actually', year: '2025', duration: '4:40' }
+  ];
+  const keys = Object.keys(candidates);
+  const nameSelect = document.querySelector('#name');
+  const contextSelect = document.querySelector('#context');
+  const filmSelect = document.querySelector('#film');
+  const stage = document.querySelector('#stage');
+  const query = new URLSearchParams(location.search).get('variant');
+  let active = keys.includes(query) ? query : 'A';
+  function add(tag, value, className) {
+    const node = document.createElement(tag);
+    node.textContent = value;
+    if (className) node.className = className;
+    stage.append(node);
+  }
+  function render() {
+    const c = candidates[active];
+    const f = films[Number(filmSelect.value)];
+    const context = contextSelect.value;
+    nameSelect.value = active;
+    stage.className = context;
+    stage.replaceChildren();
+    if (context === 'title') {
+      add('div', c.name.toUpperCase(), 'brand');
+      add('p', c.language === 'pl' ? 'przedstawia' : 'presents', 'minor');
+      add('h2', f.title);
+    } else if (context === 'profile') {
+      add('div', c.name, 'brand');
+      add('p', c.bio, 'minor');
+      add('p', 'Saturday cleaning · Akabei · Boundless, actually', 'minor');
+    } else {
+      add('h2', f.title);
+      add('p', f.year + ' · ' + f.duration, 'minor');
+      add('div', c.language === 'en' ? 'a ' + c.name + ' film' : c.name, 'brand');
+    }
+    document.querySelector('#meaning').textContent = c.meaning;
+    document.querySelector('#strength').textContent = c.strength;
+    document.querySelector('#risk').textContent = c.risk;
+    document.querySelector('#current').textContent = active + ' / D · ' + c.name;
+    document.querySelector('#state').textContent = 'STAN PROTOTYPU\n' + JSON.stringify({ variant: active, nazwa: c.name, kontekst: context, film: f, przeglad: c.screening, decyzja: 'brak', zapis: 'wyłącznie nazwa w URL' }, null, 2);
+    document.title = c.name + ' · prototyp nazwy';
+  }
+  function choose(key) {
+    active = key;
+    const url = new URL(location.href);
+    url.searchParams.set('variant', active);
+    history.replaceState(null, '', url);
+    render();
+  }
+  function cycle(step) { choose(keys[(keys.indexOf(active) + step + keys.length) % keys.length]); }
+  document.querySelector('#previous').addEventListener('click', () => cycle(-1));
+  document.querySelector('#next').addEventListener('click', () => cycle(1));
+  nameSelect.addEventListener('change', () => choose(nameSelect.value));
+  contextSelect.addEventListener('change', render);
+  filmSelect.addEventListener('change', render);
+  window.addEventListener('popstate', () => {
+    const value = new URLSearchParams(location.search).get('variant');
+    active = keys.includes(value) ? value : 'A';
+    render();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.target.closest('input, textarea, select, button, [contenteditable]') || event.altKey || event.ctrlKey || event.metaKey) return;
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      cycle(event.key === 'ArrowRight' ? 1 : -1);
+    }
+  });
+  render();
+</script>
+</html>
