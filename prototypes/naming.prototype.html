@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- THROWAWAY: porównanie nazw w jednakowej oprawie, nie prototyp strony ani logo.
-     Runda 02: nazwa własna, przewrotna historia czy subtelny mechanizm niepokoju?
-     ?round=2&variant=A..E; brak parametru round zachowuje rundę 01 dla wcześniejszych linków. -->
+     Runda 03: jednosłowe gry słów na styku różnych dziedzin twórczych.
+     ?round=3&variant=A..E; brak parametru round zachowuje rundę 01 dla wcześniejszych linków. -->
 <html lang="pl">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,6 +37,10 @@
   nav button { font-size: 20px; min-width: 44px; }
   a { color: #405927; }
   .footnote { font-size: 13px; line-height: 1.6; color: #5c6058; margin-top: 24px; max-width: 850px; }
+  details { margin-top: 24px; line-height: 1.6; max-width: 1000px; }
+  summary { cursor: pointer; }
+  table { border-collapse: collapse; font-size: 14px; width: 100%; margin: 16px 0; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-bottom: 1px solid #cac9c1; }
   @media (max-width: 680px) { .notes { grid-template-columns: 1fr; gap: 5px; } header { flex-direction: column; gap: 7px; } #stage { min-height: 290px; } #current { min-width: 165px; } }
 </style>
 <header><span>CODE-MOTION / poszukiwanie nazwy</span><span id="round-heading">Prototyp roboczy · do odrzucenia</span></header>
@@ -44,21 +48,40 @@
   <h1>Jak brzmi podpis pod Twoim filmem?</h1>
   <p class="intro">Ta sama typografia, różne skojarzenia. Zmieniaj kontekst i sprawdzaj brzmienie. To materiał do wyboru kierunku nazwy; wygląd tej planszy nie przesądza o logo ani stronie.</p>
   <div class="controls">
-    <label>Runda<select id="round"><option value="1">01 · Pierwsze kierunki</option><option value="2">02 · Angielska lub własna</option></select></label>
+    <label>Runda<select id="round"><option value="1">01 · Pierwsze kierunki</option><option value="2">02 · Angielska lub własna</option><option value="3">03 · Jedno słowo, dwie warstwy</option></select></label>
     <label>Nazwa<select id="name"></select></label>
     <label>Kontekst<select id="context"><option value="title">Plansza otwierająca</option><option value="profile">Opis profilu</option><option value="credit">Podpis przy filmie</option></select></label>
     <label>Film<select id="film"><option value="0">Saturday cleaning</option><option value="1">Akabei</option><option value="2">Boundless, actually</option></select></label>
   </div>
   <section id="stage" aria-label="Przykład użycia nazwy"></section>
+  <details id="construction" hidden>
+    <summary>Odkryj grę słów</summary>
+    <p id="construction-text"></p>
+  </details>
   <div class="notes" aria-live="polite">
     <section><h2>Punkt wyjścia</h2><p id="meaning"></p></section>
     <section><h2>Co zyskujemy</h2><p id="strength"></p></section>
     <section><h2>Co sprawdzić na głos</h2><p id="risk"></p></section>
   </div>
+  <details id="round-analysis" hidden>
+    <summary>Dlaczego porównujemy film z innymi dziedzinami?</summary>
+    <p>To model do tworzenia nazw. Szukamy podobnych mechanizmów: co twórca układa, na co czeka odbiorca i co zmienia jego interpretację.</p>
+    <table>
+      <thead><tr><th>Dziedzina</th><th>Wspólny mechanizm</th><th>Ślad w nazwie</th></tr></thead>
+      <tbody>
+        <tr><td>Iluzja</td><td>Wskazówka, domysł, odkrycie. Późniejsza informacja zmienia sens wcześniejszej.</td><td>Sleightory</td></tr>
+        <tr><td>Muzyka</td><td>Rytm, pauza i długość frazy sterują oczekiwaniem.</td><td>Staccut</td></tr>
+        <tr><td>Literatura</td><td>Opowieść przyciąga uwagę i skłania odbiorcę do uzupełniania przemilczeń.</td><td>Fablure</td></tr>
+        <tr><td>Gry narracyjne</td><td>Reguły świata nadają sens wyborom i konsekwencjom.</td><td>Ruleverie</td></tr>
+        <tr><td>Rzemiosło — metafora procesu</td><td>Znaczenie całości wynika z relacji między starannie dobranymi składnikami.</td><td>Plotchemy</td></tr>
+      </tbody>
+    </table>
+    <p>Gra słów ma być dodatkową warstwą. Najpierw oceń samo brzmienie, potem sprawdź, czy odkrycie konstrukcji coś dodaje.</p>
+  </details>
   <div id="state" class="state" aria-live="polite"></div>
   <p class="footnote">Wstępne wyszukiwanie nie potwierdza dostępności nazwy, domeny ani uchwytów. Szczegóły i źródła są w <a id="round-notes" href="../docs/rebranding/naming-round-01.md">notatce z rundy</a>. Żadna propozycja nie jest zatwierdzona. Sformułowania opisów profili również są robocze.</p>
   <p class="footnote">Do kolejnej rundy wystarczy: maksymalnie dwie nazwy oraz „podoba mi się… / przeszkadza mi…”. Można odrzucić wszystkie. Strzałki ← → przełączają nazwy, o ile nie pracujesz w polu wyboru. Adres zachowuje rundę i nazwę; pozostałe wybory istnieją tylko do przeładowania strony.</p>
-  <noscript><p>Włącz JavaScript, aby przełączać nazwy. Propozycje są też opisane w <a href="../docs/rebranding/naming-round-02.md">notatce z rundy 02</a>.</p></noscript>
+  <noscript><p>Włącz JavaScript, aby przełączać nazwy. Propozycje są też opisane w <a href="../docs/rebranding/naming-round-03.md">notatce z rundy 03</a>.</p></noscript>
 </main>
 <nav aria-label="Przełączanie nazw prototypu"><button id="previous" aria-label="Poprzednia nazwa">←</button><span id="current"></span><button id="next" aria-label="Następna nazwa">→</button></nav>
 <script>
@@ -76,6 +99,13 @@
       C: { name: 'Mild Alibi', language: 'en', meaning: 'Niewinna mina i niezbyt przekonująca wymówka. Łagodne „mild” zderzone z „alibi” daje przewrotny, lekko ironiczny ton. To połączenie autorskie, nie idiom.', strength: 'Łatwo wyobrazić sobie scenę i człowieka. Więcej dystansu i humoru, bez ponurej nazwy wprost.', risk: '„Mild” może sugerować brak intensywności, a „alibi” kieruje w kryminał. Angielska wymowa: „majld al-uh-baj”.', bio: 'Independent short films. Everyone has a story.', screening: 'Dokładna nazwa zwróciła głównie przybliżone wyniki i przewodniki wiekowe filmów z Alibi w tytule. Węższy przegląd niż dla pozostałych nazw; dostępność niepotwierdzona.' },
       D: { name: 'Quiet Offset', language: 'en', meaning: 'Dyskretne przesunięcie, które zmienia odbiór całości. Skojarzenie z perspektywą, precyzją i obrazem; możliwe drugie znaczenie dla osoby zajmującej się UX.', strength: 'Subtelna więź z projektowaniem i myśleniem technicznym. Może oznaczać zarówno zmianę obrazu, jak i sensu opowieści.', risk: 'Chłodniejsza, abstrakcyjna nazwa: może przypominać studio projektowe. „Quiet” bywa mylone z „quite”. Wymowa: „kwaj-et of-set”.', bio: 'Independent short films. A slight shift changes everything.', screening: 'Fraza pojawiła się w tekście o artyście Offset; inne wyniki przybliżone. Nie ujawniono jednoznacznej marki filmowej; dostępność niepotwierdzona.' },
       E: { ...firstRound.B, meaning: firstRound.B.meaning + ' Powrót z rundy 01 jako porównanie, bez domniemanej akceptacji.', risk: firstRound.B.risk + ' Robocza wymowa: „stil-folt”.' }
+    },
+    '3': {
+      A: { name: 'Fablure', language: 'en', blend: 'fable + lure', bridge: 'Literatura ↔ iluzja', construction: 'Opowieść, która wciąga. Wspólne „l” skleja fable i lure: fab[l]ure. To proponowany sens marki, nie znaczenie słownikowe.', meaning: 'Historia jako zaproszenie, pokusa albo pułapka. Odbiorca sam chce pójść za wskazówką.', strength: 'Siedem liter i płynne brzmienie. Ukryte znaczenie, które może pasować do thrillera, dramatu i absurdu.', risk: 'Może przypominać „failure”, „fabulous” albo kosmetyk. „Fable” może kojarzyć się z baśnią. Robocza wymowa: „fab-lur”.', bio: 'Independent short films. Follow the story.', screening: 'Zapytania o dokładny zapis i film studio zwróciły głównie skan z prawdopodobnym błędem OCR słowa failure. Nie ujawniono jednoznacznej marki filmowej; dostępność niepotwierdzona.' },
+      B: { name: 'Sleightory', language: 'en', blend: 'sleight + story', bridge: 'Iluzja sceniczna ↔ narracja', construction: 'Opowiadanie jak sztuczka iluzjonisty. „Story” zostaje skrócone do „tory”; odczytanie pełnej gry wymaga odkrycia obu składników.', meaning: 'Widz dostaje wskazówki, ale dopiero później składa z nich właściwą historię.', strength: 'Nazwa o samym opowiadaniu i prowadzeniu uwagi. Działa dla thrillera, ale także absurdu i czarnego humoru.', risk: 'Dziesięć liter i trudniejszy zapis „eigh”. Możliwa pomyłka ze „Slightory”. Robocza wymowa: „slaj-tori”.', bio: 'Independent short films. Watch what you believe.', screening: 'Brak wyników dla dokładnej nazwy i zapytania z film studio. Dostępność domen i uchwytów niepotwierdzona.' },
+      C: { name: 'Staccut', language: 'en', blend: 'staccato + cut', bridge: 'Muzyka ↔ montaż', construction: 'Muzyczne staccato i filmowe cięcie. Rytm powstaje przez oddzielenie dźwięków lub ujęć; zbitka zachowuje początek stacc- i końcówkę cut.', meaning: 'Precyzyjnie odmierzony rytm sceny: obraz, dźwięk i pauza pracują razem.', strength: 'Siedem liter, mocne spółgłoski, czytelny związek montażu z muzyką. Nazwa ma własny rytm.', risk: 'Może sugerować szybki montaż, aplikację albo fryzjerstwo. Podwójne „c” trzeba zapamiętać. Roboczo „sta-kat”, z końcówką jak angielskie cut.', bio: 'Independent short films. Every cut counts.', screening: 'Wyniki głównie z włoskiego bloga z podobnym zapisem. Nie ujawniono jednoznacznej marki filmowej; dostępność niepotwierdzona.' },
+      D: { name: 'Ruleverie', language: 'en', blend: 'rule + reverie', bridge: 'Gry narracyjne ↔ wyobraźnia', construction: 'Reguła spotyka marzenie na jawie. Świat ma własną logikę, a jej znajomość pozwala odbiorcy wejść w niezwykłą historię.', meaning: 'Wyobraźnia oparta na przemyślanej konstrukcji. Możliwy pomost między inżynierem a autorem filmów.', strength: 'Osobiste drugie znaczenie bez słowa code. Szeroki zakres gatunkowy i miększe, mniej ponure brzmienie.', risk: 'Najmniej oczywista wymowa; reverie może być nieznane. Ryzyko skojarzenia z grą fantasy. Roboczo „rul-eweri” — do próby na głos.', bio: 'Independent short films. Worlds with their own rules.', screening: 'Brak wyników dla dokładnej nazwy i zapytania z film studio. Dostępność domen i uchwytów niepotwierdzona.' },
+      E: { name: 'Plotchemy', language: 'en', blend: 'plot + alchemy', bridge: 'Scenariopisarstwo ↔ rzemiosło', construction: 'Przemiana składników w opowieść. Alchemia jest tu metaforą procesu: znaczenie powstaje z relacji między częściami.', meaning: 'Aktor, lokacja, dźwięk i detal scenografii tworzą coś, czego nie oddaje sama lista składników.', strength: 'Rozpoznawalna gra słów o tworzeniu. Pasuje do starannie przygotowanych, kameralnych produkcji bez wskazywania liczby twórców.', risk: 'Może sugerować narzędzie lub warsztaty dla scenarzystów. Alchemia to częsta metafora kreatywna. Robocza wymowa: „plot-ke-mi”.', bio: 'Independent short films. Stories, carefully made.', screening: 'Brak wyników dla dokładnej nazwy i zapytania z film studio. Dostępność domen i uchwytów niepotwierdzona.' }
     }
   };
   const films = [
@@ -104,6 +134,11 @@
     const c = candidates[active];
     const f = films[Number(filmSelect.value)];
     const context = contextSelect.value;
+    const construction = document.querySelector('#construction');
+    construction.hidden = !c.blend;
+    construction.open = false;
+    document.querySelector('#construction-text').textContent = c.blend ? c.blend + ' · ' + c.bridge + '. ' + c.construction : '';
+    document.querySelector('#round-analysis').hidden = currentRound !== '3';
     roundSelect.value = currentRound;
     nameSelect.replaceChildren(...keys.map(key => {
       const option = document.createElement('option');
