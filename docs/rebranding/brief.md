@@ -1,6 +1,6 @@
 # Rebranding CODE-MOTION — brief roboczy
 
-Status: faza 1, poszukiwanie nazwy. Żadna nowa nazwa ani identyfikacja nie została zaakceptowana.
+Status: faza 1, poszukiwanie nazwy. **Altertake jest wstępnie zaakceptowaną opcją.** Szukamy dalej w tym samym kierunku; finalna nazwa i identyfikacja pozostają otwarte. [Krótka lista](naming-shortlist.md).
 
 ## Kontekst przekazany przez autora
 
@@ -19,6 +19,7 @@ Status: faza 1, poszukiwanie nazwy. Żadna nowa nazwa ani identyfikacja nie zost
 - Runda 03: preferencja nazw jednosłowych, gier słów i połączeń. Szukamy przez analizę wspólnych mechanizmów filmu i innych dziedzin twórczych, nie wyłącznie przez skojarzenia z thrillerem.
 - Feedback po rundzie 03: jedno słowo to dobry kierunek, ale propozycje nie wpadają w pamięć. W rundzie 04 priorytetem są samodzielne brzmienie, krótki rytm i jedno obrazowe skojarzenie. Gra słów ma być dodatkiem; nie może wymagać długiego wyjaśnienia.
 - Feedback po rundzie 04: nazwy brzmią jak postacie z bajek, a powinny jak poważne studio produkujące filmy. Aktualne osie poszukiwań: nowoczesność, nowy rozdział i mocne użycie AI w procesie tworzenia filmów. Jednosłowość pozostaje aktualna; rezygnujemy z maskotkowych skojarzeń i zdrobnień.
+- Po rundzie 05 autor wskazał **Altertake jako najlepszą propozycję i wstępnie zaakceptowaną opcję**. Kolejne nazwy porównujemy z nią: poważne brzmienie studia, filmowy rdzeń, przemiana materiału i rozszerzenie możliwości przez AI. Nie jest to finalna decyzja ani potwierdzenie dostępności nazwy.
 - Mocne użycie AI jest kierunkiem dla rozwijanej marki i przyszłego procesu. Nie przypisujemy go wstecz filmom z lat 2021–2025. Autor potwierdził model mieszany opisany poniżej.
 - Pracujemy iteracyjnie: kilka opcji → uwagi autora → kolejna runda → wybór.
 - Pracujemy w tym repozytorium. Każdy push wymaga wcześniejszej zgody użytkownika.
@@ -80,4 +81,6 @@ Nie wybieramy teraz technologii ani finalnej estetyki strony. Sprawdzenie adres�
 - Runda 03: jednosłowe zbitki oparte na analogiach do iluzji, muzyki, literatury, gier narracyjnych i rzemiosła. Bez wyboru finalnej nazwy.
 - Runda 04: krótsze nazwy o wyraźnym brzmieniu. Wariant Crookoo odłożony po znalezieniu wcześniejszych użyć fotograficznych; w prototypie zastępuje go Krukoo. Żadna propozycja nie została zaakceptowana.
 - Runda 05: poważna nazwa studia na nowy etap, z silnym odniesieniem do AI jako części procesu. Cztery propozycje, bez wyboru finalnej nazwy.
+- Krótka lista: **Altertake — wstępnie zaakceptowane przez autora**. Nie przenosimy automatycznie na nią innych rekomendacji asystenta.
+- Runda 06: Altertake jako punkt odniesienia oraz cztery nowe propozycje w tej samej rodzinie znaczeń.
 - Do następnej rundy: reakcje na konkretne propozycje. Pozostałe pytania nie blokują poszukiwań nazwy.

@@ -4,6 +4,8 @@ Informacja od autora: poprzednie nazwy brzmią jak postacie z bajek; szukamy pow
 
 To korekta tonu i pozycjonowania. Wcześniejsze propozycje nie są zaakceptowanymi kierunkami. Działalność komercyjna ani produkcja na zlecenie nie zostały uzgodnione; „studio” określa tu pożądany charakter marki.
 
+Aktualny status po tej rundzie: **Altertake zostało wstępnie zaakceptowane przez autora**. Dalsze poszukiwania trwają w [rundzie 06](naming-round-06.md); [krótka lista](naming-shortlist.md) odróżnia akceptację autora od rekomendacji asystenta.
+
 ## Rola AI — co wiemy
 
 Autor potwierdził model mieszany. Zdjęcia z ekipą pozostają fundamentem. Część ujęć może powstawać z AI na podstawie klatek kluczowych z nagrań z planu, a część pracy na planie może przypominać sesję zdjęciową. AI będzie również mocno wykorzystywane w VFX, wzbogacaniu scenografii, muzyce i marketingu.

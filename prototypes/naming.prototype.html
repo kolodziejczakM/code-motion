@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- THROWAWAY: porównanie nazw w jednakowej oprawie, nie prototyp strony ani logo.
-     Runda 05: poważna nazwa studia, nowy rozdział i mocne wykorzystanie AI.
-     ?round=5&variant=A..D; brak parametru round zachowuje rundę 01 dla wcześniejszych linków. -->
+     Runda 06: Altertake jako wstępnie zaakceptowana opcja i cztery nowe propozycje.
+     ?round=6&variant=A..E; brak parametru round zachowuje rundę 01 dla wcześniejszych linków. -->
 <html lang="pl">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,13 +47,15 @@
 <main>
   <h1>Jak brzmi podpis pod Twoim filmem?</h1>
   <p class="intro">Ta sama typografia, różne skojarzenia. Zmieniaj kontekst i sprawdzaj brzmienie. To materiał do wyboru kierunku nazwy; wygląd tej planszy nie przesądza o logo ani stronie.</p>
-  <p class="intro" id="round-direction" hidden>Runda 05: poważna nazwa studia i nowy rozdział. Fundamentem pozostają zdjęcia z ekipą; AI rozszerza ujęcia, VFX, scenografię, muzykę i marketing. Przykładowe bio opisuje kierunek nowej marki; nie określa sposobu realizacji filmów z archiwum.</p>
+  <p class="intro">Krótka lista: <a href="?round=6&amp;variant=A"><strong>Altertake — wstępnie zaakceptowane</strong></a>. Szukamy dalej; finalny wybór pozostaje otwarty.</p>
+  <p class="intro" id="round-direction" hidden>Kierunek studia: poważna nazwa i nowy rozdział. Fundamentem pozostają zdjęcia z ekipą; AI rozszerza ujęcia, VFX, scenografię, muzykę i marketing. Przykładowe bio opisuje kierunek nowej marki; nie określa sposobu realizacji filmów z archiwum.</p>
   <div class="controls">
-    <label>Runda<select id="round"><option value="1">01 · Pierwsze kierunki</option><option value="2">02 · Angielska lub własna</option><option value="3">03 · Jedno słowo, dwie warstwy</option><option value="4">04 · Brzmienie i obraz</option><option value="5">05 · Nowy rozdział i AI</option></select></label>
+    <label>Runda<select id="round"><option value="1">01 · Pierwsze kierunki</option><option value="2">02 · Angielska lub własna</option><option value="3">03 · Jedno słowo, dwie warstwy</option><option value="4">04 · Brzmienie i obraz</option><option value="5">05 · Nowy rozdział i AI</option><option value="6">06 · Wokół Altertake</option></select></label>
     <label>Nazwa<select id="name"></select></label>
     <label>Kontekst<select id="context"><option value="title">Plansza otwierająca</option><option value="profile">Opis profilu</option><option value="credit">Podpis przy filmie</option></select></label>
     <label>Film<select id="film"><option value="0">Saturday cleaning</option><option value="1">Akabei</option><option value="2">Boundless, actually</option></select></label>
   </div>
+  <p id="candidate-status" class="eyebrow" role="status"></p>
   <section id="stage" aria-label="Przykład użycia nazwy"></section>
   <details id="construction" hidden>
     <summary>Odkryj pomysł za nazwą</summary>
@@ -84,9 +86,9 @@
     <p>Przeczytaj pięć nazw na głos, potem odłóż ekran na około minutę. Spróbuj przypomnieć sobie nazwy i ich zapis. Oddziel „pamiętam, ale nie lubię” od „podoba mi się, ale zapomniałem”. To próba do rozmowy, nie ranking skuteczności.</p>
   </details>
   <div id="state" class="state" aria-live="polite"></div>
-  <p class="footnote">Wstępne wyszukiwanie nie potwierdza dostępności nazwy, domeny ani uchwytów. Szczegóły i źródła są w <a id="round-notes" href="../docs/rebranding/naming-round-01.md">notatce z rundy</a>. Żadna propozycja nie jest zatwierdzona. Sformułowania opisów profili również są robocze.</p>
+  <p class="footnote">Wstępne wyszukiwanie nie potwierdza dostępności nazwy, domeny ani uchwytów. Szczegóły i źródła są w <a id="round-notes" href="../docs/rebranding/naming-round-01.md">notatce z rundy</a>. Altertake jest wstępnie zaakceptowane; finalny wybór pozostaje otwarty. Sformułowania opisów profili również są robocze.</p>
   <p class="footnote">Do kolejnej rundy wystarczy: maksymalnie dwie nazwy oraz „podoba mi się… / przeszkadza mi…”. Można odrzucić wszystkie. Strzałki ← → przełączają nazwy, o ile nie pracujesz w polu wyboru. Adres zachowuje rundę i nazwę; pozostałe wybory istnieją tylko do przeładowania strony.</p>
-  <noscript><p>Włącz JavaScript, aby przełączać nazwy. Propozycje są też opisane w <a href="../docs/rebranding/naming-round-05.md">notatce z rundy 05</a>.</p></noscript>
+  <noscript><p>Włącz JavaScript, aby przełączać nazwy. Propozycje są też opisane w <a href="../docs/rebranding/naming-round-06.md">notatce z rundy 06</a>.</p></noscript>
 </main>
 <nav aria-label="Przełączanie nazw prototypu"><button id="previous" aria-label="Poprzednia nazwa">←</button><span id="current"></span><button id="next" aria-label="Następna nazwa">→</button></nav>
 <script>
@@ -126,6 +128,13 @@
       D: { name: 'Altertake', language: 'en', article: 'an', blend: 'alter + take', bridge: 'Zmiana warsztatu filmowego', construction: 'Zmienione ujęcie i nowy sposób realizacji. Mieści współistnienie zdjęć, montażu i narzędzi AI.', meaning: 'Filmowe myślenie rozwijane przez zmianę procesu i możliwości realizacji.', strength: 'Dziewięć liter, czytelne filmowe take i oszczędny ton. Bardziej autorski niż laboratoryjny kierunek. Roboczo: „ol-ter-tejk”.', risk: 'AI nie jest bezpośrednio czytelne w nazwie. Wcześniejsze tytuły muzyczne i zbliżone użycie AlterTake w materiałach wideo wymagają dokładniejszego sprawdzenia.', bio: 'Live-action roots. Expanded by AI.', screening: 'Wcześniejsze tytuły muzyczne z Altertake oraz zapis AlterTake jako źródło materiału wideo w Coub. To ślad wymagający dalszej weryfikacji; dostępność nazwy niepotwierdzona.' }
     }
   };
+  rounds['6'] = {
+    A: { ...rounds['5'].D },
+    B: { name: 'Alterreal', language: 'en', article: 'an', blend: 'alter + real', bridge: 'Przemiana rzeczywistości z planu', construction: 'Rzeczywisty materiał staje się punktem wyjścia do dalszej kreacji. Nazwa przesuwa akcent z ujęcia na świat przedstawiony.', meaning: 'Rzeczywistość z planu rozwijana przez nowe możliwości obrazu.', strength: 'Najbliższe Altertake pod względem brzmienia. Mocne skojarzenie z rozwijaniem scenografii i przekształcaniem nagranego świata. Roboczo: „ol-ter-ri-al”.', risk: 'Mniej bezpośrednio filmowe; może przywołać AR/VR lub nieruchomości. Różna wymowa real po polsku i angielsku. Istnieją wcześniejsze zastosowania komercyjne tego zapisu.', bio: 'Live-action roots. Expanded by AI.', screening: 'Historyczne wpisy Alterreal — Car, Comércio de Automóveis w portugalskiej publikacji urzędowej. Nie ustalono obecnego statusu działalności; dostępność nazwy niepotwierdzona.' },
+    C: { name: 'Deltatake', language: 'en', blend: 'delta + take', bridge: 'Zmiana ujęcia', construction: 'Delta przywołuje różnicę i zmianę, take pozostawia czytelny filmowy rdzeń. Nie jest to nazwa konkretnej metody AI.', meaning: 'Filmowe ujęcie, którego możliwości i postać zmieniają się w procesie twórczym.', strength: 'Poważne, uporządkowane brzmienie z technicznym drugim znaczeniem. Roboczo: „del-ta-tejk”.', risk: 'Może sugerować firmę technologiczną lub lotnictwo. Delta ma wiele wcześniejszych zastosowań; AI wymaga dodatkowego opisu.', bio: 'Live-action roots. Expanded by AI.', screening: 'Wyniki głównie ze sklejonym Delta i Take-off w dokumencie urzędowym. Bez jednoznacznej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' },
+    D: { name: 'Amplitake', language: 'en', article: 'an', blend: 'amplify + take', bridge: 'Rozszerzanie możliwości ujęcia', construction: 'Ujęcie o zwiększonych możliwościach. Brzmienie ma także echo amplitude, łącząc obraz i dźwięk.', meaning: 'Materiał z planu zyskuje większy zakres kreacji: od scenografii po VFX i muzykę.', strength: 'Najmocniej akcentuje rozszerzenie, które wnosi AI. Poważne brzmienie z filmowym take. Roboczo: „am-pli-tejk”.', risk: 'Może przypominać aplikację, wtyczkę audio albo sprzęt. Zapis po usłyszeniu wymaga sprawdzenia.', bio: 'Live-action roots. Expanded by AI.', screening: 'Wyniki głównie jako trudny do odczytania tekst OCR w skanie notatek. Bez jednoznacznej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' },
+    E: { name: 'Phasetake', language: 'en', blend: 'phase + take', bridge: 'Nowy etap tworzenia', construction: 'Nowa faza pracy z filmowym ujęciem i kolejny etap działalności. To metafora procesu, nie termin techniczny.', meaning: 'Przejście do kolejnego etapu warsztatu, przy zachowaniu filmowego fundamentu.', strength: 'Dwie sylaby i oszczędne, techniczne brzmienie. Zachowuje filmowe take. Roboczo: „fejz-tejk”.', risk: 'Może brzmieć bardziej jak narzędzie do obrazu lub dźwięku niż autorskie studio. Pisownia phase wymaga zapamiętania.', bio: 'Live-action roots. Expanded by AI.', screening: 'Wyniki głównie ze sklejonymi phase i take w raporcie archeologicznym oraz przybliżone dopasowania. Bez jednoznacznej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' }
+  };
   const films = [
     { title: 'Saturday cleaning', year: '2021', duration: 'ok. 2 min' },
     { title: 'Akabei', year: '2024', duration: '11:31' },
@@ -158,7 +167,9 @@
     document.querySelector('#construction-text').textContent = c.blend ? c.blend + ' · ' + c.bridge + '. ' + c.construction : '';
     document.querySelector('#round-analysis').hidden = currentRound !== '3';
     document.querySelector('#memory-exercise').hidden = currentRound !== '4';
-    document.querySelector('#round-direction').hidden = currentRound !== '5';
+    document.querySelector('#round-direction').hidden = !['5', '6'].includes(currentRound);
+    const decision = c.name === 'Altertake' ? 'Wstępnie zaakceptowane przez autora' : 'Do oceny';
+    document.querySelector('#candidate-status').textContent = c.name + ' · ' + decision;
     roundSelect.value = currentRound;
     nameSelect.replaceChildren(...keys.map(key => {
       const option = document.createElement('option');
@@ -188,7 +199,7 @@
     document.querySelector('#current').textContent = (keys.indexOf(active) + 1) + '/' + keys.length + ' · ' + c.name;
     document.querySelector('#round-heading').textContent = 'Runda 0' + currentRound + ' · prototyp roboczy';
     document.querySelector('#round-notes').href = '../docs/rebranding/naming-round-0' + currentRound + '.md';
-    document.querySelector('#state').textContent = 'STAN PROTOTYPU\n' + JSON.stringify({ runda: currentRound, variant: active, nazwa: c.name, kontekst: context, film: f, przeglad: c.screening, decyzja: 'brak', zapis: 'runda i nazwa w URL' }, null, 2);
+    document.querySelector('#state').textContent = 'STAN PROTOTYPU\n' + JSON.stringify({ runda: currentRound, variant: active, nazwa: c.name, kontekst: context, film: f, przeglad: c.screening, decyzja: decision, zapis: 'runda i nazwa w URL' }, null, 2);
     document.title = c.name + ' · prototyp nazwy';
   }
   function choose(key) {
