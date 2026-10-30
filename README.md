@@ -12,16 +12,17 @@ Pracujemy iteracyjnie. Obecny etap: poszukiwanie nazwy. **Altertake ma wstępną
 - [Nazwy, runda 06 — wokół Altertake](docs/rebranding/naming-round-06.md)
 - [Nazwy, runda 07 — nazwy projektowane fonetycznie](docs/rebranding/naming-round-07.md)
 - [Nazwy, runda 08 — człowiek i AI](docs/rebranding/naming-round-08.md)
+- [Nazwy, runda 09 — słowiańska inspiracja, własne imię bóstwa](docs/rebranding/naming-round-09.md)
 
 ## Prototyp nazwy
 
-To jednorazowy materiał porównawczy, nie kod strony docelowej ani projekt logo. Zawiera osiem rund nazw w jednakowej typografii, trzy konteksty użycia i filmografię przekazaną przez autora. Aktualna runda 08 łączy ludzką intencję, emocje i warsztat z możliwościami AI. Status Altertake uwzględnia zastrzeżenie autora dotyczące oryginalności. Same wybory w przeglądarce nie zmieniają krótkiej listy.
+To jednorazowy materiał porównawczy, nie kod strony docelowej ani projekt logo. Zawiera dziewięć rund nazw w jednakowej typografii, trzy konteksty użycia i filmografię przekazaną przez autora. Aktualna runda 09 tworzy własne imiona bóstwa wyobraźni i inteligencji, inspirowane słowiańskim brzmieniem i symboliką. Imiona i patronaty są fikcyjne, nie historyczne. Status Altertake uwzględnia zastrzeżenie autora dotyczące oryginalności. Same wybory w przeglądarce nie zmieniają krótkiej listy.
 
 Podgląd na komputerze i telefonie po połączeniu z Tailscale:
 
-[Prototyp nazwy — runda 08, HTTPS w tailnecie](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=8&variant=A)
+[Prototyp nazwy — runda 09, HTTPS w tailnecie](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=9&variant=A)
 
-Parametr `round` przyjmuje wartości od 1 do 8, a `variant` wybiera nazwę: A–D w rundach 01 i 05, A–E w rundach 02–04 i 06, A–C w rundach 07–08. Dotychczasowe linki bez parametru `round` zachowują rundę 01. Strzałki w dolnym pasku i na klawiaturze przełączają nazwy. Kontekst i film pozostają wybrane do przeładowania strony.
+Parametr `round` przyjmuje wartości od 1 do 9, a `variant` wybiera nazwę: A–D w rundach 01, 05 i 09, A–E w rundach 02–04 i 06, A–C w rundach 07–08. Dotychczasowe linki bez parametru `round` zachowują rundę 01. Strzałki w dolnym pasku i na klawiaturze przełączają nazwy. Kontekst i film pozostają wybrane do przeładowania strony.
 
 Serwer VPS i komputer użytkownika mają różne adresy `localhost`. Na tym VPS podgląd obsługuje Caddy na porcie `8766`, z nasłuchem wyłącznie na adresach Tailscale IPv4 i IPv6. Serwuje bezpośrednio pliki prototypów i notatki rebrandingu, więc nie wymaga procesu Pythona ani tunelu SSH. Dostęp urządzeń zależy też od reguł tailnetu.
 

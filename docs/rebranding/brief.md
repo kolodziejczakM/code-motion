@@ -23,6 +23,7 @@ Status: faza 1, poszukiwanie nazwy. **Altertake ma wstępną akceptację z póź
 - Feedback po rundzie 06: nowe propozycje są zbyt podobne do Altertake. Aktualna prośba to większa kreatywność i możliwość całkowitego wymyślenia słów. W rundzie 07 projektujemy samodzielne brzmienia, bez powtarzania alter/take/frame ani dopisywania słownikowej etymologii. Poważny, nowoczesny charakter studia i model zdjęcia + AI pozostają aktualne. Altertake zachowuje wstępną akceptację.
 - Feedback po rundzie 07: nazwy nie podobają się autorowi; odbiera brzmienia z „ov” jako mocno wschodnie. To osobiste skojarzenie autora, nie klasyfikacja języków. Aktualny kierunek: połączenie siły człowieka z siłą sztucznej inteligencji, także poprzez całkowicie oryginalne słowo. Wymowa ma być czytelna; nie wracamy do poprzedniej rodziny fonetycznej.
 - Autor obawia się, że Altertake jest zbyt mało oryginalne i ktoś niezależnie nazwie tak inną inicjatywę. Zapisujemy zastrzeżenie przy wcześniejszej akceptacji; nie zakładamy, że zostało ostatecznie wybrane ani definitywnie odrzucone. Nie można obiecać, że inna osoba nigdy nie wymyśli podobnej nazwy.
+- Nowy kierunek eksploracji: inspiracja mitologią słowiańską i wymyślenie imienia bóstwa łączącego inteligencję z ludzką kreatywnością. To świadomie zamówiona stylizacja mitologiczna. Wymyślonych imion i funkcji nie przedstawiamy jako historycznych wierzeń. Wcześniejsza uwaga o brzmieniu „ov” pozostaje informacją o guście autora; sprawdzamy teraz konkretne, celowo słowiańskie propozycje. Żadne nie zostały jeszcze zaakceptowane.
 - Mocne użycie AI jest kierunkiem dla rozwijanej marki i przyszłego procesu. Nie przypisujemy go wstecz filmom z lat 2021–2025. Autor potwierdził model mieszany opisany poniżej.
 - Pracujemy iteracyjnie: kilka opcji → uwagi autora → kolejna runda → wybór.
 - Pracujemy w tym repozytorium. Każdy push wymaga wcześniejszej zgody użytkownika.
@@ -88,4 +89,5 @@ Nie wybieramy teraz technologii ani finalnej estetyki strony. Sprawdzenie adres�
 - Runda 06: Altertake jako punkt odniesienia oraz cztery nowe propozycje w tej samej rodzinie znaczeń.
 - Runda 07: trzy nazwy projektowane fonetycznie, niezależne od rodziny Altertake. Brak nowych akceptacji autora.
 - Runda 08: człowiek + AI jako rdzeń idei marki; trzy propozycje: Intensyn, Hearithm, Craftellect. Wszystkie do oceny.
+- Runda 09: wymyślone imiona bóstwa ludzkiej wyobraźni i inteligencji; inspiracja słowiańska, bez przypisywania kreacji historii. Cztery propozycje do oceny.
 - Do następnej rundy: reakcje na konkretne propozycje. Pozostałe pytania nie blokują poszukiwań nazwy.
