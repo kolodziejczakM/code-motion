@@ -92,4 +92,6 @@ Nie wybieramy teraz technologii ani finalnej estetyki strony. Sprawdzenie adres�
 - Runda 09: wymyślone imiona bóstwa ludzkiej wyobraźni i inteligencji; inspiracja słowiańska, bez przypisywania kreacji historii. Cztery propozycje do oceny.
 - Informacja zwrotna po rundzie 09: brzmienie zbyt polskie. Autor poprosił o inspirację innymi mitologiami; nie zaakceptował żadnej z nazw tej rundy.
 - Runda 10: własne imiona inspirowane motywami egipskimi, greckimi i nordyckimi: Tahenor, Metheir, Kvaeron. Imiona, patronaty i analogia do AI są współczesną kreacją. Wszystkie do oceny; Altertake zachowuje status z zastrzeżeniem oryginalności.
+- Informacja zwrotna po rundzie 10: brak wyczuwalnego związku nazw z filmem, kreatywnością i nowoczesnością. Autor ponownie podkreślił zapamiętywalność i oryginalność. Kontekst jest wystarczający; rozbudowana historia nie powinna ratować nazwy, która sama nie działa. Mitologia może być inspiracją, bez obowiązku brzmienia jak imię bóstwa.
+- Runda 11: Narravolt (opowieść + energia), Fictension (fikcja + napięcie), Cineural (kino + inteligencja). Różne akcenty marki do porównania, bez nowej akceptacji. AI nie jest dopisywane jako rzekome znaczenie słów volt czy tension.
 - Do następnej rundy: reakcje na konkretne propozycje. Pozostałe pytania nie blokują poszukiwań nazwy.
