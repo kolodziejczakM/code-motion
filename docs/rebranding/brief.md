@@ -90,4 +90,6 @@ Nie wybieramy teraz technologii ani finalnej estetyki strony. Sprawdzenie adres�
 - Runda 07: trzy nazwy projektowane fonetycznie, niezależne od rodziny Altertake. Brak nowych akceptacji autora.
 - Runda 08: człowiek + AI jako rdzeń idei marki; trzy propozycje: Intensyn, Hearithm, Craftellect. Wszystkie do oceny.
 - Runda 09: wymyślone imiona bóstwa ludzkiej wyobraźni i inteligencji; inspiracja słowiańska, bez przypisywania kreacji historii. Cztery propozycje do oceny.
+- Informacja zwrotna po rundzie 09: brzmienie zbyt polskie. Autor poprosił o inspirację innymi mitologiami; nie zaakceptował żadnej z nazw tej rundy.
+- Runda 10: własne imiona inspirowane motywami egipskimi, greckimi i nordyckimi: Tahenor, Metheir, Kvaeron. Imiona, patronaty i analogia do AI są współczesną kreacją. Wszystkie do oceny; Altertake zachowuje status z zastrzeżeniem oryginalności.
 - Do następnej rundy: reakcje na konkretne propozycje. Pozostałe pytania nie blokują poszukiwań nazwy.

@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- THROWAWAY: porównanie nazw w jednakowej oprawie, nie prototyp strony ani logo.
-     Runda 09: wymyślone imiona bóstwa wyobraźni i inteligencji, inspiracja słowiańska.
-     ?round=9&variant=A..D; brak parametru round zachowuje rundę 01 dla wcześniejszych linków. -->
+     Runda 10: własne imiona inspirowane mitologią egipską, grecką i nordycką.
+     ?round=10&variant=A..C; brak parametru round zachowuje rundę 01 dla wcześniejszych linków. -->
 <html lang="pl">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,9 +51,10 @@
   <p class="intro" id="round-sound" hidden>Runda 07: oceniamy samodzielne brzmienie i zapis. Te propozycje nie mają przypisanych znaczeń słownikowych ani historii o ukrytych składnikach. Skojarzenia poniżej są wrażeniami do oceny.</p>
   <p class="intro" id="round-concept" hidden>Runda 08: ludzka intencja, emocje i warsztat spotykają możliwości syntezy i generowania. Proponowane rozwinięcia nazw są ideami marki, nie definicjami słownikowymi.</p>
   <p class="intro" id="round-myth" hidden>Runda 09: wymyślamy imię bóstwa ludzkiej wyobraźni i inteligencji, inspirując się słowiańskim brzmieniem oraz motywami ognia, światła i tworzenia. Imiona i patronaty są naszą współczesną kreacją; nie przedstawiamy ich jako historycznych wierzeń.</p>
+  <p class="intro" id="round-myth-world" hidden>Runda 10: Egipt, Grecja i tradycja nordycka. Trzy własne imiona o bardziej międzynarodowym brzmieniu. Motywy mitologiczne są punktem wyjścia; nowe imiona, patronaty i powiązanie z AI są naszą kreacją. Źródła inspiracji i przegląd wcześniejszych użyć znajdziesz w notatce rundy.</p>
   <p class="intro" id="round-direction" hidden>Kierunek studia: poważna nazwa i nowy rozdział. Fundamentem pozostają zdjęcia z ekipą; AI rozszerza ujęcia, VFX, scenografię, muzykę i marketing. Przykładowe bio opisuje kierunek nowej marki; nie określa sposobu realizacji filmów z archiwum.</p>
   <div class="controls">
-    <label>Runda<select id="round"><option value="1">01 · Pierwsze kierunki</option><option value="2">02 · Angielska lub własna</option><option value="3">03 · Jedno słowo, dwie warstwy</option><option value="4">04 · Brzmienie i obraz</option><option value="5">05 · Nowy rozdział i AI</option><option value="6">06 · Wokół Altertake</option><option value="7">07 · Nazwy wymyślone</option><option value="8">08 · Człowiek i AI</option><option value="9">09 · Imię bóstwa</option></select></label>
+    <label>Runda<select id="round"><option value="1">01 · Pierwsze kierunki</option><option value="2">02 · Angielska lub własna</option><option value="3">03 · Jedno słowo, dwie warstwy</option><option value="4">04 · Brzmienie i obraz</option><option value="5">05 · Nowy rozdział i AI</option><option value="6">06 · Wokół Altertake</option><option value="7">07 · Nazwy wymyślone</option><option value="8">08 · Człowiek i AI</option><option value="9">09 · Imię bóstwa</option><option value="10">10 · Inne mitologie</option></select></label>
     <label>Nazwa<select id="name"></select></label>
     <label>Kontekst<select id="context"><option value="title">Plansza otwierająca</option><option value="profile">Opis profilu</option><option value="credit">Podpis przy filmie</option></select></label>
     <label>Film<select id="film"><option value="0">Saturday cleaning</option><option value="1">Akabei</option><option value="2">Boundless, actually</option></select></label>
@@ -91,7 +92,7 @@
   <div id="state" class="state" aria-live="polite"></div>
   <p class="footnote">Wstępne wyszukiwanie nie potwierdza dostępności nazwy, domeny ani uchwytów. Szczegóły i źródła są w <a id="round-notes" href="../docs/rebranding/naming-round-01.md">notatce z rundy</a>. Przy wcześniejszej akceptacji Altertake autor zgłosił zastrzeżenie dotyczące oryginalności. Finalny wybór pozostaje otwarty. Sformułowania opisów profili również są robocze.</p>
   <p class="footnote">Do kolejnej rundy wystarczy: maksymalnie dwie nazwy oraz „podoba mi się… / przeszkadza mi…”. Można odrzucić wszystkie. Strzałki ← → przełączają nazwy, o ile nie pracujesz w polu wyboru. Adres zachowuje rundę i nazwę; pozostałe wybory istnieją tylko do przeładowania strony.</p>
-  <noscript><p>Włącz JavaScript, aby przełączać nazwy. Propozycje są też opisane w <a href="../docs/rebranding/naming-round-09.md">notatce z rundy 09</a>.</p></noscript>
+  <noscript><p>Włącz JavaScript, aby przełączać nazwy. Propozycje są też opisane w <a href="../docs/rebranding/naming-round-10.md">notatce z rundy 10</a>.</p></noscript>
 </main>
 <nav aria-label="Przełączanie nazw prototypu"><button id="previous" aria-label="Poprzednia nazwa">←</button><span id="current"></span><button id="next" aria-label="Następna nazwa">→</button></nav>
 <script>
@@ -154,6 +155,11 @@
     C: { name: 'Swarum', language: 'en', blend: 'echo brzmienia Swaroga + własne zakończenie', bridge: 'Wymyślony patron kuźni wyobraźni', construction: 'Z ludzkiej myśli wykuwa obrazy, które wcześniej istniały tylko w wyobraźni. Ten patronat i imię są fikcją na potrzeby briefu, nie poświadczoną postacią mitologii.', meaning: 'Patron miejsca, w którym zamiar otrzymuje formę. Metafora wspólnej pracy warsztatu filmowego i nowych narzędzi.', strength: 'Sześć liter, dwie sylaby, brak polskich znaków. Oszczędniejsza forma o mocnym brzmieniu. Roboczo: „swa-rum”.', risk: 'Mniej czytelny sens bez opowieści. Możliwe skojarzenia z alkoholem lub muzyką. Zapis ma wcześniejsze użycia słownikowe i naukowe.', bio: 'Live-action roots. Expanded by AI.', screening: 'Wcześniejsze użycia obejmują formy słownikowe i akronim School Water and Rainwater Use Modeller. Nie jest to ciąg liter bez wcześniejszych zastosowań; dostępność niepotwierdzona.' },
     D: { name: 'Wiedrad', language: 'en', blend: 'wiedza + rada — współczesne skojarzenia', bridge: 'Wymyślony patron mądrego sprawstwa', construction: 'Daje pomysłom kierunek i prowadzi je od zamiaru do dzieła. To własna konstrukcja, bez twierdzenia o poświadczonej etymologii lub miejscu w dawnym panteonie.', meaning: 'Patron wiedzy, która potrafi stać się twórczym działaniem. Człowiek wyznacza cel, a narzędzia zwiększają możliwości jego realizacji.', strength: 'Siedem liter, brak polskich znaków i wyraźnie słowiański charakter do oceny. Roboczo: „wied-rad”.', risk: 'Może przypominać imię osoby lub instytucję doradczą. Początek wie będzie mniej oczywisty dla odbiorcy anglojęzycznego.', bio: 'Live-action roots. Expanded by AI.', screening: 'Wyniki głównie ze sklejonego fragmentu o ścieżce nad rzeką Wied na niemieckim forum rowerowym. Bez jednoznacznej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' }
   };
+  rounds['10'] = {
+    A: { name: 'Tahenor', language: 'en', blend: 'motyw Ptaha + własne imię', bridge: 'Egipt: od myśli i słowa do formy', construction: 'Luźne echo tah z imienia Ptah oraz własne zakończenie. Nie jest to egipskie słowo ani tłumaczenie. Nasz patron wyobraża sobie świat, a następnie daje mu postać.', meaning: 'Wymyślony patron urzeczywistniania wyobraźni. Człowiek wnosi wizję i emocje, a inteligencja i warsztat pozwalają uczynić je widzialnymi.', strength: 'Roboczo: „ta-he-nor”. Siedem liter, trzy wyraźne sylaby. Najbardziej monumentalna i spokojna propozycja; ma opowieść o powoływaniu obrazów do istnienia.', risk: 'Może przywołać nazwę świata fantasy. W angielskim akcent nie będzie oczywisty. Zapis ma wcześniejsze użycia osobowe; nie deklarujemy pełnej oryginalności.', bio: 'Live-action roots. Expanded by AI.', screening: 'Dokładny zapis oraz zapytanie z film studio AI: użycia osobowe i indeks nazwisk. W zwróconych wynikach bez jednoznacznej marki filmowej. Domeny, uchwyty i znaki niezweryfikowane.' },
+    B: { name: 'Metheir', language: 'en', blend: 'inspiracja Metis + własne zakończenie', bridge: 'Grecja: inteligencja, która potrafi tworzyć', construction: 'Imię Metis dostarcza inspiracji, nie gotowej etymologii. Zakończenie heir może dodatkowo przywołać angielskiego dziedzica: nowy rozdział zachowujący doświadczenie twórcy. To współczesna gra skojarzeń.', meaning: 'Wymyślony patron twórczego zamysłu. Łączy intuicję z rozumowaniem i znajduje formę dla tego, co wcześniej było tylko przeczuciem.', strength: 'Roboczo: „me-tejr”. Siedem liter, bardziej oszczędny i abstrakcyjny podpis. W tej trójce najmocniej akcentuje inteligencję oraz ciągłość warsztatu.', risk: 'Niejednoznaczne th i ei utrudniają zapis ze słuchu. Początek meth może wywołać niepożądane skojarzenie w angielskim. Ten koszt brzmienia warto ocenić przed rozwijaniem marki.', bio: 'Live-action roots. Expanded by AI.', screening: 'Zapytanie dokładnego zapisu zwróciło głównie sklejone me their i szum OCR, a także pojedynczy zapis osobowy. Nie ujawniono jednoznacznej marki filmowej; nie sprawdzono domen, uchwytów ani znaków.' },
+    C: { name: 'Kvaeron', language: 'en', blend: 'echo Kvasira + własna forma', bridge: 'Tradycja nordycka: połączenie różnych sił rodzi wiedzę i opowieść', construction: 'Zachowujemy początek Kv- jako ślad inspiracji Kvasirem, ale tworzymy nowe imię. Nie przypisujemy cząstkom staronordyckich znaczeń. Nasz patron powstaje na styku ludzkiej wyobraźni i nowej inteligencji.', meaning: 'Wymyślony patron współtworzenia. Dwie różne siły dają początek możliwościom, których żadna nie osiąga samodzielnie; wiedza staje się opowieścią.', strength: 'Roboczo: „kwe-ron”. Siedem liter, dwie sylaby i zdecydowany początek. Najbardziej odrębny zapis w tej rundzie; najmocniej oddaje ideę człowieka współpracującego z AI.', risk: 'Kv oraz ae utrudniają zapis ze słuchu. W polskim możliwe Kw / w angielskim odmienne odczytanie samogłosek. Może kojarzyć się z fantastyką lub grami.', bio: 'Live-action roots. Expanded by AI.', screening: 'Dokładne zapytanie Kvaeron nie zwróciło wyników. Zapytanie z film studio AI także nie ujawniło wcześniejszych użyć. Nie potwierdza to dostępności domen, uchwytów ani praw do nazwy.' }
+  };
   const films = [
     { title: 'Saturday cleaning', year: '2021', duration: 'ok. 2 min' },
     { title: 'Akabei', year: '2024', duration: '11:31' },
@@ -186,11 +192,12 @@
     document.querySelector('#construction-text').textContent = c.blend ? c.blend + ' · ' + c.bridge + '. ' + c.construction : '';
     document.querySelector('#round-analysis').hidden = currentRound !== '3';
     document.querySelector('#memory-exercise').hidden = currentRound !== '4';
-    document.querySelector('#round-direction').hidden = !['5', '6', '7', '8', '9'].includes(currentRound);
+    document.querySelector('#round-direction').hidden = !['5', '6', '7', '8', '9', '10'].includes(currentRound);
     document.querySelector('#round-sound').hidden = currentRound !== '7';
     document.querySelector('#round-concept').hidden = currentRound !== '8';
     document.querySelector('#round-myth').hidden = currentRound !== '9';
-    document.querySelector('#meaning-label').textContent = currentRound === '9' ? 'Patronat — nasza kreacja' : currentRound === '7' ? 'Brzmienie' : 'Punkt wyjścia';
+    document.querySelector('#round-myth-world').hidden = currentRound !== '10';
+    document.querySelector('#meaning-label').textContent = ['9', '10'].includes(currentRound) ? 'Patronat — nasza kreacja' : currentRound === '7' ? 'Brzmienie' : 'Punkt wyjścia';
     const decision = c.name === 'Altertake' ? 'Wstępna akceptacja; zastrzeżenie oryginalności' : 'Do oceny';
     document.querySelector('#candidate-status').textContent = c.name + ' · ' + decision;
     roundSelect.value = currentRound;
@@ -220,8 +227,8 @@
     document.querySelector('#strength').textContent = c.strength;
     document.querySelector('#risk').textContent = c.risk;
     document.querySelector('#current').textContent = (keys.indexOf(active) + 1) + '/' + keys.length + ' · ' + c.name;
-    document.querySelector('#round-heading').textContent = 'Runda 0' + currentRound + ' · prototyp roboczy';
-    document.querySelector('#round-notes').href = '../docs/rebranding/naming-round-0' + currentRound + '.md';
+    document.querySelector('#round-heading').textContent = 'Runda ' + currentRound.padStart(2, '0') + ' · prototyp roboczy';
+    document.querySelector('#round-notes').href = '../docs/rebranding/naming-round-' + currentRound.padStart(2, '0') + '.md';
     document.querySelector('#state').textContent = 'STAN PROTOTYPU\n' + JSON.stringify({ runda: currentRound, variant: active, nazwa: c.name, kontekst: context, film: f, przeglad: c.screening, decyzja: decision, zapis: 'runda i nazwa w URL' }, null, 2);
     document.title = c.name + ' · prototyp nazwy';
   }
