@@ -20,6 +20,7 @@ Status: faza 1, poszukiwanie nazwy. **Altertake jest wstępnie zaakceptowaną op
 - Feedback po rundzie 03: jedno słowo to dobry kierunek, ale propozycje nie wpadają w pamięć. W rundzie 04 priorytetem są samodzielne brzmienie, krótki rytm i jedno obrazowe skojarzenie. Gra słów ma być dodatkiem; nie może wymagać długiego wyjaśnienia.
 - Feedback po rundzie 04: nazwy brzmią jak postacie z bajek, a powinny jak poważne studio produkujące filmy. Aktualne osie poszukiwań: nowoczesność, nowy rozdział i mocne użycie AI w procesie tworzenia filmów. Jednosłowość pozostaje aktualna; rezygnujemy z maskotkowych skojarzeń i zdrobnień.
 - Po rundzie 05 autor wskazał **Altertake jako najlepszą propozycję i wstępnie zaakceptowaną opcję**. Kolejne nazwy porównujemy z nią: poważne brzmienie studia, filmowy rdzeń, przemiana materiału i rozszerzenie możliwości przez AI. Nie jest to finalna decyzja ani potwierdzenie dostępności nazwy.
+- Feedback po rundzie 06: nowe propozycje są zbyt podobne do Altertake. Aktualna prośba to większa kreatywność i możliwość całkowitego wymyślenia słów. W rundzie 07 projektujemy samodzielne brzmienia, bez powtarzania alter/take/frame ani dopisywania słownikowej etymologii. Poważny, nowoczesny charakter studia i model zdjęcia + AI pozostają aktualne. Altertake zachowuje wstępną akceptację.
 - Mocne użycie AI jest kierunkiem dla rozwijanej marki i przyszłego procesu. Nie przypisujemy go wstecz filmom z lat 2021–2025. Autor potwierdził model mieszany opisany poniżej.
 - Pracujemy iteracyjnie: kilka opcji → uwagi autora → kolejna runda → wybór.
 - Pracujemy w tym repozytorium. Każdy push wymaga wcześniejszej zgody użytkownika.
@@ -83,4 +84,5 @@ Nie wybieramy teraz technologii ani finalnej estetyki strony. Sprawdzenie adres�
 - Runda 05: poważna nazwa studia na nowy etap, z silnym odniesieniem do AI jako części procesu. Cztery propozycje, bez wyboru finalnej nazwy.
 - Krótka lista: **Altertake — wstępnie zaakceptowane przez autora**. Nie przenosimy automatycznie na nią innych rekomendacji asystenta.
 - Runda 06: Altertake jako punkt odniesienia oraz cztery nowe propozycje w tej samej rodzinie znaczeń.
+- Runda 07: trzy nazwy projektowane fonetycznie, niezależne od rodziny Altertake. Brak nowych akceptacji autora.
 - Do następnej rundy: reakcje na konkretne propozycje. Pozostałe pytania nie blokują poszukiwań nazwy.

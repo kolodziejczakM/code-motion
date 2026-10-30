@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- THROWAWAY: porównanie nazw w jednakowej oprawie, nie prototyp strony ani logo.
-     Runda 06: Altertake jako wstępnie zaakceptowana opcja i cztery nowe propozycje.
-     ?round=6&variant=A..E; brak parametru round zachowuje rundę 01 dla wcześniejszych linków. -->
+     Runda 07: trzy nazwy projektowane fonetycznie, bez przypisanej etymologii.
+     ?round=7&variant=A..C; brak parametru round zachowuje rundę 01 dla wcześniejszych linków. -->
 <html lang="pl">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,9 +48,10 @@
   <h1>Jak brzmi podpis pod Twoim filmem?</h1>
   <p class="intro">Ta sama typografia, różne skojarzenia. Zmieniaj kontekst i sprawdzaj brzmienie. To materiał do wyboru kierunku nazwy; wygląd tej planszy nie przesądza o logo ani stronie.</p>
   <p class="intro">Krótka lista: <a href="?round=6&amp;variant=A"><strong>Altertake — wstępnie zaakceptowane</strong></a>. Szukamy dalej; finalny wybór pozostaje otwarty.</p>
+  <p class="intro" id="round-sound" hidden>Runda 07: oceniamy samodzielne brzmienie i zapis. Te propozycje nie mają przypisanych znaczeń słownikowych ani historii o ukrytych składnikach. Skojarzenia poniżej są wrażeniami do oceny.</p>
   <p class="intro" id="round-direction" hidden>Kierunek studia: poważna nazwa i nowy rozdział. Fundamentem pozostają zdjęcia z ekipą; AI rozszerza ujęcia, VFX, scenografię, muzykę i marketing. Przykładowe bio opisuje kierunek nowej marki; nie określa sposobu realizacji filmów z archiwum.</p>
   <div class="controls">
-    <label>Runda<select id="round"><option value="1">01 · Pierwsze kierunki</option><option value="2">02 · Angielska lub własna</option><option value="3">03 · Jedno słowo, dwie warstwy</option><option value="4">04 · Brzmienie i obraz</option><option value="5">05 · Nowy rozdział i AI</option><option value="6">06 · Wokół Altertake</option></select></label>
+    <label>Runda<select id="round"><option value="1">01 · Pierwsze kierunki</option><option value="2">02 · Angielska lub własna</option><option value="3">03 · Jedno słowo, dwie warstwy</option><option value="4">04 · Brzmienie i obraz</option><option value="5">05 · Nowy rozdział i AI</option><option value="6">06 · Wokół Altertake</option><option value="7">07 · Nazwy wymyślone</option></select></label>
     <label>Nazwa<select id="name"></select></label>
     <label>Kontekst<select id="context"><option value="title">Plansza otwierająca</option><option value="profile">Opis profilu</option><option value="credit">Podpis przy filmie</option></select></label>
     <label>Film<select id="film"><option value="0">Saturday cleaning</option><option value="1">Akabei</option><option value="2">Boundless, actually</option></select></label>
@@ -62,7 +63,7 @@
     <p id="construction-text"></p>
   </details>
   <div class="notes" aria-live="polite">
-    <section><h2>Punkt wyjścia</h2><p id="meaning"></p></section>
+    <section><h2 id="meaning-label">Punkt wyjścia</h2><p id="meaning"></p></section>
     <section><h2>Co zyskujemy</h2><p id="strength"></p></section>
     <section><h2>Co sprawdzić na głos</h2><p id="risk"></p></section>
   </div>
@@ -88,7 +89,7 @@
   <div id="state" class="state" aria-live="polite"></div>
   <p class="footnote">Wstępne wyszukiwanie nie potwierdza dostępności nazwy, domeny ani uchwytów. Szczegóły i źródła są w <a id="round-notes" href="../docs/rebranding/naming-round-01.md">notatce z rundy</a>. Altertake jest wstępnie zaakceptowane; finalny wybór pozostaje otwarty. Sformułowania opisów profili również są robocze.</p>
   <p class="footnote">Do kolejnej rundy wystarczy: maksymalnie dwie nazwy oraz „podoba mi się… / przeszkadza mi…”. Można odrzucić wszystkie. Strzałki ← → przełączają nazwy, o ile nie pracujesz w polu wyboru. Adres zachowuje rundę i nazwę; pozostałe wybory istnieją tylko do przeładowania strony.</p>
-  <noscript><p>Włącz JavaScript, aby przełączać nazwy. Propozycje są też opisane w <a href="../docs/rebranding/naming-round-06.md">notatce z rundy 06</a>.</p></noscript>
+  <noscript><p>Włącz JavaScript, aby przełączać nazwy. Propozycje są też opisane w <a href="../docs/rebranding/naming-round-07.md">notatce z rundy 07</a>.</p></noscript>
 </main>
 <nav aria-label="Przełączanie nazw prototypu"><button id="previous" aria-label="Poprzednia nazwa">←</button><span id="current"></span><button id="next" aria-label="Następna nazwa">→</button></nav>
 <script>
@@ -135,6 +136,11 @@
     D: { name: 'Amplitake', language: 'en', article: 'an', blend: 'amplify + take', bridge: 'Rozszerzanie możliwości ujęcia', construction: 'Ujęcie o zwiększonych możliwościach. Brzmienie ma także echo amplitude, łącząc obraz i dźwięk.', meaning: 'Materiał z planu zyskuje większy zakres kreacji: od scenografii po VFX i muzykę.', strength: 'Najmocniej akcentuje rozszerzenie, które wnosi AI. Poważne brzmienie z filmowym take. Roboczo: „am-pli-tejk”.', risk: 'Może przypominać aplikację, wtyczkę audio albo sprzęt. Zapis po usłyszeniu wymaga sprawdzenia.', bio: 'Live-action roots. Expanded by AI.', screening: 'Wyniki głównie jako trudny do odczytania tekst OCR w skanie notatek. Bez jednoznacznej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' },
     E: { name: 'Phasetake', language: 'en', blend: 'phase + take', bridge: 'Nowy etap tworzenia', construction: 'Nowa faza pracy z filmowym ujęciem i kolejny etap działalności. To metafora procesu, nie termin techniczny.', meaning: 'Przejście do kolejnego etapu warsztatu, przy zachowaniu filmowego fundamentu.', strength: 'Dwie sylaby i oszczędne, techniczne brzmienie. Zachowuje filmowe take. Roboczo: „fejz-tejk”.', risk: 'Może brzmieć bardziej jak narzędzie do obrazu lub dźwięku niż autorskie studio. Pisownia phase wymaga zapamiętania.', bio: 'Live-action roots. Expanded by AI.', screening: 'Wyniki głównie ze sklejonymi phase i take w raporcie archeologicznym oraz przybliżone dopasowania. Bez jednoznacznej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' }
   };
+  rounds['7'] = {
+    A: { name: 'Anvrel', language: 'en', article: 'an', meaning: 'Roboczo: „an-wrel”. Dwie sylaby, zwarty zapis i wyraźne spółgłoski. Nazwa zaprojektowana pod brzmienie, bez przypisanej definicji.', strength: 'Spokojny, bardziej chłodny i formalny charakter do oceny. Sześć liter; może funkcjonować jako samodzielny podpis studia.', risk: 'Środkowe vr może utrudnić odtworzenie zapisu. Brzmienie może być zbyt techniczne albo zbyt bliskie nazwie przemysłowej. Są to hipotezy, nie wyniki badania odbiorców.', bio: 'Live-action roots. Expanded by AI.', screening: 'Dokładny zapis i zapytanie z film studio zwróciły głównie stare skany i szum OCR. Bez jednoznacznej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' },
+    B: { name: 'Udravo', language: 'en', article: 'an', meaning: 'Roboczo: „u-dra-wo”. Trzy otwarte sylaby i płynne zakończenie. Nazwa zaprojektowana pod dźwięk, bez wyjaśniania jej jako zbitki istniejących słów.', strength: 'Szersze, bardziej otwarte brzmienie do oceny. Kontrastuje z zwartym Anvrel; sześć liter i prosty podział na sylaby.', risk: 'Czy końcówka brzmi wystarczająco poważnie? Możliwy polski zapis Udrawo. Wymowę w kontekście angielskim trzeba sprawdzić osobno.', bio: 'Live-action roots. Expanded by AI.', screening: 'Wyniki obejmowały zapis w komentarzu na forum i prawdopodobny błąd OCR w skanie czasopisma. Bez jednoznacznej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' },
+    C: { name: 'Kaltrev', language: 'en', meaning: 'Roboczo: „kal-trew”. Dwie sylaby, twardszy początek i zamknięta końcówka. Propozycja oparta na charakterze dźwięku, bez przypisanego znaczenia słownikowego.', strength: 'Surowszy, bardziej stanowczy podpis do oceny. Siedem liter; wyraźnie inny rytm niż otwarte Udravo.', risk: 'Może brzmieć przemysłowo lub kojarzyć się z fantastyką. Zapis ma wcześniejsze użycia jako pseudonim i nazwa usługowa; nie jest to nowy ciąg liter bez wcześniejszych wystąpień.', bio: 'Live-action roots. Expanded by AI.', screening: 'Dokładny zapis zwrócił pseudonim gracza i użycie Kaltrev solutions w profilu freelancera. Zakres przeglądu jest węższy niż dla Anvrel i Udravo; dostępność nazwy niepotwierdzona.' }
+  };
   const films = [
     { title: 'Saturday cleaning', year: '2021', duration: 'ok. 2 min' },
     { title: 'Akabei', year: '2024', duration: '11:31' },
@@ -167,7 +173,9 @@
     document.querySelector('#construction-text').textContent = c.blend ? c.blend + ' · ' + c.bridge + '. ' + c.construction : '';
     document.querySelector('#round-analysis').hidden = currentRound !== '3';
     document.querySelector('#memory-exercise').hidden = currentRound !== '4';
-    document.querySelector('#round-direction').hidden = !['5', '6'].includes(currentRound);
+    document.querySelector('#round-direction').hidden = !['5', '6', '7'].includes(currentRound);
+    document.querySelector('#round-sound').hidden = currentRound !== '7';
+    document.querySelector('#meaning-label').textContent = currentRound === '7' ? 'Brzmienie' : 'Punkt wyjścia';
     const decision = c.name === 'Altertake' ? 'Wstępnie zaakceptowane przez autora' : 'Do oceny';
     document.querySelector('#candidate-status').textContent = c.name + ' · ' + decision;
     roundSelect.value = currentRound;
