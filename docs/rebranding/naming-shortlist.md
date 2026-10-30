@@ -1,10 +1,18 @@
 # Krótka lista nazw
 
-Lista zawiera wyłącznie propozycje wstępnie zaakceptowane przez autora. Wstępna akceptacja oznacza zachowanie opcji podczas dalszych poszukiwań; nie jest ostatecznym wyborem ani potwierdzeniem dostępności domeny, uchwytów czy praw do nazwy.
+Lista zawiera opcje zachowane lub wyraźnie pozytywnie ocenione przez autora. Status rozróżnia wstępną akceptację od pozytywnej reakcji i prośby o weryfikację. Żaden nie oznacza ostatecznego wyboru ani potwierdzenia dostępności domeny, uchwytów czy praw do nazwy.
 
 | Nazwa | Status | Podstawa |
 | --- | --- | --- |
+| **Fictension** | **Pozytywna ocena; zlecone sprawdzenie oryginalności i porównanie z Altertake** | „Fictension lepsze. Sprawdź jego oryginalność i porównaj z altertake”. Nie interpretujemy tego jako ostatecznego wyboru. |
 | **Altertake** | **Wstępna akceptacja; późniejsze zastrzeżenie dotyczące oryginalności** | Najpierw: „Altertake jest najlepsze, zostawmy to jako jedna z opcji wstępnie zaakceptowanych ale szukajmy dalej w tym samym kierunku”. Później: „Altertake obawiam się jest za mało oryginalny”. |
+
+## Fictension
+
+- Źródło: [runda 11](naming-round-11.md), wariant B.
+- Konstrukcja: **fiction + tension**, z pobocznym skojarzeniem z extension. Film, fikcja i napięcie są głównym punktem zaczepienia; nazwa sama nie oznacza AI.
+- Mocniejszy związek z charakterem dotychczasowych filmów; większy koszt zapisu ze słuchu niż w Altertake.
+- [Pogłębiony przegląd i porównanie](name-originality-check.md) z 30.10.2026. Wnioski asystenta pozostają odrębne od decyzji autora.
 
 ## Altertake
 
@@ -18,6 +26,6 @@ Lista zawiera wyłącznie propozycje wstępnie zaakceptowane przez autora. Wstę
 
 [Porównanie z nowymi propozycjami — runda 06](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=6&variant=A).
 
-[Aktualny kierunek — człowiek + AI, runda 08](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=8&variant=A). Nowe propozycje nie są jeszcze na krótkiej liście.
+[Aktualne porównanie — Fictension / Altertake](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=12&variant=A). Przełącznik pozwala ocenić obie nazwy w jednakowej oprawie.
 
 Nie wybrano jeszcze finalnej nazwy, logo ani domeny. Nie zmieniano nazw profili społecznościowych.

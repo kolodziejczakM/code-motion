@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- THROWAWAY: porównanie nazw w jednakowej oprawie, nie prototyp strony ani logo.
-     Runda 11: film, opowieść i nowe możliwości — Narravolt, Fictension, Cineural.
-     ?round=11&variant=A..C; brak parametru round zachowuje rundę 01 dla wcześniejszych linków. -->
+     Runda 12: bezpośrednie porównanie Fictension i Altertake po przeglądzie wcześniejszych użyć.
+     ?round=12&variant=A..B; brak parametru round zachowuje rundę 01 dla wcześniejszych linków. -->
 <html lang="pl">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,15 +47,16 @@
 <main>
   <h1>Jak brzmi podpis pod Twoim filmem?</h1>
   <p class="intro">Ta sama typografia, różne skojarzenia. Zmieniaj kontekst i sprawdzaj brzmienie. To materiał do wyboru kierunku nazwy; wygląd tej planszy nie przesądza o logo ani stronie.</p>
-  <p class="intro">Dotychczasowa opcja: <a href="?round=6&amp;variant=A"><strong>Altertake — wstępna akceptacja z zastrzeżeniem oryginalności</strong></a>. Szukamy dalej; finalny wybór pozostaje otwarty.</p>
+  <p class="intro">Krótka lista: <a href="?round=12&amp;variant=A"><strong>Fictension — pozytywna ocena, porównanie w toku</strong></a> oraz <a href="?round=12&amp;variant=B"><strong>Altertake — wstępna akceptacja z zastrzeżeniem oryginalności</strong></a>. Finalny wybór pozostaje otwarty.</p>
   <p class="intro" id="round-sound" hidden>Runda 07: oceniamy samodzielne brzmienie i zapis. Te propozycje nie mają przypisanych znaczeń słownikowych ani historii o ukrytych składnikach. Skojarzenia poniżej są wrażeniami do oceny.</p>
   <p class="intro" id="round-concept" hidden>Runda 08: ludzka intencja, emocje i warsztat spotykają możliwości syntezy i generowania. Proponowane rozwinięcia nazw są ideami marki, nie definicjami słownikowymi.</p>
   <p class="intro" id="round-myth" hidden>Runda 09: wymyślamy imię bóstwa ludzkiej wyobraźni i inteligencji, inspirując się słowiańskim brzmieniem oraz motywami ognia, światła i tworzenia. Imiona i patronaty są naszą współczesną kreacją; nie przedstawiamy ich jako historycznych wierzeń.</p>
   <p class="intro" id="round-myth-world" hidden>Runda 10: Egipt, Grecja i tradycja nordycka. Trzy własne imiona o bardziej międzynarodowym brzmieniu. Motywy mitologiczne są punktem wyjścia; nowe imiona, patronaty i powiązanie z AI są naszą kreacją. Źródła inspiracji i przegląd wcześniejszych użyć znajdziesz w notatce rundy.</p>
   <p class="intro" id="round-film" hidden>Runda 11: opowieść i energia, fikcja i napięcie, kino i inteligencja. Trzy różne akcenty tej samej marki. Oceń nazwę na planszy, zanim rozwiniesz jej konstrukcję. Żadna z propozycji nie ma jeszcze potwierdzonej dostępności domen i uchwytów.</p>
+  <p class="intro" id="round-comparison" hidden>Porównanie Fictension i Altertake. Fictension akcentuje fikcję i napięcie, Altertake — ujęcie i zmianę warsztatu. Przegląd z 30.10.2026 daje Fictension przewagę w odrębności wyników i sytuacji domeny .com. Szczegółowe źródła oraz ograniczenia są w notatce. Dostępność zakupu domeny i uchwytów wymaga potwierdzenia.</p>
   <p class="intro" id="round-direction" hidden>Kierunek studia: poważna nazwa i nowy rozdział. Fundamentem pozostają zdjęcia z ekipą; AI rozszerza ujęcia, VFX, scenografię, muzykę i marketing. Przykładowe bio opisuje kierunek nowej marki; nie określa sposobu realizacji filmów z archiwum.</p>
   <div class="controls">
-    <label>Runda<select id="round"><option value="1">01 · Pierwsze kierunki</option><option value="2">02 · Angielska lub własna</option><option value="3">03 · Jedno słowo, dwie warstwy</option><option value="4">04 · Brzmienie i obraz</option><option value="5">05 · Nowy rozdział i AI</option><option value="6">06 · Wokół Altertake</option><option value="7">07 · Nazwy wymyślone</option><option value="8">08 · Człowiek i AI</option><option value="9">09 · Imię bóstwa</option><option value="10">10 · Inne mitologie</option><option value="11">11 · Film i nowe możliwości</option></select></label>
+    <label>Runda<select id="round"><option value="1">01 · Pierwsze kierunki</option><option value="2">02 · Angielska lub własna</option><option value="3">03 · Jedno słowo, dwie warstwy</option><option value="4">04 · Brzmienie i obraz</option><option value="5">05 · Nowy rozdział i AI</option><option value="6">06 · Wokół Altertake</option><option value="7">07 · Nazwy wymyślone</option><option value="8">08 · Człowiek i AI</option><option value="9">09 · Imię bóstwa</option><option value="10">10 · Inne mitologie</option><option value="11">11 · Film i nowe możliwości</option><option value="12">12 · Fictension / Altertake</option></select></label>
     <label>Nazwa<select id="name"></select></label>
     <label>Kontekst<select id="context"><option value="title">Plansza otwierająca</option><option value="profile">Opis profilu</option><option value="credit">Podpis przy filmie</option></select></label>
     <label>Film<select id="film"><option value="0">Saturday cleaning</option><option value="1">Akabei</option><option value="2">Boundless, actually</option></select></label>
@@ -93,7 +94,7 @@
   <div id="state" class="state" aria-live="polite"></div>
   <p class="footnote">Wstępne wyszukiwanie nie potwierdza dostępności nazwy, domeny ani uchwytów. Szczegóły i źródła są w <a id="round-notes" href="../docs/rebranding/naming-round-01.md">notatce z rundy</a>. Przy wcześniejszej akceptacji Altertake autor zgłosił zastrzeżenie dotyczące oryginalności. Finalny wybór pozostaje otwarty. Sformułowania opisów profili również są robocze.</p>
   <p class="footnote">Do kolejnej rundy wystarczy: maksymalnie dwie nazwy oraz „podoba mi się… / przeszkadza mi…”. Można odrzucić wszystkie. Strzałki ← → przełączają nazwy, o ile nie pracujesz w polu wyboru. Adres zachowuje rundę i nazwę; pozostałe wybory istnieją tylko do przeładowania strony.</p>
-  <noscript><p>Włącz JavaScript, aby przełączać nazwy. Propozycje są też opisane w <a href="../docs/rebranding/naming-round-11.md">notatce z rundy 11</a>.</p></noscript>
+  <noscript><p>Włącz JavaScript, aby przełączać nazwy. Wyniki porównania są też opisane w <a href="../docs/rebranding/name-originality-check.md">notatce z badania Fictension i Altertake</a>.</p></noscript>
 </main>
 <nav aria-label="Przełączanie nazw prototypu"><button id="previous" aria-label="Poprzednia nazwa">←</button><span id="current"></span><button id="next" aria-label="Następna nazwa">→</button></nav>
 <script>
@@ -166,6 +167,10 @@
     B: { name: 'Fictension', language: 'en', blend: 'fiction + tension; dodatkowe echo extension', bridge: 'Fikcja, napięcie i rozszerzanie możliwości', construction: 'Fict- z fiction spotyka tension. Extension może być dodatkowym skojarzeniem z rozszerzaniem obrazu i możliwości studia; to warstwa interpretacji, nie dosłowny składnik znaczenia słownikowego.', meaning: 'Opowieści, które budują napięcie. Nazwa wychodzi od charakteru Twojego kina; nowy warsztat rozszerza sposób, w jaki można je tworzyć.', strength: 'Roboczo: „fik-ten-szyn”. Dziesięć liter i trzy sylaby. Najbliższa thrillerowi oraz autorskiemu profilowi; podobieństwo do fiction daje rozpoznawalny punkt zaczepienia.', risk: 'Silniej sugeruje thriller i suspense. Może być usłyszana jako fiction lub friction. Nowoczesność jest mniej bezpośrednia; AI wymaga opisu procesu, a nie dopisania rzekomego znaczenia do nazwy.', bio: 'Live-action roots. Expanded by AI.', screening: 'Dokładna nazwa oraz zapytania z film studio AI i production zwróciły głównie skany ze zniekształconym słowem extension i szum OCR. Nie ujawniono jednoznacznej marki filmowej; domeny, uchwyty i podobne nazwy niezweryfikowane.' },
     C: { name: 'Cineural', language: 'en', blend: 'cinema + neural', bridge: 'Kino i inteligencja w jednym słowie', construction: 'Cine- zachowuje skojarzenie z kinem, a neural z myśleniem i sieciami neuronowymi. Własna zbitka łączy je wspólnym ne. Skojarzenie z ludzką kreatywnością i AI jest ideą marki; nie utożsamiamy tych procesów.', meaning: 'Film rodzi się z ludzkiej wizji, pracy z aktorami i nowych narzędzi. Najbardziej bezpośrednia propozycja łącząca kino z inteligencją.', strength: 'Roboczo po polsku: „si-nu-ral”. Osiem liter i trzy sylaby. Najczytelniej sygnalizuje film oraz nowoczesny warsztat; może pasować do modelu zdjęcia z planu + AI.', risk: 'Wymowa i podział cine/neural nie są oczywiste. Może brzmieć jak aplikacja lub narzędzie VFX. Zbitka jest dość przewidywalna i już występuje na stronie generatora nazw — słabszy wynik pod względem oryginalności.', bio: 'Live-action roots. Expanded by AI.', screening: 'Dokładna nazwa i zapytania film studio AI / cinema animation wskazały stronę SpinXO z propozycjami uchwytów Cineural. To wcześniejsze publiczne wystąpienie zapisu, nie dowód istnienia studia ani dostępności nazwy. Domeny i uchwyty niezweryfikowane.' }
   };
+  rounds['12'] = {
+    A: { ...rounds['11'].B, strength: 'Fikcja i napięcie pasują do Twojego kina. Roboczo: „fik-ten-szyn”. W przeglądzie mniej rzeczywistych wcześniejszych użyć niż Altertake; dobry kandydat na samodzielną markę autorską.', risk: 'Dziesięć liter. Możliwe pomylenie z fiction / friction oraz zapis Fictention zamiast Fictension. Mocniej kieruje ku thrillerowi. Zapamiętywalność i odtworzenie zapisu wymagają próby z odbiorcami.', screening: '30.10.2026: bez potwierdzonej marki filmowej w przeglądzie publicznych wyników; głównie OCR. Fictension.com, .pl i .film: brak obiektu w oficjalnym RDAP (HTTP 404). Zakup, uchwyty i znaki wymagają odrębnego potwierdzenia; źródła w notatce.' },
+    B: { ...rounds['6'].A, strength: 'Take daje bezpośrednie skojarzenie z planem filmowym; alter sugeruje zmianę. Roboczo: „ol-ter-tejk”. Szeroka gatunkowo i trafna dla modelu zdjęcia + AI; nie wymienia konkretnej technologii.', risk: 'Łatwiejsza do niezależnego wymyślenia — ocena kreatywna. Dokładny zapis ma użycia muzyczne. Domena altertake.com jest już zarejestrowana. Wzmianka Coub nie potwierdza istnienia studia o tej nazwie.', screening: '30.10.2026: potwierdzone tytuły muzyczne w katalogach Apple Music i Bugs. Oficjalny RDAP: altertake.com zarejestrowana 25.09.2026; przez HTTP strona rejestratora. Altertake.pl i .film: brak obiektu RDAP (404). Nie ustalono marki filmowej ani pełnego stanu znaków/uchwytów.' }
+  };
   const films = [
     { title: 'Saturday cleaning', year: '2021', duration: 'ok. 2 min' },
     { title: 'Akabei', year: '2024', duration: '11:31' },
@@ -198,14 +203,15 @@
     document.querySelector('#construction-text').textContent = c.blend ? c.blend + ' · ' + c.bridge + '. ' + c.construction : '';
     document.querySelector('#round-analysis').hidden = currentRound !== '3';
     document.querySelector('#memory-exercise').hidden = currentRound !== '4';
-    document.querySelector('#round-direction').hidden = !['5', '6', '7', '8', '9', '10', '11'].includes(currentRound);
+    document.querySelector('#round-direction').hidden = !['5', '6', '7', '8', '9', '10', '11', '12'].includes(currentRound);
     document.querySelector('#round-sound').hidden = currentRound !== '7';
     document.querySelector('#round-concept').hidden = currentRound !== '8';
     document.querySelector('#round-myth').hidden = currentRound !== '9';
     document.querySelector('#round-myth-world').hidden = currentRound !== '10';
     document.querySelector('#round-film').hidden = currentRound !== '11';
+    document.querySelector('#round-comparison').hidden = currentRound !== '12';
     document.querySelector('#meaning-label').textContent = ['9', '10'].includes(currentRound) ? 'Patronat — nasza kreacja' : currentRound === '7' ? 'Brzmienie' : 'Punkt wyjścia';
-    const decision = c.name === 'Altertake' ? 'Wstępna akceptacja; zastrzeżenie oryginalności' : 'Do oceny';
+    const decision = c.name === 'Altertake' ? 'Wstępna akceptacja; zastrzeżenie oryginalności' : c.name === 'Fictension' ? 'Pozytywna ocena; porównanie z Altertake' : 'Do oceny';
     document.querySelector('#candidate-status').textContent = c.name + ' · ' + decision;
     roundSelect.value = currentRound;
     nameSelect.replaceChildren(...keys.map(key => {
@@ -235,7 +241,7 @@
     document.querySelector('#risk').textContent = c.risk;
     document.querySelector('#current').textContent = (keys.indexOf(active) + 1) + '/' + keys.length + ' · ' + c.name;
     document.querySelector('#round-heading').textContent = 'Runda ' + currentRound.padStart(2, '0') + ' · prototyp roboczy';
-    document.querySelector('#round-notes').href = '../docs/rebranding/naming-round-' + currentRound.padStart(2, '0') + '.md';
+    document.querySelector('#round-notes').href = currentRound === '12' ? '../docs/rebranding/name-originality-check.md' : '../docs/rebranding/naming-round-' + currentRound.padStart(2, '0') + '.md';
     document.querySelector('#state').textContent = 'STAN PROTOTYPU\n' + JSON.stringify({ runda: currentRound, variant: active, nazwa: c.name, kontekst: context, film: f, przeglad: c.screening, decyzja: decision, zapis: 'runda i nazwa w URL' }, null, 2);
     document.title = c.name + ' · prototyp nazwy';
   }
