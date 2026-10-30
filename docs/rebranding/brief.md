@@ -1,6 +1,6 @@
 # Rebranding CODE-MOTION — brief roboczy
 
-Status: faza 1, poszukiwanie nazwy. **Altertake jest wstępnie zaakceptowaną opcją.** Szukamy dalej w tym samym kierunku; finalna nazwa i identyfikacja pozostają otwarte. [Krótka lista](naming-shortlist.md).
+Status: faza 1, poszukiwanie nazwy. **Altertake ma wstępną akceptację z późniejszym zastrzeżeniem autora dotyczącym oryginalności.** Aktualnie szukamy nazwy łączącej siłę człowieka i AI. Finalna nazwa i identyfikacja pozostają otwarte. [Krótka lista](naming-shortlist.md).
 
 ## Kontekst przekazany przez autora
 
@@ -21,6 +21,8 @@ Status: faza 1, poszukiwanie nazwy. **Altertake jest wstępnie zaakceptowaną op
 - Feedback po rundzie 04: nazwy brzmią jak postacie z bajek, a powinny jak poważne studio produkujące filmy. Aktualne osie poszukiwań: nowoczesność, nowy rozdział i mocne użycie AI w procesie tworzenia filmów. Jednosłowość pozostaje aktualna; rezygnujemy z maskotkowych skojarzeń i zdrobnień.
 - Po rundzie 05 autor wskazał **Altertake jako najlepszą propozycję i wstępnie zaakceptowaną opcję**. Kolejne nazwy porównujemy z nią: poważne brzmienie studia, filmowy rdzeń, przemiana materiału i rozszerzenie możliwości przez AI. Nie jest to finalna decyzja ani potwierdzenie dostępności nazwy.
 - Feedback po rundzie 06: nowe propozycje są zbyt podobne do Altertake. Aktualna prośba to większa kreatywność i możliwość całkowitego wymyślenia słów. W rundzie 07 projektujemy samodzielne brzmienia, bez powtarzania alter/take/frame ani dopisywania słownikowej etymologii. Poważny, nowoczesny charakter studia i model zdjęcia + AI pozostają aktualne. Altertake zachowuje wstępną akceptację.
+- Feedback po rundzie 07: nazwy nie podobają się autorowi; odbiera brzmienia z „ov” jako mocno wschodnie. To osobiste skojarzenie autora, nie klasyfikacja języków. Aktualny kierunek: połączenie siły człowieka z siłą sztucznej inteligencji, także poprzez całkowicie oryginalne słowo. Wymowa ma być czytelna; nie wracamy do poprzedniej rodziny fonetycznej.
+- Autor obawia się, że Altertake jest zbyt mało oryginalne i ktoś niezależnie nazwie tak inną inicjatywę. Zapisujemy zastrzeżenie przy wcześniejszej akceptacji; nie zakładamy, że zostało ostatecznie wybrane ani definitywnie odrzucone. Nie można obiecać, że inna osoba nigdy nie wymyśli podobnej nazwy.
 - Mocne użycie AI jest kierunkiem dla rozwijanej marki i przyszłego procesu. Nie przypisujemy go wstecz filmom z lat 2021–2025. Autor potwierdził model mieszany opisany poniżej.
 - Pracujemy iteracyjnie: kilka opcji → uwagi autora → kolejna runda → wybór.
 - Pracujemy w tym repozytorium. Każdy push wymaga wcześniejszej zgody użytkownika.
@@ -82,7 +84,8 @@ Nie wybieramy teraz technologii ani finalnej estetyki strony. Sprawdzenie adres�
 - Runda 03: jednosłowe zbitki oparte na analogiach do iluzji, muzyki, literatury, gier narracyjnych i rzemiosła. Bez wyboru finalnej nazwy.
 - Runda 04: krótsze nazwy o wyraźnym brzmieniu. Wariant Crookoo odłożony po znalezieniu wcześniejszych użyć fotograficznych; w prototypie zastępuje go Krukoo. Żadna propozycja nie została zaakceptowana.
 - Runda 05: poważna nazwa studia na nowy etap, z silnym odniesieniem do AI jako części procesu. Cztery propozycje, bez wyboru finalnej nazwy.
-- Krótka lista: **Altertake — wstępnie zaakceptowane przez autora**. Nie przenosimy automatycznie na nią innych rekomendacji asystenta.
+- Krótka lista: **Altertake — wstępna akceptacja, później zastrzeżenie dotyczące oryginalności**. Nie przenosimy automatycznie na nią innych rekomendacji asystenta.
 - Runda 06: Altertake jako punkt odniesienia oraz cztery nowe propozycje w tej samej rodzinie znaczeń.
 - Runda 07: trzy nazwy projektowane fonetycznie, niezależne od rodziny Altertake. Brak nowych akceptacji autora.
+- Runda 08: człowiek + AI jako rdzeń idei marki; trzy propozycje: Intensyn, Hearithm, Craftellect. Wszystkie do oceny.
 - Do następnej rundy: reakcje na konkretne propozycje. Pozostałe pytania nie blokują poszukiwań nazwy.

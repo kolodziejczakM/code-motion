@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- THROWAWAY: porównanie nazw w jednakowej oprawie, nie prototyp strony ani logo.
-     Runda 07: trzy nazwy projektowane fonetycznie, bez przypisanej etymologii.
-     ?round=7&variant=A..C; brak parametru round zachowuje rundę 01 dla wcześniejszych linków. -->
+     Runda 08: ludzka intencja, emocje i warsztat w połączeniu z możliwościami AI.
+     ?round=8&variant=A..C; brak parametru round zachowuje rundę 01 dla wcześniejszych linków. -->
 <html lang="pl">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,11 +47,12 @@
 <main>
   <h1>Jak brzmi podpis pod Twoim filmem?</h1>
   <p class="intro">Ta sama typografia, różne skojarzenia. Zmieniaj kontekst i sprawdzaj brzmienie. To materiał do wyboru kierunku nazwy; wygląd tej planszy nie przesądza o logo ani stronie.</p>
-  <p class="intro">Krótka lista: <a href="?round=6&amp;variant=A"><strong>Altertake — wstępnie zaakceptowane</strong></a>. Szukamy dalej; finalny wybór pozostaje otwarty.</p>
+  <p class="intro">Dotychczasowa opcja: <a href="?round=6&amp;variant=A"><strong>Altertake — wstępna akceptacja z zastrzeżeniem oryginalności</strong></a>. Szukamy dalej; finalny wybór pozostaje otwarty.</p>
   <p class="intro" id="round-sound" hidden>Runda 07: oceniamy samodzielne brzmienie i zapis. Te propozycje nie mają przypisanych znaczeń słownikowych ani historii o ukrytych składnikach. Skojarzenia poniżej są wrażeniami do oceny.</p>
+  <p class="intro" id="round-concept" hidden>Runda 08: ludzka intencja, emocje i warsztat spotykają możliwości syntezy i generowania. Proponowane rozwinięcia nazw są ideami marki, nie definicjami słownikowymi.</p>
   <p class="intro" id="round-direction" hidden>Kierunek studia: poważna nazwa i nowy rozdział. Fundamentem pozostają zdjęcia z ekipą; AI rozszerza ujęcia, VFX, scenografię, muzykę i marketing. Przykładowe bio opisuje kierunek nowej marki; nie określa sposobu realizacji filmów z archiwum.</p>
   <div class="controls">
-    <label>Runda<select id="round"><option value="1">01 · Pierwsze kierunki</option><option value="2">02 · Angielska lub własna</option><option value="3">03 · Jedno słowo, dwie warstwy</option><option value="4">04 · Brzmienie i obraz</option><option value="5">05 · Nowy rozdział i AI</option><option value="6">06 · Wokół Altertake</option><option value="7">07 · Nazwy wymyślone</option></select></label>
+    <label>Runda<select id="round"><option value="1">01 · Pierwsze kierunki</option><option value="2">02 · Angielska lub własna</option><option value="3">03 · Jedno słowo, dwie warstwy</option><option value="4">04 · Brzmienie i obraz</option><option value="5">05 · Nowy rozdział i AI</option><option value="6">06 · Wokół Altertake</option><option value="7">07 · Nazwy wymyślone</option><option value="8">08 · Człowiek i AI</option></select></label>
     <label>Nazwa<select id="name"></select></label>
     <label>Kontekst<select id="context"><option value="title">Plansza otwierająca</option><option value="profile">Opis profilu</option><option value="credit">Podpis przy filmie</option></select></label>
     <label>Film<select id="film"><option value="0">Saturday cleaning</option><option value="1">Akabei</option><option value="2">Boundless, actually</option></select></label>
@@ -87,9 +88,9 @@
     <p>Przeczytaj pięć nazw na głos, potem odłóż ekran na około minutę. Spróbuj przypomnieć sobie nazwy i ich zapis. Oddziel „pamiętam, ale nie lubię” od „podoba mi się, ale zapomniałem”. To próba do rozmowy, nie ranking skuteczności.</p>
   </details>
   <div id="state" class="state" aria-live="polite"></div>
-  <p class="footnote">Wstępne wyszukiwanie nie potwierdza dostępności nazwy, domeny ani uchwytów. Szczegóły i źródła są w <a id="round-notes" href="../docs/rebranding/naming-round-01.md">notatce z rundy</a>. Altertake jest wstępnie zaakceptowane; finalny wybór pozostaje otwarty. Sformułowania opisów profili również są robocze.</p>
+  <p class="footnote">Wstępne wyszukiwanie nie potwierdza dostępności nazwy, domeny ani uchwytów. Szczegóły i źródła są w <a id="round-notes" href="../docs/rebranding/naming-round-01.md">notatce z rundy</a>. Przy wcześniejszej akceptacji Altertake autor zgłosił zastrzeżenie dotyczące oryginalności. Finalny wybór pozostaje otwarty. Sformułowania opisów profili również są robocze.</p>
   <p class="footnote">Do kolejnej rundy wystarczy: maksymalnie dwie nazwy oraz „podoba mi się… / przeszkadza mi…”. Można odrzucić wszystkie. Strzałki ← → przełączają nazwy, o ile nie pracujesz w polu wyboru. Adres zachowuje rundę i nazwę; pozostałe wybory istnieją tylko do przeładowania strony.</p>
-  <noscript><p>Włącz JavaScript, aby przełączać nazwy. Propozycje są też opisane w <a href="../docs/rebranding/naming-round-07.md">notatce z rundy 07</a>.</p></noscript>
+  <noscript><p>Włącz JavaScript, aby przełączać nazwy. Propozycje są też opisane w <a href="../docs/rebranding/naming-round-08.md">notatce z rundy 08</a>.</p></noscript>
 </main>
 <nav aria-label="Przełączanie nazw prototypu"><button id="previous" aria-label="Poprzednia nazwa">←</button><span id="current"></span><button id="next" aria-label="Następna nazwa">→</button></nav>
 <script>
@@ -141,6 +142,11 @@
     B: { name: 'Udravo', language: 'en', article: 'an', meaning: 'Roboczo: „u-dra-wo”. Trzy otwarte sylaby i płynne zakończenie. Nazwa zaprojektowana pod dźwięk, bez wyjaśniania jej jako zbitki istniejących słów.', strength: 'Szersze, bardziej otwarte brzmienie do oceny. Kontrastuje z zwartym Anvrel; sześć liter i prosty podział na sylaby.', risk: 'Czy końcówka brzmi wystarczająco poważnie? Możliwy polski zapis Udrawo. Wymowę w kontekście angielskim trzeba sprawdzić osobno.', bio: 'Live-action roots. Expanded by AI.', screening: 'Wyniki obejmowały zapis w komentarzu na forum i prawdopodobny błąd OCR w skanie czasopisma. Bez jednoznacznej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' },
     C: { name: 'Kaltrev', language: 'en', meaning: 'Roboczo: „kal-trew”. Dwie sylaby, twardszy początek i zamknięta końcówka. Propozycja oparta na charakterze dźwięku, bez przypisanego znaczenia słownikowego.', strength: 'Surowszy, bardziej stanowczy podpis do oceny. Siedem liter; wyraźnie inny rytm niż otwarte Udravo.', risk: 'Może brzmieć przemysłowo lub kojarzyć się z fantastyką. Zapis ma wcześniejsze użycia jako pseudonim i nazwa usługowa; nie jest to nowy ciąg liter bez wcześniejszych wystąpień.', bio: 'Live-action roots. Expanded by AI.', screening: 'Dokładny zapis zwrócił pseudonim gracza i użycie Kaltrev solutions w profilu freelancera. Zakres przeglądu jest węższy niż dla Anvrel i Udravo; dostępność nazwy niepotwierdzona.' }
   };
+  rounds['8'] = {
+    A: { name: 'Intensyn', language: 'en', article: 'an', blend: 'intention + synthesis', bridge: 'Ludzka intencja i możliwości syntezy', construction: 'Twórca nadaje kierunek, a technologia rozszerza możliwości realizacji. Zbitka wykorzystuje inten- oraz -syn. To proponowane znaczenie marki, nie definicja słownikowa.', meaning: 'Intencja twórcy spotyka możliwości AI. Człowiek określa sens i charakter filmu, a nowe narzędzia pomagają rozwinąć obraz.', strength: 'Osiem liter, trzy sylaby, bez powrotu do rodziny alter/take/frame. Roboczo: „in-ten-sin”. Może też przywoływać intensywność — to skojarzenie do oceny.', risk: 'Może brzmieć technologicznie lub farmaceutycznie. Końcówka -syn nie jest oczywista ze słuchu. Synteza jest tu metaforą, nie pełną definicją AI.', bio: 'Live-action roots. Expanded by AI.', screening: 'Dokładna nazwa i zapytanie z film studio AI zwróciły zapis w skanie słownika tagalsko-angielskiego, z widocznymi zniekształceniami tekstu. Bez jednoznacznej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' },
+    B: { name: 'Hearithm', language: 'en', blend: 'heart + algorithm', bridge: 'Emocjonalny zamiar i algorytmiczne możliwości', construction: 'Skrócenie heart i algorithm tworzy proponowaną nazwę. Źródłem emocji pozostają twórcy, aktorzy i odbiorcy; technologia poszerza środki realizacji.', meaning: 'Emocje i filmowy puls wspierane przez możliwości algorytmów.', strength: 'Osiem liter, bardziej artystyczny i dźwiękowy charakter. Roboczo po polsku: „ha-rytm”; może przywołać rytm montażu i muzykę.', risk: 'Najtrudniejszy zapis i wymowa tej trójki. Hear może być odczytane inaczej niż heart. Możliwe skojarzenie z audio lub urządzeniem medycznym; wymowę angielską trzeba sprawdzić.', bio: 'Live-action roots. Expanded by AI.', screening: 'Brak wyników dla dokładnej nazwy oraz zapytania z film studio AI. Nie potwierdza to dostępności domeny, uchwytów ani praw do nazwy.' },
+    C: { name: 'Craftellect', language: 'en', blend: 'craft + intellect', bridge: 'Warsztat twórcy i inteligencja w procesie', construction: 'Połączenie rzemiosła z inteligencją, w tym AI wykorzystywaną przy realizacji. Intellect samo w sobie nie oznacza wyłącznie sztucznej inteligencji; jest to proponowana interpretacja marki.', meaning: 'Doświadczenie filmowca, praca z ekipą i nowe możliwości przetwarzania materiału.', strength: 'Dwa rozpoznawalne składniki, profesjonalny i warsztatowy charakter do oceny. Roboczo: „kraft-e-lekt”.', risk: 'Jedenaście liter. Może sugerować konsulting, edukację, rękodzieło albo platformę dla twórców. Związek z AI wymaga opisu działalności.', bio: 'Live-action roots. Expanded by AI.', screening: 'Brak wyników dla dokładnej nazwy oraz zapytania z film studio AI. Nie potwierdza to dostępności domeny, uchwytów ani praw do nazwy.' }
+  };
   const films = [
     { title: 'Saturday cleaning', year: '2021', duration: 'ok. 2 min' },
     { title: 'Akabei', year: '2024', duration: '11:31' },
@@ -173,10 +179,11 @@
     document.querySelector('#construction-text').textContent = c.blend ? c.blend + ' · ' + c.bridge + '. ' + c.construction : '';
     document.querySelector('#round-analysis').hidden = currentRound !== '3';
     document.querySelector('#memory-exercise').hidden = currentRound !== '4';
-    document.querySelector('#round-direction').hidden = !['5', '6', '7'].includes(currentRound);
+    document.querySelector('#round-direction').hidden = !['5', '6', '7', '8'].includes(currentRound);
     document.querySelector('#round-sound').hidden = currentRound !== '7';
+    document.querySelector('#round-concept').hidden = currentRound !== '8';
     document.querySelector('#meaning-label').textContent = currentRound === '7' ? 'Brzmienie' : 'Punkt wyjścia';
-    const decision = c.name === 'Altertake' ? 'Wstępnie zaakceptowane przez autora' : 'Do oceny';
+    const decision = c.name === 'Altertake' ? 'Wstępna akceptacja; zastrzeżenie oryginalności' : 'Do oceny';
     document.querySelector('#candidate-status').textContent = c.name + ' · ' + decision;
     roundSelect.value = currentRound;
     nameSelect.replaceChildren(...keys.map(key => {
