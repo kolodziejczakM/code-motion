@@ -4,6 +4,7 @@ Lista zawiera opcje zachowane lub wyraźnie pozytywnie ocenione przez autora. St
 
 | Nazwa | Status | Podstawa |
 | --- | --- | --- |
+| **Elsecut** | **Faworyt rundy 13; dalsze poszukiwania** | „Elsecut podoba mi się najbardziej. Spróbuj jeszcze poszukać żebym miał więcej opcji”. [Punkt odniesienia w rundzie 14](naming-round-14.md). |
 | **Fictension** | **Pozytywna ocena; zlecone sprawdzenie oryginalności i porównanie z Altertake** | „Fictension lepsze. Sprawdź jego oryginalność i porównaj z altertake”. Nie interpretujemy tego jako ostatecznego wyboru. |
 | **Altertake** | **Wstępna akceptacja; późniejsze zastrzeżenie dotyczące oryginalności** | Najpierw: „Altertake jest najlepsze, zostawmy to jako jedna z opcji wstępnie zaakceptowanych ale szukajmy dalej w tym samym kierunku”. Później: „Altertake obawiam się jest za mało oryginalny”. |
 
