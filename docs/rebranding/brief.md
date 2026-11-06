@@ -99,4 +99,5 @@ Nie wybieramy teraz technologii ani finalnej estetyki strony. Sprawdzenie adres�
 - Runda 13: autor poprosił o świeże propozycje. Elsecut łączy kod z montażem, Plotcoil akcentuje napięcie fabuły, a Shotgraft odwołuje się do łączenia zdjęć z planu z generowanymi elementami. Wszystkie do oceny.
 - Po rundzie 13 autor wskazał Elsecut jako faworyta i poprosił o więcej opcji. Runda 14 porównuje z nim cztery nowe nazwy: Lensyntax, Afterif, Reelhinge i Rendergrain.
 - Runda 15: autor zaproponował zmianę akcentu na pionierstwo, wyznaczanie kierunku i połączenie tradycji z nowoczesnym podejściem. Do oceny: Avantreel, Spoolforth i Newnegative. Elsecut pozostaje punktem odniesienia.
+- Po rundzie 15 autor wskazał Avantreel jako obecnego faworyta. Interpretacja i pochodzenie nazwy są opisane w notatce z rundy 15. Ostateczny wybór pozostaje otwarty.
 - Do następnej rundy: reakcje na konkretne propozycje. Pozostałe pytania nie blokują poszukiwań nazwy.

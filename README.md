@@ -1,6 +1,6 @@
 # CODE-MOTION — rebranding
 
-Pracujemy iteracyjnie. Obecny etap: poszukiwanie nazwy. **Najnowszy kierunek to pionierskie kino wyrosłe z tradycyjnego warsztatu.** Elsecut, faworyt rundy 13, pozostaje punktem odniesienia. Finalny wybór pozostaje otwarty. Push wymaga zgody właściciela repozytorium.
+Pracujemy iteracyjnie. Obecny etap: poszukiwanie nazwy. **Avantreel jest obecnym faworytem autora.** Nazwa wyraża ambicję tworzenia pionierskiego kina wyrosłego z tradycyjnego warsztatu. Finalny wybór pozostaje otwarty. Push wymaga zgody właściciela repozytorium.
 
 - [Brief i potwierdzone preferencje](docs/rebranding/brief.md)
 - [Krótka lista — oceny i zastrzeżenia autora](docs/rebranding/naming-shortlist.md)

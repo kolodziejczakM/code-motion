@@ -47,7 +47,7 @@
 <main>
   <h1>Jak brzmi podpis pod Twoim filmem?</h1>
   <p class="intro">Ta sama typografia, różne skojarzenia. Zmieniaj kontekst i sprawdzaj brzmienie. To materiał do wyboru kierunku nazwy; wygląd tej planszy nie przesądza o logo ani stronie.</p>
-  <p class="intro">Krótka lista: <a href="?round=14&amp;variant=E"><strong>Elsecut — faworyt rundy 13</strong></a>, <a href="?round=12&amp;variant=A">Fictension — pozytywna ocena</a> oraz <a href="?round=12&amp;variant=B">Altertake — wstępna akceptacja z zastrzeżeniem oryginalności</a>.</p>
+  <p class="intro">Krótka lista: <a href="?round=15&amp;variant=A"><strong>Avantreel — obecny faworyt</strong></a>, <a href="?round=14&amp;variant=E">Elsecut — faworyt rundy 13</a>, <a href="?round=12&amp;variant=A">Fictension — pozytywna ocena</a> oraz <a href="?round=12&amp;variant=B">Altertake — wstępna akceptacja z zastrzeżeniem oryginalności</a>.</p>
   <p class="intro" id="round-sound" hidden>Runda 07: oceniamy samodzielne brzmienie i zapis. Te propozycje nie mają przypisanych znaczeń słownikowych ani historii o ukrytych składnikach. Skojarzenia poniżej są wrażeniami do oceny.</p>
   <p class="intro" id="round-concept" hidden>Runda 08: ludzka intencja, emocje i warsztat spotykają możliwości syntezy i generowania. Proponowane rozwinięcia nazw są ideami marki, nie definicjami słownikowymi.</p>
   <p class="intro" id="round-myth" hidden>Runda 09: wymyślamy imię bóstwa ludzkiej wyobraźni i inteligencji, inspirując się słowiańskim brzmieniem oraz motywami ognia, światła i tworzenia. Imiona i patronaty są naszą współczesną kreacją; nie przedstawiamy ich jako historycznych wierzeń.</p>
@@ -229,7 +229,7 @@
     document.querySelector('#round-film').hidden = currentRound !== '11';
     document.querySelector('#round-comparison').hidden = currentRound !== '12';
     document.querySelector('#meaning-label').textContent = ['9', '10'].includes(currentRound) ? 'Patronat — nasza kreacja' : currentRound === '7' ? 'Brzmienie' : 'Punkt wyjścia';
-    const decision = { Altertake: 'Wstępna akceptacja; zastrzeżenie oryginalności', Fictension: 'Pozytywna ocena; porównanie z Altertake', Elsecut: 'Faworyt rundy 13; do dalszego porównania' }[c.name] ?? 'Do oceny';
+    const decision = { Altertake: 'Wstępna akceptacja; zastrzeżenie oryginalności', Fictension: 'Pozytywna ocena; porównanie z Altertake', Elsecut: 'Faworyt rundy 13; do dalszego porównania', Avantreel: 'Obecny faworyt; wybór otwarty' }[c.name] ?? 'Do oceny';
     document.querySelector('#candidate-status').textContent = c.name + ' · ' + decision;
     roundSelect.value = currentRound;
     nameSelect.replaceChildren(...keys.map(key => {

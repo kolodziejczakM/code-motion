@@ -9,7 +9,16 @@ Autor chce sprawdzić inny kierunek: marka ma sugerować wyznaczanie kierunku i 
 | **C · Newnegative** | *New + negative*. Negatyw jako punkt wyjścia do nowego obrazu. Najmroczniejszy wariant i najbliższy tonowi filmów autora. | Negative ma dodatkowe ujemne skojarzenia. Domena .com jest zarejestrowana. |
 | **D · Elsecut** | *Else + cut*. Faworyt autora z rundy 13; kod i montaż jako punkt odniesienia. | Silniej mówi o sposobie myślenia i montażu niż o ambicji wyznaczania kierunku. |
 
-**Pierwsza propozycja do próby: Avantreel.** Spoolforth nadaje pomysłowi więcej charakteru i mocniej pokazuje ciągłość rzemiosła. Newnegative to wariant o ciemniejszym, bardziej autorskim tonie. W podglądzie profilu wszystkie cztery warianty mają ten sam roboczy podpis: **From the set. Beyond the expected.** Po polsku bliskim pomysłem jest **Kino z planu. Dalej niż plan.**
+**Avantreel jest obecnym faworytem autora.** W podglądzie profilu wszystkie cztery warianty mają ten sam roboczy podpis: **From the set. Beyond the expected.** Po polsku bliskim pomysłem jest **Kino z planu. Dalej niż plan.**
+
+## Avantreel — pochodzenie i interpretacja
+
+**Avantreel** to nowa zbitka francuskiego **avant** i angielskiego **reel**. Robocza wymowa: „a-wan-ril”.
+
+- **Avant** znaczy „przed”, „wcześniej”; pochodzi z późnołacińskiego *abante*, zbudowanego na *ante*. W nazwie odsyła także do *avant-garde*: pierwotnie straży przedniej, później także twórców wyznaczających nowy kierunek w sztuce. [Académie française: avant](https://www.dictionnaire-academie.fr/article/A9A3344), [avant-garde](https://www.dictionnaire-academie.fr/article/A9A3358).
+- **Reel** oznacza m.in. szpulę na taśmę filmową. Wywodzi się ze staroangielskiego *hrēol*, a dziś może również oznaczać kompilację klipów lub materiał wideo publikowany online. Głównym skojarzeniem nazwy jest szpula jako znak filmowego rzemiosła. [Merriam-Webster: reel](https://www.merriam-webster.com/dictionary/reel).
+
+**Razem: kino z korzeniami, które wyznacza sobie nowy kierunek.** Reel wskazuje punkt wyjścia — zdjęcia, aktorów, światło i montaż. Avant mówi o tym, jak daleko można poprowadzić ten materiał. Przykład przyszłej realizacji: nagrać aktora w niewielkim wnętrzu, a potem rozbudować świat za oknem za pomocą cyfrowej scenografii lub AI. Zagrana scena pozostaje podstawą ujęcia, a możliwości planu sięgają dalej.
 
 ## Wstępny filtr wcześniejszych użyć — 6 listopada 2026
 
