@@ -96,4 +96,5 @@ Nie wybieramy teraz technologii ani finalnej estetyki strony. Sprawdzenie adres�
 - Runda 11: Narravolt (opowieść + energia), Fictension (fikcja + napięcie), Cineural (kino + inteligencja). Różne akcenty marki do porównania, bez nowej akceptacji. AI nie jest dopisywane jako rzekome znaczenie słów volt czy tension.
 - Po rundzie 11 autor napisał: „Fictension lepsze. Sprawdź jego oryginalność i porównaj z altertake”. Zapisujemy pozytywną ocenę Fictension i zlecenie pogłębionej weryfikacji; nie jest to finalny wybór ani odrzucenie Altertake.
 - Runda 12 jest porównaniem dwóch istniejących kandydatów, bez generowania kolejnych nazw. Badanie wcześniejszych użyć i domen oraz ocena kreatywna znajdują się w name-originality-check.md.
+- Runda 13: autor poprosił o świeże propozycje. Elsecut łączy kod z montażem, Plotcoil akcentuje napięcie fabuły, a Shotgraft odwołuje się do łączenia zdjęć z planu z generowanymi elementami. Wszystkie do oceny.
 - Do następnej rundy: reakcje na konkretne propozycje. Pozostałe pytania nie blokują poszukiwań nazwy.
