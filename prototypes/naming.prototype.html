@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- THROWAWAY: porównanie nazw w jednakowej oprawie, nie prototyp strony ani logo.
-     Runda 14: cztery nowe propozycje i Elsecut jako punkt odniesienia.
-     ?round=14&variant=A..E; brak parametru round zachowuje rundę 01 dla wcześniejszych linków. -->
+     Runda 15: kino z tradycją i ambicją wyznaczania kierunku.
+     ?round=15&variant=A..D; brak parametru round zachowuje rundę 01 dla wcześniejszych linków. -->
 <html lang="pl">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,7 +56,7 @@
   <p class="intro" id="round-comparison" hidden>Porównanie Fictension i Altertake. Fictension akcentuje fikcję i napięcie, Altertake — ujęcie i zmianę warsztatu. Przegląd z 30.10.2026 daje Fictension przewagę w odrębności wyników i sytuacji domeny .com. Szczegółowe źródła oraz ograniczenia są w notatce. Dostępność zakupu domeny i uchwytów wymaga potwierdzenia.</p>
   <p class="intro" id="round-direction" hidden>Kierunek studia: poważna nazwa i nowy rozdział. Fundamentem pozostają zdjęcia z ekipą; AI rozszerza ujęcia, VFX, scenografię, muzykę i marketing. Przykładowe bio opisuje kierunek nowej marki; nie określa sposobu realizacji filmów z archiwum.</p>
   <div class="controls">
-    <label>Runda<select id="round"><option value="1">01 · Pierwsze kierunki</option><option value="2">02 · Angielska lub własna</option><option value="3">03 · Jedno słowo, dwie warstwy</option><option value="4">04 · Brzmienie i obraz</option><option value="5">05 · Nowy rozdział i AI</option><option value="6">06 · Wokół Altertake</option><option value="7">07 · Nazwy wymyślone</option><option value="8">08 · Człowiek i AI</option><option value="9">09 · Imię bóstwa</option><option value="10">10 · Inne mitologie</option><option value="11">11 · Film i nowe możliwości</option><option value="12">12 · Fictension / Altertake</option><option value="13">13 · Inne cięcie, napięcie, hybryda</option><option value="14">14 · Cztery nowe kierunki + Elsecut</option></select></label>
+    <label>Runda<select id="round"><option value="1">01 · Pierwsze kierunki</option><option value="2">02 · Angielska lub własna</option><option value="3">03 · Jedno słowo, dwie warstwy</option><option value="4">04 · Brzmienie i obraz</option><option value="5">05 · Nowy rozdział i AI</option><option value="6">06 · Wokół Altertake</option><option value="7">07 · Nazwy wymyślone</option><option value="8">08 · Człowiek i AI</option><option value="9">09 · Imię bóstwa</option><option value="10">10 · Inne mitologie</option><option value="11">11 · Film i nowe możliwości</option><option value="12">12 · Fictension / Altertake</option><option value="13">13 · Inne cięcie, napięcie, hybryda</option><option value="14">14 · Cztery nowe kierunki + Elsecut</option><option value="15">15 · Pionierskie kino + Elsecut</option></select></label>
     <label>Nazwa<select id="name"></select></label>
     <label>Kontekst<select id="context"><option value="title">Plansza otwierająca</option><option value="profile">Opis profilu</option><option value="credit">Podpis przy filmie</option></select></label>
     <label>Film<select id="film"><option value="0">Saturday cleaning</option><option value="1">Akabei</option><option value="2">Boundless, actually</option></select></label>
@@ -183,6 +183,12 @@
     D: { name: 'Rendergrain', language: 'en', blend: 'render + grain', bridge: 'Cyfrowe tworzenie i filmowa faktura', construction: 'Render przywołuje tworzenie obrazu za pomocą narzędzi cyfrowych. Grain to ziarno i materialny ślad, po którym obraz ma własny charakter.', meaning: 'Obraz może powstawać z kilku źródeł i nadal mieć spójną, rozpoznawalną fakturę. To metafora połączenia zdjęć z planu i cyfrowych warstw.', strength: 'Roboczo „ren-der-grejn”. Najmocniej opowiada o hybrydowym obrazie i jego estetyce, bez wpisywania konkretnej technologii w nazwę.', risk: 'Może brzmieć jak narzędzie VFX lub filtr ziarna. Mniej bezpośrednio mówi o historii i postaciach.', bio: 'Live-action roots. Expanded by AI.', screening: '6.11.2026: przejrzane wyniki dotyczyły m.in. renderowania i ziarna, bez potwierdzonej marki filmowej o dokładnym zapisie. RDAP .com: brak rekordu (404).' },
     E: { ...rounds['13'].A }
   };
+  rounds['15'] = {
+    A: { name: 'Avantreel', language: 'en', article: 'an', blend: 'avant + reel', bridge: 'Taśma filmowa i awangarda', construction: 'Avant przywołuje ruch naprzód i awangardę, reel — szpulę z taśmą. Jeden człon pokazuje kierunek, drugi mówi, skąd wyrasta studio.', meaning: 'Kino wyrastające z pracy na planie, które wyznacza sobie własny kierunek. Zdjęcia z ekipą są punktem wyjścia do nowych sposobów tworzenia świata filmu.', strength: 'Roboczo „awan-ril”. Najczytelniej łączy pionierską ambicję z rodowodem filmowym. Może objąć i thriller, i inne gatunki.', risk: 'Avant może sugerować kino eksperymentalne. Warto sprawdzić, czy zapis i wymowa są czytelne po jednym usłyszeniu.', bio: 'From the set. Beyond the expected.', screening: 'W sprawdzonych wynikach brak potwierdzonej marki filmowej o tym zapisie. Wystąpienie w zniekształconej warstwie tekstowej dokumentu urzędowego. RDAP .com: brak rekordu (404).' },
+    B: { name: 'Spoolforth', language: 'en', blend: 'spool + forth', bridge: 'Szpula, która rozwija kino dalej', construction: 'Spool przywołuje szpulę z taśmą, a forth — ruch naprzód. Stary przedmiot niesie pomysł na przyszłość: rozwijamy dalej to, co powstaje na planie.', meaning: 'Pionierstwo jako ciąg dalszy filmowego rzemiosła. Materiał z planu jest podstawą, na której można zbudować rzeczy wcześniej poza zasięgiem małej ekipy.', strength: 'Roboczo „szpul-fort”. Konkretna metafora, która daje obraz do zapamiętania i pasuje do czołówki studia.', risk: 'Końcowe angielskie th może utrudnić wymowę i zapis ze słuchu. Spool poza kontekstem kina przywołuje też szpulę nici.', bio: 'From the set. Beyond the expected.', screening: 'Zapytania o dokładny zapis bez wyników. W sprawdzonych wynikach rozdzielonego zapisu bez potwierdzonej marki filmowej. RDAP .com: brak rekordu (404).' },
+    C: { name: 'Newnegative', language: 'en', blend: 'new + negative', bridge: 'Nowy negatyw, nowy obraz', construction: 'Negatyw jest obrazem, z którego powstaje następny. New dopisuje do niego nowy proces: materiał filmowy może stać się podstawą do tworzenia obrazu, którego nie dało się w całości nakręcić na planie.', meaning: 'Tradycyjny punkt wyjścia, nowe możliwości obrazu. Nazwa korzysta z filmowego terminu i ma ciemniejszy ton pasujący do thrillera.', strength: 'Roboczo „nju-negatyw”; po angielsku zakończenie jak w negative. Najbardziej wyrazista i mroczna interpretacja tego kierunku.', risk: 'Negative ma także potoczne, ujemne skojarzenie. Domena .com jest już zarejestrowana.', bio: 'From the set. Beyond the expected.', screening: 'W sprawdzonych wynikach brak potwierdzonej marki filmowej o dokładnym zapisie. New negative pojawia się jako opis filmu fotograficznego. RDAP .com: domena zarejestrowana (200).' },
+    D: { ...rounds['13'].A, bio: 'From the set. Beyond the expected.' }
+  };
   const films = [
     { title: 'Saturday cleaning', year: '2021', duration: 'ok. 2 min' },
     { title: 'Akabei', year: '2024', duration: '11:31' },
@@ -215,7 +221,7 @@
     document.querySelector('#construction-text').textContent = c.blend ? c.blend + ' · ' + c.bridge + '. ' + c.construction : '';
     document.querySelector('#round-analysis').hidden = currentRound !== '3';
     document.querySelector('#memory-exercise').hidden = currentRound !== '4';
-    document.querySelector('#round-direction').hidden = !['5', '6', '7', '8', '9', '10', '11', '12', '13', '14'].includes(currentRound);
+    document.querySelector('#round-direction').hidden = !['5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15'].includes(currentRound);
     document.querySelector('#round-sound').hidden = currentRound !== '7';
     document.querySelector('#round-concept').hidden = currentRound !== '8';
     document.querySelector('#round-myth').hidden = currentRound !== '9';

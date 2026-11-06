@@ -1,6 +1,6 @@
 # CODE-MOTION — rebranding
 
-Pracujemy iteracyjnie. Obecny etap: poszukiwanie nazwy. **Elsecut jest faworytem rundy 13 i punktem odniesienia dla czterech nowych propozycji.** Oceny Fictension i Altertake są na krótkiej liście. Finalny wybór pozostaje otwarty. Push wymaga zgody właściciela repozytorium.
+Pracujemy iteracyjnie. Obecny etap: poszukiwanie nazwy. **Najnowszy kierunek to pionierskie kino wyrosłe z tradycyjnego warsztatu.** Elsecut, faworyt rundy 13, pozostaje punktem odniesienia. Finalny wybór pozostaje otwarty. Push wymaga zgody właściciela repozytorium.
 
 - [Brief i potwierdzone preferencje](docs/rebranding/brief.md)
 - [Krótka lista — oceny i zastrzeżenia autora](docs/rebranding/naming-shortlist.md)
@@ -18,16 +18,17 @@ Pracujemy iteracyjnie. Obecny etap: poszukiwanie nazwy. **Elsecut jest faworytem
 - [Fictension i Altertake — badanie oryginalności, domeny i porównanie](docs/rebranding/name-originality-check.md)
 - [Nazwy, runda 13 — Elsecut, Plotcoil i Shotgraft](docs/rebranding/naming-round-13.md)
 - [Nazwy, runda 14 — Lensyntax, Afterif, Reelhinge i Rendergrain](docs/rebranding/naming-round-14.md)
+- [Nazwy, runda 15 — Avantreel, Spoolforth i Newnegative](docs/rebranding/naming-round-15.md)
 
 ## Prototyp nazwy
 
-To jednorazowy materiał porównawczy, nie kod strony docelowej ani projekt logo. Runda 14 zestawia cztery nowe nazwy z Elsecut na planszach filmowych, w opisie profilu i w podpisie przy filmie. Same wybory w przeglądarce nie zmieniają krótkiej listy.
+To jednorazowy materiał porównawczy, nie kod strony docelowej ani projekt logo. Runda 15 zestawia trzy nowe nazwy z Elsecut na planszach filmowych, w opisie profilu i w podpisie przy filmie. Same wybory w przeglądarce nie zmieniają krótkiej listy.
 
 Podgląd na komputerze i telefonie po połączeniu z Tailscale:
 
-[Runda 14: cztery nowe nazwy i Elsecut — HTTPS w tailnecie](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=14&variant=A) · [Porównanie Fictension i Altertake](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=12&variant=A)
+[Runda 15: pionierskie kino — HTTPS w tailnecie](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=15&variant=A) · [Porównanie Fictension i Altertake](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=12&variant=A)
 
-Parametr `round` przyjmuje wartości od 1 do 14, a `variant` wybiera nazwę: A–D w rundach 01, 05 i 09, A–E w rundach 02–04, 06 i 14, A–C w rundach 07–08, 10–11 i 13, A–B w porównaniu 12. Dotychczasowe linki bez parametru `round` zachowują rundę 01. Strzałki w dolnym pasku i na klawiaturze przełączają nazwy. Kontekst i film pozostają wybrane do przeładowania strony.
+Parametr `round` przyjmuje wartości od 1 do 15, a `variant` wybiera nazwę: A–D w rundach 01, 05, 09 i 15, A–E w rundach 02–04, 06 i 14, A–C w rundach 07–08, 10–11 i 13, A–B w porównaniu 12. Dotychczasowe linki bez parametru `round` zachowują rundę 01. Strzałki w dolnym pasku i na klawiaturze przełączają nazwy. Kontekst i film pozostają wybrane do przeładowania strony.
 
 Serwer VPS i komputer użytkownika mają różne adresy `localhost`. Na tym VPS podgląd obsługuje Caddy na porcie `8766`, z nasłuchem wyłącznie na adresach Tailscale IPv4 i IPv6. Serwuje bezpośrednio pliki prototypów i notatki rebrandingu, więc nie wymaga procesu Pythona ani tunelu SSH. Dostęp urządzeń zależy też od reguł tailnetu.
 
