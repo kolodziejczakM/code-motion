@@ -21,16 +21,17 @@ Pracujemy iteracyjnie. Obecny etap: poszukiwanie nazwy. **Avantreel jest obecnym
 - [Nazwy, runda 15 — Avantreel, Spoolforth i Newnegative](docs/rebranding/naming-round-15.md)
 - [Nazwy, runda 16 — variant / var](docs/rebranding/naming-round-16.md)
 - [Nazwy, runda 17 — var + liczby i symbole](docs/rebranding/naming-round-17.md)
+- [Nazwy, runda 18 — dwa słowa](docs/rebranding/naming-round-18.md)
 
 ## Prototyp nazwy
 
-To jednorazowy materiał porównawczy, nie kod strony docelowej ani projekt logo. Runda 17 porównuje cztery nowe nazwy z rdzeniem vari / var i symboliką liczb na planszach filmowych, w opisie profilu i w podpisie przy filmie. Same wybory w przeglądarce nie zmieniają krótkiej listy.
+To jednorazowy materiał porównawczy, nie kod strony docelowej ani projekt logo. Runda 18 porównuje cztery dwuwyrazowe nazwy na planszach filmowych, w opisie profilu i w podpisie przy filmie. Same wybory w przeglądarce nie zmieniają krótkiej listy.
 
 Podgląd na komputerze i telefonie po połączeniu z Tailscale:
 
-[Runda 17: var + liczby i symbole — HTTPS w tailnecie](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=17&variant=A) · [Avantreel — dotychczasowy faworyt](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=15&variant=A)
+[Runda 18: dwa słowa — HTTPS w tailnecie](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=18&variant=A) · [Avantreel — dotychczasowy faworyt](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=15&variant=A)
 
-Parametr `round` przyjmuje wartości od 1 do 17, a `variant` wybiera nazwę: A–D w rundach 01, 05, 09, 15 i 17, A–E w rundach 02–04, 06, 14 i 16, A–C w rundach 07–08, 10–11 i 13, A–B w porównaniu 12. Dotychczasowe linki bez parametru `round` zachowują rundę 01. Strzałki w dolnym pasku i na klawiaturze przełączają nazwy. Kontekst i film pozostają wybrane do przeładowania strony.
+Parametr `round` przyjmuje wartości od 1 do 18, a `variant` wybiera nazwę: A–D w rundach 01, 05, 09, 15, 17 i 18, A–E w rundach 02–04, 06, 14 i 16, A–C w rundach 07–08, 10–11 i 13, A–B w porównaniu 12. Dotychczasowe linki bez parametru `round` zachowują rundę 01. Strzałki w dolnym pasku i na klawiaturze przełączają nazwy. Kontekst i film pozostają wybrane do przeładowania strony.
 
 Serwer VPS i komputer użytkownika mają różne adresy `localhost`. Na tym VPS podgląd obsługuje Caddy na porcie `8766`, z nasłuchem wyłącznie na adresach Tailscale IPv4 i IPv6. Serwuje bezpośrednio pliki prototypów i notatki rebrandingu, więc nie wymaga procesu Pythona ani tunelu SSH. Dostęp urządzeń zależy też od reguł tailnetu.
 
