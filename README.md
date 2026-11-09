@@ -24,6 +24,7 @@ Pracujemy iteracyjnie. Obecny etap: poszukiwanie nazwy. **Avantreel jest obecnym
 - [Nazwy, runda 18 — dwa słowa](docs/rebranding/naming-round-18.md)
 - [OutOfRange — znaczenie i wcześniejsze użycia](docs/rebranding/naming-out-of-range.md)
 - [Nazwy, runda 19 — nostalgia i retro](docs/rebranding/naming-round-19.md)
+- [Coming Home Studio — interpretacja i wcześniejsze użycia](docs/rebranding/naming-coming-home.md)
 
 ## Prototyp nazwy
 

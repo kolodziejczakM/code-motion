@@ -105,4 +105,5 @@ Nie wybieramy teraz technologii ani finalnej estetyki strony. Sprawdzenie adres�
 - Runda 18: autor dopuścił nazwy dwuwyrazowe. Propozycje: Var Unfold, Variant Unseen, Variant Loom i Var Continuum. Odrębność oceniamy dla całego zestawienia. Nie wybrano nowego faworyta.
 - Autor zapytał o OutOfRange. Znaczenie i potwierdzone wcześniejsze użycia w filmie, muzyce oraz domenę opisano w naming-out-of-range.md. Nie zapisano akceptacji tej nazwy.
 - Runda 19: autor poprosił o nostalgiczny, retro kierunek. Propozycje do oceny: Amber Splice (warsztat montażowy), Flicker Parlour (kameralny seans) i Raster Matinee (dawne ekrany i kino). Brak nowej akceptacji.
+- Autor zapytał o Coming Home Studio. Interpretacja wskazuje nostalgię opartą na uczuciu powrotu. Potwierdzono wcześniejsze użycia Coming Home Studios w produkcji filmowej oraz Coming Home Studio na profilu biznesowym; szczegóły w naming-coming-home.md. Nie zapisano akceptacji.
 - Do następnej rundy: reakcje na konkretne propozycje. Pozostałe pytania nie blokują poszukiwań nazwy.
