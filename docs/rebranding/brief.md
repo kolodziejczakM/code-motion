@@ -100,4 +100,5 @@ Nie wybieramy teraz technologii ani finalnej estetyki strony. Sprawdzenie adres�
 - Po rundzie 13 autor wskazał Elsecut jako faworyta i poprosił o więcej opcji. Runda 14 porównuje z nim cztery nowe nazwy: Lensyntax, Afterif, Reelhinge i Rendergrain.
 - Runda 15: autor zaproponował zmianę akcentu na pionierstwo, wyznaczanie kierunku i połączenie tradycji z nowoczesnym podejściem. Do oceny: Avantreel, Spoolforth i Newnegative. Elsecut pozostaje punktem odniesienia.
 - Po rundzie 15 autor wskazał Avantreel jako obecnego faworyta. Interpretacja i pochodzenie nazwy są opisane w notatce z rundy 15. Ostateczny wybór pozostaje otwarty.
+- Runda 16: autor zaproponował rdzeń „warianty / variant” z symboliczną zmianą, odnoszący się do wielu wersji ujęcia oraz var jako zmiennej w kodzie. Do oceny: Variynt, Variflect, Varislate, Varianture i Varianteer. Brak nowego wyboru; Avantreel zachowuje dotychczasowy status.
 - Do następnej rundy: reakcje na konkretne propozycje. Pozostałe pytania nie blokują poszukiwań nazwy.
