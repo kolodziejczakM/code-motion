@@ -28,6 +28,8 @@ Lista zawiera opcje zachowane lub wyraźnie pozytywnie ocenione przez autora. St
 
 [Porównanie z nowymi propozycjami — runda 06](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=6&variant=A).
 
-[Aktualne porównanie — Fictension / Altertake](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=12&variant=A). Przełącznik pozwala ocenić obie nazwy w jednakowej oprawie.
+[Porównanie — Fictension / Altertake](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=12&variant=A). Przełącznik pozwala ocenić obie nazwy w jednakowej oprawie.
+
+[Bieżące porównanie — Avantreel / Last Familiar Pictures](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=21&variant=A). Last Familiar Pictures jest propozycją autora do porównania, bez deklaracji akceptacji.
 
 Nie wybrano jeszcze finalnej nazwy, logo ani domeny. Nie zmieniano nazw profili społecznościowych.
