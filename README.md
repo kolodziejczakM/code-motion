@@ -22,6 +22,7 @@ Pracujemy iteracyjnie. Obecny etap: poszukiwanie nazwy. **Avantreel jest obecnym
 - [Nazwy, runda 16 — variant / var](docs/rebranding/naming-round-16.md)
 - [Nazwy, runda 17 — var + liczby i symbole](docs/rebranding/naming-round-17.md)
 - [Nazwy, runda 18 — dwa słowa](docs/rebranding/naming-round-18.md)
+- [OutOfRange — znaczenie i wcześniejsze użycia](docs/rebranding/naming-out-of-range.md)
 
 ## Prototyp nazwy
 

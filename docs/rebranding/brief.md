@@ -103,4 +103,5 @@ Nie wybieramy teraz technologii ani finalnej estetyki strony. Sprawdzenie adres�
 - Runda 16: autor zaproponował rdzeń „warianty / variant” z symboliczną zmianą, odnoszący się do wielu wersji ujęcia oraz var jako zmiennej w kodzie. Do oceny: Variynt, Variflect, Varislate, Varianture i Varianteer. Brak nowego wyboru; Avantreel zachowuje dotychczasowy status.
 - Po pytaniu o Varyant autor doprecyzował wymóg: potrzebne jest oryginalne słowo; używane nazwy odkładamy. Runda 17 łączy vari / var z symboliką ∞, 2, 3 i 0: Varinuum, Variduum, Variterno, Varinought. Wykonane wyszukiwania dokładnych zapisów nie zwróciły wyników. Wszystkie do oceny.
 - Runda 18: autor dopuścił nazwy dwuwyrazowe. Propozycje: Var Unfold, Variant Unseen, Variant Loom i Var Continuum. Odrębność oceniamy dla całego zestawienia. Nie wybrano nowego faworyta.
+- Autor zapytał o OutOfRange. Znaczenie i potwierdzone wcześniejsze użycia w filmie, muzyce oraz domenę opisano w naming-out-of-range.md. Nie zapisano akceptacji tej nazwy.
 - Do następnej rundy: reakcje na konkretne propozycje. Pozostałe pytania nie blokują poszukiwań nazwy.
