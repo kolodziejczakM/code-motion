@@ -106,4 +106,5 @@ Nie wybieramy teraz technologii ani finalnej estetyki strony. Sprawdzenie adres�
 - Autor zapytał o OutOfRange. Znaczenie i potwierdzone wcześniejsze użycia w filmie, muzyce oraz domenę opisano w naming-out-of-range.md. Nie zapisano akceptacji tej nazwy.
 - Runda 19: autor poprosił o nostalgiczny, retro kierunek. Propozycje do oceny: Amber Splice (warsztat montażowy), Flicker Parlour (kameralny seans) i Raster Matinee (dawne ekrany i kino). Brak nowej akceptacji.
 - Autor zapytał o Coming Home Studio. Interpretacja wskazuje nostalgię opartą na uczuciu powrotu. Potwierdzono wcześniejsze użycia Coming Home Studios w produkcji filmowej oraz Coming Home Studio na profilu biznesowym; szczegóły w naming-coming-home.md. Nie zapisano akceptacji.
+- Runda 20: autor poprosił o rozwinięcie motywu Coming Home i wiele wariantów. Pula 12 nazw porównuje powrót i znajome światło, pamięć domu oraz nostalgiczny niepokój. Nie zapisano nowej akceptacji; Avantreel zachowuje dotychczasowy status.
 - Do następnej rundy: reakcje na konkretne propozycje. Pozostałe pytania nie blokują poszukiwań nazwy.
