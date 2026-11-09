@@ -28,4 +28,6 @@ Rejestr .com zwrócił HTTP 404 dla [variynt.com](https://rdap.verisign.com/com/
 
 Nie rozwijamy prostszych zapisów **Varyant** i **Varynt** ze względu na istniejące użycia, m.in. [Varyant.ai](https://www.linkedin.com/company/varyant-ai) i [Varynt](https://varynt-ai.com/). Nie próbujemy uzyskać odrębności samego słowa Variant wyłącznie wielkością liter lub dodaniem znaku typograficznego.
 
+Dodatkowe sprawdzenie **Varyant** po pytaniu autora o wymowę: istnieje [firma produkcji medialnej Varyant](https://www.linkedin.com/company/varyant), która opisuje produkcję filmów kinowych, reklam i dokumentów, oraz [Varyant.ai](https://www.varyant.ai/about), platforma generowania wariantów obrazów produktowych z AI. To rzeczywiste użycia w bliskich obszarach, dlatego nie rekomendujemy dokładnego zapisu Varyant. Wymowę „wariant” można ustalić dla marki, ale nie wynika ona automatycznie z polskiego odczytu litery y.
+
 [Porównaj pięć propozycji na planszach filmowych](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=16&variant=A).
