@@ -26,6 +26,7 @@ Pracujemy iteracyjnie. Obecny etap: poszukiwanie nazwy. **Avantreel jest obecnym
 - [Nazwy, runda 19 — nostalgia i retro](docs/rebranding/naming-round-19.md)
 - [Coming Home Studio — interpretacja i wcześniejsze użycia](docs/rebranding/naming-coming-home.md)
 - [Nazwy, runda 20 — 12 wariantów wokół uczucia powrotu](docs/rebranding/naming-round-20.md)
+- [Interframe Studio — interpretacja i wcześniejsze użycia](docs/rebranding/naming-interframe.md)
 
 ## Prototyp nazwy
 
