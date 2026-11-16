@@ -30,18 +30,19 @@ Trwa wybór nazwy. **Varianture jest obecnym faworytem autora.** Na krótkiej li
 - [Last Familiar Pictures — interpretacja i wcześniejsze użycia](docs/rebranding/naming-last-familiar.md)
 - [Runda 21 — porównanie Avantreel i Last Familiar Pictures](docs/rebranding/naming-round-21.md)
 - [Varianture — interpretacja i sprawdzenie oryginalności](docs/rebranding/naming-varianture.md)
+- [Runda 22 — porównanie Varianture i Variantour](docs/rebranding/naming-round-22.md)
 
 ## Prototyp nazwy
 
-To jednorazowy materiał porównawczy, nie kod strony docelowej ani projekt logo. Runda 21 porównuje Avantreel i Last Familiar Pictures na planszach filmowych, w opisie profilu i w podpisie przy filmie. Obie nazwy mają tę samą oprawę i robocze bio. Same wybory w przeglądarce nie zmieniają krótkiej listy.
+Runda 22 zestawia Varianture i Variantour na planszy otwierającej, w opisie profilu i w podpisie przy filmie. Oba warianty mają tę samą oprawę i ten sam opis profilu.
 
 Podgląd na komputerze i telefonie po połączeniu z Tailscale:
 
-[Varianture na planszy filmowej](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=16&variant=D)
+[Runda 22 — Varianture](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=22&variant=A) · [Variantour](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=22&variant=B)
 
 [Runda 21: Avantreel — wariant A](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=21&variant=A) · [Last Familiar Pictures — wariant B](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=21&variant=B)
 
-Parametr `round` przyjmuje wartości od 1 do 21, a `variant` wybiera nazwę: A–D w rundach 01, 05, 09, 15, 17 i 18, A–E w rundach 02–04, 06, 14 i 16, A–C w rundach 07–08, 10–11, 13 i 19, A–B w porównaniach 12 i 21, A–L w rundzie 20. Dotychczasowe linki bez parametru `round` zachowują rundę 01. Strzałki w dolnym pasku i na klawiaturze przełączają nazwy. Kontekst i film pozostają wybrane do przeładowania strony.
+Parametr `round` przyjmuje wartości od 1 do 22. Parametr `variant` wybiera nazwę. Listę wariantów danej rundy pokazuje przełącznik „Nazwa”. Adres bez parametru `round` otwiera rundę 01. Strzałki w dolnym pasku i na klawiaturze przełączają nazwy. Kontekst i film pozostają wybrane do przeładowania strony.
 
 Serwer VPS i komputer użytkownika mają różne adresy `localhost`. Na tym VPS podgląd obsługuje Caddy na porcie `8766`, z nasłuchem wyłącznie na adresach Tailscale IPv4 i IPv6. Serwuje bezpośrednio pliki prototypów i notatki rebrandingu, więc nie wymaga procesu Pythona ani tunelu SSH. Dostęp urządzeń zależy też od reguł tailnetu.
 

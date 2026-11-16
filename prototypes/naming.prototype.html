@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- THROWAWAY: porównanie nazw w jednakowej oprawie, nie prototyp strony ani logo.
-     Runda 21: Avantreel / Last Familiar Pictures — porównanie dwóch istniejących kandydatów.
-     ?round=21&variant=A..B; brak parametru round zachowuje rundę 01 dla wcześniejszych linków. -->
+     Runda 22 porównuje Varianture i Variantour.
+     ?round=22&variant=A..B. Adres bez parametru round otwiera rundę 01. -->
 <html lang="pl">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -57,8 +57,9 @@
   <p class="intro" id="round-direction" hidden>Kierunek studia: poważna nazwa i nowy rozdział. Fundamentem pozostają zdjęcia z ekipą; AI rozszerza ujęcia, VFX, scenografię, muzykę i marketing. Przykładowe bio opisuje kierunek nowej marki; nie określa sposobu realizacji filmów z archiwum.</p>
   <p class="intro" id="round-homecoming" hidden>Runda 20: 12 wariantów wokół uczucia powrotu. A–E: znajome światło i droga do domu; F–H: pamięć miejsca; I–L: wspomnienie i zakłócenie. Studio pozostaje opcjonalnym dopiskiem. Wszystkie nazwy są do oceny.</p>
   <p class="intro" id="round-avantreel-familiar" hidden>Runda 21 porównuje Avantreel i Last Familiar Pictures. Zmień nazwę, film lub kontekst, by zobaczyć obie propozycje w tej samej oprawie.</p>
+  <p class="intro" id="round-varianture-variantour" hidden>Porównaj Varianture i Variantour na tej samej planszy. Zmień kontekst, by zobaczyć podpis filmowy albo opis profilu.</p>
   <div class="controls">
-    <label>Runda<select id="round"><option value="1">01 · Pierwsze kierunki</option><option value="2">02 · Angielska lub własna</option><option value="3">03 · Jedno słowo, dwie warstwy</option><option value="4">04 · Brzmienie i obraz</option><option value="5">05 · Nowy rozdział i AI</option><option value="6">06 · Wokół Altertake</option><option value="7">07 · Nazwy wymyślone</option><option value="8">08 · Człowiek i AI</option><option value="9">09 · Imię bóstwa</option><option value="10">10 · Inne mitologie</option><option value="11">11 · Film i nowe możliwości</option><option value="12">12 · Fictension / Altertake</option><option value="13">13 · Inne cięcie, napięcie, hybryda</option><option value="14">14 · Cztery nowe kierunki + Elsecut</option><option value="15">15 · Pionierskie kino + Elsecut</option><option value="16">16 · Variant / var</option><option value="17">17 · Var + liczby i symbole</option><option value="18">18 · Dwa słowa</option><option value="19">19 · Nostalgia i retro</option><option value="20">20 · Uczucie powrotu — 12 nazw</option><option value="21">21 · Avantreel / Last Familiar Pictures</option></select></label>
+    <label>Runda<select id="round"><option value="1">01 · Pierwsze kierunki</option><option value="2">02 · Angielska lub własna</option><option value="3">03 · Jedno słowo, dwie warstwy</option><option value="4">04 · Brzmienie i obraz</option><option value="5">05 · Nowy rozdział i AI</option><option value="6">06 · Wokół Altertake</option><option value="7">07 · Nazwy wymyślone</option><option value="8">08 · Człowiek i AI</option><option value="9">09 · Imię bóstwa</option><option value="10">10 · Inne mitologie</option><option value="11">11 · Film i nowe możliwości</option><option value="12">12 · Fictension / Altertake</option><option value="13">13 · Inne cięcie, napięcie, hybryda</option><option value="14">14 · Cztery nowe kierunki + Elsecut</option><option value="15">15 · Pionierskie kino + Elsecut</option><option value="16">16 · Variant / var</option><option value="17">17 · Var + liczby i symbole</option><option value="18">18 · Dwa słowa</option><option value="19">19 · Nostalgia i retro</option><option value="20">20 · Uczucie powrotu — 12 nazw</option><option value="21">21 · Avantreel / Last Familiar Pictures</option><option value="22">22 · Varianture / Variantour</option></select></label>
     <label>Nazwa<select id="name"></select></label>
     <label>Kontekst<select id="context"><option value="title">Plansza otwierająca</option><option value="profile">Opis profilu</option><option value="credit">Podpis przy filmie</option></select></label>
     <label>Film<select id="film"><option value="0">Saturday cleaning</option><option value="1">Akabei</option><option value="2">Boundless, actually</option></select></label>
@@ -244,6 +245,25 @@
     A: { ...rounds['15'].A, article: 'an', meaning: 'Avant + reel: kino z korzeniami, które szuka nowego kierunku. Zdjęcia z ekipą i filmowy warsztat są punktem wyjścia; nowe narzędzia rozwijają możliwości obrazu.', strength: 'Jeden wyraz, 9 liter; samodzielna nazwa o szerokiej swobodzie gatunkowej. Przy dotychczasowych priorytetach oryginalności, zapamiętywalności i nowego rozdziału daję jej niewielką przewagę. To ocena kreatywna, bez badania pamięci odbiorców.', risk: 'Może sugerować kino eksperymentalne. Trzeba ustalić wymowę; po usłyszeniu możliwa jest pomyłka reel / real. Nowoczesność nie oznacza automatycznie AI.', bio: 'Independent short films. Live-action roots. Expanded by AI.', screening: '9.11.2026: dokładny zapis ponownie zwrócił zniekształcony tekst urzędowy; nie potwierdzono marki filmowej. RDAP avantreel.com: 404, brak rekordu. Wstępny przegląd, bez potwierdzenia zakupu i uchwytów.' },
     B: { name: 'Last Familiar Pictures', language: 'en', blend: 'last + familiar + pictures', bridge: 'Pamięć znajomego świata i zapowiedź zmiany', construction: 'Pełną frazę czytamy jako ostatnie znajome obrazy. Pictures dopełnia jej sens; samo Last Familiar ma także inne możliwe odczyty. Poniższa obietnica jest interpretacją marki.', meaning: 'Ostatnie obrazy znajomego świata, zanim wszystko się zmieni. Nostalgia, bliskość i niepokój o to, co zaraz utracimy.', strength: 'Mocniej sugeruje atmosferę thrillerów i mrocznego dramatu. Zwykłe słowa tworzą czytelny obraz; wyraźny ton klasycznej wytwórni. Znaczenie może pomagać zapamiętaniu, ale wymaga to sprawdzenia.', risk: 'Trzy wyrazy, 20 liter bez spacji. Last sugeruje koniec lub pożegnanie, a podobny tytuł The Last Familiar istnieje w książkach fantasy. AI i nowoczesny warsztat wymagałyby opisu procesu.', bio: 'Independent short films. Live-action roots. Expanded by AI.', screening: '9.11.2026: brak potwierdzonego studia o pełnej nazwie w przejrzanych wynikach; podobny tytuł książkowy The Last Familiar. RDAP lastfamiliar.com i lastfamiliarpictures.com: 404, brak rekordu. Wstępny przegląd, bez potwierdzenia zakupu i uchwytów.' }
   };
+  rounds['22'] = {
+    A: {
+      ...rounds['16'].D,
+      strength: 'Czytelny rdzeń variant. Nazwa pasuje do rozwijania jednej wersji ujęcia w kilka, a skojarzenie z future wspiera kierunek nowoczesnego studia.',
+      risk: 'VAIR-ee-uhn-chur to proponowana wymowa angielska. Końcówkę można przeczytać inaczej bez podpowiedzi. Nazwa może przywoływać również markę narzędzia do projektowania.'
+    },
+    B: {
+      name: 'Variantour',
+      language: 'en',
+      blend: 'variant i tour ze wspólną literą t',
+      bridge: 'Zwiedzanie alternatywnych wersji świata',
+      construction: 'W zapisie mieszczą się całe variant i całe tour, które dzielą literę t. Odbiorca może zobaczyć przede wszystkim tour, czyli wycieczkę lub trasę.',
+      meaning: 'Podróż przez różne wersje świata filmu. Nazwa akcentuje odkrywanie, a trop var i wariantów nadal da się rozwinąć w opisie studia.',
+      strength: 'Tour to rozpoznawalne angielskie słowo. Sugeruje ruch, odkrywanie i kolejne miejsca, co pasuje do cyklu pokazów albo opowieści zbudowanej wokół podróży.',
+      risk: 'Proponowana wymowa to VAIR-ee-uhn-toor. Końcówkę łatwiej rozpoznać, choć po usłyszeniu można zapisać nazwę jako Varian Tour. Sam zapis może przywołać turystykę lub wydarzenie.',
+      bio: rounds['16'].D.bio,
+      screening: '16.11.2026. W przejrzanych wynikach nie znaleziono marki o dokładnym zapisie. W turystyce występuje podobne Varia Tour. Rejestry nie zwróciły wpisów dla .com, .pl i .film. Status znaków towarowych pozostaje nieustalony.'
+    }
+  };
   const films = [
     { title: 'Saturday cleaning', year: '2021', duration: 'ok. 2 min' },
     { title: 'Akabei', year: '2024', duration: '11:31' },
@@ -276,8 +296,9 @@
     document.querySelector('#construction-text').textContent = c.blend ? c.blend + ' · ' + c.bridge + '. ' + c.construction : '';
     document.querySelector('#round-analysis').hidden = currentRound !== '3';
     document.querySelector('#memory-exercise').hidden = currentRound !== '4';
-    document.querySelector('#round-direction').hidden = !['5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21'].includes(currentRound);
+    document.querySelector('#round-direction').hidden = !['5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22'].includes(currentRound);
     document.querySelector('#round-avantreel-familiar').hidden = currentRound !== '21';
+    document.querySelector('#round-varianture-variantour').hidden = currentRound !== '22';
     document.querySelector('#round-homecoming').hidden = currentRound !== '20';
     document.querySelector('#round-sound').hidden = currentRound !== '7';
     document.querySelector('#round-concept').hidden = currentRound !== '8';
