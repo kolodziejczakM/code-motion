@@ -1,0 +1,25 @@
+---
+import Home from "../../components/Home.astro";
+import Films from "../../components/Films.astro";
+import About from "../../components/About.astro";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import { locales, pages, slugFor } from "../../content";
+import type { InferGetStaticPropsType } from "astro";
+
+export function getStaticPaths() {
+  return locales.flatMap((locale) =>
+    pages.map((page) => ({
+      params: { lang: locale, page: slugFor(locale, page) || undefined },
+      props: { locale, page },
+    })),
+  );
+}
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { locale, page } = Astro.props;
+const Content = { home: Home, films: Films, about: About }[page];
+---
+
+<SiteLayout locale={locale} page={page}>
+  <Content locale={locale} />
+</SiteLayout>

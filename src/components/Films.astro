@@ -1,0 +1,62 @@
+---
+import { copy, type Locale } from "../content";
+import { brandArtwork, films, playIcon } from "../films";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = copy[locale].films;
+const [featured, akabei, saturday] = films;
+const more = [
+  { ...akabei, description: t.akabei, approximate: false },
+  { ...saturday, description: t.saturdayCleaning, approximate: true },
+];
+---
+
+<main id="main">
+  <section id={featured.id} class="featured" aria-labelledby="featured-title">
+    <img class="featured-still" src={featured.image} width="1280" height="720" alt="" />
+    <div class="featured-copy wrap">
+      <h1 id="featured-title">Boundless,<br /> actually</h1>
+      <p class="film-meta">
+        {featured.year} · Thriller / {t.absurd} · <time datetime={featured.isoDuration}>{featured.duration}</time>
+      </p>
+      <a class="button" href={featured.url} aria-label={t.watchOnYouTube(featured.title)}>
+        <img src={playIcon} width="22" height="22" alt="" />
+        {t.watch}
+      </a>
+    </div>
+  </section>
+
+  <section class="more-films wrap" aria-labelledby="more-short-films">
+    <h2 id="more-short-films" class="section-heading">{t.more}</h2>
+    <div class="film-grid film-grid-pair">
+      {more.map((film) => (
+        <article id={film.id} class="film-entry">
+          <h3>
+            <a class="film-poster" href={film.url} aria-label={t.watchOnYouTube(film.title)}>
+              {film.image ? (
+                <img src={film.image} width="1280" height="720" alt="" />
+              ) : (
+                <span class="poster-visual" aria-hidden="true">
+                  <span class="saturday-art">
+                    <img src={brandArtwork} width="1487" height="1058" alt="" />
+                  </span>
+                </span>
+              )}
+              <span>{film.title}</span>
+            </a>
+          </h3>
+          <p class="film-meta">
+            {film.year} · Thriller / {t.darkDrama} · {film.approximate ? `${t.approximate} ` : ""}
+            <time datetime={film.isoDuration}>{film.duration}</time>
+          </p>
+          <p class="film-description">{film.description}</p>
+          <a class="text-link" href={film.url}>{t.watchOnYouTube(film.title)}</a>
+        </article>
+      ))}
+    </div>
+  </section>
+</main>

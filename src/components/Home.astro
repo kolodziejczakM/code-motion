@@ -1,0 +1,43 @@
+---
+import { copy, hrefFor, type Locale } from "../content";
+import { brandArtwork, films } from "../films";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = copy[locale].home;
+const filmsHref = hrefFor(locale, "films");
+---
+
+<main id="main" class="wrap">
+  <section class="home-hero">
+    <div class="home-intro">
+      <h1><span>{t.heading[0]}</span> <span>{t.heading[1]}</span></h1>
+      <p>{t.legend[0]}<br class="desktop-break" /> {t.legend[1]}</p>
+      <a class="button" href={filmsHref}>{t.explore}</a>
+    </div>
+    <div class="home-art" aria-hidden="true">
+      <img src={brandArtwork} width="1487" height="1058" alt="" />
+    </div>
+  </section>
+
+  <section class="film-strip" aria-labelledby="short-films">
+    <h2 id="short-films">{t.shortFilms}</h2>
+    <div class="film-grid">
+      {films.map((film) => (
+        <a class="film-tile" href={`${filmsHref}#${film.id}`}>
+          {film.image ? (
+            <img src={film.image} width="1280" height="720" alt="" />
+          ) : (
+            <span class="saturday-art" aria-hidden="true">
+              <img src={brandArtwork} width="1487" height="1058" alt="" />
+            </span>
+          )}
+          <span>{film.title}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</main>

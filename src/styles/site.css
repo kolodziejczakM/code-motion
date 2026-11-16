@@ -1,0 +1,34 @@
+.site-header .language-link {
+  min-inline-size: 44px;
+  justify-content: center;
+  border-inline-start: 1px solid var(--rule);
+  font-size: .875em;
+}
+
+@media (max-width: 390px) {
+  .site-header { gap: .5rem; }
+  .site-header nav { gap: .4rem; font-size: .9375rem; }
+  .site-header nav a { padding-inline: .2rem; }
+  .brand-mark { width: 1.875rem; }
+  .wordmark { font-size: .75rem; }
+}
+
+.site-header .brand { view-transition-name: studio-logo; }
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 160ms;
+}
+
+::view-transition-group(root),
+::view-transition-group(studio-logo) {
+  animation-duration: 160ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none;
+  }
+}

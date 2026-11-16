@@ -1,0 +1,26 @@
+---
+import { copy, hrefFor, type Locale } from "../content";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = copy[locale].about;
+---
+
+<main id="main" class="wrap">
+  <article class="studio-story" aria-labelledby="story-title">
+    <h1 id="story-title">{t.heading}</h1>
+    <p class="story-intro">{t.intro}</p>
+
+    {t.story.map(({ heading, text }) => (
+      <Fragment>
+        <h2>{heading}</h2>
+        <p>{text}</p>
+      </Fragment>
+    ))}
+
+    <a class="text-link story-link" href={hrefFor(locale, "films")}>{t.explore}</a>
+  </article>
+</main>

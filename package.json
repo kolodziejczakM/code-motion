@@ -1,0 +1,17 @@
+{
+  "name": "tower-lady-pictures",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "build:preview": "TOWER_LADY_PREVIEW=1 astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "7.4.0"
+  }
+}

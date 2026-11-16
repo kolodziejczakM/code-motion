@@ -2,7 +2,22 @@
 
 Marka to **Tower Lady Pictures**. Autor potwierdził wybór logo i zakup domeny **`towerlady.com`**. Trwa ocena prototypu portfolio. Push wymaga zgody właściciela repozytorium.
 
-[Prototyp portfolio przez Tailscale](https://vps.tailfb5686.ts.net:8766/prototypes/tower-lady/index.html) obejmuje stronę główną opartą na wybranej makiecie, filmografię z wyróżnionym filmem i roboczy artykuł About.
+[Polski podgląd portfolio](https://vps.tailfb5686.ts.net:8766/prototypes/tower-lady/astro/pl/) · [Angielski podgląd portfolio](https://vps.tailfb5686.ts.net:8766/prototypes/tower-lady/astro/en/)
+
+Portfolio w Astro obejmuje stronę główną opartą na wybranej makiecie, filmografię z wyróżnionym filmem i roboczy artykuł O nas. Wspólny nagłówek przełącza język bieżącej podstrony. Adres bez oznaczenia języka prowadzi do wersji polskiej.
+
+### Praca nad portfolio
+
+Użyj Node.js 22.22 lub nowszego.
+
+```sh
+npm ci
+npm run dev
+```
+
+- `npm run build` zapisuje pliki do `dist/`, gotowe do serwowania w katalogu głównym domeny.
+- `npm run build:preview` zapisuje pliki pod `prototypes/tower-lady/astro/` z oznaczeniem `noindex`. Po wykonaniu tego polecenia na VPS działający Caddy od razu udostępnia nowy build w Tailscale.
+- [Pierwotna makieta HTML](https://vps.tailfb5686.ts.net:8766/prototypes/tower-lady/index.html) jest nadal dostępna do porównań. Astro korzysta z jej zasobów graficznych i stylów.
 
 - [Brief i potwierdzone preferencje](docs/rebranding/brief.md)
 - [Krótka lista — oceny i zastrzeżenia autora](docs/rebranding/naming-shortlist.md)
@@ -56,7 +71,7 @@ Parametr `round` przyjmuje wartości od 1 do 26. Parametr `variant` wybiera nazw
 
 Serwer VPS i komputer użytkownika mają różne adresy `localhost`. Na tym VPS podgląd obsługuje Caddy na porcie `8766`, z nasłuchem wyłącznie na adresach Tailscale IPv4 i IPv6. Serwuje bezpośrednio pliki prototypów i notatki rebrandingu, więc nie wymaga procesu Pythona ani tunelu SSH. Dostęp urządzeń zależy też od reguł tailnetu.
 
-Wpis do konfiguracji: [ops/caddy/prototypes.caddy](ops/caddy/prototypes.caddy). Wpis jest już zapisany w `/etc/caddy/Caddyfile`, a działający podgląd obsługuje Caddy. Edycje plików prototypu są dostępne od razu, bez przeładowania serwera.
+Wpis do konfiguracji: [ops/caddy/prototypes.caddy](ops/caddy/prototypes.caddy). Wpis jest już zapisany w `/etc/caddy/Caddyfile`, a działający podgląd obsługuje Caddy. Edycje statycznych makiet są dostępne od razu. Edycje portfolio wymagają ponownego `npm run build:preview`.
 
 ### Uruchomienie na komputerze z lokalną kopią repozytorium
 

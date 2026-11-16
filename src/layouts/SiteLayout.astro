@@ -1,0 +1,57 @@
+---
+import { copy, hrefFor, locales, pathFor, type Locale, type Page } from "../content";
+import "../../prototypes/tower-lady/portfolio.css";
+import "../styles/site.css";
+
+interface Props {
+  locale: Locale;
+  page: Page;
+}
+
+const { locale, page } = Astro.props;
+const other = locale === "pl" ? "en" : "pl";
+const t = copy[locale];
+const { title, description } = t[page];
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} — Tower Lady Pictures</title>
+    <meta name="description" content={description} />
+    {__TAILNET_PREVIEW__ && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="canonical" href={new URL(pathFor(locale, page), Astro.site)} />
+    {locales.map((language) => (
+      <link rel="alternate" hreflang={language} href={new URL(pathFor(language, page), Astro.site)} />
+    ))}
+    <style is:inline>
+      @view-transition { navigation: auto; }
+      @media (prefers-reduced-motion: reduce) {
+        @view-transition { navigation: none; }
+      }
+    </style>
+  </head>
+  <body class:list={{ "films-page": page === "films" }}>
+    <a class="skip-link" href="#main">{t.skip}</a>
+    <header class="site-header wrap">
+      <a class="brand" href={hrefFor(locale, "home")} aria-label={t.homeLabel} aria-current={page === "home" ? "page" : undefined}>
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="wordmark" aria-hidden="true">
+          <span>Tower Lady</span>
+          <span class="wordmark-detail">Pictures</span>
+        </span>
+      </a>
+      <nav aria-label={t.navigation}>
+        <a href={hrefFor(locale, "films")} aria-current={page === "films" ? "page" : undefined}>{t.films.title}</a>
+        <a href={hrefFor(locale, "about")} aria-current={page === "about" ? "page" : undefined}>{t.about.title}</a>
+        <a class="language-link" href={hrefFor(other, page)} lang={other} hreflang={other} aria-label={copy[other].languageLabel}>
+          {other.toUpperCase()}
+        </a>
+      </nav>
+    </header>
+    <slot />
+    <footer class="site-footer wrap">Tower Lady Pictures</footer>
+  </body>
+</html>
