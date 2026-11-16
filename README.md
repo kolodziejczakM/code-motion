@@ -1,6 +1,6 @@
 # CODE-MOTION — rebranding
 
-Trwa wybór nazwy. **Varianture jest obecnym faworytem autora.** Na krótkiej liście są też Altertake, Fictension, Elsecut, Avantreel i Last Familiar Pictures. Push wymaga zgody właściciela repozytorium.
+Autor wybrał nazwę **Tower Lady Pictures**. Rekomendowana domena główna to `towerladypictures.com`. [Rekomendacja domeny](docs/rebranding/naming-round-26.md#rekomendacja-domeny). Push wymaga zgody właściciela repozytorium.
 
 - [Brief i potwierdzone preferencje](docs/rebranding/brief.md)
 - [Krótka lista — oceny i zastrzeżenia autora](docs/rebranding/naming-shortlist.md)

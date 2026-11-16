@@ -1,5 +1,7 @@
 # Tower Lady Pictures
 
+**Wybrana nazwa studia.** Autor potwierdził wybór Tower Lady Pictures 16 listopada 2026 r.
+
 ## Porównanie z krótką listą
 
 **Tower Lady Pictures ma w mojej ocenie najsilniejszy osobisty rodowód i najbardziej konkretny obraz.** Szamotuły i związana z nimi opowieść o Halszce dają autorowi powód, by używać właśnie tej nazwy. Odbiorca może sobie wyobrazić postać i wieżę, zanim pozna ich związek z Szamotułami. *Pictures* nadaje całości ton klasycznej wytwórni.
@@ -49,6 +51,14 @@ W publicznych indeksach YouTube, Facebooka i Instagrama nie znalazłem profilu z
 | `.com` | [towerladypictures.com — 404](https://rdap.verisign.com/com/v1/domain/towerladypictures.com) | [towerlady.com — 404](https://rdap.verisign.com/com/v1/domain/towerlady.com) |
 | `.pl` | [towerladypictures.pl — 404](https://rdap.dns.pl/domain/towerladypictures.pl) | [towerlady.pl — 404](https://rdap.dns.pl/domain/towerlady.pl) |
 | `.film` | [towerladypictures.film — 404](https://rdap.nic.film/domain/towerladypictures.film) | [towerlady.film — 404](https://rdap.nic.film/domain/towerlady.film) |
+
+## Rekomendacja domeny
+
+**`towerladypictures.com` jako domena główna.** Zawiera pełną wybraną nazwę. Ten sam zapis będą mogli skojarzyć odbiorcy strony, widzowie czołówki i osoby korzystające z katalogów festiwalowych. Końcówka `.com` pasuje do anglojęzycznej nazwy i międzynarodowej prezentacji filmów.
+
+**`towerlady.com` jako opcjonalny krótki adres.** Po uruchomieniu strony może przekierowywać na pełną domenę. Jeżeli kupujesz jedną domenę, priorytetem jest pełna nazwa.
+
+Ponowny odczyt 16 listopada 2026 r. o godz. 17:30 czasu polskiego zwrócił brak rekordu dla obu domen `.com`. Kontrola `google.com` zwróciła istniejący rekord. Dostępność i cenę rejestracji potwierdzi wybrany rejestrator. [Rejestr pełnej domeny](https://rdap.verisign.com/com/v1/domain/towerladypictures.com) · [Rejestr krótkiej domeny](https://rdap.verisign.com/com/v1/domain/towerlady.com)
 
 ## Halszka i baszta w Szamotułach
 

@@ -1,10 +1,10 @@
 # Krótka lista nazw
 
-16 listopada 2026 autor wskazał sześć najlepszych nazw. Obecnym faworytem jest **Varianture**, a ostateczny wybór pozostaje otwarty.
+16 listopada 2026 autor wybrał **Tower Lady Pictures**. Poniższa lista dokumentuje wcześniejszych faworytów. [Porównanie i rekomendacja domeny](naming-round-26.md)
 
 | Nazwa | Status | Podstawa |
 | --- | --- | --- |
-| **Varianture** | **Obecny faworyt z zastrzeżeniem** | Autor preferuje pełną formę **Varianture Pictures**. Rdzeniowi brakuje dla niego osobistego znaczenia. [Sprawdzenie i interpretacja](naming-varianture.md) · [Porównanie dopisków](naming-round-24.md) |
+| **Varianture** | **Wcześniejszy faworyt z zastrzeżeniem** | Autor preferował pełną formę **Varianture Pictures**. Rdzeniowi brakowało dla niego osobistego znaczenia. [Sprawdzenie i interpretacja](naming-varianture.md) · [Porównanie dopisków](naming-round-24.md) |
 | **Altertake** | Na krótkiej liście, z wcześniejszym zastrzeżeniem dotyczącym oryginalności | [Porównanie z Fictension](name-originality-check.md) |
 | **Fictension** | Na krótkiej liście | [Porównanie z Altertake](name-originality-check.md) |
 | **Elsecut** | Na krótkiej liście, faworyt rundy 13 | [Punkt odniesienia w rundzie 14](naming-round-14.md) |
@@ -34,6 +34,4 @@
 
 [Porównanie Avantreel i Last Familiar Pictures](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=21&variant=A).
 
-[Tower Lady Pictures obok sześciu faworytów](naming-round-26.md). Autor zaproponował tę nazwę do porównania.
-
-Nie wybrano jeszcze finalnej nazwy, logo ani domeny. Nie zmieniano nazw profili społecznościowych.
+[Tower Lady Pictures obok sześciu wcześniejszych faworytów](naming-round-26.md).

@@ -1,6 +1,6 @@
 # Rebranding CODE-MOTION — brief roboczy
 
-Trwa wybór nazwy. **Varianture jest obecnym faworytem autora.** [Krótka lista](naming-shortlist.md)
+Autor wybrał nazwę **Tower Lady Pictures**. [Historia wyboru](naming-shortlist.md) · [Rekomendacja domeny](naming-round-26.md#rekomendacja-domeny)
 
 ## Kontekst przekazany przez autora
 
@@ -79,7 +79,7 @@ Nie wybieramy teraz technologii ani finalnej estetyki strony. Sprawdzenie adres�
 ## Rejestr decyzji
 
 - Potwierdzone: nazwa angielska lub własna budząca skojarzenia, bez wskazywania liczby twórców, push wyłącznie za zgodą.
-- Otwarte: nazwa, identyfikacja, domena, języki strony, najważniejszy odbiorca i cel odwiedzin, technologia.
+- Wybór nazwy jest zakończony. Do ustalenia pozostają identyfikacja, domena, języki strony, najważniejszy odbiorca i cel odwiedzin oraz technologia.
 - Runda 01: rozpoznanie kierunków, bez wyboru nazwy.
 - Runda 02: angielskie zestawienia słów i nazwy własne. Stillfault wraca jako punkt porównania, bez założenia, że został zaakceptowany.
 - Runda 03: jednosłowe zbitki oparte na analogiach do iluzji, muzyki, literatury, gier narracyjnych i rzemiosła. Bez wyboru finalnej nazwy.
@@ -118,3 +118,4 @@ Nie wybieramy teraz technologii ani finalnej estetyki strony. Sprawdzenie adres�
 - W rundzie 25 autor wskazał inspirację Hitchcockiem i zainteresowanie łączeniem starego z nowym, kodu z kinem oraz thrillera z innymi gatunkami. Propozycje wyprowadzono z tytułu i opisu jego filmów. [Porównanie nazw](naming-round-25.md)
 - Autor odrzucił łączenie tytułów swoich filmów z wcześniejszymi pomysłami na nazwę studia. Do sprawdzenia są osobne tropy oparte na tym, jak filmy powstają. Autor i jego żona przygotowują scenografię razem, a preprodukcja kilkuminutowej historii potrafi zająć miesiące. Autor planuje także rozwijać zdjęcia i scenografię cyfrowo. Robocze przykłady do rozmowy to A Room Rewritten i Months per Minute.
 - Autor pochodzi z Szamotuł. W rundzie 26 zaproponował **Tower Lady Pictures** jako angielską nazwę inspirowaną lokalną legendą Halszki i zachowaną basztą. Poprosił o porównanie z sześcioma faworytami i załączył wizualizację. [Porównanie i ocena wizualizacji](naming-round-26.md)
+- 16 listopada 2026 autor wybrał **Tower Lady Pictures** i poprosił o rekomendację domeny do rejestracji. [Rekomendacja i odczyt rejestru](naming-round-26.md#rekomendacja-domeny)
