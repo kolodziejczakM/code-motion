@@ -1,6 +1,6 @@
 # Rebranding CODE-MOTION — brief roboczy
 
-Status: faza 1, poszukiwanie nazwy. **Altertake ma wstępną akceptację z późniejszym zastrzeżeniem autora dotyczącym oryginalności.** Aktualnie szukamy nazwy łączącej siłę człowieka i AI. Finalna nazwa i identyfikacja pozostają otwarte. [Krótka lista](naming-shortlist.md).
+Trwa wybór nazwy. **Varianture jest obecnym faworytem autora.** [Krótka lista](naming-shortlist.md)
 
 ## Kontekst przekazany przez autora
 
@@ -109,5 +109,5 @@ Nie wybieramy teraz technologii ani finalnej estetyki strony. Sprawdzenie adres�
 - Runda 20: autor poprosił o rozwinięcie motywu Coming Home i wiele wariantów. Pula 12 nazw porównuje powrót i znajome światło, pamięć domu oraz nostalgiczny niepokój. Nie zapisano nowej akceptacji; Avantreel zachowuje dotychczasowy status.
 - Autor zapytał o Interframe Studio. Nazwa łączy filmowy i techniczny sens, ale potwierdzono wcześniejsze użycia Interframe Digital Media, Interframe Pictures oraz Interframe Pte. Ltd. Ocena i odczyty domen są w naming-interframe.md. Nie zapisano akceptacji tej nazwy.
 - Autor zapytał o Last Familiar Pictures. Interpretacja łączy nostalgię z niepokojem. Nie potwierdzono studia o dokładnej nazwie w przejrzanych wynikach; znaleziono podobny tytuł serii książkowej The Last Familiar. Szczegóły językowe i odczyty domen są w naming-last-familiar.md. Nie zapisano akceptacji tej nazwy.
-- Runda 21: autor zlecił porównanie Last Familiar Pictures i Avantreel. Dwa warianty w tej samej oprawie oraz analiza zalet i kosztów są w naming-round-21.md. Avantreel pozostaje dotychczasowym faworytem autora; samo zlecenie porównania nie oznacza akceptacji Last Familiar Pictures.
-- Do następnej rundy: reakcje na konkretne propozycje. Pozostałe pytania nie blokują poszukiwań nazwy.
+- W rundzie 21 autor zlecił porównanie Last Familiar Pictures i Avantreel. W chwili porównania jego faworytem był Avantreel. [Porównanie nazw](naming-round-21.md)
+- 16 listopada 2026 autor wskazał Altertake, Fictension, Elsecut, Avantreel, Varianture oraz Last Familiar Pictures jako sześć najlepszych propozycji. Wybrał **Varianture** na obecnego faworyta i poprosił o sprawdzenie oryginalności oraz ocenę znaczenia, zalet i wad. [Wyniki sprawdzenia i ocena Varianture](naming-varianture.md)

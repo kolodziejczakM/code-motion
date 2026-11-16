@@ -1,13 +1,15 @@
 # Krótka lista nazw
 
-Lista zawiera opcje zachowane lub wyraźnie pozytywnie ocenione przez autora. Status rozróżnia wstępną akceptację od pozytywnej reakcji i prośby o weryfikację. Żaden nie oznacza ostatecznego wyboru ani potwierdzenia dostępności domeny, uchwytów czy praw do nazwy.
+16 listopada 2026 autor wskazał sześć najlepszych nazw. Obecnym faworytem jest **Varianture**, a ostateczny wybór pozostaje otwarty.
 
 | Nazwa | Status | Podstawa |
 | --- | --- | --- |
-| **Avantreel** | **Obecny faworyt; wybór otwarty** | „Avantreel póki co wygrywa”. [Pochodzenie i interpretacja](naming-round-15.md#avantreel--pochodzenie-i-interpretacja). |
-| **Elsecut** | **Faworyt rundy 13; dalsze poszukiwania** | „Elsecut podoba mi się najbardziej. Spróbuj jeszcze poszukać żebym miał więcej opcji”. [Punkt odniesienia w rundzie 14](naming-round-14.md). |
-| **Fictension** | **Pozytywna ocena; zlecone sprawdzenie oryginalności i porównanie z Altertake** | „Fictension lepsze. Sprawdź jego oryginalność i porównaj z altertake”. Nie interpretujemy tego jako ostatecznego wyboru. |
-| **Altertake** | **Wstępna akceptacja; późniejsze zastrzeżenie dotyczące oryginalności** | Najpierw: „Altertake jest najlepsze, zostawmy to jako jedna z opcji wstępnie zaakceptowanych ale szukajmy dalej w tym samym kierunku”. Później: „Altertake obawiam się jest za mało oryginalny”. |
+| **Varianture** | **Obecny faworyt** | Autor poprosił o sprawdzenie oryginalności i ocenę nazwy. [Sprawdzenie i interpretacja](naming-varianture.md) |
+| **Altertake** | Na krótkiej liście, z wcześniejszym zastrzeżeniem dotyczącym oryginalności | [Porównanie z Fictension](name-originality-check.md) |
+| **Fictension** | Na krótkiej liście | [Porównanie z Altertake](name-originality-check.md) |
+| **Elsecut** | Na krótkiej liście, faworyt rundy 13 | [Punkt odniesienia w rundzie 14](naming-round-14.md) |
+| **Avantreel** | Na krótkiej liście, wcześniejszy faworyt | [Pochodzenie i interpretacja](naming-round-15.md#avantreel--pochodzenie-i-interpretacja) |
+| **Last Familiar Pictures** | Na krótkiej liście | [Ocena propozycji autora](naming-last-familiar.md) |
 
 ## Fictension
 
@@ -30,6 +32,6 @@ Lista zawiera opcje zachowane lub wyraźnie pozytywnie ocenione przez autora. St
 
 [Porównanie — Fictension / Altertake](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=12&variant=A). Przełącznik pozwala ocenić obie nazwy w jednakowej oprawie.
 
-[Bieżące porównanie — Avantreel / Last Familiar Pictures](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=21&variant=A). Last Familiar Pictures jest propozycją autora do porównania, bez deklaracji akceptacji.
+[Porównanie Avantreel i Last Familiar Pictures](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=21&variant=A).
 
 Nie wybrano jeszcze finalnej nazwy, logo ani domeny. Nie zmieniano nazw profili społecznościowych.

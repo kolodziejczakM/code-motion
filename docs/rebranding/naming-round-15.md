@@ -9,7 +9,7 @@ Autor chce sprawdzić inny kierunek: marka ma sugerować wyznaczanie kierunku i 
 | **C · Newnegative** | *New + negative*. Negatyw jako punkt wyjścia do nowego obrazu. Najmroczniejszy wariant i najbliższy tonowi filmów autora. | Negative ma dodatkowe ujemne skojarzenia. Domena .com jest zarejestrowana. |
 | **D · Elsecut** | *Else + cut*. Faworyt autora z rundy 13; kod i montaż jako punkt odniesienia. | Silniej mówi o sposobie myślenia i montażu niż o ambicji wyznaczania kierunku. |
 
-**Avantreel jest obecnym faworytem autora.** W podglądzie profilu wszystkie cztery warianty mają ten sam roboczy podpis: **From the set. Beyond the expected.** Po polsku bliskim pomysłem jest **Kino z planu. Dalej niż plan.**
+Po tej rundzie autor wskazał **Avantreel** jako faworyta. W podglądzie profilu wszystkie cztery warianty mają ten sam roboczy podpis: **From the set. Beyond the expected.** Po polsku bliskim pomysłem jest **Kino z planu. Dalej niż plan.**
 
 ## Avantreel — pochodzenie i interpretacja
 

@@ -1,6 +1,6 @@
 # CODE-MOTION — rebranding
 
-Pracujemy iteracyjnie. Obecny etap: poszukiwanie nazwy. **Avantreel jest obecnym faworytem autora.** Nazwa wyraża ambicję tworzenia pionierskiego kina wyrosłego z tradycyjnego warsztatu. Finalny wybór pozostaje otwarty. Push wymaga zgody właściciela repozytorium.
+Trwa wybór nazwy. **Varianture jest obecnym faworytem autora.** Na krótkiej liście są też Altertake, Fictension, Elsecut, Avantreel i Last Familiar Pictures. Push wymaga zgody właściciela repozytorium.
 
 - [Brief i potwierdzone preferencje](docs/rebranding/brief.md)
 - [Krótka lista — oceny i zastrzeżenia autora](docs/rebranding/naming-shortlist.md)
@@ -29,12 +29,15 @@ Pracujemy iteracyjnie. Obecny etap: poszukiwanie nazwy. **Avantreel jest obecnym
 - [Interframe Studio — interpretacja i wcześniejsze użycia](docs/rebranding/naming-interframe.md)
 - [Last Familiar Pictures — interpretacja i wcześniejsze użycia](docs/rebranding/naming-last-familiar.md)
 - [Runda 21 — porównanie Avantreel i Last Familiar Pictures](docs/rebranding/naming-round-21.md)
+- [Varianture — interpretacja i sprawdzenie oryginalności](docs/rebranding/naming-varianture.md)
 
 ## Prototyp nazwy
 
 To jednorazowy materiał porównawczy, nie kod strony docelowej ani projekt logo. Runda 21 porównuje Avantreel i Last Familiar Pictures na planszach filmowych, w opisie profilu i w podpisie przy filmie. Obie nazwy mają tę samą oprawę i robocze bio. Same wybory w przeglądarce nie zmieniają krótkiej listy.
 
 Podgląd na komputerze i telefonie po połączeniu z Tailscale:
+
+[Varianture na planszy filmowej](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=16&variant=D)
 
 [Runda 21: Avantreel — wariant A](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=21&variant=A) · [Last Familiar Pictures — wariant B](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=21&variant=B)
 

@@ -2,7 +2,7 @@
 
 Nowy kierunek zaproponowany przez autora: warianty tego samego ujęcia, np. materiał z planu i różne wersje rozwinięte z AI, oraz **var** jako skojarzenie ze zmienną w kodzie. Szukamy niewielkiej zmiany w słowie variant lub nazwy zachowującej jego rozpoznawalny rdzeń.
 
-Avantreel pozostaje dotychczasowym faworytem. Propozycje tej rundy są do oceny, bez automatycznego dodawania do krótkiej listy.
+W trakcie tej rundy faworytem był Avantreel. 16 listopada 2026 autor wskazał **Varianture** jako nowego faworyta. [Ocena i sprawdzenie oryginalności Varianture](naming-varianture.md)
 
 | Wariant | Nazwa | Konstrukcja i sens | Główny koszt |
 | --- | --- | --- | --- |

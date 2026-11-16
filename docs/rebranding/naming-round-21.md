@@ -1,6 +1,6 @@
 # Runda 21 — Avantreel i Last Familiar Pictures
 
-Autor poprosił o porównanie po zaproponowaniu Last Familiar Pictures. Avantreel pozostaje dotychczasowym faworytem autora. Zlecenie porównania nie oznacza akceptacji nowej nazwy ani zmiany faworyta.
+Autor poprosił o porównanie po zaproponowaniu Last Familiar Pictures. W chwili porównania jego faworytem był Avantreel. [Aktualna krótka lista](naming-shortlist.md)
 
 ## Wniosek asystenta
 
