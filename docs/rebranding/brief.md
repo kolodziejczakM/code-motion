@@ -113,3 +113,4 @@ Nie wybieramy teraz technologii ani finalnej estetyki strony. Sprawdzenie adres�
 - 16 listopada 2026 autor wskazał Altertake, Fictension, Elsecut, Avantreel, Varianture oraz Last Familiar Pictures jako sześć najlepszych propozycji. Wybrał **Varianture** na obecnego faworyta i poprosił o sprawdzenie oryginalności oraz ocenę znaczenia, zalet i wad. [Wyniki sprawdzenia i ocena Varianture](naming-varianture.md)
 - W rundzie 22 autor zaproponował pisownię Variantour i poprosił o zestawienie jej z Varianture. [Porównanie obu nazw](naming-round-22.md)
 - W rundzie 23 autor zaproponował Variant93, łącząc rdzeń Variant z końcówką roku urodzenia, i poprosił o porównanie z Varianture pod kątem osobistego znaczenia, oryginalności i klimatu retro. [Porównanie obu nazw](naming-round-23.md)
+- W rundzie 24 autor poprosił o porównanie dopisków Films, Studio, Studios, Film i Pictures oraz ocenę ich roli w głównej nazwie. [Porównanie dopisków](naming-round-24.md)
