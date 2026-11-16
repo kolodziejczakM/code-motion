@@ -4,7 +4,7 @@
 
 | Nazwa | Status | Podstawa |
 | --- | --- | --- |
-| **Varianture** | **Obecny faworyt** | Autor poprosił o sprawdzenie oryginalności i ocenę nazwy. [Sprawdzenie i interpretacja](naming-varianture.md) |
+| **Varianture** | **Obecny faworyt z zastrzeżeniem** | Autor preferuje pełną formę **Varianture Pictures**. Rdzeniowi brakuje dla niego osobistego znaczenia. [Sprawdzenie i interpretacja](naming-varianture.md) · [Porównanie dopisków](naming-round-24.md) |
 | **Altertake** | Na krótkiej liście, z wcześniejszym zastrzeżeniem dotyczącym oryginalności | [Porównanie z Fictension](name-originality-check.md) |
 | **Fictension** | Na krótkiej liście | [Porównanie z Altertake](name-originality-check.md) |
 | **Elsecut** | Na krótkiej liście, faworyt rundy 13 | [Punkt odniesienia w rundzie 14](naming-round-14.md) |

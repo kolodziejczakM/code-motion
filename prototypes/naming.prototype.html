@@ -325,8 +325,8 @@
       name: 'Varianture Pictures',
       language: 'en',
       meaning: 'Pictures przywołuje klasyczny szyld wytwórni filmowej.',
-      strength: 'Najmocniej niesie filmowy charakter retro i dobrze wygląda na planszy otwierającej.',
-      risk: 'Dłuższy i bardziej formalny zapis niż Varianture Films.',
+      strength: 'Preferowana przez autora forma z dopiskiem. Pictures przywołuje klasyczną wytwórnię filmową.',
+      risk: 'Zastrzeżenie autora dotyczy samego Varianture. Nazwa opisuje koncepcję, ale brakuje jej osobistego znaczenia.',
       bio: rounds['16'].D.bio,
       credit: 'Produced by Varianture Pictures'
     }
@@ -375,7 +375,8 @@
     document.querySelector('#round-comparison').hidden = currentRound !== '12';
     document.querySelector('#meaning-label').textContent = ['9', '10'].includes(currentRound) ? 'Patronat — nasza kreacja' : currentRound === '7' ? 'Brzmienie' : 'Punkt wyjścia';
     const decision = {
-      Varianture: 'Obecny faworyt autora',
+      Varianture: 'Obecny faworyt z zastrzeżeniem dotyczącym osobistego znaczenia',
+      'Varianture Pictures': 'Preferowana forma z dopiskiem',
       Altertake: 'Krótka lista, zastrzeżenie dotyczące oryginalności',
       Fictension: 'Krótka lista',
       Elsecut: 'Krótka lista',

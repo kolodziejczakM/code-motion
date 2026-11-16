@@ -1,6 +1,8 @@
 # Varianture i dopiski filmowe
 
-**Varianture** jako główna nazwa, **Varianture Films** jako wersja rozszerzona. To rekomendacja do oceny. Dopisek *Films* od razu wskazuje film i dobrze pasuje do autorskich produkcji krótkometrażowych.
+**Autor preferuje Varianture Pictures** spośród form z dopiskiem. Zastrzeżenie dotyczy nazwy Varianture, która przekazuje ideę wariantów i odwołanie do programowania, ale zdaniem autora nie ma dla niego znaczenia poza skojarzeniami z tymi słowami. Osobisty rodowód staje się odrębnym kryterium kolejnej iteracji.
+
+W pierwotnej ocenie asystent zaproponował **Varianture** jako główną nazwę i **Varianture Films** jako wersję rozszerzoną ze względu na czytelny związek z filmem.
 
 | Wariant | Forma | Jak brzmi w kontekście studia |
 | --- | --- | --- |
@@ -9,7 +11,7 @@
 | C | **Varianture Studio** | Poważna nazwa o szerszym znaczeniu. Pasuje do marki obejmującej również design, animację lub produkcję treści. Samo *Studio* słabiej wskazuje kino. |
 | D | **Varianture Studios** | Brzmi bardziej instytucjonalnie. Może kojarzyć się z większą organizacją produkcyjną lub zapleczem studyjnym. |
 | E | **Varianture Film** | Zwięzłe, lecz jako nazwa brzmi mniej naturalnie niż *Varianture Films*. Liczba pojedyncza dobrze sprawdza się w podpisie *A Varianture film*. |
-| F | **Varianture Pictures** | Najbardziej klasyczny, lekko retro charakter. Dobrze działa na planszy otwierającej i brzmi bardziej formalnie od *Films*. |
+| F | **Varianture Pictures** | Preferowana przez autora forma z dopiskiem. Ma klasyczny, lekko retro charakter. |
 
 W nagłówku strony i w logotypie głównym proponuję **Varianture**. Przy pierwszym kontakcie poza kontekstem filmu można użyć **Varianture Films**, np. w nazwie wyświetlanej kanału. W podpisie ekranowym krótka forma daje naturalne **A Varianture film**. Pełna forma dobrze działa na planszy **Varianture Films presents** i w podpisie **Produced by Varianture Films**. Gdy potrzebne jest objaśnienie pod nazwą, wystarczy **Independent short films**.
 
