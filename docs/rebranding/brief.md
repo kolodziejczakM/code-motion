@@ -112,3 +112,4 @@ Nie wybieramy teraz technologii ani finalnej estetyki strony. Sprawdzenie adres�
 - W rundzie 21 autor zlecił porównanie Last Familiar Pictures i Avantreel. W chwili porównania jego faworytem był Avantreel. [Porównanie nazw](naming-round-21.md)
 - 16 listopada 2026 autor wskazał Altertake, Fictension, Elsecut, Avantreel, Varianture oraz Last Familiar Pictures jako sześć najlepszych propozycji. Wybrał **Varianture** na obecnego faworyta i poprosił o sprawdzenie oryginalności oraz ocenę znaczenia, zalet i wad. [Wyniki sprawdzenia i ocena Varianture](naming-varianture.md)
 - W rundzie 22 autor zaproponował pisownię Variantour i poprosił o zestawienie jej z Varianture. [Porównanie obu nazw](naming-round-22.md)
+- W rundzie 23 autor zaproponował Variant93, łącząc rdzeń Variant z końcówką roku urodzenia, i poprosił o porównanie z Varianture pod kątem osobistego znaczenia, oryginalności i klimatu retro. [Porównanie obu nazw](naming-round-23.md)
