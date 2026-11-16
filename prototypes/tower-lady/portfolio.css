@@ -118,12 +118,19 @@ img { display: block; max-width: 100%; }
   text-decoration: none;
 }
 
+.brand-mark {
+  position: relative;
+  width: clamp(2.2rem, 5vw, 4.5rem);
+  background: var(--ivory);
+  mask: url("assets/brand-reference.png") 80.55% 9.21% / 297.4% auto no-repeat luminance;
+}
+
 .wordmark {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   white-space: nowrap;
-  font-size: clamp(1.03rem, 2.05vw, 1.9rem);
+  font-size: clamp(.86rem, 1.94vw, 1.8rem);
   font-weight: 700;
   letter-spacing: .15em;
   line-height: 1;
@@ -289,15 +296,6 @@ img { display: block; max-width: 100%; }
   transform: translateX(-50%);
 }
 
-.brand-mark {
-  position: relative;
-  width: clamp(2.2rem, 5vw, 4.5rem);
-  background: var(--ivory);
-  mask: url("assets/brand-reference.png") 80.55% 9.21% / 297.4% auto no-repeat luminance;
-}
-
-.films-page .wordmark { font-size: clamp(.86rem, 1.94vw, 1.8rem); }
-
 .featured {
   position: relative;
   isolation: isolate;
@@ -437,6 +435,8 @@ img { display: block; max-width: 100%; }
 @media (max-width: 620px) {
   .site-header { min-height: 80px; align-items: center; padding-block: .8rem; }
   .site-header nav a { padding-inline: .32rem; }
+  .brand { gap: .4rem; }
+  .brand-mark { width: 2.25rem; }
   .home-hero { display: grid; min-height: 0; padding-top: 1rem; }
   .home-intro { max-width: 100%; padding: 0; }
   .home-intro h1 { font-size: clamp(2.55rem, 10.3vw, 3.8rem); }
@@ -446,8 +446,6 @@ img { display: block; max-width: 100%; }
   .film-strip { padding-top: 1rem; }
   .film-grid { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
   .film-tile > span:last-child { margin-top: .35em; }
-  .films-page .brand { gap: .4rem; }
-  .brand-mark { width: 2.25rem; }
   .featured { align-items: flex-end; min-height: 32.5rem; }
   .featured-still { inset-inline-start: 0; object-position: 56% 35%; mask-image: none; }
   .featured::after {
@@ -457,8 +455,4 @@ img { display: block; max-width: 100%; }
   .featured-copy h1 { font-size: clamp(3.55rem, 13vw, 5.65rem); }
   .section-heading { margin-bottom: .65em; }
   .studio-story { font-size: 1rem; }
-}
-
-@media (max-width: 350px) {
-  .films-page .brand-mark { display: none; }
 }
