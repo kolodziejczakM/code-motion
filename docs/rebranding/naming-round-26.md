@@ -54,6 +54,8 @@ W publicznych indeksach YouTube, Facebooka i Instagrama nie znalazłem profilu z
 
 ## Rekomendacja domeny
 
+**Autor potwierdził zakup `towerlady.com`.**
+
 **`towerlady.com` jako domena główna.** Autor zwrócił uwagę, że łatwiej zapamiętać i przekazać krótszy adres. Ma 9 liter przed `.com` i zachowuje oba człony, które tworzą obraz kobiety i wieży. W logotypie, czołówkach i materiałach festiwalowych nazwą studia jest **Tower Lady Pictures**. Podobny układ widać w nazwie Pixar Animation Studios i domenie `pixar.com`. [Oficjalna strona Pixara](https://www.pixar.com/)
 
 **`towerladypictures.com` jako opcjonalny drugi adres.** Może przekierowywać na `towerlady.com`, gdy ktoś wpisze z pamięci pełną nazwę studia. Przy zakupie jednej domeny priorytetem jest `towerlady.com`.

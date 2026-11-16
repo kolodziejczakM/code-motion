@@ -1,6 +1,6 @@
 # CODE-MOTION — rebranding
 
-Autor wybrał nazwę **Tower Lady Pictures**. Rekomendowana domena główna to `towerlady.com`. [Rekomendacja domeny](docs/rebranding/naming-round-26.md#rekomendacja-domeny). Push wymaga zgody właściciela repozytorium.
+Marka to **Tower Lady Pictures**. Autor potwierdził wybór logo i zakup domeny **`towerlady.com`**. Trwa wybór układu portfolio. Push wymaga zgody właściciela repozytorium.
 
 - [Brief i potwierdzone preferencje](docs/rebranding/brief.md)
 - [Krótka lista — oceny i zastrzeżenia autora](docs/rebranding/naming-shortlist.md)
