@@ -1,6 +1,8 @@
 # CODE-MOTION — rebranding
 
-Marka to **Tower Lady Pictures**. Autor potwierdził wybór logo i zakup domeny **`towerlady.com`**. Trwa wybór układu portfolio. Push wymaga zgody właściciela repozytorium.
+Marka to **Tower Lady Pictures**. Autor potwierdził wybór logo i zakup domeny **`towerlady.com`**. Trwa ocena prototypu portfolio. Push wymaga zgody właściciela repozytorium.
+
+[Prototyp portfolio przez Tailscale](https://vps.tailfb5686.ts.net:8766/prototypes/tower-lady/index.html) obejmuje stronę główną opartą na wybranej makiecie, filmografię z wyróżnionym filmem i roboczy artykuł About.
 
 - [Brief i potwierdzone preferencje](docs/rebranding/brief.md)
 - [Krótka lista — oceny i zastrzeżenia autora](docs/rebranding/naming-shortlist.md)
