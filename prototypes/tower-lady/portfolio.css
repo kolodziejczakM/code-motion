@@ -287,7 +287,6 @@ img { display: block; max-width: 100%; }
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  padding-block-start: 1.1rem;
 }
 
 .brand-mark {
@@ -447,10 +446,8 @@ img { display: block; max-width: 100%; }
   .film-strip { padding-top: 1rem; }
   .film-grid { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
   .film-tile > span:last-child { margin-top: .35em; }
-  .films-page .site-header { padding-block-start: .75rem; }
   .films-page .brand { gap: .4rem; }
   .brand-mark { width: 2.25rem; }
-  .films-page .site-header nav { gap: .3rem; }
   .featured { align-items: flex-end; min-height: 32.5rem; }
   .featured-still { inset-inline-start: 0; object-position: 56% 35%; mask-image: none; }
   .featured::after {
