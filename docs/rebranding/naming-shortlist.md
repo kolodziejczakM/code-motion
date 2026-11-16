@@ -34,4 +34,6 @@
 
 [Porównanie Avantreel i Last Familiar Pictures](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=21&variant=A).
 
+[Tower Lady Pictures obok sześciu faworytów](naming-round-26.md). Autor zaproponował tę nazwę do porównania.
+
 Nie wybrano jeszcze finalnej nazwy, logo ani domeny. Nie zmieniano nazw profili społecznościowych.

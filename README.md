@@ -34,10 +34,11 @@ Trwa wybór nazwy. **Varianture jest obecnym faworytem autora.** Na krótkiej li
 - [Runda 23 — porównanie Variant93 i Varianture](docs/rebranding/naming-round-23.md)
 - [Runda 24 — Varianture i dopiski filmowe](docs/rebranding/naming-round-24.md)
 - [Runda 25 — nazwy z własnej filmografii](docs/rebranding/naming-round-25.md)
+- [Runda 26 — Tower Lady Pictures i dotychczasowa krótka lista](docs/rebranding/naming-round-26.md)
 
 ## Prototyp nazwy
 
-Runda 25 zestawia trzy nazwy wyprowadzone z własnej filmografii na planszy otwierającej, w opisie profilu i w podpisie przy filmie.
+Runda 26 zestawia Tower Lady Pictures z sześcioma wcześniejszymi faworytami w tej samej oprawie. Załączona przez autora wizualizacja jest oceniona w notatce rundy.
 
 Podgląd na komputerze i telefonie po połączeniu z Tailscale:
 
@@ -45,9 +46,11 @@ Podgląd na komputerze i telefonie po połączeniu z Tailscale:
 
 [Runda 25 — nazwy z własnej filmografii](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=25&variant=A)
 
+[Runda 26 — Tower Lady Pictures i dotychczasowi faworyci](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=26&variant=A)
+
 [Runda 21: Avantreel — wariant A](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=21&variant=A) · [Last Familiar Pictures — wariant B](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=21&variant=B)
 
-Parametr `round` przyjmuje wartości od 1 do 25. Parametr `variant` wybiera nazwę. Listę wariantów danej rundy pokazuje przełącznik „Nazwa”. Adres bez parametru `round` otwiera rundę 01. Strzałki w dolnym pasku i na klawiaturze przełączają nazwy. Kontekst i film pozostają wybrane do przeładowania strony.
+Parametr `round` przyjmuje wartości od 1 do 26. Parametr `variant` wybiera nazwę. Listę wariantów danej rundy pokazuje przełącznik „Nazwa”. Adres bez parametru `round` otwiera rundę 01. Strzałki w dolnym pasku i na klawiaturze przełączają nazwy. Kontekst i film pozostają wybrane do przeładowania strony.
 
 Serwer VPS i komputer użytkownika mają różne adresy `localhost`. Na tym VPS podgląd obsługuje Caddy na porcie `8766`, z nasłuchem wyłącznie na adresach Tailscale IPv4 i IPv6. Serwuje bezpośrednio pliki prototypów i notatki rebrandingu, więc nie wymaga procesu Pythona ani tunelu SSH. Dostęp urządzeń zależy też od reguł tailnetu.
 
