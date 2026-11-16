@@ -54,11 +54,11 @@ W publicznych indeksach YouTube, Facebooka i Instagrama nie znalazłem profilu z
 
 ## Rekomendacja domeny
 
-**`towerladypictures.com` jako domena główna.** Zawiera pełną wybraną nazwę. Ten sam zapis będą mogli skojarzyć odbiorcy strony, widzowie czołówki i osoby korzystające z katalogów festiwalowych. Końcówka `.com` pasuje do anglojęzycznej nazwy i międzynarodowej prezentacji filmów.
+**`towerlady.com` jako domena główna.** Autor zwrócił uwagę, że łatwiej zapamiętać i przekazać krótszy adres. Ma 9 liter przed `.com` i zachowuje oba człony, które tworzą obraz kobiety i wieży. W logotypie, czołówkach i materiałach festiwalowych nazwą studia jest **Tower Lady Pictures**. Podobny układ widać w nazwie Pixar Animation Studios i domenie `pixar.com`. [Oficjalna strona Pixara](https://www.pixar.com/)
 
-**`towerlady.com` jako opcjonalny krótki adres.** Po uruchomieniu strony może przekierowywać na pełną domenę. Jeżeli kupujesz jedną domenę, priorytetem jest pełna nazwa.
+**`towerladypictures.com` jako opcjonalny drugi adres.** Może przekierowywać na `towerlady.com`, gdy ktoś wpisze z pamięci pełną nazwę studia. Przy zakupie jednej domeny priorytetem jest `towerlady.com`.
 
-Ponowny odczyt 16 listopada 2026 r. o godz. 17:30 czasu polskiego zwrócił brak rekordu dla obu domen `.com`. Kontrola `google.com` zwróciła istniejący rekord. Dostępność i cenę rejestracji potwierdzi wybrany rejestrator. [Rejestr pełnej domeny](https://rdap.verisign.com/com/v1/domain/towerladypictures.com) · [Rejestr krótkiej domeny](https://rdap.verisign.com/com/v1/domain/towerlady.com)
+Ponowny odczyt 16 listopada 2026 r. o godz. 17:34 czasu polskiego zwrócił brak rekordu dla obu domen `.com`. Kontrola `google.com` zwróciła istniejący rekord. Dostępność i cenę rejestracji potwierdzi wybrany rejestrator. [Rejestr krótkiej domeny](https://rdap.verisign.com/com/v1/domain/towerlady.com) · [Rejestr pełnej domeny](https://rdap.verisign.com/com/v1/domain/towerladypictures.com)
 
 ## Halszka i baszta w Szamotułach
 
