@@ -1,5 +1,7 @@
 # Runda 25 — nazwy z własnej filmografii
 
+Autor odrzucił kierunek tej rundy. Połączenie dawnych tytułów filmów z wcześniejszymi pomysłami na nazwę studia nie odpowiada jego potrzebie osobistego znaczenia.
+
 Autor wskazał Hitchcocka, łączenie starego kina z nowymi narzędziami, mieszanie gatunków i programowanie. W tej rundzie każda nazwa ma punkt wyjścia w tytule lub opisie jego filmu. W dostępnym briefie są informacje o filmach i warsztacie. Konkretne lektury i miejsce pochodzenia pozostają do ustalenia.
 
 Proponowany kierunek da się zobaczyć w dwóch zestawieniach. W opisie *Saturday cleaning* zwykła sobota staje się nieuchronna. W *Boundless, actually* klasyczna sytuacja z detektywem spotyka absurdalną propozycję. To odczyt tytułów i opisów autora. Hitchcock mówił o ustanowieniu sytuacji wyjściowej i o tym, co widz o niej wie, jako podstawie suspensu. [Saturday cleaning](https://www.youtube.com/watch?v=1Uv6I2wPWSQ) · [Boundless, actually](https://www.youtube.com/watch?v=AIIpG5RpMbc) · [Rozmowa z Hitchcockiem w Le Monde](https://www.lemonde.fr/archives/article/1959/10/22/entretien-avec-alfred-hitchcock-qui-reve-d-etre-a-nouveau-decouvert_2148468_1819218.html)
