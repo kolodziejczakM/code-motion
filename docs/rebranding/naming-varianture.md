@@ -37,8 +37,14 @@ W thrillerze pojawia się drugi odczyt. Widz może najpierw uwierzyć w jedną w
 
 | Co działa | Co sprawdzić |
 | --- | --- |
-| Jeden wyraz, dziesięć liter. Czytelny rdzeń daje odbiorcy punkt zaczepienia, szczególnie po polsku. | W angielskim nie ma ustalonej wymowy tej nazwy. Roboczy polski odczyt to „wa-ri-an-tur”. Po usłyszeniu końcówka może dawać kilka możliwych zapisów. |
+| Jeden wyraz, dziesięć liter. Czytelny rdzeń daje odbiorcy punkt zaczepienia, szczególnie po polsku. | Końcówkę można różnie odczytać ze słuchu. Proponowany angielski odczyt to **VAIR-ee-uhn-chur**, z akcentem na pierwszą sylabę. |
 | Nazwa pasuje do rozwijania filmowego warsztatu z AI i zostawia przestrzeń na różne gatunki oraz techniki. | Sama forma może budzić skojarzenie z narzędziem do tworzenia wariantów lub studiem designu. Filmowy kontekst daje plansza, podpis albo opis. |
 | Znaczenie wynika z rzeczywistego sposobu pracy. Alternatywne wersje obrazu służą decyzji twórczej. | Nazwa łatwiej komunikuje proces i wybór niż konkretny nastrój. Pamięć, nostalgia i napięcie powinny wybrzmieć w filmach. |
+
+## Proponowana wymowa po angielsku
+
+**VAIR-ee-uhn-chur** ma akcent na **VAIR**. Początek brzmi jak *vary*, potem dochodzi krótkie *uhn*, a ostatnia sylaba brzmi jak końcówka *future* lub *venture*. Podział naśladuje wymowę angielskiego *variant*, z *-ture* czytanym jak w *future*. [Cambridge Dictionary — vary](https://dictionary.cambridge.org/pronunciation/english/vary) · [variant](https://dictionary.cambridge.org/pronunciation/english/variant) · [future](https://dictionary.cambridge.org/pronunciation/english/future) · [venture](https://dictionary.cambridge.org/pronunciation/english/venture)
+
+Krótki zapis do angielskiego opisu studia lub notatki dla prowadzącego pokaz to **Varianture (pronounced VAIR-ee-uhn-chur)**. Przy pierwszym kontakcie w materiale wideo nazwę można wypowiedzieć, gdy pojawia się na ekranie. Przed przyjęciem tej wymowy warto pokazać sam zapis kilku osobom mówiącym po angielsku i posłuchać ich pierwszego odczytu.
 
 [Varianture na planszy filmowej](https://vps.tailfb5686.ts.net:8766/prototypes/naming.prototype.html?round=16&variant=D)
