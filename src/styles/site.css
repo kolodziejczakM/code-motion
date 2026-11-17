@@ -5,6 +5,11 @@
   font-size: .875em;
 }
 
+@media (width > 850px) {
+  .site-header .language-link { padding-inline-start: .75rem; }
+  .home-art img { translate: 0 10px; }
+}
+
 @media (max-width: 390px) {
   .site-header { gap: .5rem; }
   .site-header nav { gap: .4rem; font-size: .9375rem; }
@@ -20,10 +25,29 @@
   animation-duration: 160ms;
 }
 
-::view-transition-group(root),
-::view-transition-group(studio-logo) {
+::view-transition-group(root) {
   animation-duration: 160ms;
 }
+
+/* Keep the outgoing page visible until the incoming page is ready to fade in. */
+.waiting-for-transition-assets::view-transition-group(root),
+.waiting-for-transition-assets::view-transition-old(root),
+.waiting-for-transition-assets::view-transition-new(root) {
+  animation-play-state: paused;
+}
+
+::view-transition-group(studio-logo),
+::view-transition-old(studio-logo) {
+  animation: none;
+}
+
+::view-transition-old(studio-logo) {
+  width: auto;
+  height: 100%;
+  mix-blend-mode: normal;
+}
+
+::view-transition-new(studio-logo) { display: none; }
 
 @media (prefers-reduced-motion: reduce) {
   ::view-transition-group(*),

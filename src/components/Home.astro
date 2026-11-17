@@ -19,7 +19,7 @@ const filmsHref = hrefFor(locale, "films");
       <a class="button" href={filmsHref}>{t.explore}</a>
     </div>
     <div class="home-art" aria-hidden="true">
-      <img src={brandArtwork} width="1487" height="1058" alt="" />
+      <img src={brandArtwork} width="1487" height="1058" alt="" crossorigin />
     </div>
   </section>
 
@@ -32,7 +32,7 @@ const filmsHref = hrefFor(locale, "films");
             <img src={film.image} width="1280" height="720" alt="" />
           ) : (
             <span class="saturday-art" aria-hidden="true">
-              <img src={brandArtwork} width="1487" height="1058" alt="" />
+              <img src={brandArtwork} width="1487" height="1058" alt="" crossorigin />
             </span>
           )}
           <span>{film.title}</span>
