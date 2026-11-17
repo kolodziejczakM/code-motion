@@ -31,7 +31,7 @@ export const copy = {
       title: "Niezależne krótkie metraże z Polski",
       description: "Tower Lady Pictures tworzy niezależne krótkie metraże z pogranicza thrillera, mrocznego dramatu i absurdu.",
       heading: ["Niezależne krótkie", "metraże z Polski."],
-      tagline: "Historie bez murów",
+      tagline: "Kino bez murów",
       explore: "Zobacz filmy",
       shortFilms: "Krótkie metraże",
     },
