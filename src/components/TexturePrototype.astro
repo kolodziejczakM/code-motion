@@ -1,36 +1,90 @@
-<!-- Throwaway prototype: compare A–D on the existing pages using ?variant=. -->
+<!-- Throwaway prototype: compare sparse brick and light accents using ?variant=A–E. -->
 <style is:inline>
-  :root[data-texture] body {
-    --texture-color: 0 0 0;
+  :root[data-texture]:not([data-texture="A"]) body {
+    position: relative;
+    isolation: isolate;
   }
 
-  :root[data-texture] .films-page {
-    --texture-color: 16 16 16;
+  /* Let the illustration's screen blend reach the page behind it. */
+  :root[data-texture]:not([data-texture="A"]) .home-hero {
+    isolation: auto;
   }
 
-  :root[data-texture="B"] body,
-  :root[data-texture="C"] body {
-    background-image:
-      linear-gradient(rgb(var(--texture-color) / var(--texture-cover)), rgb(var(--texture-color) / var(--texture-cover))),
-      var(--texture-tile);
-    background-size: auto, var(--texture-size);
+  .texture-details {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
   }
 
-  :root[data-texture="B"] body {
-    --texture-cover: .88;
-    --texture-size: 620px;
-    --texture-tile: url("/prototypes/tower-lady/texture-prototype/film-grain.webp");
+  [data-texture="A"] .texture-details { display: none; }
+
+  :is([data-texture="C"], [data-texture="D"], [data-texture="E"]) .texture-details::before {
+    content: "";
+    position: absolute;
+    inset-block-start: -8rem;
+    inset-inline-start: -8%;
+    width: min(92rem, 115%);
+    height: clamp(32rem, 74vh, 56rem);
+    background: radial-gradient(
+      ellipse 84% 86% at 16% 22%,
+      rgb(171 137 83 / 15%),
+      rgb(153 119 72 / 6%) 46%,
+      transparent 84%
+    );
   }
 
-  :root[data-texture="C"] body {
-    --texture-cover: .61;
-    --texture-size: 820px;
-    --texture-tile: url("/prototypes/tower-lady/texture-prototype/matte-paper.webp");
+  @media (prefers-reduced-motion: no-preference) {
+    [data-texture="E"] .texture-details::before {
+      animation: texture-light-drift 28s ease-in-out infinite alternate;
+    }
+
+    @keyframes texture-light-drift {
+      from { transform: translate(0, 0); opacity: 1; }
+      to { transform: translate(4%, 3%); opacity: .82; }
+    }
   }
 
-  :root[data-texture="D"] body {
-    background-image:
-      radial-gradient(ellipse min(78vw, 70rem) 45rem at 47% 34rem, rgb(147 107 66 / 14%), transparent 100%);
+  .texture-bricks {
+    position: absolute;
+    width: clamp(9rem, 17vw, 17rem);
+    aspect-ratio: 3.2;
+    color: rgb(184 152 108 / 19%);
+    background:
+      linear-gradient(currentColor 0 0) 22% 33% / 77% 1px,
+      linear-gradient(currentColor 0 0) 75% 66% / 64% 1px,
+      linear-gradient(currentColor 0 0) 28% 0 / 1px 33%,
+      linear-gradient(currentColor 0 0) 59% 49% / 1px 34%,
+      linear-gradient(currentColor 0 0) 39% 100% / 1px 34%,
+      linear-gradient(currentColor 0 0) 76% 100% / 1px 34%;
+    background-repeat: no-repeat;
+    mask-image: radial-gradient(ellipse farthest-side, #000 32%, #000a 62%, transparent 100%);
+  }
+
+  [data-texture="C"] .texture-bricks { display: none; }
+
+  .texture-bricks:nth-child(1) {
+    inset-inline-start: clamp(1rem, 6vw, 10rem);
+    inset-block-start: clamp(6.5rem, 10vh, 8.5rem);
+  }
+
+  .texture-bricks:nth-child(2) {
+    inset-inline-end: clamp(.25rem, 3vw, 7rem);
+    inset-block-start: 54%;
+    transform: scaleX(-1) scale(.86);
+    opacity: .83;
+  }
+
+  .texture-bricks:nth-child(3) {
+    inset-inline-start: clamp(1rem, 10vw, 16rem);
+    inset-block-end: 7.5rem;
+    transform: scale(.73);
+    opacity: .66;
+  }
+
+  .films-page .texture-bricks:nth-child(1) {
+    inset-block-start: clamp(36.5rem, 44vw, 46rem);
   }
 
   :root[data-texture]:not([data-texture="A"]) .featured {
@@ -47,6 +101,16 @@
   }
 
   @media (max-width: 620px) {
+    .texture-bricks:nth-child(1) {
+      width: 8rem;
+      inset-inline-start: auto;
+      inset-inline-end: -2.5rem;
+      inset-block-start: 4.6rem;
+      opacity: .78;
+    }
+    .films-page .texture-bricks:nth-child(1) { inset-block-start: 33rem; }
+    .texture-bricks:nth-child(3) { display: none; }
+
     :root[data-texture]:not([data-texture="A"]) .featured-still {
       mask-image: var(--texture-fade);
     }
@@ -91,9 +155,9 @@
     const root = document.documentElement;
     const polish = root.lang === "pl";
     const labels = polish
-      ? ["Czerń (obecna)", "Ziarno 35 mm", "Matowy papier", "Poświata projektora"]
-      : ["Black (current)", "35 mm grain", "Matte paper", "Projector glow"];
-    const variants = ["A", "B", "C", "D"];
+      ? ["Czerń (obecna)", "Ślady cegieł", "Ciepła poświata", "Cegły i światło", "Cegły i ruch światła"]
+      : ["Black (current)", "Brick traces", "Warm glow", "Brick and light", "Brick and drifting light"];
+    const variants = ["A", "B", "C", "D", "E"];
     const address = new URL(location.href);
     const initial = address.searchParams.get("variant");
     if (!variants.includes(initial)) return;
@@ -101,6 +165,12 @@
     root.dataset.texture = initial;
 
     document.addEventListener("DOMContentLoaded", () => {
+      const details = document.createElement("div");
+      details.className = "texture-details";
+      details.setAttribute("aria-hidden", "true");
+      details.innerHTML = '<span class="texture-bricks"></span>'.repeat(3);
+      document.body.prepend(details);
+
       const bar = document.createElement("div");
       bar.className = "texture-switcher";
       bar.setAttribute("role", "group");
