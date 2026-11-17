@@ -6,6 +6,7 @@
 /* Let the illustration's screen blend reach the backdrop. */
 .portfolio-page .home-hero { isolation: auto; }
 .home-art-graphic { position: absolute; inset: 0; overflow: hidden; }
+.hair-motion-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 
 .featured { --featured-fade: linear-gradient(to bottom, #000 72%, transparent 100%); }
 
@@ -20,6 +21,28 @@
   .featured .featured-still { mask-image: var(--featured-fade); }
 }
 
+.portfolio-page .site-header {
+  flex-wrap: wrap;
+  row-gap: .25rem;
+}
+
+.portfolio-page .site-header .brand {
+  max-inline-size: 100%;
+  min-inline-size: 0;
+}
+
+.portfolio-page .site-header .wordmark {
+  white-space: normal;
+  text-align: center;
+}
+
+.portfolio-page .site-header nav {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-inline-size: 100%;
+  margin-inline-start: auto;
+}
+
 .site-header .language-link {
   min-inline-size: 44px;
   justify-content: center;
@@ -32,12 +55,28 @@
   .home-art img { translate: 0 10px; }
 }
 
-@media (max-width: 390px) {
-  .site-header { gap: .5rem; }
-  .site-header nav { gap: .4rem; font-size: .9375rem; }
-  .site-header nav a { padding-inline: .2rem; }
-  .brand-mark { width: 1.875rem; }
-  .wordmark { font-size: .75rem; }
+@media (max-width: 620px) {
+  .portfolio-page main { overflow-wrap: anywhere; }
+  .portfolio-page .site-header { column-gap: .75rem; }
+  .portfolio-page .site-header nav { column-gap: clamp(.4rem, 2vw, .75rem); }
+  .portfolio-page .site-header nav a {
+    min-inline-size: 44px;
+    justify-content: center;
+    padding-inline: .25rem;
+  }
+}
+
+@media (min-width: 341px) and (max-width: 390px) {
+  .portfolio-page .site-header nav { font-size: .9375rem; }
+  .portfolio-page .site-header .brand-mark { width: 1.875rem; }
+  .portfolio-page .site-header .wordmark { font-size: .75rem; }
+}
+
+@media (width < 341px) {
+  .portfolio-page .site-header nav {
+    flex-basis: 100%;
+    justify-content: space-between;
+  }
 }
 
 .site-header .brand { view-transition-name: studio-logo; }
@@ -72,6 +111,8 @@
 ::view-transition-new(studio-logo) { display: none; }
 
 @media (prefers-reduced-motion: reduce) {
+  .hair-motion-canvas { display: none; }
+
   ::view-transition-group(*),
   ::view-transition-old(*),
   ::view-transition-new(*) {

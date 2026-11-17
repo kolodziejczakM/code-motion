@@ -1,7 +1,6 @@
 ---
 import { copy, hrefFor, type Locale } from "../content";
 import { brandArtwork, films } from "../films";
-import HeroMotionPrototype from "./HeroMotionPrototype.astro";
 
 interface Props {
   locale: Locale;
@@ -22,10 +21,10 @@ const filmsHref = hrefFor(locale, "films");
     <div class="home-art" aria-hidden="true">
       <div class="home-art-graphic">
         <img src={brandArtwork} width="1487" height="1058" alt="" crossorigin />
+        <canvas class="hair-motion-canvas" hidden></canvas>
       </div>
     </div>
   </section>
-  {__TAILNET_PREVIEW__ && <HeroMotionPrototype locale={locale} />}
 
   <section class="film-strip" aria-labelledby="short-films">
     <h2 id="short-films">{t.shortFilms}</h2>
@@ -45,3 +44,7 @@ const filmsHref = hrefFor(locale, "films");
     </div>
   </section>
 </main>
+
+<script>
+  import "../scripts/hair-motion.js";
+</script>
