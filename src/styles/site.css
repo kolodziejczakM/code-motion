@@ -1,3 +1,25 @@
+.portfolio-page {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Let the illustration's screen blend reach the backdrop. */
+.portfolio-page .home-hero { isolation: auto; }
+.home-art-graphic { position: absolute; inset: 0; overflow: hidden; }
+
+.featured { --featured-fade: linear-gradient(to bottom, #000 72%, transparent 100%); }
+
+.featured .featured-still {
+  mask-image: linear-gradient(to right, transparent, #000 23%), var(--featured-fade);
+  mask-composite: intersect;
+}
+
+.featured::after { mask-image: var(--featured-fade); }
+
+@media (max-width: 620px) {
+  .featured .featured-still { mask-image: var(--featured-fade); }
+}
+
 .site-header .language-link {
   min-inline-size: 44px;
   justify-content: center;

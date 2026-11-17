@@ -1,7 +1,7 @@
 import boundlessStill from "../prototypes/tower-lady/assets/boundless.jpg?url";
 import akabeiStill from "../prototypes/tower-lady/assets/akabei.jpg?url";
 
-export { default as brandArtwork } from "../prototypes/tower-lady/assets/brand-reference.png?url";
+export { default as brandArtwork } from "../prototypes/tower-lady/assets/brand-artwork.webp?url";
 export { default as playIcon } from "../prototypes/tower-lady/assets/player-play.svg?url";
 
 export const films = [

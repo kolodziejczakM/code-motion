@@ -1,6 +1,7 @@
 ---
 import { copy, hrefFor, type Locale } from "../content";
 import { brandArtwork, films } from "../films";
+import HeroMotionPrototype from "./HeroMotionPrototype.astro";
 
 interface Props {
   locale: Locale;
@@ -19,7 +20,10 @@ const filmsHref = hrefFor(locale, "films");
       <a class="button" href={filmsHref}>{t.explore}</a>
     </div>
     <div class="home-art" aria-hidden="true">
-      <img src={brandArtwork} width="1487" height="1058" alt="" crossorigin />
+      <div class="home-art-graphic">
+        <img src={brandArtwork} width="1487" height="1058" alt="" crossorigin />
+      </div>
+      {__TAILNET_PREVIEW__ && <HeroMotionPrototype />}
     </div>
   </section>
 

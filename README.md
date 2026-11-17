@@ -19,6 +19,17 @@ npm run dev
 - `npm run build:preview` zapisuje pliki pod `prototypes/tower-lady/astro/` z oznaczeniem `noindex`. Po wykonaniu tego polecenia na VPS działający Caddy od razu udostępnia nowy build w Tailscale.
 - [Pierwotna makieta HTML](https://vps.tailfb5686.ts.net:8766/prototypes/tower-lady/index.html) jest nadal dostępna do porównań. Astro korzysta z jej zasobów graficznych i stylów.
 
+### Design system
+
+Wpisz `/design/` bezpośrednio w adresie strony. Na podglądzie ścieżka to `/prototypes/tower-lady/astro/design/`. Strona pokazuje paletę, role i rozmiary typografii, odstępy, wzorce elementów oraz zasady ruchu. Ma `noindex` i jest dostępna przez bezpośredni adres.
+
+### Przed publikacją
+
+- Zatwierdź treść **O nas / About** oraz kadry i linki do wszystkich filmów.
+- Serwuj zawartość `dist/` pod `https://towerlady.com/`. Skieruj HTTP i ewentualny adres `www` na domenę kanoniczną. Na serwerze ustaw stałe przekierowanie `/` → `/pl/` i serwuj `404.html` ze statusem 404. Plikom z hashem w `/_astro/` można ustawić długi cache.
+- Sprawdź obie wersje językowe, przekierowania, widok mobilny w Safari oraz kartę udostępniania na publicznym adresie.
+- Po uruchomieniu zweryfikuj domenę w Google Search Console, zgłoś `/sitemap.xml` i sprawdź inspekcję URL dla `/pl/` i `/en/`.
+
 - [Brief i potwierdzone preferencje](docs/rebranding/brief.md)
 - [Krótka lista — oceny i zastrzeżenia autora](docs/rebranding/naming-shortlist.md)
 - [Nazwy, runda 01 — propozycje, ograniczenia i źródła](docs/rebranding/naming-round-01.md)

@@ -37,7 +37,7 @@ export const copy = {
     },
     films: {
       title: "Filmy",
-      description: "Obejrzyj niezależne filmy krótkometrażowe Tower Lady Pictures.",
+      description: "Obejrzyj niezależne krótkie metraże Tower Lady Pictures. „Boundless, actually”, „Akabei” i „Saturday cleaning” łączą thriller z mrocznym dramatem lub absurdem.",
       watch: "Obejrzyj film",
       watchOnYouTube: (film: string) => `Obejrzyj „${film}” na YouTube`,
       more: "Więcej krótkich metraży",
@@ -75,7 +75,7 @@ export const copy = {
     },
     films: {
       title: "Films",
-      description: "Watch independent short films from Tower Lady Pictures.",
+      description: "Watch Boundless, actually, Akabei and Saturday cleaning, three independent short films from Tower Lady Pictures where suspense meets dark drama or the absurd.",
       watch: "Watch film",
       watchOnYouTube: (film: string) => `Watch ${film} on YouTube`,
       more: "More short films",
