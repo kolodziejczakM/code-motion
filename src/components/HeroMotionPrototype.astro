@@ -1,50 +1,67 @@
 ---
-// Neutral grey preserves the image. The two fields only reach the loose locks.
-const displacement = `
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 580">
-    <defs>
-      <radialGradient id="lower">
-        <stop stop-color="rgb(245 197 128)" />
-        <stop offset="1" stop-color="rgb(128 128 128)" stop-opacity="0" />
-      </radialGradient>
-      <radialGradient id="upper">
-        <stop stop-color="rgb(55 172 128)" />
-        <stop offset="1" stop-color="rgb(128 128 128)" stop-opacity="0" />
-      </radialGradient>
-    </defs>
-    <rect width="500" height="580" fill="rgb(128 128 128)" />
-    <ellipse cx="44" cy="455" rx="83" ry="81" fill="url(#lower)" />
-    <ellipse cx="61" cy="369" rx="91" ry="81" fill="url(#upper)" />
-  </svg>`;
+import type { Locale } from "../content";
+import animation from "../scripts/hair-motion.js?raw";
+
+interface Props {
+  locale: Locale;
+}
+
+const polish = Astro.props.locale === "pl";
+const labels = polish
+  ? ["Statyczna", "Łagodny powiew", "Płynny wiatr", "Wyraźny podmuch"]
+  : ["Still", "Gentle breeze", "Flowing wind", "Stronger gust"];
+const controlLabel = polish ? "Animacja włosów" : "Hair animation";
 ---
 
-<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true">
-  <filter id="hair-wind" x="0%" y="0%" width="100%" height="100%" primitiveUnits="objectBoundingBox" color-interpolation-filters="sRGB">
-    <feImage href={`data:image/svg+xml,${encodeURIComponent(displacement)}`} x="0" y="0" width="1" height="1" preserveAspectRatio="none" result="wind" />
-    <feDisplacementMap in="SourceGraphic" in2="wind" scale="0" xChannelSelector="R" yChannelSelector="G">
-      <animate id="hair-wind-cycle" attributeName="scale" values="0;.022;.008;-.013;0"
-        keyTimes="0;.28;.47;.75;1" calcMode="spline"
-        keySplines=".42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1"
-        dur="11s" repeatCount="indefinite" begin="indefinite" />
-    </feDisplacementMap>
-  </filter>
-</svg>
+<!-- Throwaway prototype. Open a home page with ?hair=A–D. -->
+<div class="hair-preview-controls" data-hair-preview role="group" aria-label={controlLabel} hidden>
+  <button type="button" data-step="-1" aria-label={polish ? "Poprzedni wariant" : "Previous variant"}>←</button>
+  <select aria-label={controlLabel}>
+    {["A", "B", "C", "D"].map((option, index) => <option value={option}>{option} · {labels[index]}</option>)}
+  </select>
+  <button type="button" data-step="1" aria-label={polish ? "Następny wariant" : "Next variant"}>→</button>
+</div>
 
 <style is:inline>
-  @media (prefers-reduced-motion: no-preference) {
-    :root[data-hair-motion] .home-art-graphic { filter: url(#hair-wind); }
+  .hair-preview-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+  .hair-preview-controls[hidden] { display: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hair-preview-canvas { display: none; }
   }
+
+  .hair-preview-controls {
+    position: fixed;
+    z-index: 4;
+    inset-inline-start: 50%;
+    inset-block-end: max(1rem, env(safe-area-inset-bottom));
+    translate: -50% 0;
+    display: flex;
+    max-width: calc(100% - 1.5rem);
+    padding: .25rem;
+    border: 1px solid #647176;
+    border-radius: .65rem;
+    background: #1a2529;
+    color: #eef4f4;
+    box-shadow: 0 3px 14px #0008;
+    font: 500 .875rem/1.25 system-ui, sans-serif;
+  }
+
+  .hair-preview-controls button,
+  .hair-preview-controls select {
+    min-width: 44px;
+    min-height: 44px;
+    border: 0;
+    border-radius: .35rem;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .hair-preview-controls button { font-size: 1.15rem; }
+  .hair-preview-controls select { background-color: #253438; padding-inline: .5rem; }
+  .hair-preview-controls button:hover { background-color: #34464c; }
 </style>
-<script is:inline>
-  if (new URLSearchParams(location.search).get("hair") === "on") {
-    const preference = matchMedia("(prefers-reduced-motion: no-preference)");
-    const cycle = document.getElementById("hair-wind-cycle");
-    const update = () => {
-      document.documentElement.toggleAttribute("data-hair-motion", preference.matches);
-      if (preference.matches) cycle?.beginElement?.();
-      else cycle?.endElement?.();
-    };
-    update();
-    preference.addEventListener("change", update);
-  }
-</script>
+
+<script is:inline type="module" set:html={animation}></script>

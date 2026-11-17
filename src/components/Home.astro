@@ -23,9 +23,9 @@ const filmsHref = hrefFor(locale, "films");
       <div class="home-art-graphic">
         <img src={brandArtwork} width="1487" height="1058" alt="" crossorigin />
       </div>
-      {__TAILNET_PREVIEW__ && <HeroMotionPrototype />}
     </div>
   </section>
+  {__TAILNET_PREVIEW__ && <HeroMotionPrototype locale={locale} />}
 
   <section class="film-strip" aria-labelledby="short-films">
     <h2 id="short-films">{t.shortFilms}</h2>
