@@ -1,4 +1,4 @@
-<!-- Throwaway prototype: compare sparse brick and light accents using ?variant=A–E. -->
+<!-- Throwaway prototype: compare accents using ?variant=A–E or brick spacing using ?density=A–D. -->
 <style is:inline>
   :root[data-texture]:not([data-texture="A"]) body {
     position: relative;
@@ -87,6 +87,61 @@
     inset-block-start: clamp(36.5rem, 44vw, 46rem);
   }
 
+  /* Keep the added fragments in the margins and the free space above the footer. */
+  [data-brick-density]:not([data-brick-density="A"]) .texture-bricks {
+    --brick-inset: clamp(-3.5rem, (100% - var(--measure)) / 2 - 7rem, 12rem);
+  }
+
+  [data-brick-density]:not([data-brick-density="A"]) .texture-bricks:nth-child(2) {
+    inset-inline-end: var(--brick-inset);
+    inset-block-start: 49%;
+  }
+
+  [data-brick-density]:not([data-brick-density="A"]) .texture-bricks:nth-child(3) {
+    inset-inline-start: var(--brick-inset);
+    inset-block-end: 5rem;
+    opacity: .83;
+  }
+
+  .texture-bricks:nth-child(4) {
+    inset-inline-end: var(--brick-inset);
+    inset-block-start: 26%;
+    transform: scale(.9);
+  }
+
+  .texture-bricks:nth-child(5) {
+    inset-inline-start: var(--brick-inset);
+    inset-block-start: 42%;
+    transform: scaleX(-1) scale(.84);
+  }
+
+  .texture-bricks:nth-child(6) {
+    inset-inline-end: var(--brick-inset);
+    inset-block-end: 7rem;
+    transform: scale(.92);
+  }
+
+  .texture-bricks:nth-child(7) {
+    inset-inline-end: calc(var(--brick-inset) - 1.5rem);
+    inset-block-start: max(6rem, 14%);
+    transform: scaleX(-1) scale(.68);
+    opacity: .76;
+  }
+
+  .texture-bricks:nth-child(8) {
+    inset-inline-start: calc(var(--brick-inset) - .75rem);
+    inset-block-start: 63%;
+    transform: scale(.82);
+    opacity: .84;
+  }
+
+  .texture-bricks:nth-child(9) {
+    inset-inline-end: calc(var(--brick-inset) - 1rem);
+    inset-block-start: 72%;
+    transform: scaleX(-1) scale(.73);
+    opacity: .76;
+  }
+
   :root[data-texture]:not([data-texture="A"]) .featured {
     --texture-fade: linear-gradient(to bottom, #000 72%, transparent 100%);
   }
@@ -110,6 +165,9 @@
     }
     .films-page .texture-bricks:nth-child(1) { inset-block-start: 33rem; }
     .texture-bricks:nth-child(3) { display: none; }
+    [data-brick-density]:not([data-brick-density="A"]) .texture-bricks:nth-child(3) { display: block; }
+    .texture-bricks:nth-child(6) { inset-block-end: 9rem; }
+    .texture-bricks:nth-child(9) { display: none; }
 
     :root[data-texture]:not([data-texture="A"]) .featured-still {
       mask-image: var(--texture-fade);
@@ -154,46 +212,62 @@
   (() => {
     const root = document.documentElement;
     const polish = root.lang === "pl";
-    const labels = polish
+    const address = new URL(location.href);
+    const density = address.searchParams.has("density");
+    const parameter = density ? "density" : "variant";
+    const backgroundLabels = polish
       ? ["Czerń (obecna)", "Ślady cegieł", "Ciepła poświata", "Cegły i światło", "Cegły i ruch światła"]
       : ["Black (current)", "Brick traces", "Warm glow", "Brick and light", "Brick and drifting light"];
-    const variants = ["A", "B", "C", "D", "E"];
-    const address = new URL(location.href);
-    const initial = address.searchParams.get("variant");
+    const densityLabels = polish
+      ? ["Obecny układ", "Rzadko", "Średnio", "Gęsto"]
+      : ["Current layout", "Sparse", "Medium", "Dense"];
+    const brickCounts = [3, 4, 6, 9];
+    const labels = density ? densityLabels : backgroundLabels;
+    const variants = ["A", "B", "C", "D", "E"].slice(0, labels.length);
+    const initial = address.searchParams.get(parameter);
     if (!variants.includes(initial)) return;
 
-    root.dataset.texture = initial;
+    root.dataset.texture = density ? "E" : initial;
 
     document.addEventListener("DOMContentLoaded", () => {
+      const brickFragment = '<span class="texture-bricks"></span>';
       const details = document.createElement("div");
       details.className = "texture-details";
       details.setAttribute("aria-hidden", "true");
-      details.innerHTML = '<span class="texture-bricks"></span>'.repeat(3);
+      if (!density) details.innerHTML = brickFragment.repeat(3);
       document.body.prepend(details);
 
+      const controlsLabel = density
+        ? (polish ? "Gęstość cegieł" : "Brick density")
+        : (polish ? "Wariant tła" : "Background variant");
       const bar = document.createElement("div");
       bar.className = "texture-switcher";
       bar.setAttribute("role", "group");
-      bar.setAttribute("aria-label", polish ? "Warianty tła" : "Background variants");
+      bar.setAttribute("aria-label", controlsLabel);
       bar.innerHTML = `
-        <button type="button" data-step="-1" aria-label="${polish ? "Poprzednie tło" : "Previous background"}">←</button>
-        <select aria-label="${polish ? "Wariant tła" : "Background variant"}">
+        <button type="button" data-step="-1" aria-label="${polish ? "Poprzedni wariant" : "Previous variant"}">←</button>
+        <select aria-label="${controlsLabel}">
           ${variants.map((variant, index) => `<option value="${variant}">${variant} · ${labels[index]}</option>`).join("")}
         </select>
-        <button type="button" data-step="1" aria-label="${polish ? "Następne tło" : "Next background"}">→</button>
+        <button type="button" data-step="1" aria-label="${polish ? "Następny wariant" : "Next variant"}">→</button>
       `;
       document.body.append(bar);
       const select = bar.querySelector("select");
       const links = [...document.querySelectorAll('a[href^="/prototypes/tower-lady/astro/"]')];
 
       function show(variant) {
-        root.dataset.texture = variant;
+        if (density) {
+          root.dataset.brickDensity = variant;
+          details.innerHTML = brickFragment.repeat(brickCounts[variants.indexOf(variant)]);
+        } else {
+          root.dataset.texture = variant;
+        }
         select.value = variant;
-        address.searchParams.set("variant", variant);
+        address.searchParams.set(parameter, variant);
         history.replaceState(history.state, "", address);
         for (const link of links) {
           const target = new URL(link.href);
-          target.searchParams.set("variant", variant);
+          target.searchParams.set(parameter, variant);
           link.href = target;
         }
       }
