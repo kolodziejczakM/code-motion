@@ -1,5 +1,29 @@
 ---
-import { hrefFor } from "../content";
+import { hrefFor, pathFor } from "../content";
 
-return Astro.redirect(hrefFor("pl", "home"), 301);
+const destination = hrefFor("pl", "home");
+const canonical = new URL(pathFor("pl", "home"), Astro.site);
 ---
+
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style is:inline>
+      :root { color-scheme: dark; background: #000; }
+      body { margin: 0; background: #000; }
+    </style>
+    <title>Tower Lady Pictures</title>
+    <meta name="theme-color" content="#000000" />
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href={canonical} />
+    <script is:inline define:vars={{ destination }}>
+      window.location.replace(destination + window.location.search + window.location.hash);
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content={`0;url=${destination}`} />
+    </noscript>
+  </head>
+  <body></body>
+</html>

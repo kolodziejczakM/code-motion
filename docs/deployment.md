@@ -49,7 +49,7 @@ Zastąp dotychczasowy rekord A `@` wskazujący na `2.57.91.91` i CNAME `www` wsk
 
 `astro.config.mjs` ma produkcyjne `site: "https://towerlady.com"` i `base: "/"`. Ścieżki są gotowe do publikacji na własnej domenie. Przed podpięciem domeny podgląd `github.io/code-motion/` ma inną ścieżkę bazową. [Konfiguracja Astro dla Pages](https://docs.astro.build/en/guides/deploy/github/)
 
-Po publikacji katalog główny otwiera `/pl/` za pomocą statycznego przekierowania HTML generowanego przez Astro. GitHub Pages automatycznie obsługuje plik `404.html` jako stronę błędu ze statusem 404. [Przekierowania statyczne Astro](https://docs.astro.build/en/guides/routing/#redirects), [strona 404 w Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
+Katalog główny otwiera `/pl/` za pomocą `location.replace()`. Dokument startowy ma czarne tło zapisane w HTML i pustą treść. Zachowuje parametry adresu oraz fragment po `#`. Przy wyłączonym JavaScripcie przekierowanie wykonuje znacznik `meta refresh` z czasem 0 s. GitHub Pages automatycznie obsługuje plik `404.html` jako stronę błędu ze statusem 404. [Strona 404 w Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
 
 ## Kolejne wydania
 
