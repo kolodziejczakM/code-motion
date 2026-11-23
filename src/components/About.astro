@@ -22,7 +22,9 @@ const contactLinks = [
 <main id="main" class="wrap">
   <article class="studio-story" aria-labelledby="story-title">
     <h1 id="story-title">{meta.heading}</h1>
-    <p class="story-intro">{meta.intro}</p>
+    <div class="studio-intro">
+      {meta.intro.map(paragraph => <p class="story-intro">{paragraph}</p>)}
+    </div>
     <p class="studio-origin">{t.origin}</p>
 
     <section aria-labelledby="studio-history">
@@ -90,6 +92,7 @@ const contactLinks = [
 </main>
 
 <style>
+  .studio-intro .story-intro + .story-intro { margin-top: .65em; }
   .studio-origin { margin-top: 1.4rem; }
   .studio-story > section { margin-top: clamp(2.5rem, 5vw, 4rem); }
   .studio-story > section > h2 {

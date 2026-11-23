@@ -1,6 +1,6 @@
 export const aboutStory = {
   pl: {
-    origin: "Nasze korzenie sięgają Szamotuł — rodzinnego miasta Marcina, w którym zaczęła się jego pasja do kina. Stamtąd pochodzi również nazwa studia, inspirowana legendą o Halszce uwięzionej w baszcie.",
+    origin: "Nasze korzenie sięgają Szamotuł - rodzinnego miasta Marcina, w którym zaczęła się jego pasja do kina. Stamtąd pochodzi również nazwa studia, inspirowana legendą o Halszce uwięzionej w baszcie.",
     filmTitles: {
       "saturday-cleaning": "Saturday Cleaning",
       akabei: "Akabei",
@@ -16,7 +16,7 @@ export const aboutStory = {
             { label: "„2 Hot 4 Pedals”", href: "https://www.youtube.com/watch?v=ZChvzeyTAf0" },
             ". W 2014 roku powstał ",
             { label: "„Teren Udjat”", href: "https://www.youtube.com/watch?v=1FlXyYYB5cQ" },
-            " — pierwszy krótkometrażowy thriller i zarazem ostatni film grupy.",
+            " - pierwszy krótkometrażowy thriller i zarazem ostatni film grupy.",
           ],
         },
         {
@@ -53,7 +53,7 @@ export const aboutStory = {
       heading: "Jak pracuję",
       byline: "Marcin Kołodziejczak",
       paragraphs: [
-        "Przygotowania do filmu zaczynam wiele miesięcy przed zdjęciami. Scenariusz dojrzewa w kolejnych wersjach, rozmowach i próbach w wybranych lokacjach. Pracujemy w małej ekipie, dlatego wiele rzeczy przygotowujemy wspólnie — od scenografii po szczegóły organizacji planu.",
+        "Przygotowania do filmu zaczynam wiele miesięcy przed zdjęciami. Scenariusz dojrzewa w kolejnych wersjach, rozmowach i próbach w wybranych lokacjach. Pracujemy w małej ekipie, dlatego wiele rzeczy przygotowujemy wspólnie - od scenografii po szczegóły organizacji planu.",
         "Podczas zdjęć sprawdzam różne warianty sceny i szukam tego, który najlepiej działa. Szczególną uwagę poświęcam pracy z aktorami oraz atmosferze filmu. Interesuje mnie, jak gra, obraz, dźwięk i rytm sceny wspólnie budują napięcie. W pracy z ludźmi cenię otwartość, szczerość i dotrzymywanie słowa.",
         "Montaż od lat jest jednym z moich ulubionych etapów. To wtedy mogę spojrzeć na nakręcony materiał jako całość, odnaleźć rozwiązania trudnych scen i dopracować sposób, w jaki opowieść prowadzi widza.",
         "Poza filmem zajmuję się programowaniem. Interesuje mnie łączenie klasycznego warsztatu filmowego z nowymi narzędziami. W kolejnych projektach chcę wykorzystywać AI do efektów wizualnych, rozbudowy scenografii i rozwijania ujęć na podstawie materiału z planu. Zdjęcia z aktorami pozostają fundamentem tej pracy.",
@@ -97,7 +97,7 @@ export const aboutStory = {
     },
   },
   en: {
-    origin: "Our roots are in Szamotuły, Poland — Marcin’s hometown, where his passion for cinema began. The studio takes its name from a local legend about Halszka, a woman imprisoned in a tower.",
+    origin: "Our roots are in Szamotuły, Poland - Marcin’s hometown, where his passion for cinema began. The studio takes its name from a local legend about Halszka, a woman imprisoned in a tower.",
     filmTitles: {
       "saturday-cleaning": "Saturday Cleaning",
       akabei: "Akabei",
@@ -178,7 +178,7 @@ export const aboutStory = {
         selection: "Official Selection",
         nominee: "Nomination",
         thriller: "Best Suspense Thriller Award",
-        direction: "Audience Award — Best Direction",
+        direction: "Audience Award - Best Direction",
         audienceAndSecond: "Audience Award and Second Place",
       },
     },
