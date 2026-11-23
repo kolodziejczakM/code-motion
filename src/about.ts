@@ -45,7 +45,7 @@ export const aboutStory = {
         },
         {
           filmId: null,
-          parts: ["W 2026 roku CODE-MOTION zmieniło nazwę na Tower Lady Pictures, otwierając kolejny rozdział naszej wspólnej pracy."],
+          parts: ["W 2026 roku CODE-MOTION zmieniło nazwę na Tower Lady Pictures. Śledzimy rozwój AI i analizujemy możliwości, które otwiera przed kinem. W wielu obszarach widzimy początek rewolucji, która zmieni sposób przygotowania, realizacji i montażu naszych filmów. Chcemy poszerzyć możliwości naszej małej ekipy, łącząc pracę z aktorami z nowymi metodami tworzenia obrazu i dźwięku. Nowa nazwa wyznacza początek tej przemiany: przebudowujemy nasz warsztat, żeby móc swobodniej realizować własne historie."],
         },
       ],
     },
@@ -142,7 +142,7 @@ export const aboutStory = {
         },
         {
           filmId: null,
-          parts: ["In 2026, CODE-MOTION became Tower Lady Pictures, opening a new chapter in our work together."],
+          parts: ["In 2026, CODE-MOTION became Tower Lady Pictures. We follow developments in AI and explore the possibilities they open up for cinema. Across many areas of filmmaking, we see the beginnings of a revolution that will change how we prepare, shoot and edit our films. We want to expand what our small crew can achieve by combining work with actors with new ways of creating images and sound. Our new name marks the start of that transformation: reshaping our craft to give us greater freedom to tell our own stories."],
         },
       ],
     },
