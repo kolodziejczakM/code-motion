@@ -48,7 +48,7 @@
 :root {
   color-scheme: dark;
   /* Keep centered content aligned when the vertical scrollbar appears. */
-  scrollbar-gutter: stable both-edges;
+  scrollbar-gutter: stable;
   --black: #000;
   --ivory: #f5ebd3;
   --muted: #d8cebb;
