@@ -1,7 +1,10 @@
 ---
 import { hrefFor, pathFor } from "../content";
 
-const destination = hrefFor("pl", "home");
+const destinations = {
+  pl: hrefFor("pl", "home"),
+  en: hrefFor("en", "home"),
+};
 const canonical = new URL(pathFor("pl", "home"), Astro.site);
 ---
 
@@ -18,11 +21,14 @@ const canonical = new URL(pathFor("pl", "home"), Astro.site);
     <meta name="theme-color" content="#000000" />
     <meta name="robots" content="noindex" />
     <link rel="canonical" href={canonical} />
-    <script is:inline define:vars={{ destination }}>
+    <script is:inline define:vars={{ destinations }}>
+      const language = navigator.languages?.[0] || navigator.language || "";
+      const locale = language.toLowerCase().split("-")[0] === "pl" ? "pl" : "en";
+      const destination = destinations[locale];
       window.location.replace(destination + window.location.search + window.location.hash);
     </script>
     <noscript>
-      <meta http-equiv="refresh" content={`0;url=${destination}`} />
+      <meta http-equiv="refresh" content={`0;url=${destinations.pl}`} />
     </noscript>
   </head>
   <body></body>

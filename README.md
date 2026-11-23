@@ -4,7 +4,9 @@ Marka to **Tower Lady Pictures**. Autor potwierdził wybór logo i zakup domeny 
 
 [Polski podgląd portfolio](https://vps.tailfb5686.ts.net:8766/prototypes/tower-lady/astro/pl/) · [Angielski podgląd portfolio](https://vps.tailfb5686.ts.net:8766/prototypes/tower-lady/astro/en/)
 
-Portfolio w Astro obejmuje stronę główną opartą na wybranej makiecie, filmografię z wyróżnionym filmem i roboczy artykuł O nas. Wspólny nagłówek przełącza język bieżącej podstrony. Adres bez oznaczenia języka prowadzi do wersji polskiej.
+Portfolio w Astro obejmuje stronę główną opartą na wybranej makiecie, filmografię z wyróżnionym filmem i artykuł O nas z historią studia, podejściem twórczym, zespołem, wyróżnieniami festiwalowymi i kontaktem. Wspólny nagłówek przełącza język bieżącej podstrony. Adres bez oznaczenia języka wybiera wersję na podstawie pierwszego preferowanego języka przeglądarki: polski (`pl`, `pl-PL`) prowadzi do `/pl/`, pozostałe do `/en/`. Bez JavaScriptu otwiera się wersja polska. Bezpośrednie adresy językowe i ręczny przełącznik mają pierwszeństwo przed ustawieniami przeglądarki.
+
+Treść artykułu w obu językach jest w `src/about.ts`, a jego wstęp i metadane w `src/content.ts`. Trzy filmy w historii studia mają lokalne miniatury; odtwarzacz YouTube jest ładowany dopiero po kliknięciu. Bez JavaScriptu miniatura prowadzi bezpośrednio do filmu. Nazwy festiwali pozostają w oryginale, a rodzaje wyróżnień są tłumaczone. Zgodnie z decyzją autora nie dodajemy lat wyróżnień ani dodatkowych kategorii.
 
 ### Praca nad portfolio
 

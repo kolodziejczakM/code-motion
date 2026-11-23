@@ -8,7 +8,7 @@ interface Props {
 
 const { locale, page } = Astro.props;
 const name = "Tower Lady Pictures";
-const title = `${copy[locale][page].title} — ${name}`;
+const title = `${copy[locale][page].title} - ${name}`;
 const { description } = copy[locale][page];
 const canonical = new URL(pathFor(locale, page), Astro.site).href;
 const siteUrl = new URL("/", Astro.site).href;
