@@ -1,0 +1,95 @@
+---
+import { copy, hrefFor, type Locale, type Page } from "../content";
+import { brandArtwork } from "../films";
+import Backdrop from "../components/Backdrop.astro";
+import SiteMeta from "../components/SiteMeta.astro";
+import inter from "../../prototypes/tower-lady/assets/inter.woff2?url";
+import interExtended from "../../prototypes/tower-lady/assets/inter-latin-ext.woff2?url";
+import cormorant from "../../prototypes/tower-lady/assets/cormorant.woff2?url";
+import cormorantExtended from "../../prototypes/tower-lady/assets/cormorant-latin-ext.woff2?url";
+import cormorantItalic from "../../prototypes/tower-lady/assets/cormorant-italic.woff2?url";
+import cormorantItalicExtended from "../../prototypes/tower-lady/assets/cormorant-italic-latin-ext.woff2?url";
+import "../../prototypes/tower-lady/portfolio.css";
+import "../styles/site.css";
+
+interface Props {
+  locale: Locale;
+  page: Page;
+}
+
+const { locale, page } = Astro.props;
+const other = locale === "pl" ? "en" : "pl";
+const t = copy[locale];
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href={`${base}/favicon.png`} type="image/png" sizes="32x32" />
+    <link rel="icon" href={`${base}/apple-touch-icon.png`} type="image/png" sizes="180x180" />
+    <link rel="apple-touch-icon" href={`${base}/apple-touch-icon.png`} sizes="180x180" />
+    <link rel="preload" href={brandArtwork} as="image" crossorigin />
+    <link rel="preload" href={inter} as="font" type="font/woff2" crossorigin />
+    {(locale === "pl" || page !== "films") && <link rel="preload" href={interExtended} as="font" type="font/woff2" crossorigin />}
+    {page !== "films" && <link rel="preload" href={cormorant} as="font" type="font/woff2" crossorigin />}
+    {page !== "films" && locale === "pl" && <link rel="preload" href={cormorantExtended} as="font" type="font/woff2" crossorigin />}
+    {page !== "about" && <link rel="preload" href={cormorantItalic} as="font" type="font/woff2" crossorigin />}
+    {page !== "about" && locale === "pl" && <link rel="preload" href={cormorantItalicExtended} as="font" type="font/woff2" crossorigin />}
+    <SiteMeta locale={locale} page={page} />
+    <style is:inline>
+      @view-transition { navigation: auto; }
+      @media (prefers-reduced-motion: reduce) {
+        @view-transition { navigation: none; }
+      }
+    </style>
+    <script is:inline>
+      window.addEventListener("pagereveal", ({ viewTransition }) => {
+        if (!viewTransition) return;
+
+        const root = document.documentElement;
+        root.classList.add("waiting-for-transition-assets");
+        const resume = () => root.classList.remove("waiting-for-transition-assets");
+        const timeout = window.setTimeout(() => {
+          viewTransition.skipTransition();
+          resume();
+        }, 500);
+
+        const loaded = document.readyState === "complete"
+          ? Promise.resolve()
+          : new Promise(resolve => window.addEventListener("load", resolve, { once: true }));
+        const finish = () => {
+          window.clearTimeout(timeout);
+          resume();
+        };
+        Promise.all([loaded, viewTransition.ready])
+          .then(() => document.fonts.ready)
+          .then(finish, finish);
+      });
+    </script>
+  </head>
+  <body class:list={["portfolio-page", { "films-page": page === "films" }]}>
+    <Backdrop />
+    <a class="skip-link" href="#main">{t.skip}</a>
+    <header class="site-header wrap">
+      <a class="brand" href={hrefFor(locale, "home")} aria-label={t.homeLabel} aria-current={page === "home" ? "page" : undefined}>
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="wordmark" aria-hidden="true">
+          <span>Tower Lady</span>
+          <span class="wordmark-detail">Pictures</span>
+        </span>
+      </a>
+      <nav aria-label={t.navigation}>
+        <a href={hrefFor(locale, "films")} aria-current={page === "films" ? "page" : undefined}>{t.films.title}</a>
+        <a href={hrefFor(locale, "about")} aria-current={page === "about" ? "page" : undefined}>{t.about.title}</a>
+        <a class="language-link" href={hrefFor(other, page)} lang={other} hreflang={other} aria-label={copy[other].languageLabel}>
+          {other.toUpperCase()}
+        </a>
+      </nav>
+    </header>
+    <slot />
+    <footer class="site-footer wrap">Tower Lady Pictures</footer>
+  </body>
+</html>

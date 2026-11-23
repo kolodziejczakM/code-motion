@@ -1,0 +1,131 @@
+<div class="site-backdrop" aria-hidden="true">
+  {Array.from({ length: 9 }, () => <span class="brick-fragment"></span>)}
+</div>
+
+<style>
+  .site-backdrop {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .site-backdrop::before {
+    content: "";
+    position: absolute;
+    inset-block-start: -8rem;
+    inset-inline-start: -8%;
+    width: min(92rem, 115%);
+    height: clamp(32rem, 74vh, 56rem);
+    background: radial-gradient(
+      ellipse 84% 86% at 16% 22%,
+      rgb(171 137 83 / 15%),
+      rgb(153 119 72 / 6%) 46%,
+      transparent 84%
+    );
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .site-backdrop::before {
+      animation: light-drift 28s ease-in-out infinite alternate;
+    }
+
+    @keyframes light-drift {
+      from { transform: translate(0, 0); opacity: 1; }
+      to { transform: translate(4%, 3%); opacity: .82; }
+    }
+  }
+
+  .brick-fragment {
+    --brick-inset: clamp(-3.5rem, (100% - var(--measure)) / 2 - 7rem, 12rem);
+    position: absolute;
+    width: clamp(9rem, 17vw, 17rem);
+    aspect-ratio: 3.2;
+    color: rgb(184 152 108 / 19%);
+    background:
+      linear-gradient(currentColor 0 0) 22% 33% / 77% 1px,
+      linear-gradient(currentColor 0 0) 75% 66% / 64% 1px,
+      linear-gradient(currentColor 0 0) 28% 0 / 1px 33%,
+      linear-gradient(currentColor 0 0) 59% 49% / 1px 34%,
+      linear-gradient(currentColor 0 0) 39% 100% / 1px 34%,
+      linear-gradient(currentColor 0 0) 76% 100% / 1px 34%;
+    background-repeat: no-repeat;
+    mask-image: radial-gradient(ellipse farthest-side, #000 32%, #000a 62%, transparent 100%);
+  }
+
+  .brick-fragment:nth-child(1) {
+    inset-inline-start: clamp(1rem, 6vw, 10rem);
+    inset-block-start: clamp(6.5rem, 10vh, 8.5rem);
+  }
+
+  .brick-fragment:nth-child(2) {
+    inset-inline-end: var(--brick-inset);
+    inset-block-start: 49%;
+    transform: scaleX(-1) scale(.86);
+    opacity: .83;
+  }
+
+  .brick-fragment:nth-child(3) {
+    inset-inline-start: var(--brick-inset);
+    inset-block-end: 5rem;
+    transform: scale(.73);
+    opacity: .83;
+  }
+
+  :global(.films-page) .brick-fragment:nth-child(1) {
+    inset-block-start: clamp(36.5rem, 44vw, 46rem);
+  }
+
+  .brick-fragment:nth-child(4) {
+    inset-inline-end: var(--brick-inset);
+    inset-block-start: 26%;
+    transform: scale(.9);
+  }
+
+  .brick-fragment:nth-child(5) {
+    inset-inline-start: var(--brick-inset);
+    inset-block-start: 42%;
+    transform: scaleX(-1) scale(.84);
+  }
+
+  .brick-fragment:nth-child(6) {
+    inset-inline-end: var(--brick-inset);
+    inset-block-end: 7rem;
+    transform: scale(.92);
+  }
+
+  .brick-fragment:nth-child(7) {
+    inset-inline-end: calc(var(--brick-inset) - 1.5rem);
+    inset-block-start: max(6rem, 14%);
+    transform: scaleX(-1) scale(.68);
+    opacity: .76;
+  }
+
+  .brick-fragment:nth-child(8) {
+    inset-inline-start: calc(var(--brick-inset) - .75rem);
+    inset-block-start: 63%;
+    transform: scale(.82);
+    opacity: .84;
+  }
+
+  .brick-fragment:nth-child(9) {
+    inset-inline-end: calc(var(--brick-inset) - 1rem);
+    inset-block-start: 72%;
+    transform: scaleX(-1) scale(.73);
+    opacity: .76;
+  }
+
+  @media (max-width: 620px) {
+    .brick-fragment:nth-child(1) {
+      width: 8rem;
+      inset-inline-start: auto;
+      inset-inline-end: -2.5rem;
+      inset-block-start: 4.6rem;
+      opacity: .78;
+    }
+    :global(.films-page) .brick-fragment:nth-child(1) { inset-block-start: 33rem; }
+    .brick-fragment:nth-child(6) { inset-block-end: 9rem; }
+    .brick-fragment:nth-child(9) { display: none; }
+  }
+</style>

@@ -1,0 +1,65 @@
+---
+import { copy, locales, pathFor, type Locale, type Page } from "../content";
+
+interface Props {
+  locale: Locale;
+  page: Page;
+}
+
+const { locale, page } = Astro.props;
+const name = "Tower Lady Pictures";
+const title = `${copy[locale][page].title} — ${name}`;
+const { description } = copy[locale][page];
+const canonical = new URL(pathFor(locale, page), Astro.site).href;
+const siteUrl = new URL("/", Astro.site).href;
+const socialImage = new URL("/tower-lady-social.jpg", Astro.site).href;
+const socialAlt = locale === "pl"
+  ? "Symbol Halszki i nazwa Tower Lady Pictures na czarnym tle"
+  : "The Halszka emblem and the Tower Lady Pictures wordmark on black";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}#studio`,
+      name,
+      url: siteUrl,
+      logo: new URL("/apple-touch-icon.png", Astro.site).href,
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}#website`,
+      name,
+      url: siteUrl,
+      inLanguage: locales,
+      publisher: { "@id": `${siteUrl}#studio` },
+    },
+  ],
+};
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+{__TAILNET_PREVIEW__ && <meta name="robots" content="noindex, nofollow" />}
+<link rel="canonical" href={canonical} />
+{locales.map((language) => (
+  <link rel="alternate" hreflang={language} href={new URL(pathFor(language, page), Astro.site)} />
+))}
+<link rel="alternate" hreflang="x-default" href={new URL(pathFor("pl", page), Astro.site)} />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={name} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:locale" content={locale === "pl" ? "pl_PL" : "en_US"} />
+<meta property="og:locale:alternate" content={locale === "pl" ? "en_US" : "pl_PL"} />
+<meta property="og:image" content={socialImage} />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={socialAlt} />
+<meta name="twitter:card" content="summary_large_image" />
+{page === "home" && (
+  <script type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g, "\\u003c")} />
+)}

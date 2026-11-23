@@ -1,0 +1,520 @@
+<!doctype html>
+<!-- THROWAWAY: porównanie nazw w jednakowej oprawie, nie prototyp strony ani logo.
+     Runda 26 porównuje Tower Lady Pictures i sześciu wcześniejszych faworytów.
+     ?round=26&variant=A..G. Adres bez parametru round otwiera rundę 01. -->
+<html lang="pl">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prototyp nazwy · CODE-MOTION</title>
+<style>
+  * { box-sizing: border-box; }
+  :root { color-scheme: light; font-family: system-ui, sans-serif; color: #242622; background: #f3f1eb; }
+  body { margin: 0; padding: 32px clamp(18px, 5vw, 90px) 130px; }
+  header { display: flex; justify-content: space-between; gap: 20px; border-bottom: 1px solid #cac9c1; padding-bottom: 18px; }
+  header span, .eyebrow { font-size: 12px; letter-spacing: .09em; text-transform: uppercase; }
+  h1 { font-weight: 500; font-size: clamp(28px, 4vw, 44px); letter-spacing: -.04em; margin: 32px 0 10px; }
+  .intro { max-width: 760px; line-height: 1.6; color: #5c6058; }
+  .controls { display: flex; flex-wrap: wrap; align-items: end; gap: 16px 32px; margin: 24px 0; }
+  label { display: grid; gap: 7px; font-size: 13px; }
+  select, button { font: inherit; padding: 10px 14px; border: 1px solid #b5b8ac; background: #fffefa; color: #242622; border-radius: 5px; }
+  button { cursor: pointer; }
+  button:hover { background: #e5e8dc; }
+  button:focus-visible, select:focus-visible, a:focus-visible { outline: 3px solid #607c38; outline-offset: 4px; }
+  #stage { min-height: 320px; padding: clamp(25px, 5vw, 70px); background: #151713; color: #f6f3e9; display: flex; flex-direction: column; justify-content: center; text-align: center; }
+  #stage .brand { font-size: clamp(32px, 7vw, 88px); font-weight: 500; letter-spacing: .035em; overflow-wrap: anywhere; }
+  #stage .minor { margin: 18px 0 0; color: #bac0b1; font-size: 15px; line-height: 1.7; }
+  #stage h2 { font-size: clamp(25px, 4vw, 42px); font-weight: 400; margin: 12px 0; }
+  #stage.profile { align-items: start; text-align: left; background: #fffefa; color: #242622; border: 1px solid #cac9c1; }
+  #stage.profile .brand { font-size: clamp(30px, 5vw, 58px); letter-spacing: -.02em; }
+  #stage.profile .minor { color: #5c6058; }
+  #stage.credit .brand { font-size: clamp(24px, 4vw, 42px); }
+  .notes { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 28px; margin-top: 24px; }
+  .notes h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .09em; font-weight: 500; color: #5c6058; }
+  .notes p { font-size: 15px; line-height: 1.6; margin-top: 10px; }
+  .state { margin-top: 22px; padding-top: 16px; border-top: 1px solid #cac9c1; font: 12px/1.6 ui-monospace, monospace; white-space: pre-wrap; overflow-wrap: anywhere; color: #5c6058; }
+  nav { position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 12px; padding: 9px; background: #fffefa; border: 1px solid #969c8c; border-radius: 14px; box-shadow: 0 8px 30px #0002; width: max-content; max-width: calc(100vw - 24px); }
+  #current { min-width: 190px; text-align: center; font-size: 14px; }
+  nav button { font-size: 20px; min-width: 44px; }
+  a { color: #405927; }
+  .footnote { font-size: 13px; line-height: 1.6; color: #5c6058; margin-top: 24px; max-width: 850px; }
+  details { margin-top: 24px; line-height: 1.6; max-width: 1000px; }
+  summary { cursor: pointer; }
+  table { border-collapse: collapse; font-size: 14px; width: 100%; margin: 16px 0; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-bottom: 1px solid #cac9c1; }
+  @media (max-width: 680px) { .notes { grid-template-columns: 1fr; gap: 5px; } header { flex-direction: column; gap: 7px; } #stage { min-height: 290px; } #current { min-width: 165px; } }
+</style>
+<header><span>CODE-MOTION / poszukiwanie nazwy</span><span id="round-heading">Prototyp roboczy · do odrzucenia</span></header>
+<main>
+  <h1>Jak brzmi podpis pod Twoim filmem?</h1>
+  <p class="intro">Ta sama typografia, różne skojarzenia. Zmieniaj kontekst i sprawdzaj brzmienie. To materiał do wyboru kierunku nazwy; wygląd tej planszy nie przesądza o logo ani stronie.</p>
+  <p class="intro"><a href="?round=26&amp;variant=A"><strong>Tower Lady Pictures — wybrana nazwa</strong></a>. <a href="../docs/rebranding/naming-round-26.md#rekomendacja-domeny">Rekomendacja domeny</a>.</p>
+  <p class="intro" id="round-sound" hidden>Runda 07: oceniamy samodzielne brzmienie i zapis. Te propozycje nie mają przypisanych znaczeń słownikowych ani historii o ukrytych składnikach. Skojarzenia poniżej są wrażeniami do oceny.</p>
+  <p class="intro" id="round-concept" hidden>Runda 08: ludzka intencja, emocje i warsztat spotykają możliwości syntezy i generowania. Proponowane rozwinięcia nazw są ideami marki, nie definicjami słownikowymi.</p>
+  <p class="intro" id="round-myth" hidden>Runda 09: wymyślamy imię bóstwa ludzkiej wyobraźni i inteligencji, inspirując się słowiańskim brzmieniem oraz motywami ognia, światła i tworzenia. Imiona i patronaty są naszą współczesną kreacją; nie przedstawiamy ich jako historycznych wierzeń.</p>
+  <p class="intro" id="round-myth-world" hidden>Runda 10: Egipt, Grecja i tradycja nordycka. Trzy własne imiona o bardziej międzynarodowym brzmieniu. Motywy mitologiczne są punktem wyjścia; nowe imiona, patronaty i powiązanie z AI są naszą kreacją. Źródła inspiracji i przegląd wcześniejszych użyć znajdziesz w notatce rundy.</p>
+  <p class="intro" id="round-film" hidden>Runda 11: opowieść i energia, fikcja i napięcie, kino i inteligencja. Trzy różne akcenty tej samej marki. Oceń nazwę na planszy, zanim rozwiniesz jej konstrukcję. Żadna z propozycji nie ma jeszcze potwierdzonej dostępności domen i uchwytów.</p>
+  <p class="intro" id="round-comparison" hidden>Porównanie Fictension i Altertake. Fictension akcentuje fikcję i napięcie, Altertake — ujęcie i zmianę warsztatu. Przegląd z 30.10.2026 daje Fictension przewagę w odrębności wyników i sytuacji domeny .com. Szczegółowe źródła oraz ograniczenia są w notatce. Dostępność zakupu domeny i uchwytów wymaga potwierdzenia.</p>
+  <p class="intro" id="round-direction" hidden>Kierunek studia: poważna nazwa i nowy rozdział. Fundamentem pozostają zdjęcia z ekipą; AI rozszerza ujęcia, VFX, scenografię, muzykę i marketing. Przykładowe bio opisuje kierunek nowej marki; nie określa sposobu realizacji filmów z archiwum.</p>
+  <p class="intro" id="round-homecoming" hidden>Runda 20: 12 wariantów wokół uczucia powrotu. A–E: znajome światło i droga do domu; F–H: pamięć miejsca; I–L: wspomnienie i zakłócenie. Studio pozostaje opcjonalnym dopiskiem. Wszystkie nazwy są do oceny.</p>
+  <p class="intro" id="round-avantreel-familiar" hidden>Runda 21 porównuje Avantreel i Last Familiar Pictures. Zmień nazwę, film lub kontekst, by zobaczyć obie propozycje w tej samej oprawie.</p>
+  <p class="intro" id="round-varianture-variantour" hidden>Porównaj Varianture i Variantour na tej samej planszy. Zmień kontekst, by zobaczyć podpis filmowy albo opis profilu.</p>
+  <div class="controls">
+    <label>Runda<select id="round"><option value="1">01 · Pierwsze kierunki</option><option value="2">02 · Angielska lub własna</option><option value="3">03 · Jedno słowo, dwie warstwy</option><option value="4">04 · Brzmienie i obraz</option><option value="5">05 · Nowy rozdział i AI</option><option value="6">06 · Wokół Altertake</option><option value="7">07 · Nazwy wymyślone</option><option value="8">08 · Człowiek i AI</option><option value="9">09 · Imię bóstwa</option><option value="10">10 · Inne mitologie</option><option value="11">11 · Film i nowe możliwości</option><option value="12">12 · Fictension / Altertake</option><option value="13">13 · Inne cięcie, napięcie, hybryda</option><option value="14">14 · Cztery nowe kierunki + Elsecut</option><option value="15">15 · Pionierskie kino + Elsecut</option><option value="16">16 · Variant / var</option><option value="17">17 · Var + liczby i symbole</option><option value="18">18 · Dwa słowa</option><option value="19">19 · Nostalgia i retro</option><option value="20">20 · Uczucie powrotu — 12 nazw</option><option value="21">21 · Avantreel / Last Familiar Pictures</option><option value="22">22 · Varianture / Variantour</option><option value="23">23 · Variant93 / Varianture</option><option value="24">24 · Varianture i dopiski</option><option value="25">25 · Nazwy z własnej filmografii</option><option value="26">26 · Tower Lady Pictures i krótka lista</option></select></label>
+    <label>Nazwa<select id="name"></select></label>
+    <label>Kontekst<select id="context"><option value="title">Plansza otwierająca</option><option value="profile">Opis profilu</option><option value="credit">Podpis przy filmie</option></select></label>
+    <label>Film<select id="film"><option value="0">Saturday cleaning</option><option value="1">Akabei</option><option value="2">Boundless, actually</option></select></label>
+  </div>
+  <p id="candidate-status" class="eyebrow" role="status"></p>
+  <section id="stage" aria-label="Przykład użycia nazwy"></section>
+  <details id="construction" hidden>
+    <summary>Odkryj pomysł za nazwą</summary>
+    <p id="construction-text"></p>
+  </details>
+  <div class="notes" aria-live="polite">
+    <section><h2 id="meaning-label">Punkt wyjścia</h2><p id="meaning"></p></section>
+    <section><h2>Co zyskujemy</h2><p id="strength"></p></section>
+    <section><h2>Co sprawdzić na głos</h2><p id="risk"></p></section>
+  </div>
+  <details id="round-analysis" hidden>
+    <summary>Dlaczego porównujemy film z innymi dziedzinami?</summary>
+    <p>To model do tworzenia nazw. Szukamy podobnych mechanizmów: co twórca układa, na co czeka odbiorca i co zmienia jego interpretację.</p>
+    <table>
+      <thead><tr><th>Dziedzina</th><th>Wspólny mechanizm</th><th>Ślad w nazwie</th></tr></thead>
+      <tbody>
+        <tr><td>Iluzja</td><td>Wskazówka, domysł, odkrycie. Późniejsza informacja zmienia sens wcześniejszej.</td><td>Sleightory</td></tr>
+        <tr><td>Muzyka</td><td>Rytm, pauza i długość frazy sterują oczekiwaniem.</td><td>Staccut</td></tr>
+        <tr><td>Literatura</td><td>Opowieść przyciąga uwagę i skłania odbiorcę do uzupełniania przemilczeń.</td><td>Fablure</td></tr>
+        <tr><td>Gry narracyjne</td><td>Reguły świata nadają sens wyborom i konsekwencjom.</td><td>Ruleverie</td></tr>
+        <tr><td>Rzemiosło — metafora procesu</td><td>Znaczenie całości wynika z relacji między starannie dobranymi składnikami.</td><td>Plotchemy</td></tr>
+      </tbody>
+    </table>
+    <p>Gra słów ma być dodatkową warstwą. Najpierw oceń samo brzmienie, potem sprawdź, czy odkrycie konstrukcji coś dodaje.</p>
+  </details>
+  <details id="memory-exercise" hidden>
+    <summary>Które nazwy zostają w pamięci?</summary>
+    <p>Przeczytaj pięć nazw na głos, potem odłóż ekran na około minutę. Spróbuj przypomnieć sobie nazwy i ich zapis. Oddziel „pamiętam, ale nie lubię” od „podoba mi się, ale zapomniałem”. To próba do rozmowy, nie ranking skuteczności.</p>
+  </details>
+  <div id="state" class="state" aria-live="polite"></div>
+  <p class="footnote">Wstępne wyszukiwanie nie potwierdza dostępności nazwy, domeny ani uchwytów. Szczegóły i źródła są w <a id="round-notes" href="../docs/rebranding/naming-round-01.md">notatce z rundy</a>. Przy wcześniejszej akceptacji Altertake autor zgłosił zastrzeżenie dotyczące oryginalności. Finalny wybór pozostaje otwarty. Sformułowania opisów profili również są robocze.</p>
+  <p class="footnote">Do kolejnej rundy wystarczy: maksymalnie dwie nazwy oraz „podoba mi się… / przeszkadza mi…”. Można odrzucić wszystkie. Strzałki ← → przełączają nazwy, o ile nie pracujesz w polu wyboru. Adres zachowuje rundę i nazwę; pozostałe wybory istnieją tylko do przeładowania strony.</p>
+  <noscript><p>Włącz JavaScript, aby przełączać nazwy. Wyniki porównania są też opisane w <a href="../docs/rebranding/name-originality-check.md">notatce z badania Fictension i Altertake</a>.</p></noscript>
+</main>
+<nav aria-label="Przełączanie nazw prototypu"><button id="previous" aria-label="Poprzednia nazwa">←</button><span id="current"></span><button id="next" aria-label="Następna nazwa">→</button></nav>
+<script>
+  const firstRound = {
+    A: { name: 'Niedocisza', language: 'pl', meaning: 'Cisza, która nie jest pełna. Coś zostaje poza kadrem. Polski neologizm o napięciu i niedopowiedzeniu.', strength: 'Charakterystyczny zapis bez polskich znaków. Pasuje również do dramatu i absurdu.', risk: 'Czy brzmi celowo, czy jak językowa niezręczność? Dla zagranicznego widza wymowa może być trudna.', bio: 'Autorskie krótkie filmy. Coś zostaje poza kadrem.', screening: 'Brak wyników dla dokładnej nazwy w wykonanych zapytaniach. Dostępność niepotwierdzona.' },
+    B: { name: 'Stillfault', language: 'en', meaning: 'Bezruch lub filmowa stopklatka + pęknięcie, wina lub błąd. Spokój, który ma ukrytą skazę. Złożone słowo, nie wyrażenie słownikowe.', strength: 'Zwarty zapis i subtelne powiązanie z programowaniem. Opisuje mechanizm napięcia bez dosłownego „thrillera”.', risk: 'Czy zapamiętasz zapis razem? „Fault” może sugerować usterkę; angielskie brzmienie trzeba oswoić.', bio: 'Independent short films. Something is slightly wrong.', screening: 'Wyniki głównie techniczne, w tym fragmenty innych wyrazów. Brak jednoznacznej marki filmowej w zwróconych wynikach.' },
+    C: { name: 'Odmrok', language: 'pl', meaning: 'Krótki neologizm wokół mroku: odsłanianie, wychodzenie z ciemności. Znaczenie budowane dopiero filmami.', strength: 'Sześć liter, prosty zapis bez znaków diakrytycznych. Dużo swobody dla przyszłego logotypu.', risk: 'Czy brzmi jak marka, czy tytuł horroru? Mało czytelna opowieść bez dodatkowego kontekstu.', bio: 'Krótkie filmy. Nieoczywiste historie.', screening: 'Wyniki głównie jako szum OCR w skanach. Nie ujawniły jednoznacznej marki; dostępność niepotwierdzona.' },
+    D: { name: 'Patient Frame', language: 'en', meaning: 'Cierpliwy kadr. Nazwa oparta na długim przygotowaniu krótkiego filmu i dbałości o jego realizację.', strength: 'Prawdziwe odniesienie do sposobu pracy. Działa niezależnie od gatunku.', risk: 'Czy nie sugeruje zbyt powolnego kina? „Patient” oznacza też pacjenta; wyszukiwanie zawiera zastosowania medyczne.', bio: 'Independent short films, carefully made.', screening: 'Zastosowania medyczne, produktowe i opisowe w filmie. Najsłabsza odrębność w tej rundzie.' }
+  };
+  const rounds = {
+    '1': firstRound,
+    '2': {
+      A: { name: 'Elsewick', language: 'en', article: 'an', meaning: 'Nazwa własnego świata. „Else” przywołuje coś innego lub gdzie indziej; końcówka brzmi jak angielska nazwa miejsca. To interpretacja brzmienia, nie etymologia.', strength: 'Osiem liter, jeden wyraz, dużo miejsca na różne gatunki. Filmy mogą zbudować znaczenie nazwy.', risk: 'Możliwa pomyłka z Elswick lub Eastwick. Brzmi jak miejsce albo nazwisko. Spróbuj wymowy „els-łik”.', bio: 'Independent short films. Familiar places, unfamiliar turns.', screening: 'Wcześniejsze wystąpienia jako nazwa miejscowa i zapisy nazwisk. Nie ujawniono jednoznacznej marki filmowej; dostępność niepotwierdzona.' },
+      B: { name: 'Crooked Minute', language: 'en', meaning: 'Chwila, w której rzeczywistość skręca w nieoczekiwaną stronę. „Crooked” wnosi przewrotność i nieuczciwość, „minute” — krótki moment.', strength: 'Obrazowe, charakterystyczne połączenie. Mieści thriller, czarny humor i absurd, z odniesieniem do krótkiej formy.', risk: 'Może brzmieć jak tytuł lub sugerować filmy jednominutowe. „Crooked” ma tu dwie sylaby: „kruk-id”.', bio: 'Independent short films. Every moment can take a turn.', screening: 'Wyniki przybliżone z Crooked i Minute, bez potwierdzonej marki o dokładnym zapisie w zwróconych wynikach. Dostępność niepotwierdzona.' },
+      C: { name: 'Mild Alibi', language: 'en', meaning: 'Niewinna mina i niezbyt przekonująca wymówka. Łagodne „mild” zderzone z „alibi” daje przewrotny, lekko ironiczny ton. To połączenie autorskie, nie idiom.', strength: 'Łatwo wyobrazić sobie scenę i człowieka. Więcej dystansu i humoru, bez ponurej nazwy wprost.', risk: '„Mild” może sugerować brak intensywności, a „alibi” kieruje w kryminał. Angielska wymowa: „majld al-uh-baj”.', bio: 'Independent short films. Everyone has a story.', screening: 'Dokładna nazwa zwróciła głównie przybliżone wyniki i przewodniki wiekowe filmów z Alibi w tytule. Węższy przegląd niż dla pozostałych nazw; dostępność niepotwierdzona.' },
+      D: { name: 'Quiet Offset', language: 'en', meaning: 'Dyskretne przesunięcie, które zmienia odbiór całości. Skojarzenie z perspektywą, precyzją i obrazem; możliwe drugie znaczenie dla osoby zajmującej się UX.', strength: 'Subtelna więź z projektowaniem i myśleniem technicznym. Może oznaczać zarówno zmianę obrazu, jak i sensu opowieści.', risk: 'Chłodniejsza, abstrakcyjna nazwa: może przypominać studio projektowe. „Quiet” bywa mylone z „quite”. Wymowa: „kwaj-et of-set”.', bio: 'Independent short films. A slight shift changes everything.', screening: 'Fraza pojawiła się w tekście o artyście Offset; inne wyniki przybliżone. Nie ujawniono jednoznacznej marki filmowej; dostępność niepotwierdzona.' },
+      E: { ...firstRound.B, meaning: firstRound.B.meaning + ' Powrót z rundy 01 jako porównanie, bez domniemanej akceptacji.', risk: firstRound.B.risk + ' Robocza wymowa: „stil-folt”.' }
+    },
+    '3': {
+      A: { name: 'Fablure', language: 'en', blend: 'fable + lure', bridge: 'Literatura ↔ iluzja', construction: 'Opowieść, która wciąga. Wspólne „l” skleja fable i lure: fab[l]ure. To proponowany sens marki, nie znaczenie słownikowe.', meaning: 'Historia jako zaproszenie, pokusa albo pułapka. Odbiorca sam chce pójść za wskazówką.', strength: 'Siedem liter i płynne brzmienie. Ukryte znaczenie, które może pasować do thrillera, dramatu i absurdu.', risk: 'Może przypominać „failure”, „fabulous” albo kosmetyk. „Fable” może kojarzyć się z baśnią. Robocza wymowa: „fab-lur”.', bio: 'Independent short films. Follow the story.', screening: 'Zapytania o dokładny zapis i film studio zwróciły głównie skan z prawdopodobnym błędem OCR słowa failure. Nie ujawniono jednoznacznej marki filmowej; dostępność niepotwierdzona.' },
+      B: { name: 'Sleightory', language: 'en', blend: 'sleight + story', bridge: 'Iluzja sceniczna ↔ narracja', construction: 'Opowiadanie jak sztuczka iluzjonisty. „Story” zostaje skrócone do „tory”; odczytanie pełnej gry wymaga odkrycia obu składników.', meaning: 'Widz dostaje wskazówki, ale dopiero później składa z nich właściwą historię.', strength: 'Nazwa o samym opowiadaniu i prowadzeniu uwagi. Działa dla thrillera, ale także absurdu i czarnego humoru.', risk: 'Dziesięć liter i trudniejszy zapis „eigh”. Możliwa pomyłka ze „Slightory”. Robocza wymowa: „slaj-tori”.', bio: 'Independent short films. Watch what you believe.', screening: 'Brak wyników dla dokładnej nazwy i zapytania z film studio. Dostępność domen i uchwytów niepotwierdzona.' },
+      C: { name: 'Staccut', language: 'en', blend: 'staccato + cut', bridge: 'Muzyka ↔ montaż', construction: 'Muzyczne staccato i filmowe cięcie. Rytm powstaje przez oddzielenie dźwięków lub ujęć; zbitka zachowuje początek stacc- i końcówkę cut.', meaning: 'Precyzyjnie odmierzony rytm sceny: obraz, dźwięk i pauza pracują razem.', strength: 'Siedem liter, mocne spółgłoski, czytelny związek montażu z muzyką. Nazwa ma własny rytm.', risk: 'Może sugerować szybki montaż, aplikację albo fryzjerstwo. Podwójne „c” trzeba zapamiętać. Roboczo „sta-kat”, z końcówką jak angielskie cut.', bio: 'Independent short films. Every cut counts.', screening: 'Wyniki głównie z włoskiego bloga z podobnym zapisem. Nie ujawniono jednoznacznej marki filmowej; dostępność niepotwierdzona.' },
+      D: { name: 'Ruleverie', language: 'en', blend: 'rule + reverie', bridge: 'Gry narracyjne ↔ wyobraźnia', construction: 'Reguła spotyka marzenie na jawie. Świat ma własną logikę, a jej znajomość pozwala odbiorcy wejść w niezwykłą historię.', meaning: 'Wyobraźnia oparta na przemyślanej konstrukcji. Możliwy pomost między inżynierem a autorem filmów.', strength: 'Osobiste drugie znaczenie bez słowa code. Szeroki zakres gatunkowy i miększe, mniej ponure brzmienie.', risk: 'Najmniej oczywista wymowa; reverie może być nieznane. Ryzyko skojarzenia z grą fantasy. Roboczo „rul-eweri” — do próby na głos.', bio: 'Independent short films. Worlds with their own rules.', screening: 'Brak wyników dla dokładnej nazwy i zapytania z film studio. Dostępność domen i uchwytów niepotwierdzona.' },
+      E: { name: 'Plotchemy', language: 'en', blend: 'plot + alchemy', bridge: 'Scenariopisarstwo ↔ rzemiosło', construction: 'Przemiana składników w opowieść. Alchemia jest tu metaforą procesu: znaczenie powstaje z relacji między częściami.', meaning: 'Aktor, lokacja, dźwięk i detal scenografii tworzą coś, czego nie oddaje sama lista składników.', strength: 'Rozpoznawalna gra słów o tworzeniu. Pasuje do starannie przygotowanych, kameralnych produkcji bez wskazywania liczby twórców.', risk: 'Może sugerować narzędzie lub warsztaty dla scenarzystów. Alchemia to częsta metafora kreatywna. Robocza wymowa: „plot-ke-mi”.', bio: 'Independent short films. Stories, carefully made.', screening: 'Brak wyników dla dokładnej nazwy i zapytania z film studio. Dostępność domen i uchwytów niepotwierdzona.' }
+    },
+    '4': {
+      A: { name: 'Krukoo', language: 'en', blend: 'kruk + echo cuckoo', bridge: 'Niepokój i absurd', construction: 'Wymyślona nazwa z jednym obrazem: kruk, który odzywa się inaczej, niż oczekujesz. Polski rdzeń spotyka dźwiękowe echo angielskiego cuckoo. Nie jest to angielskie słowo ani wymóg ptasiego logo.', meaning: 'Kruk z nietypowym głosem. Znajoma postać zachowuje się nieoczekiwanie.', strength: 'Sześć liter, dwie krótkie sylaby i powtórzone „ku”. Jedno wyraziste skojarzenie do przywołania. Roboczo: „kru-ku”.', risk: 'Może być zbyt zabawne lub dziecięce. Ze słuchu możliwe Crookoo / Kruku. Crookoo ma wcześniejsze użycia fotograficzne, więc podobieństwo trzeba zbadać.', bio: 'Independent short films. Something is off.', screening: 'Wyniki zawierały opis odgłosu ptaka i fora; bez jednoznacznej marki filmowej. Podobny zapis Crookoo używany fotograficznie. Dostępność niepotwierdzona.' },
+      B: { name: 'Smirrow', language: 'en', blend: 'echo smirk i mirror', bridge: 'Uśmieszek i odbicie', construction: 'Swobodna gra brzmieniem smirk i mirror z własnym zakończeniem -ow. To inspiracja, nie dosłowne sklejenie dwóch pełnych słów.', meaning: 'Uśmieszek w lustrze, który nie pasuje do sytuacji. Coś ludzkiego, znajomego i lekko niepokojącego.', strength: 'Siedem liter i dwie sylaby. Mocny początek przechodzi w miękkie zakończenie. Roboczo: „smir-oł”.', risk: 'Może przypominać nazwisko lub Smirnoff. Istnieją wcześniejsze użycia, w tym Smirrow Trading. Wymowa po polsku i angielsku może się różnić.', bio: 'Independent short films. Look again.', screening: 'Wyniki obejmowały profil Steam oraz Smirrow Trading w publikacji CIPC. To nie jest zapis bez wcześniejszych użyć komercyjnych. Dostępność niepotwierdzona.' },
+      C: { name: 'Rookle', language: 'en', blend: 'rook + własne zakończenie -le', bridge: 'Ptak lub szachowa wieża', construction: 'Krótka nazwa własna oparta na brzmieniu rook. Obraz czarnego ptaka lub wieży może zostać rozwinięty później, jeśli pasuje do autora. Zapis ma wcześniejsze użycia.', meaning: 'Niewielki znak z własnym charakterem: czarny ptak albo szachowa wieża.', strength: 'Sześć liter, dwie sylaby. Bardziej neutralne gatunkowo brzmienie, z prostym obrazem w tle. Roboczo: „ruk-el”.', risk: 'Może brzmieć jak aplikacja lub sympatyczna postać. Zapis występuje jako nazwisko i w nazwie firmy Rookle Ehitus OÜ.', bio: 'Independent short films. Stories with a turn.', screening: 'Wyniki obejmowały zapisy genealogiczne oraz firmę budowlaną Rookle Ehitus OÜ. Bez potwierdzonej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' },
+      D: { name: 'Snarlit', language: 'en', blend: 'snarl + lit', bridge: 'Opowieść z ukrytym warknięciem', construction: 'Snarl spotyka lit — z echem literatury i oświetlenia. Całość jest proponowaną nazwą, nie słownikowym terminem.', meaning: 'Historia, która odsłania zęby. Najbardziej drapieżne brzmienie w tej rundzie.', strength: 'Siedem liter i dwie sylaby. Wyraźne przejście od cięższego początku do krótkiej końcówki. Roboczo: „snar-lit”.', risk: 'Może przywołać metal, potwora albo grę. Początek „snarl” może być trudniejszy dla polskiego odbiorcy.', bio: 'Independent short films. Stories with teeth.', screening: 'Głównie szum OCR w gazecie i lista wymyślonych nazw. Bez jednoznacznej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' },
+      E: { name: 'Plotato', language: 'en', blend: 'plot + potato', bridge: 'Codzienność i absurd', construction: 'Ziemniak ze scenariuszem. Prosty żart, w którym zwykły przedmiot staje się bohaterem czegoś nieoczywistego.', meaning: 'Codzienność, która dostaje własną dziwną historię. Świadomie humorystyczny kandydat.', strength: 'Siedem liter, trzy rytmiczne sylaby i jeden konkretny obraz. Roboczo: „plo-tej-toł”.', risk: 'Może sugerować parodię lub kino robione dla żartu. To odważna próba granicy tonu, a nie rekomendacja komediowego pozycjonowania.', bio: 'Independent short films. Ordinary things, unusual stories.', screening: 'Istniejące pseudonimy graczy, m.in. Tales of Maj’Eyal i Hypixel. Nie zakładamy wolnego uchwytu ani domeny.' }
+    },
+    '5': {
+      A: { name: 'Syntake', language: 'en', blend: 'synthesis + take', bridge: 'Synteza i filmowe ujęcie', construction: 'Połączenie procesu syntezy z filmowym take. Może obejmować rozwijanie koncepcji, łączenie materiałów i generowanie części obrazu lub dźwięku; nie deklaruje, że wszystko powstaje w AI.', meaning: 'Nowy warsztat filmowy, w którym AI znacząco rozszerza możliwości autora.', strength: 'Siedem liter, dwie sylaby, czytelny filmowy składnik take. Najbardziej bezpośrednie połączenie AI z filmem w tej rundzie. Roboczo: „sin-tejk”.', risk: 'Może brzmieć jak produkt do generowania wideo lub firma chemiczna. Istnieje wpis Syntake Chemical; syntake.com jest oferowana do odsprzedaży.', bio: 'Live-action roots. Expanded by AI.', screening: 'Oferta odsprzedaży syntake.com oraz wpis Syntake Chemical w katalogu B2Brazil, oznaczony jako niezweryfikowany. Nazwa i domeny nie są potwierdzone jako dostępne.' },
+      B: { name: 'Newacta', language: 'en', blend: 'new + act + własne zakończenie -a', bridge: 'Nowy akt twórczości', construction: 'Nazwa własna o nowym rozdziale. Act przywołuje tworzenie, działanie i dramaturgię; zakończenie nadaje nazwie odrębne brzmienie. Nie deklarujemy znaczenia łacińskiego.', meaning: 'Otwarcie nowego etapu filmowego i rozwój sposobu pracy.', strength: 'Siedem liter, bardziej instytucjonalny ton i szerokość gatunkowa. AI może być jasno opisane w podpisie, a nazwa pozostawia przestrzeń na rozwój. Roboczo: „nju-ak-ta”.', risk: 'Może brzmieć korporacyjnie lub przywoływać ACTA. Związek z AI wymaga podpisu lub opisu działalności.', bio: 'Live-action roots. Expanded by AI.', screening: 'Wcześniejsze wystąpienie Newacta Lodge i wyniki przybliżone. Nie ujawniono jednoznacznego studia filmowego w zwróconych wynikach; dostępność domen i uchwytów niepotwierdzona.' },
+      C: { name: 'Emerframe', language: 'en', article: 'an', blend: 'emerge + frame', bridge: 'Wyłanianie się obrazu', construction: 'Obraz staje się widoczny: przez projektowanie sceny, zdjęcia, montaż albo generowanie. To metafora procesu twórczego, nie techniczna definicja modelu AI.', meaning: 'Przejście od wyobrażenia do obrazu przy użyciu nowych możliwości twórczych.', strength: 'Dziewięć liter, mocny składnik frame i poważny ton. Łączy obraz z powstawaniem czegoś nowego. Roboczo: „e-mer-frej(m)”.', risk: 'Dłuższy zapis i mniej oczywista wymowa. Może przypominać firmę graficzną lub oprogramowanie.', bio: 'Live-action roots. Expanded by AI.', screening: 'Brak wyników dla dokładnej nazwy i zapytania z film studio. To nie potwierdza dostępności domeny, uchwytów ani praw do nazwy.' },
+      D: { name: 'Altertake', language: 'en', article: 'an', blend: 'alter + take', bridge: 'Zmiana warsztatu filmowego', construction: 'Zmienione ujęcie i nowy sposób realizacji. Mieści współistnienie zdjęć, montażu i narzędzi AI.', meaning: 'Filmowe myślenie rozwijane przez zmianę procesu i możliwości realizacji.', strength: 'Dziewięć liter, czytelne filmowe take i oszczędny ton. Bardziej autorski niż laboratoryjny kierunek. Roboczo: „ol-ter-tejk”.', risk: 'AI nie jest bezpośrednio czytelne w nazwie. Wcześniejsze tytuły muzyczne i zbliżone użycie AlterTake w materiałach wideo wymagają dokładniejszego sprawdzenia.', bio: 'Live-action roots. Expanded by AI.', screening: 'Wcześniejsze tytuły muzyczne z Altertake oraz zapis AlterTake jako źródło materiału wideo w Coub. To ślad wymagający dalszej weryfikacji; dostępność nazwy niepotwierdzona.' }
+    }
+  };
+  rounds['6'] = {
+    A: { ...rounds['5'].D },
+    B: { name: 'Alterreal', language: 'en', article: 'an', blend: 'alter + real', bridge: 'Przemiana rzeczywistości z planu', construction: 'Rzeczywisty materiał staje się punktem wyjścia do dalszej kreacji. Nazwa przesuwa akcent z ujęcia na świat przedstawiony.', meaning: 'Rzeczywistość z planu rozwijana przez nowe możliwości obrazu.', strength: 'Najbliższe Altertake pod względem brzmienia. Mocne skojarzenie z rozwijaniem scenografii i przekształcaniem nagranego świata. Roboczo: „ol-ter-ri-al”.', risk: 'Mniej bezpośrednio filmowe; może przywołać AR/VR lub nieruchomości. Różna wymowa real po polsku i angielsku. Istnieją wcześniejsze zastosowania komercyjne tego zapisu.', bio: 'Live-action roots. Expanded by AI.', screening: 'Historyczne wpisy Alterreal — Car, Comércio de Automóveis w portugalskiej publikacji urzędowej. Nie ustalono obecnego statusu działalności; dostępność nazwy niepotwierdzona.' },
+    C: { name: 'Deltatake', language: 'en', blend: 'delta + take', bridge: 'Zmiana ujęcia', construction: 'Delta przywołuje różnicę i zmianę, take pozostawia czytelny filmowy rdzeń. Nie jest to nazwa konkretnej metody AI.', meaning: 'Filmowe ujęcie, którego możliwości i postać zmieniają się w procesie twórczym.', strength: 'Poważne, uporządkowane brzmienie z technicznym drugim znaczeniem. Roboczo: „del-ta-tejk”.', risk: 'Może sugerować firmę technologiczną lub lotnictwo. Delta ma wiele wcześniejszych zastosowań; AI wymaga dodatkowego opisu.', bio: 'Live-action roots. Expanded by AI.', screening: 'Wyniki głównie ze sklejonym Delta i Take-off w dokumencie urzędowym. Bez jednoznacznej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' },
+    D: { name: 'Amplitake', language: 'en', article: 'an', blend: 'amplify + take', bridge: 'Rozszerzanie możliwości ujęcia', construction: 'Ujęcie o zwiększonych możliwościach. Brzmienie ma także echo amplitude, łącząc obraz i dźwięk.', meaning: 'Materiał z planu zyskuje większy zakres kreacji: od scenografii po VFX i muzykę.', strength: 'Najmocniej akcentuje rozszerzenie, które wnosi AI. Poważne brzmienie z filmowym take. Roboczo: „am-pli-tejk”.', risk: 'Może przypominać aplikację, wtyczkę audio albo sprzęt. Zapis po usłyszeniu wymaga sprawdzenia.', bio: 'Live-action roots. Expanded by AI.', screening: 'Wyniki głównie jako trudny do odczytania tekst OCR w skanie notatek. Bez jednoznacznej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' },
+    E: { name: 'Phasetake', language: 'en', blend: 'phase + take', bridge: 'Nowy etap tworzenia', construction: 'Nowa faza pracy z filmowym ujęciem i kolejny etap działalności. To metafora procesu, nie termin techniczny.', meaning: 'Przejście do kolejnego etapu warsztatu, przy zachowaniu filmowego fundamentu.', strength: 'Dwie sylaby i oszczędne, techniczne brzmienie. Zachowuje filmowe take. Roboczo: „fejz-tejk”.', risk: 'Może brzmieć bardziej jak narzędzie do obrazu lub dźwięku niż autorskie studio. Pisownia phase wymaga zapamiętania.', bio: 'Live-action roots. Expanded by AI.', screening: 'Wyniki głównie ze sklejonymi phase i take w raporcie archeologicznym oraz przybliżone dopasowania. Bez jednoznacznej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' }
+  };
+  rounds['7'] = {
+    A: { name: 'Anvrel', language: 'en', article: 'an', meaning: 'Roboczo: „an-wrel”. Dwie sylaby, zwarty zapis i wyraźne spółgłoski. Nazwa zaprojektowana pod brzmienie, bez przypisanej definicji.', strength: 'Spokojny, bardziej chłodny i formalny charakter do oceny. Sześć liter; może funkcjonować jako samodzielny podpis studia.', risk: 'Środkowe vr może utrudnić odtworzenie zapisu. Brzmienie może być zbyt techniczne albo zbyt bliskie nazwie przemysłowej. Są to hipotezy, nie wyniki badania odbiorców.', bio: 'Live-action roots. Expanded by AI.', screening: 'Dokładny zapis i zapytanie z film studio zwróciły głównie stare skany i szum OCR. Bez jednoznacznej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' },
+    B: { name: 'Udravo', language: 'en', article: 'an', meaning: 'Roboczo: „u-dra-wo”. Trzy otwarte sylaby i płynne zakończenie. Nazwa zaprojektowana pod dźwięk, bez wyjaśniania jej jako zbitki istniejących słów.', strength: 'Szersze, bardziej otwarte brzmienie do oceny. Kontrastuje z zwartym Anvrel; sześć liter i prosty podział na sylaby.', risk: 'Czy końcówka brzmi wystarczająco poważnie? Możliwy polski zapis Udrawo. Wymowę w kontekście angielskim trzeba sprawdzić osobno.', bio: 'Live-action roots. Expanded by AI.', screening: 'Wyniki obejmowały zapis w komentarzu na forum i prawdopodobny błąd OCR w skanie czasopisma. Bez jednoznacznej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' },
+    C: { name: 'Kaltrev', language: 'en', meaning: 'Roboczo: „kal-trew”. Dwie sylaby, twardszy początek i zamknięta końcówka. Propozycja oparta na charakterze dźwięku, bez przypisanego znaczenia słownikowego.', strength: 'Surowszy, bardziej stanowczy podpis do oceny. Siedem liter; wyraźnie inny rytm niż otwarte Udravo.', risk: 'Może brzmieć przemysłowo lub kojarzyć się z fantastyką. Zapis ma wcześniejsze użycia jako pseudonim i nazwa usługowa; nie jest to nowy ciąg liter bez wcześniejszych wystąpień.', bio: 'Live-action roots. Expanded by AI.', screening: 'Dokładny zapis zwrócił pseudonim gracza i użycie Kaltrev solutions w profilu freelancera. Zakres przeglądu jest węższy niż dla Anvrel i Udravo; dostępność nazwy niepotwierdzona.' }
+  };
+  rounds['8'] = {
+    A: { name: 'Intensyn', language: 'en', article: 'an', blend: 'intention + synthesis', bridge: 'Ludzka intencja i możliwości syntezy', construction: 'Twórca nadaje kierunek, a technologia rozszerza możliwości realizacji. Zbitka wykorzystuje inten- oraz -syn. To proponowane znaczenie marki, nie definicja słownikowa.', meaning: 'Intencja twórcy spotyka możliwości AI. Człowiek określa sens i charakter filmu, a nowe narzędzia pomagają rozwinąć obraz.', strength: 'Osiem liter, trzy sylaby, bez powrotu do rodziny alter/take/frame. Roboczo: „in-ten-sin”. Może też przywoływać intensywność — to skojarzenie do oceny.', risk: 'Może brzmieć technologicznie lub farmaceutycznie. Końcówka -syn nie jest oczywista ze słuchu. Synteza jest tu metaforą, nie pełną definicją AI.', bio: 'Live-action roots. Expanded by AI.', screening: 'Dokładna nazwa i zapytanie z film studio AI zwróciły zapis w skanie słownika tagalsko-angielskiego, z widocznymi zniekształceniami tekstu. Bez jednoznacznej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' },
+    B: { name: 'Hearithm', language: 'en', blend: 'heart + algorithm', bridge: 'Emocjonalny zamiar i algorytmiczne możliwości', construction: 'Skrócenie heart i algorithm tworzy proponowaną nazwę. Źródłem emocji pozostają twórcy, aktorzy i odbiorcy; technologia poszerza środki realizacji.', meaning: 'Emocje i filmowy puls wspierane przez możliwości algorytmów.', strength: 'Osiem liter, bardziej artystyczny i dźwiękowy charakter. Roboczo po polsku: „ha-rytm”; może przywołać rytm montażu i muzykę.', risk: 'Najtrudniejszy zapis i wymowa tej trójki. Hear może być odczytane inaczej niż heart. Możliwe skojarzenie z audio lub urządzeniem medycznym; wymowę angielską trzeba sprawdzić.', bio: 'Live-action roots. Expanded by AI.', screening: 'Brak wyników dla dokładnej nazwy oraz zapytania z film studio AI. Nie potwierdza to dostępności domeny, uchwytów ani praw do nazwy.' },
+    C: { name: 'Craftellect', language: 'en', blend: 'craft + intellect', bridge: 'Warsztat twórcy i inteligencja w procesie', construction: 'Połączenie rzemiosła z inteligencją, w tym AI wykorzystywaną przy realizacji. Intellect samo w sobie nie oznacza wyłącznie sztucznej inteligencji; jest to proponowana interpretacja marki.', meaning: 'Doświadczenie filmowca, praca z ekipą i nowe możliwości przetwarzania materiału.', strength: 'Dwa rozpoznawalne składniki, profesjonalny i warsztatowy charakter do oceny. Roboczo: „kraft-e-lekt”.', risk: 'Jedenaście liter. Może sugerować konsulting, edukację, rękodzieło albo platformę dla twórców. Związek z AI wymaga opisu działalności.', bio: 'Live-action roots. Expanded by AI.', screening: 'Brak wyników dla dokładnej nazwy oraz zapytania z film studio AI. Nie potwierdza to dostępności domeny, uchwytów ani praw do nazwy.' }
+  };
+  rounds['9'] = {
+    A: { name: 'Iskromysł', language: 'en', article: 'an', blend: 'iskra + myśl', bridge: 'Wymyślony patron iskry, która staje się obrazem', construction: 'Przyjmuje ludzką iskrę i nadaje jej moc stawania się światem. To nasza nowa opowieść, nie opis historycznego bóstwa. Wariant bez polskich znaków: Iskromysl.', meaning: 'Patron iskry, która staje się myślą, a potem obrazem. Człowiek wnosi zamiar i wyobraźnię; nowa inteligencja rozszerza możliwości nadania im formy.', strength: 'Wyrazista symbolika twórczego impulsu i inteligencji. Roboczo: „is-kro-myśl”. Imię z własną opowieścią do rozwijania w marce.', risk: 'Polskie ś i ł oraz trudniejsza wymowa za granicą. Może sugerować fantastykę lub projekt literacki. Trzeba porównać zapisy Iskromysł i Iskromysl.', bio: 'Live-action roots. Expanded by AI.', screening: 'Wspólne zapytanie dokładnych zapisów Iskromysł i Iskromysl nie zwróciło wyników. Domeny, uchwyty i podobne nazwy nie zostały zweryfikowane.' },
+    B: { name: 'Splotwit', language: 'en', blend: 'splot + zakończenie inspirowane brzmieniem imion słowiańskich', bridge: 'Wymyślony patron współtworzenia', construction: 'Splata to, co człowiek czuje, z tym, czemu potrafi nadać formę. Zakończenie przypomina brzmienie Świętowita; nie deklarujemy historycznego znaczenia -wit jako bóg.', meaning: 'Patron łączenia ludzkiego zamiaru z możliwościami nowej inteligencji. Splata wątki, obrazy i różne sposoby tworzenia.', strength: 'Osiem liter, brak polskich znaków i mocny motyw współdziałania. Roboczo: „splot-wit”. Opowieść i imię są naszą kreacją.', risk: 'Twarda zbitka spółgłosek, możliwe skojarzenie z tekstyliami. Wymowa angielska może odbiegać od polskiej.', bio: 'Live-action roots. Expanded by AI.', screening: 'Zapytanie o dokładny zapis nie zwróciło wyników. To nie potwierdza dostępności domeny, uchwytów ani praw do nazwy.' },
+    C: { name: 'Swarum', language: 'en', blend: 'echo brzmienia Swaroga + własne zakończenie', bridge: 'Wymyślony patron kuźni wyobraźni', construction: 'Z ludzkiej myśli wykuwa obrazy, które wcześniej istniały tylko w wyobraźni. Ten patronat i imię są fikcją na potrzeby briefu, nie poświadczoną postacią mitologii.', meaning: 'Patron miejsca, w którym zamiar otrzymuje formę. Metafora wspólnej pracy warsztatu filmowego i nowych narzędzi.', strength: 'Sześć liter, dwie sylaby, brak polskich znaków. Oszczędniejsza forma o mocnym brzmieniu. Roboczo: „swa-rum”.', risk: 'Mniej czytelny sens bez opowieści. Możliwe skojarzenia z alkoholem lub muzyką. Zapis ma wcześniejsze użycia słownikowe i naukowe.', bio: 'Live-action roots. Expanded by AI.', screening: 'Wcześniejsze użycia obejmują formy słownikowe i akronim School Water and Rainwater Use Modeller. Nie jest to ciąg liter bez wcześniejszych zastosowań; dostępność niepotwierdzona.' },
+    D: { name: 'Wiedrad', language: 'en', blend: 'wiedza + rada — współczesne skojarzenia', bridge: 'Wymyślony patron mądrego sprawstwa', construction: 'Daje pomysłom kierunek i prowadzi je od zamiaru do dzieła. To własna konstrukcja, bez twierdzenia o poświadczonej etymologii lub miejscu w dawnym panteonie.', meaning: 'Patron wiedzy, która potrafi stać się twórczym działaniem. Człowiek wyznacza cel, a narzędzia zwiększają możliwości jego realizacji.', strength: 'Siedem liter, brak polskich znaków i wyraźnie słowiański charakter do oceny. Roboczo: „wied-rad”.', risk: 'Może przypominać imię osoby lub instytucję doradczą. Początek wie będzie mniej oczywisty dla odbiorcy anglojęzycznego.', bio: 'Live-action roots. Expanded by AI.', screening: 'Wyniki głównie ze sklejonego fragmentu o ścieżce nad rzeką Wied na niemieckim forum rowerowym. Bez jednoznacznej marki filmowej w zwróconych wynikach; dostępność niepotwierdzona.' }
+  };
+  rounds['10'] = {
+    A: { name: 'Tahenor', language: 'en', blend: 'motyw Ptaha + własne imię', bridge: 'Egipt: od myśli i słowa do formy', construction: 'Luźne echo tah z imienia Ptah oraz własne zakończenie. Nie jest to egipskie słowo ani tłumaczenie. Nasz patron wyobraża sobie świat, a następnie daje mu postać.', meaning: 'Wymyślony patron urzeczywistniania wyobraźni. Człowiek wnosi wizję i emocje, a inteligencja i warsztat pozwalają uczynić je widzialnymi.', strength: 'Roboczo: „ta-he-nor”. Siedem liter, trzy wyraźne sylaby. Najbardziej monumentalna i spokojna propozycja; ma opowieść o powoływaniu obrazów do istnienia.', risk: 'Może przywołać nazwę świata fantasy. W angielskim akcent nie będzie oczywisty. Zapis ma wcześniejsze użycia osobowe; nie deklarujemy pełnej oryginalności.', bio: 'Live-action roots. Expanded by AI.', screening: 'Dokładny zapis oraz zapytanie z film studio AI: użycia osobowe i indeks nazwisk. W zwróconych wynikach bez jednoznacznej marki filmowej. Domeny, uchwyty i znaki niezweryfikowane.' },
+    B: { name: 'Metheir', language: 'en', blend: 'inspiracja Metis + własne zakończenie', bridge: 'Grecja: inteligencja, która potrafi tworzyć', construction: 'Imię Metis dostarcza inspiracji, nie gotowej etymologii. Zakończenie heir może dodatkowo przywołać angielskiego dziedzica: nowy rozdział zachowujący doświadczenie twórcy. To współczesna gra skojarzeń.', meaning: 'Wymyślony patron twórczego zamysłu. Łączy intuicję z rozumowaniem i znajduje formę dla tego, co wcześniej było tylko przeczuciem.', strength: 'Roboczo: „me-tejr”. Siedem liter, bardziej oszczędny i abstrakcyjny podpis. W tej trójce najmocniej akcentuje inteligencję oraz ciągłość warsztatu.', risk: 'Niejednoznaczne th i ei utrudniają zapis ze słuchu. Początek meth może wywołać niepożądane skojarzenie w angielskim. Ten koszt brzmienia warto ocenić przed rozwijaniem marki.', bio: 'Live-action roots. Expanded by AI.', screening: 'Zapytanie dokładnego zapisu zwróciło głównie sklejone me their i szum OCR, a także pojedynczy zapis osobowy. Nie ujawniono jednoznacznej marki filmowej; nie sprawdzono domen, uchwytów ani znaków.' },
+    C: { name: 'Kvaeron', language: 'en', blend: 'echo Kvasira + własna forma', bridge: 'Tradycja nordycka: połączenie różnych sił rodzi wiedzę i opowieść', construction: 'Zachowujemy początek Kv- jako ślad inspiracji Kvasirem, ale tworzymy nowe imię. Nie przypisujemy cząstkom staronordyckich znaczeń. Nasz patron powstaje na styku ludzkiej wyobraźni i nowej inteligencji.', meaning: 'Wymyślony patron współtworzenia. Dwie różne siły dają początek możliwościom, których żadna nie osiąga samodzielnie; wiedza staje się opowieścią.', strength: 'Roboczo: „kwe-ron”. Siedem liter, dwie sylaby i zdecydowany początek. Najbardziej odrębny zapis w tej rundzie; najmocniej oddaje ideę człowieka współpracującego z AI.', risk: 'Kv oraz ae utrudniają zapis ze słuchu. W polskim możliwe Kw / w angielskim odmienne odczytanie samogłosek. Może kojarzyć się z fantastyką lub grami.', bio: 'Live-action roots. Expanded by AI.', screening: 'Dokładne zapytanie Kvaeron nie zwróciło wyników. Zapytanie z film studio AI także nie ujawniło wcześniejszych użyć. Nie potwierdza to dostępności domen, uchwytów ani praw do nazwy.' }
+  };
+  rounds['11'] = {
+    A: { name: 'Narravolt', language: 'en', blend: 'narrative + volt', bridge: 'Opowieści z nową energią', construction: 'Narra- daje skojarzenie z narracją, a volt z energią, impulsem i technologią. To współczesna konstrukcja marki. Volt nie oznacza AI; AI jest częścią rzeczywistego procesu opisanego w briefie.', meaning: 'Autorska opowieść zyskuje nowe możliwości realizacji. Twórczy impuls przechodzi w obraz, a technologia zwiększa skalę tego, co da się pokazać.', strength: 'Roboczo: „na-ra-wolt”; po angielsku „na-ra-volt”. Dziewięć liter, trzy sylaby i wyraźna końcówka. Zestawia opowiadanie z energią oraz nowoczesnością bez zamykania marki w jednym gatunku.', risk: 'Może przywołać technologię, audio albo energetykę. Narracja jest szersza niż film, a sama nazwa nie komunikuje wprost AI. Zapamiętywalność i prostotę zapisu trzeba ocenić w praktyce.', bio: 'Live-action roots. Expanded by AI.', screening: 'Dokładny zapis, zapytanie z film studio AI i osobne zapytanie z production nie zwróciły wyników. To wstępny filtr, nie potwierdzenie dostępności domen, uchwytów ani praw do nazwy.' },
+    B: { name: 'Fictension', language: 'en', blend: 'fiction + tension; dodatkowe echo extension', bridge: 'Fikcja, napięcie i rozszerzanie możliwości', construction: 'Fict- z fiction spotyka tension. Extension może być dodatkowym skojarzeniem z rozszerzaniem obrazu i możliwości studia; to warstwa interpretacji, nie dosłowny składnik znaczenia słownikowego.', meaning: 'Opowieści, które budują napięcie. Nazwa wychodzi od charakteru Twojego kina; nowy warsztat rozszerza sposób, w jaki można je tworzyć.', strength: 'Roboczo: „fik-ten-szyn”. Dziesięć liter i trzy sylaby. Najbliższa thrillerowi oraz autorskiemu profilowi; podobieństwo do fiction daje rozpoznawalny punkt zaczepienia.', risk: 'Silniej sugeruje thriller i suspense. Może być usłyszana jako fiction lub friction. Nowoczesność jest mniej bezpośrednia; AI wymaga opisu procesu, a nie dopisania rzekomego znaczenia do nazwy.', bio: 'Live-action roots. Expanded by AI.', screening: 'Dokładna nazwa oraz zapytania z film studio AI i production zwróciły głównie skany ze zniekształconym słowem extension i szum OCR. Nie ujawniono jednoznacznej marki filmowej; domeny, uchwyty i podobne nazwy niezweryfikowane.' },
+    C: { name: 'Cineural', language: 'en', blend: 'cinema + neural', bridge: 'Kino i inteligencja w jednym słowie', construction: 'Cine- zachowuje skojarzenie z kinem, a neural z myśleniem i sieciami neuronowymi. Własna zbitka łączy je wspólnym ne. Skojarzenie z ludzką kreatywnością i AI jest ideą marki; nie utożsamiamy tych procesów.', meaning: 'Film rodzi się z ludzkiej wizji, pracy z aktorami i nowych narzędzi. Najbardziej bezpośrednia propozycja łącząca kino z inteligencją.', strength: 'Roboczo po polsku: „si-nu-ral”. Osiem liter i trzy sylaby. Najczytelniej sygnalizuje film oraz nowoczesny warsztat; może pasować do modelu zdjęcia z planu + AI.', risk: 'Wymowa i podział cine/neural nie są oczywiste. Może brzmieć jak aplikacja lub narzędzie VFX. Zbitka jest dość przewidywalna i już występuje na stronie generatora nazw — słabszy wynik pod względem oryginalności.', bio: 'Live-action roots. Expanded by AI.', screening: 'Dokładna nazwa i zapytania film studio AI / cinema animation wskazały stronę SpinXO z propozycjami uchwytów Cineural. To wcześniejsze publiczne wystąpienie zapisu, nie dowód istnienia studia ani dostępności nazwy. Domeny i uchwyty niezweryfikowane.' }
+  };
+  rounds['12'] = {
+    A: { ...rounds['11'].B, strength: 'Fikcja i napięcie pasują do Twojego kina. Roboczo: „fik-ten-szyn”. W przeglądzie mniej rzeczywistych wcześniejszych użyć niż Altertake; dobry kandydat na samodzielną markę autorską.', risk: 'Dziesięć liter. Możliwe pomylenie z fiction / friction oraz zapis Fictention zamiast Fictension. Mocniej kieruje ku thrillerowi. Zapamiętywalność i odtworzenie zapisu wymagają próby z odbiorcami.', screening: '30.10.2026: bez potwierdzonej marki filmowej w przeglądzie publicznych wyników; głównie OCR. Fictension.com, .pl i .film: brak obiektu w oficjalnym RDAP (HTTP 404). Zakup, uchwyty i znaki wymagają odrębnego potwierdzenia; źródła w notatce.' },
+    B: { ...rounds['6'].A, strength: 'Take daje bezpośrednie skojarzenie z planem filmowym; alter sugeruje zmianę. Roboczo: „ol-ter-tejk”. Szeroka gatunkowo i trafna dla modelu zdjęcia + AI; nie wymienia konkretnej technologii.', risk: 'Łatwiejsza do niezależnego wymyślenia — ocena kreatywna. Dokładny zapis ma użycia muzyczne. Domena altertake.com jest już zarejestrowana. Wzmianka Coub nie potwierdza istnienia studia o tej nazwie.', screening: '30.10.2026: potwierdzone tytuły muzyczne w katalogach Apple Music i Bugs. Oficjalny RDAP: altertake.com zarejestrowana 25.09.2026; przez HTTP strona rejestratora. Altertake.pl i .film: brak obiektu RDAP (404). Nie ustalono marki filmowej ani pełnego stanu znaków/uchwytów.' }
+  };
+  rounds['13'] = {
+    A: { name: 'Elsecut', language: 'en', article: 'an', blend: 'else + cut', bridge: 'Alternatywna ścieżka i cięcie montażowe', construction: 'Else w kodzie otwiera inną ścieżkę; cut w kinie przenosi widza do następnego obrazu. Razem przywołują pytanie „co, jeśli po cięciu wydarzy się coś innego, niż zakładał widz?”.', meaning: 'Montaż otwiera drugą wersję zdarzeń. Nazwa łączy język programowania z pracą filmową i pasuje do historii, które skręcają w nieoczekiwaną stronę.', strength: 'Roboczo „els-kat”. Siedem liter, dwie sylaby. Najbliższa połączeniu Twojego doświadczenia w kodzie z autorskim kinem; działa także poza thrillerem.', risk: 'Może brzmieć jak wtyczka do montażu. Warto sprawdzić, czy słuchacz odtworzy zapis z e przed cut.', bio: 'Live-action roots. Expanded by AI.', screening: '6.11.2026: wyniki obejmują fragmenty tekstu, m.in. zlepione else i cut. W wyszukiwaniu branżowym nie znaleziono potwierdzonej marki o dokładnym zapisie. RDAP .com: brak obiektu (404).' },
+    B: { name: 'Plotcoil', language: 'en', blend: 'plot + coil', bridge: 'Fabuła jak nakręcana sprężyna', construction: 'Plot to fabuła, coil przywołuje zwój lub sprężynę. Każda scena może dokręcać napięcie, aż mały gest albo nowa informacja wywołają duży skutek.', meaning: 'Nazwa obiecuje opowieść, która stopniowo gromadzi napięcie. Daje wyrazisty obraz tego, jak kameralny film może zadziałać na widza.', strength: 'Roboczo „plot-kojl”. Najbliższa Fictension pod względem nastroju, z konkretniejszym obrazem do zapamiętania.', risk: 'Coil może przywołać cewkę lub mechanikę. Nazwa akcentuje napięcie opowieści; model zdjęcia + AI trzeba objaśnić w opisie marki.', bio: 'Live-action roots. Expanded by AI.', screening: '6.11.2026: zapis pojawia się w zniekształconym tekście katalogu przemysłowego. W sprawdzonych wynikach nie znaleziono potwierdzonego użycia jako marki filmowej. RDAP .com: brak obiektu (404).' },
+    C: { name: 'Shotgraft', language: 'en', blend: 'shot + graft', bridge: 'Szczepienie nowych warstw na ujęciu', construction: 'Shot jest filmowym ujęciem. Graft przywołuje szczepienie: istniejący materiał staje się podstawą, do której można dołączyć nowe fragmenty świata filmu.', meaning: 'Ujęcie z planu pozostaje punktem wyjścia. Scenografia cyfrowa, VFX lub generowane fragmenty rozszerzają to, co dało się nagrać.', strength: 'Roboczo „szot-graft”. Najbardziej konkretna metafora modelu zdjęcia + AI. Twarde brzmienie pasuje do ciemniejszego kina.', risk: 'Graft może kojarzyć się z przeszczepem, a w angielskim także z korupcją. Może brzmieć bardziej jak pracownia efektów niż marka narracyjna.', bio: 'Live-action roots. Expanded by AI.', screening: '6.11.2026: wyszukiwania dokładnego zapisu nie zwróciły wyników. Wariant rozdzielony pokazał m.in. odrębne studio Art&Graft. RDAP .com: brak obiektu (404).' }
+  };
+  rounds['14'] = {
+    A: { name: 'Lensyntax', language: 'en', blend: 'lens + syntax', bridge: 'Składnia obrazu', construction: 'Lens i syntax spotykają się we wspólnym s. Obiektyw daje obraz, a kolejność ujęć zmienia jego znaczenie. Syntax dodaje też czytelny trop programistyczny.', meaning: 'Obraz ma własną składnię. To samo spojrzenie może zagrać jako żart, groźba albo wskazówka w zależności od tego, z czym je zestawisz.', strength: 'Roboczo „len-sin-taks”. Najczytelniej łączy Twój warsztat programisty z filmowym językiem obrazu.', risk: 'Może brzmieć jak nazwa narzędzia do kamery. Rozdzielony zapis Lens Syntax istnieje jako motyw edytora Atom.', bio: 'Live-action roots. Expanded by AI.', screening: '6.11.2026: w przejrzanych wynikach bez potwierdzonej marki filmowej o dokładnym zapisie. Odnotowano motyw Atom Lens Syntax. RDAP .com: brak rekordu (404).' },
+    B: { name: 'Afterif', language: 'en', article: 'an', blend: 'after + if', bridge: 'Co dzieje się po „co, jeśli?”', construction: 'If stawia warunek, a after przenosi uwagę na konsekwencje. Nazwa zaczyna się tam, gdzie filmowy pomysł zaczyna działać na bohaterów.', meaning: 'Co, jeśli ktoś podejmie decyzję, której nie da się cofnąć? Film pokazuje, co wydarzy się potem.', strength: 'Roboczo „af-ter-if”. Krótka, otwarta gatunkowo nazwa. Niesie pomysł na opowieść i subtelnie nawiązuje do kodu.', risk: 'Kino jest skojarzeniem pośrednim. W obiegu bez planszy lub słowa „film” może być odczytana jako nazwa innego projektu kreatywnego.', bio: 'Live-action roots. Expanded by AI.', screening: '6.11.2026: trafienia dotyczyły głównie połączeń słów after i if w tekstach. Bez potwierdzonej marki filmowej o dokładnym zapisie. RDAP .com: brak rekordu (404).' },
+    C: { name: 'Reelhinge', language: 'en', blend: 'reel + hinge', bridge: 'Moment, na którym obraca się film', construction: 'Reel przywołuje taśmę filmową, hinge — zawias. Pojedynczy gest, detal albo ujęcie może obrócić znaczenie całej historii.', meaning: 'Jedno ujęcie sprawia, że wszystkie poprzednie zaczynają znaczyć coś innego.', strength: 'Roboczo „ril-hindż”. Najmocniej akcentuje moment zwrotu i pasuje do napięcia budowanego z detali.', risk: 'Hinge może brzmieć mechanicznie. W branży działa studio Hinge, które publikuje showreel jako „Hinge Reel”; warto pamiętać o tym sąsiedztwie.', bio: 'Live-action roots. Expanded by AI.', screening: '6.11.2026: zapytania o dokładny zapis bez wyników; wariant rozdzielony prowadził m.in. do showreela odrębnego studia Hinge. RDAP .com: brak rekordu (404).' },
+    D: { name: 'Rendergrain', language: 'en', blend: 'render + grain', bridge: 'Cyfrowe tworzenie i filmowa faktura', construction: 'Render przywołuje tworzenie obrazu za pomocą narzędzi cyfrowych. Grain to ziarno i materialny ślad, po którym obraz ma własny charakter.', meaning: 'Obraz może powstawać z kilku źródeł i nadal mieć spójną, rozpoznawalną fakturę. To metafora połączenia zdjęć z planu i cyfrowych warstw.', strength: 'Roboczo „ren-der-grejn”. Najmocniej opowiada o hybrydowym obrazie i jego estetyce, bez wpisywania konkretnej technologii w nazwę.', risk: 'Może brzmieć jak narzędzie VFX lub filtr ziarna. Mniej bezpośrednio mówi o historii i postaciach.', bio: 'Live-action roots. Expanded by AI.', screening: '6.11.2026: przejrzane wyniki dotyczyły m.in. renderowania i ziarna, bez potwierdzonej marki filmowej o dokładnym zapisie. RDAP .com: brak rekordu (404).' },
+    E: { ...rounds['13'].A }
+  };
+  rounds['15'] = {
+    A: { name: 'Avantreel', language: 'en', article: 'an', blend: 'avant + reel', bridge: 'Taśma filmowa i awangarda', construction: 'Avant przywołuje ruch naprzód i awangardę, reel — szpulę z taśmą. Jeden człon pokazuje kierunek, drugi mówi, skąd wyrasta studio.', meaning: 'Kino wyrastające z pracy na planie, które wyznacza sobie własny kierunek. Zdjęcia z ekipą są punktem wyjścia do nowych sposobów tworzenia świata filmu.', strength: 'Roboczo „awan-ril”. Najczytelniej łączy pionierską ambicję z rodowodem filmowym. Może objąć i thriller, i inne gatunki.', risk: 'Avant może sugerować kino eksperymentalne. Warto sprawdzić, czy zapis i wymowa są czytelne po jednym usłyszeniu.', bio: 'From the set. Beyond the expected.', screening: 'W sprawdzonych wynikach brak potwierdzonej marki filmowej o tym zapisie. Wystąpienie w zniekształconej warstwie tekstowej dokumentu urzędowego. RDAP .com: brak rekordu (404).' },
+    B: { name: 'Spoolforth', language: 'en', blend: 'spool + forth', bridge: 'Szpula, która rozwija kino dalej', construction: 'Spool przywołuje szpulę z taśmą, a forth — ruch naprzód. Stary przedmiot niesie pomysł na przyszłość: rozwijamy dalej to, co powstaje na planie.', meaning: 'Pionierstwo jako ciąg dalszy filmowego rzemiosła. Materiał z planu jest podstawą, na której można zbudować rzeczy wcześniej poza zasięgiem małej ekipy.', strength: 'Roboczo „szpul-fort”. Konkretna metafora, która daje obraz do zapamiętania i pasuje do czołówki studia.', risk: 'Końcowe angielskie th może utrudnić wymowę i zapis ze słuchu. Spool poza kontekstem kina przywołuje też szpulę nici.', bio: 'From the set. Beyond the expected.', screening: 'Zapytania o dokładny zapis bez wyników. W sprawdzonych wynikach rozdzielonego zapisu bez potwierdzonej marki filmowej. RDAP .com: brak rekordu (404).' },
+    C: { name: 'Newnegative', language: 'en', blend: 'new + negative', bridge: 'Nowy negatyw, nowy obraz', construction: 'Negatyw jest obrazem, z którego powstaje następny. New dopisuje do niego nowy proces: materiał filmowy może stać się podstawą do tworzenia obrazu, którego nie dało się w całości nakręcić na planie.', meaning: 'Tradycyjny punkt wyjścia, nowe możliwości obrazu. Nazwa korzysta z filmowego terminu i ma ciemniejszy ton pasujący do thrillera.', strength: 'Roboczo „nju-negatyw”; po angielsku zakończenie jak w negative. Najbardziej wyrazista i mroczna interpretacja tego kierunku.', risk: 'Negative ma także potoczne, ujemne skojarzenie. Domena .com jest już zarejestrowana.', bio: 'From the set. Beyond the expected.', screening: 'W sprawdzonych wynikach brak potwierdzonej marki filmowej o dokładnym zapisie. New negative pojawia się jako opis filmu fotograficznego. RDAP .com: domena zarejestrowana (200).' },
+    D: { ...rounds['13'].A, bio: 'From the set. Beyond the expected.' }
+  };
+  rounds['16'] = {
+    A: { name: 'Variynt', language: 'en', blend: 'variant; a → y', bridge: 'Jedno ujęcie rozgałęzia się na warianty', construction: 'Jedną literę w variant zastępujemy przez y. Y może stać się symbolem rozgałęzienia: wspólny materiał z planu, różne kierunki dalszej realizacji. Początek var zachowuje trop programistyczny.', meaning: 'Różne wersje tego samego ujęcia, prowadzone przez jedną autorską wizję. Najbliżej pomysłu niewielkiej zmiany w słowie variant.', strength: 'Siedem liter; bardzo blisko pierwotnego słowa. Najlepiej sprawdza, czy symboliczna zmiana wystarczy, żeby nazwa nabrała własnego charakteru.', risk: 'Roboczo „wa-ri-int”. Największy koszt zapisu i wymowy w tej rundzie. Y może wyglądać jak literówka, a symbol rozgałęzienia nie będzie czytelny dla każdego.', bio: 'Live-action roots. Expanded by AI.', screening: '9.11.2026: dokładny zapis i zapytania branżowe wskazały m.in. ogłoszenie oraz zniekształcony tekst publikacji. Bez potwierdzonej marki filmowej w wynikach. RDAP .com: brak rekordu (404).' },
+    B: { name: 'Variflect', language: 'en', blend: 'variant / var + reflect', bridge: 'Warianty obrazu, różne odbicia tej samej wizji', construction: 'Vari- zachowuje skojarzenie z wariantami, a -flect pochodzi z reflect. Nazwa przywołuje obraz, odbicie i zmianę perspektywy; to proponowane znaczenie marki.', meaning: 'Nagranie z planu może otrzymać różne wersje świata wokół bohatera. Zmieniają się warstwy obrazu, a twórca wybiera formę, która najlepiej niesie opowieść.', strength: 'Roboczo „wa-ri-flekt”. Trzy sylaby i wyraźny rytm. Najmocniej łączy var z obrazem; moja pierwsza propozycja do oceny jako samodzielna marka filmowa.', risk: 'Może przypominać nazwę produktu optycznego lub materiału odblaskowego. W zapisie ze słuchu możliwe Variflex albo Variffect.', bio: 'Live-action roots. Expanded by AI.', screening: '9.11.2026: dokładny zapis oraz zapytania branżowe i społecznościowe nie zwróciły wyników. RDAP .com: brak rekordu (404). Dostępność niepotwierdzona.' },
+    C: { name: 'Varislate', language: 'en', blend: 'variant / var + slate', bridge: 'Wariant ujęcia zaczyna się na planie', construction: 'Slate przywołuje klaps filmowy i oznaczanie ujęć. Vari- dodaje różne wersje tego samego materiału, a var zachowuje skojarzenie ze zmienną.', meaning: 'Warianty mają wspólne źródło w pracy z aktorami i ekipą. Montaż, VFX oraz AI mogą rozwinąć materiał w kilku kierunkach.', strength: 'Roboczo „wa-ri-slejt”. Najbardziej konkretny filmowy przedmiot w tej rodzinie nazw. Łączy rzemiosło planu z wieloma możliwościami obrazu.', risk: 'Slate nie będzie oczywiste dla każdego odbiorcy. Może brzmieć jak aplikacja do zarządzania planem albo oznaczenie materiału budowlanego.', bio: 'Live-action roots. Expanded by AI.', screening: '9.11.2026: głównie wyniki dotyczące farb i koloru slate. Bez potwierdzonej marki filmowej o dokładnym zapisie w wynikach. RDAP .com: brak rekordu (404).' },
+    D: {
+      name: 'Varianture',
+      language: 'en',
+      blend: 'variant + -ure',
+      bridge: 'Wersje ujęcia i wybór twórcy',
+      construction: 'Pełne variant przywołuje inną wersję obrazu, a var jest nawiązaniem do deklarowania zmiennej w kodzie. Końcówka może budzić skojarzenia z future lub venture.',
+      meaning: 'Jedno nagranie z planu może dać kilka wersji ujęcia, np. z oryginalną scenografią i z tłem rozwiniętym przez AI. Twórca wybiera wersję, która najlepiej służy scenie.',
+      strength: 'Jeden wyraz, dziesięć liter. Łączy warsztat filmowy z programowaniem i pasuje do różnych gatunków. Polskiemu odbiorcy łatwo skojarzyć początek z wariantem.',
+      risk: 'Proponowana wymowa angielska to VAIR-ee-uhn-chur, z akcentem na VAIR. Początek brzmi jak vary, a końcówka jak w future. Warto sprawdzić, jak odbiorcy czytają sam zapis.',
+      bio: 'Live-action roots. Expanded by AI.',
+      screening: '16.11.2026. Pełny zapis występuje w opisie produktu Axee. W branży wideo działają VARIANT i Variant Cinema Co. W przejrzanych wynikach nie znaleziono studia o dokładnej nazwie Varianture. Rejestry domen: brak wpisów dla .com, .pl i .film. Status znaków towarowych pozostaje nieustalony.'
+    },
+    E: { name: 'Varianteer', language: 'en', blend: 'variant + echo engineer / pioneer', bridge: 'Twórca, który buduje i wybiera warianty', construction: 'Variant łączy się z zakończeniem przywołującym engineer i pioneer. Filmowe możliwości są rozwijane świadomie, z udziałem warsztatu i nowych narzędzi.', meaning: 'Twórcze eksperymentowanie połączone z inżynierską precyzją. Najbardziej osobisty trop do doświadczenia autora jako filmowca i software engineera.', strength: 'Roboczo „wa-ri-an-tir”. Wyraźny rdzeń variant i pomysł pionierskiego warsztatu. W nazwie pojawia się aktywna rola twórcy.', risk: 'Dziesięć liter. Może sugerować platformę dla twórców albo nazwę profesji; ma lżejszy ton niż Avantreel.', bio: 'Live-action roots. Expanded by AI.', screening: '9.11.2026: wyniki obejmują fragmenty tekstów w różnych językach; bez potwierdzonej marki filmowej o dokładnym zapisie. RDAP .com: brak rekordu (404).' }
+  };
+  rounds['17'] = {
+    A: { name: 'Varinuum', language: 'en', blend: 'vari + continuum', bridge: '∞ · Spektrum możliwych wersji', construction: 'Vari zachowuje trop wariantu i zmiennej. Końcówka -nuum przywołuje continuum — płynne spektrum. ∞ jest naszą symboliką otwartych możliwości, nie dosłownym tłumaczeniem continuum.', meaning: 'Materiał z planu otwiera wiele możliwych wersji świata filmu. Autor wybiera spośród nich tę, która najlepiej opowie historię.', strength: 'Roboczo „wa-ri-nuum”. Najbardziej samodzielna nazwa tej rundy i moja pierwsza rekomendacja. Ma charakter studia, które potrafi rozwijać jedną wizję w różnych kierunkach.', risk: 'Podwójne u wymaga zapamiętania. Bez objaśnienia nie wskazuje bezpośrednio kina; może kojarzyć się z nauką lub fantastyką.', bio: 'Live-action roots. Expanded by AI.', screening: '9.11.2026: dokładne wyszukiwanie oraz zapytania branżowe i społecznościowe nie zwróciły wyników. Oficjalny RDAP .com: brak rekordu (404). To wstępny filtr wcześniejszych użyć.' },
+    B: { name: 'Variduum', language: 'en', blend: 'vari + duo; własne zakończenie -duum', bridge: '2 · Dwa źródła obrazu, jedna autorska całość', construction: 'Duo daje symbol dwóch źródeł: materiału z planu i generowanych elementów. Zakończenie zmieniamy na -duum, tworząc nowe słowo. Nie przypisujemy mu łacińskiej definicji.', meaning: 'Zdjęcia i generowanie mogą spotkać się w jednym ujęciu. Twórca nadaje ich połączeniu sens i spójny charakter.', strength: 'Roboczo „wa-ri-duum”. Zdecydowane brzmienie i bezpośrednie odniesienie do hybrydowego warsztatu.', risk: 'Zapis z dwoma u może być odtwarzany jako Varidum. Może brzmieć technologicznie lub laboratoryjnie.', bio: 'Live-action roots. Expanded by AI.', screening: '9.11.2026: dokładne wyszukiwanie oraz zapytania branżowe i społecznościowe nie zwróciły wyników. Oficjalny RDAP .com: brak rekordu (404). To wstępny filtr wcześniejszych użyć.' },
+    C: { name: 'Variterno', language: 'en', blend: 'vari + ternary; własne zakończenie -o', bridge: '3 · Trzecia droga tworzenia filmu', construction: 'Ternary przywołuje trójkę, także w kodzie. Nasza interpretacja: zdjęcia i generowane warstwy razem dają nową drogę tworzenia obrazu. To metafora marki, nie klasyfikacja produkcji filmowej.', meaning: 'Filmowe rzemiosło spotyka nowe narzędzia w spójnym procesie. Warianty służą budowaniu autorskiego świata filmu.', strength: 'Roboczo „wa-ri-ter-no”. Płynniejsze brzmienie niż Variduum, mocny rytm i widoczne vari na początku.', risk: 'Może kojarzyć się z włoską nazwą lub produktem technologicznym. Symbol trójki wymaga objaśnienia.', bio: 'Live-action roots. Expanded by AI.', screening: '9.11.2026: dokładne wyszukiwanie oraz zapytania branżowe i społecznościowe nie zwróciły wyników. Oficjalny RDAP .com: brak rekordu (404). To wstępny filtr wcześniejszych użyć.' },
+    D: { name: 'Varinought', language: 'en', blend: 'vari + nought', bridge: '0 · Wariant wyjściowy', construction: 'Nought to angielskie zero. W naszej opowieści wariant zero jest materiałem z planu: punktem wyjścia do kolejnych wersji obrazu.', meaning: 'Każdy nowy świat filmu zaczyna się od czegoś nagranego. Z tej podstawy można rozwijać scenografię, efekty i warianty ujęcia.', strength: 'Roboczo „wa-ri-not”. Najbardziej bezpośredni motyw początku i odniesienie do wariantu zerowego.', risk: 'Najtrudniejszy zapis ze słuchu. Nought nie jest powszechnie znane poza angielskim; możliwe skojarzenie z not.', bio: 'Live-action roots. Expanded by AI.', screening: '9.11.2026: dokładne wyszukiwanie oraz zapytania branżowe i społecznościowe nie zwróciły wyników. Oficjalny RDAP .com: brak rekordu (404). To wstępny filtr wcześniejszych użyć.' }
+  };
+  rounds['18'] = {
+    A: { name: 'Var Unfold', language: 'en', blend: 'var + unfold', bridge: 'Zmienna, z której rozwija się opowieść', construction: 'Var zachowuje trop zmiennej i wariantów. Unfold przywołuje rozwijanie, odsłanianie i bieg zdarzeń. Nowe narzędzia pozwalają rozwinąć materiał z planu w kilku kierunkach.', meaning: 'Jedna scena może otworzyć różne wersje historii. Autor decyduje, którą z nich zobaczy widz.', strength: 'Roboczo „war an-fold”. Krótka, dwuwyrazowa nazwa z czytelnym drugim członem. Moja pierwsza propozycja tej rundy.', risk: 'Może brzmieć jak narzędzie do projektowania. Filmowy charakter powinien wynikać z prezentowanych prac i opisu studia.', bio: 'Live-action roots. Expanded by AI.', screening: '9.11.2026: wyniki dotyczyły m.in. fragmentów kodu i tekstów. Nie ujawniono potwierdzonej marki filmowej o tej dokładnej nazwie. RDAP varunfold.com: brak rekordu (404).' },
+    B: { name: 'Variant Unseen', language: 'en', blend: 'variant + unseen', bridge: 'Wariant, którego jeszcze nie widzieliśmy', construction: 'Variant wskazuje alternatywne wersje obrazu. Unseen dodaje ciekawość tego, co dotąd pozostawało poza kadrem, wyobraźnią albo możliwościami realizacji.', meaning: 'Pokazywać światy i wersje zdarzeń, których nie dało się uchwycić samą kamerą. Nazwa pasuje też do napięcia wokół tego, czego widz jeszcze nie wie.', strength: 'Roboczo „wariant an-sin”. Najmocniej łączy nowe możliwości obrazu z charakterem Twoich thrillerów.', risk: 'Dłuższa od Var Unfold; może być odczytana jako tytuł filmu. Samo unseen ma wiele innych zastosowań w kulturze.', bio: 'Live-action roots. Expanded by AI.', screening: '9.11.2026: przejrzane wyniki zawierały rozproszone dopasowania słów, bez potwierdzonej marki o tej dokładnej nazwie. RDAP variantunseen.com: brak rekordu (404).' },
+    C: { name: 'Variant Loom', language: 'en', blend: 'variant + loom', bridge: 'Krosno możliwych obrazów', construction: 'Loom jako krosno daje metaforę rzemiosła. Z nagrań, scenografii, montażu, dźwięku i generowanych elementów powstaje spójna całość.', meaning: 'Wiele możliwości jest materiałem dla jednego filmu. O jego charakterze decydują sposób łączenia warstw i autorski wybór.', strength: 'Roboczo „wariant lum”. Najmocniejszy motyw warsztatu i łączenia tradycji z nowymi narzędziami.', risk: 'Może kojarzyć się z tekstyliami. W wyszukiwaniu pojawia się też odrębne narzędzie biologiczne PRRS-Loom Variant; nie traktujemy nazwy jako zupełnie pozbawionej podobnych zapisów.', bio: 'Live-action roots. Expanded by AI.', screening: '9.11.2026: wyniki dotyczyły tekstyliów, narzędzi i rozproszonych dopasowań. Bez potwierdzonej marki filmowej o dokładnej nazwie. RDAP variantloom.com: brak rekordu (404).' },
+    D: { name: 'Var Continuum', language: 'en', blend: 'var + continuum', bridge: 'Spektrum wariantów prowadzone przez autora', construction: 'Zachowujemy var i pełne continuum. To dwuwyrazowa alternatywa dla Varinuum: sens można odczytać z dwóch rozpoznawalnych składników.', meaning: 'Nagranie z planu może być rozwijane w wielu wersjach. Ostateczną formę obrazu wyznacza intencja twórcy.', strength: 'Roboczo „war kontinuum”. Najbardziej konceptualna propozycja, bez narzuconego gatunku; nawiązuje do poprzedniego motywu otwartych możliwości.', risk: 'Może brzmieć naukowo lub technologicznie. Continuum jest popularnym słowem i nazwą wielu odrębnych projektów; odrębność oceniamy dla całego zestawienia.', bio: 'Live-action roots. Expanded by AI.', screening: '9.11.2026: wyniki zawierały m.in. kod i teksty w różnych językach. Nie ujawniono potwierdzonej marki filmowej o dokładnej nazwie. RDAP varcontinuum.com: brak rekordu (404).' }
+  };
+  rounds['19'] = {
+    A: { name: 'Amber Splice', language: 'en', article: 'an', blend: 'amber + splice', bridge: 'Ciepła barwa i ręcznie łączona taśma', construction: 'Amber przywołuje bursztynowy kolor światła i wspomnień. Splice to łączenie fragmentów taśmy filmowej. Razem dają obraz pracy rąk, cięcia i cierpliwego składania filmu.', meaning: 'Stół montażowy, pudełka z taśmą i ciepłe światło. Nostalgia zakorzeniona w filmowym rzemiośle, otwarta na nowy sposób pracy z obrazem.', strength: 'Roboczo „amber splajs”. Najbliższa Twojemu warsztatowi i moja pierwsza rekomendacja tej rundy. Ciepły pierwszy człon spotyka konkretne filmowe działanie.', risk: 'Amber może przywołać biżuterię albo osobę o tym imieniu. Samo splice ma wiele zastosowań w obrazie, dźwięku i technologii; badamy całą nazwę.', bio: 'Live-action roots. Expanded by AI.', screening: '9.11.2026: nie ujawniono potwierdzonej marki filmowej o dokładnej nazwie. Wyniki zawierały m.in. odrębny nocleg „Splice Modern Amber”. RDAP ambersplice.com: brak rekordu (404).' },
+    B: { name: 'Flicker Parlour', language: 'en', blend: 'flicker + parlour', bridge: 'Migotanie projektora i kameralny salon', construction: 'Flicker przywołuje migotanie światła, a parlour — dawny salon. Własne skojarzenie: małe miejsce, w którym wspólnie ogląda się filmy i na chwilę znika codzienny świat.', meaning: 'Wieczorny seans, ciemna sala i snop światła z projektora. Najbardziej atmosferyczna, klubowa propozycja tej rundy.', strength: 'Roboczo „fliker parlor”. Mocny obraz małego, autorskiego kina. Ma miejsce na niepokój i absurd.', risk: 'Brytyjskie parlour ma amerykański wariant parlor. Może sugerować miejsce pokazów zamiast studia; pisownię trzeba ustalić i utrzymać.', bio: 'Live-action roots. Expanded by AI.', screening: '9.11.2026: nie ujawniono potwierdzonej marki o dokładnej nazwie ani w sprawdzonej pisowni Flicker Parlor. RDAP obu .com: brak rekordu (404). Wyszukiwarka zwracała rozproszone dopasowania słów.' },
+    C: { name: 'Raster Matinee', language: 'en', blend: 'raster + matinee', bridge: 'Dawny ekran i rytuał dziennego seansu', construction: 'Raster przywołuje obraz składany z linii lub punktów, w tym dawne ekrany telewizorów i komputerów. Matinee to w angielskim dzienny, zwłaszcza popołudniowy pokaz.', meaning: 'Nostalgia za ekranem, przy którym odkrywało się filmy, gry i komputery. Najbliżej połączenia obu Twoich pasji z duchem domowego retro.', strength: 'Roboczo „raster matinej”. Najbardziej osobista propozycja dla programisty i filmowca; mocniej idzie w klimat dawnych ekranów niż w taśmę i projektor.', risk: 'Matinee może być trudniejsze do zapisania po usłyszeniu. Nazwa może przywołać wydarzenie lub cykl pokazów.', bio: 'Live-action roots. Expanded by AI.', screening: '9.11.2026: nie ujawniono potwierdzonej marki o dokładnej nazwie. W wynikach m.in. artykuł o odrębnej firmie Raster Media, której zespół chodził na seanse matinee. RDAP rastermatinee.com: brak rekordu (404).' }
+  };
+  rounds['20'] = {
+    A: {"name":"Homeward Frame","meaning":"Kadr skierowany ku domowi. Nostalgia za miejscem i ludźmi, do których wracamy także przez oglądane historie.","strength":"Najprostsze połączenie emocji Coming Home z filmem. Dwa wyraźne człony; dobrze brzmi także z dopiskiem Studio. Moja pierwsza propozycja tej rundy.","risk":"Homeward może wymagać oswojenia wymowy. Frame jest częstym składnikiem nazw fotograficznych; odrębność buduje cały zestaw.","blend":"homeward + frame","bridge":"Powrót do domu spotyka filmowy kadr","construction":"Homeward znaczy ku domowi. Frame oznacza m.in. kadr i ramę. Łączymy uczucie powrotu z konkretnym śladem medium; nie dopisujemy do nazwy technologii.","language":"en","bio":"Live-action roots. Expanded by AI.","screening":"9.11.2026: w przejrzanych wynikach nie potwierdzono marki filmowej o tej dokładnej nazwie. Sprawdzono też zapis łączny. RDAP homewardframe.com: brak rekordu (404). Szczegóły i podobne wyniki w notatce rundy."},
+    B: {"name":"Homeward Hour","meaning":"Pora wracania do domu: koniec dnia, światła w oknach i początek wieczornego seansu.","strength":"Powtórzenie H daje nazwie rytm. Najbliżej codziennego rytuału i ciepła Coming Home, z przestrzenią dla różnych gatunków.","risk":"Hour nie oznacza, że robisz filmy godzinne, ale taki odczyt jest możliwy. Nazwa może sugerować audycję albo cykl pokazów.","blend":"homeward + hour","bridge":"Znajoma pora powrotu","construction":"Z dwóch zwykłych angielskich słów powstaje własna nazwa chwili. To nasz obraz marki, nie ustalony idiom ani wskazanie długości filmów.","language":"en","bio":"Live-action roots. Expanded by AI.","screening":"9.11.2026: w przejrzanych wynikach nie potwierdzono marki filmowej o tej dokładnej nazwie. Sprawdzono też zapis łączny. RDAP homewardhour.com: brak rekordu (404). Szczegóły i podobne wyniki w notatce rundy."},
+    C: {"name":"Homeward Hush","meaning":"Cisza, którą zastajesz po powrocie. Może być kojąca, ale może też oznaczać, że coś jest inaczej.","strength":"Miękka aliteracja H i krótki drugi człon. Łączy domową nostalgię z niedopowiedzeniem.","risk":"Dwa mniej podstawowe angielskie słowa mogą utrudnić zapamiętanie ze słuchu. Hush może też kojarzyć się z marką relaksacyjną.","blend":"homeward + hush","bridge":"Powrót i cisza","construction":"Homeward zachowuje motyw drogi do domu. Hush dodaje ściszenie i oczekiwanie. Potencjalny niepokój jest interpretacją sceny, nie definicją słów.","language":"en","bio":"Live-action roots. Expanded by AI.","screening":"9.11.2026: w przejrzanych wynikach nie potwierdzono marki filmowej o tej dokładnej nazwie. Sprawdzono też zapis łączny. RDAP homewardhush.com: brak rekordu (404). Szczegóły i podobne wyniki w notatce rundy."},
+    D: {"name":"Back by Dusk","meaning":"Wróć przed zmrokiem. Wspomnienie swobody, dziecięcych wypraw i granicy, po której znajomy świat staje się niepokojący.","strength":"Najbardziej pamiętna mała historia tej rundy. Naturalna fraza łączy ciepło powrotu z napięciem bez użycia słów horror czy thriller. Druga z moich rekomendacji.","risk":"Trzy krótkie słowa zamiast preferowanych dwóch; świadomy wyjątek dla naturalnego brzmienia. Może być odczytana jak tytuł filmu lub gry.","blend":"back + by dusk","bridge":"Obietnica powrotu przed zmrokiem","construction":"Fraza może być zwykłym ustaleniem godziny powrotu. W naszej interpretacji przywołuje dzieciństwo i pytanie, co wydarzy się po zapadnięciu ciemności.","language":"en","bio":"Live-action roots. Expanded by AI.","screening":"9.11.2026: w przejrzanych wynikach nie potwierdzono marki filmowej o tej dokładnej nazwie. Sprawdzono też zapis łączny. RDAP backbydusk.com: brak rekordu (404). Szczegóły i podobne wyniki w notatce rundy."},
+    E: {"name":"Lamplit Return","meaning":"Powrót w świetle lamp. Wieczór, znajomy dom i światło, które ktoś zostawił dla wracającego.","strength":"Najcieplejszy obraz tej rundy. Nostalgia wynika z ludzkiej sytuacji, bez potrzeby odwoływania się do rekwizytów retro.","risk":"Lamplit jest poprawnym, ale mniej codziennym słowem. Nazwa może sugerować spokojny dramat; samo Lamplit występuje również jako marka lamp.","blend":"lamplit + return","bridge":"Światło czekające na powrót","construction":"Lamplit oznacza oświetlony lampą lub lampami, return — powrót. Czekające światło i obecność drugiej osoby są proponowaną opowieścią marki.","language":"en","bio":"Live-action roots. Expanded by AI.","screening":"9.11.2026: w przejrzanych wynikach nie potwierdzono marki filmowej o tej dokładnej nazwie. Sprawdzono też zapis łączny. RDAP lamplitreturn.com: brak rekordu (404). Szczegóły i podobne wyniki w notatce rundy."},
+    F: {"name":"Doorframe Echo","meaning":"Echo w framudze: znajomy głos, kroki, rozmowa zapamiętana z domu. Próg oddziela dawne życie od tego, co jest dalej.","strength":"Konkretny obraz i dźwięk; można go poczuć bez rozbudowanej etymologii. Frame daje dodatkowe, pośrednie skojarzenie z kadrem.","risk":"Doorframe ma dziewięć liter; całość wymaga próby zapisu ze słuchu. Może sugerować projekt muzyczny lub wnętrzarski.","blend":"doorframe + echo","bridge":"Próg domu i pozostałość wspomnienia","construction":"Doorframe to rama drzwi. Echo przenosimy ze zjawiska dźwiękowego na wspomnienie. Nie twierdzimy, że doorframe jest terminem filmowym.","language":"en","bio":"Live-action roots. Expanded by AI.","screening":"9.11.2026: w przejrzanych wynikach nie potwierdzono marki filmowej o tej dokładnej nazwie. Sprawdzono też zapis łączny. RDAP doorframeecho.com: brak rekordu (404). Szczegóły i podobne wyniki w notatce rundy."},
+    G: {"name":"Familiar Hush","meaning":"Znajoma cisza. Odczucie bycia u siebie i drobna wątpliwość, czy naprawdę wszystko pamiętamy tak, jak było.","strength":"Najbardziej subtelny związek nostalgii z Twoimi thrillerami. Obiecuje atmosferę i niedopowiedzenie. Trzecia z moich rekomendacji.","risk":"Familiar jest dłuższym słowem i ma kilka znaczeń. Bez filmów nazwa może też kojarzyć się z muzyką ambientową albo wyciszeniem.","blend":"familiar + hush","bridge":"Bliskość z odrobiną niepokoju","construction":"Familiar czytamy tu jako znajomy, dobrze znany. Hush to cisza lub ściszenie. Napięcie wynika z naszego zestawienia i możliwej sceny.","language":"en","bio":"Live-action roots. Expanded by AI.","screening":"9.11.2026: w przejrzanych wynikach nie potwierdzono marki filmowej o tej dokładnej nazwie. Sprawdzono też zapis łączny. RDAP familiarhush.com: brak rekordu (404). Szczegóły i podobne wyniki w notatce rundy."},
+    H: {"name":"Tender Rewind","meaning":"Czułe przewijanie wspomnień. Powrót do historii, które chcemy zobaczyć jeszcze raz, nawet jeśli pamięć je zmienia.","strength":"Najczytelniejsza emocjonalna więź z dawnymi seansami i kasetami. Dwa rozpoznawalne słowa, wyraźny gest filmowego powrotu.","risk":"Tender mocniej prowadzi w dramat i delikatność niż thriller. Wyszukiwanie zawiera też przetargi: tender ma odrębne znaczenie rzeczownikowe.","blend":"tender + rewind","bridge":"Czułość i powrót do zapisanego obrazu","construction":"Tender opisuje tu czułość, rewind — przewijanie wstecz. To metafora pracy pamięci i powracania do filmów, bez deklaracji realizacji na taśmie.","language":"en","bio":"Live-action roots. Expanded by AI.","screening":"9.11.2026: w przejrzanych wynikach nie potwierdzono marki filmowej o tej dokładnej nazwie. Sprawdzono też zapis łączny. RDAP tenderrewind.com: brak rekordu (404). Szczegóły i podobne wyniki w notatce rundy."},
+    I: {"name":"Homeward Grain","meaning":"Powrót do obrazów, które pamiętamy z dawnych seansów: niedoskonałych, ziarnistych, osobistych.","strength":"Mocniej niż pozostałe warianty homeward łączy domowe uczucie z fakturą obrazu. Może spiąć dawny warsztat z nowymi narzędziami.","risk":"Grain oznacza także ziarno zbóż i fakturę drewna. Nazwa może sugerować określoną estetykę, choć nie musi ograniczać przyszłych filmów.","blend":"homeward + grain","bridge":"Droga ku domowi i faktura zapamiętanego obrazu","construction":"Grain przywołuje tu filmowe ziarno. Jest skojarzeniem estetycznym, nie stwierdzeniem o formacie, na którym nagrano dotychczasowe filmy.","language":"en","bio":"Live-action roots. Expanded by AI.","screening":"9.11.2026: w przejrzanych wynikach nie potwierdzono marki filmowej o tej dokładnej nazwie. Sprawdzono też zapis łączny. RDAP homewardgrain.com: brak rekordu (404). Szczegóły i podobne wyniki w notatce rundy."},
+    J: {"name":"Homeward Static","meaning":"Powrót przez szum dawnego ekranu. Domowe wspomnienie jest bliskie, ale obraz nie daje się już odtworzyć bez zakłóceń.","strength":"Najmocniejsza więź domowej nostalgii, starych telewizorów i niepokoju. Ma też pośredni trop techniczny dla programisty.","risk":"Static może sugerować bezruch albo awarię. Nazwa brzmi chłodniej i bardziej muzycznie niż Coming Home.","blend":"homeward + static","bridge":"Domowe wspomnienie docierające przez szum","construction":"Static czytamy tu jako szum zakłócający odbiór. Inne znaczenia, w tym bezruch i termin programistyczny, pozostają dodatkowymi skojarzeniami.","language":"en","bio":"Live-action roots. Expanded by AI.","screening":"9.11.2026: w przejrzanych wynikach nie potwierdzono marki filmowej o tej dokładnej nazwie. Sprawdzono też zapis łączny. RDAP homewardstatic.com: brak rekordu (404). Szczegóły i podobne wyniki w notatce rundy."},
+    K: {"name":"Doorway Hour","meaning":"Chwila na progu: między powrotem a wyjściem, znajomym wnętrzem a nowym światem. Potencjalny początek opowieści.","strength":"Daje scenę i przestrzeń do różnych gatunków. Może oznaczać wieczorny rytuał wejścia w świat filmu.","risk":"Bardziej abstrakcyjna od Back by Dusk; wymaga zaakceptowania poetyckiego zestawienia. Może kojarzyć się z cyklem audycji.","blend":"doorway + hour","bridge":"Próg jako moment rozpoczęcia historii","construction":"Doorway to wejście lub otwór drzwiowy. Hour nadaje mu wymiar czasu. To własna metafora, bez przypisywania frazie znaczenia słownikowego.","language":"en","bio":"Live-action roots. Expanded by AI.","screening":"9.11.2026: w przejrzanych wynikach nie potwierdzono marki filmowej o tej dokładnej nazwie. Sprawdzono też zapis łączny. RDAP doorwayhour.com: brak rekordu (404). Szczegóły i podobne wyniki w notatce rundy."},
+    L: {"name":"Windowheld","meaning":"Obraz zatrzymany w oknie: światło domu oglądanego z zewnątrz, wspomnienie widoku i filmowe spojrzenie na cudzą historię.","strength":"Jeden wyraz z dwóch czytelnych części. Najbardziej własny zapis w tej rundzie, z wyraźnym obrazem do zapamiętania.","risk":"To wymyślone słowo, więc sens i wymowa wymagają oswojenia. Może przypominać funkcję programu do obsługi okien; windowheld występuje jako identyfikator techniczny.","blend":"window + held","bridge":"Wymyślone słowo o zatrzymanym widoku","construction":"Łączymy window i held. „Obraz zatrzymany w oknie” jest proponowaną interpretacją marki, a nie dosłownym tłumaczeniem istniejącego angielskiego wyrazu.","language":"en","bio":"Live-action roots. Expanded by AI.","screening":"9.11.2026: w przejrzanych wynikach nie potwierdzono marki filmowej o tej dokładnej nazwie. Sprawdzono też zapis łączny. RDAP windowheld.com: brak rekordu (404). Szczegóły i podobne wyniki w notatce rundy."}
+  };
+  rounds['21'] = {
+    A: { ...rounds['15'].A, article: 'an', meaning: 'Avant + reel: kino z korzeniami, które szuka nowego kierunku. Zdjęcia z ekipą i filmowy warsztat są punktem wyjścia; nowe narzędzia rozwijają możliwości obrazu.', strength: 'Jeden wyraz, 9 liter; samodzielna nazwa o szerokiej swobodzie gatunkowej. Przy dotychczasowych priorytetach oryginalności, zapamiętywalności i nowego rozdziału daję jej niewielką przewagę. To ocena kreatywna, bez badania pamięci odbiorców.', risk: 'Może sugerować kino eksperymentalne. Trzeba ustalić wymowę; po usłyszeniu możliwa jest pomyłka reel / real. Nowoczesność nie oznacza automatycznie AI.', bio: 'Independent short films. Live-action roots. Expanded by AI.', screening: '9.11.2026: dokładny zapis ponownie zwrócił zniekształcony tekst urzędowy; nie potwierdzono marki filmowej. RDAP avantreel.com: 404, brak rekordu. Wstępny przegląd, bez potwierdzenia zakupu i uchwytów.' },
+    B: { name: 'Last Familiar Pictures', language: 'en', blend: 'last + familiar + pictures', bridge: 'Pamięć znajomego świata i zapowiedź zmiany', construction: 'Pełną frazę czytamy jako ostatnie znajome obrazy. Pictures dopełnia jej sens; samo Last Familiar ma także inne możliwe odczyty. Poniższa obietnica jest interpretacją marki.', meaning: 'Ostatnie obrazy znajomego świata, zanim wszystko się zmieni. Nostalgia, bliskość i niepokój o to, co zaraz utracimy.', strength: 'Mocniej sugeruje atmosferę thrillerów i mrocznego dramatu. Zwykłe słowa tworzą czytelny obraz; wyraźny ton klasycznej wytwórni. Znaczenie może pomagać zapamiętaniu, ale wymaga to sprawdzenia.', risk: 'Trzy wyrazy, 20 liter bez spacji. Last sugeruje koniec lub pożegnanie, a podobny tytuł The Last Familiar istnieje w książkach fantasy. AI i nowoczesny warsztat wymagałyby opisu procesu.', bio: 'Independent short films. Live-action roots. Expanded by AI.', screening: '9.11.2026: brak potwierdzonego studia o pełnej nazwie w przejrzanych wynikach; podobny tytuł książkowy The Last Familiar. RDAP lastfamiliar.com i lastfamiliarpictures.com: 404, brak rekordu. Wstępny przegląd, bez potwierdzenia zakupu i uchwytów.' }
+  };
+  rounds['22'] = {
+    A: {
+      ...rounds['16'].D,
+      strength: 'Czytelny rdzeń variant. Nazwa pasuje do rozwijania jednej wersji ujęcia w kilka, a skojarzenie z future wspiera kierunek nowoczesnego studia.',
+      risk: 'VAIR-ee-uhn-chur to proponowana wymowa angielska. Końcówkę można przeczytać inaczej bez podpowiedzi. Nazwa może przywoływać również markę narzędzia do projektowania.'
+    },
+    B: {
+      name: 'Variantour',
+      language: 'en',
+      blend: 'variant i tour ze wspólną literą t',
+      bridge: 'Zwiedzanie alternatywnych wersji świata',
+      construction: 'W zapisie mieszczą się całe variant i całe tour, które dzielą literę t. Odbiorca może zobaczyć przede wszystkim tour, czyli wycieczkę lub trasę.',
+      meaning: 'Podróż przez różne wersje świata filmu. Nazwa akcentuje odkrywanie, a trop var i wariantów nadal da się rozwinąć w opisie studia.',
+      strength: 'Tour to rozpoznawalne angielskie słowo. Sugeruje ruch, odkrywanie i kolejne miejsca, co pasuje do cyklu pokazów albo opowieści zbudowanej wokół podróży.',
+      risk: 'Proponowana wymowa to VAIR-ee-uhn-toor. Końcówkę łatwiej rozpoznać, choć po usłyszeniu można zapisać nazwę jako Varian Tour. Sam zapis może przywołać turystykę lub wydarzenie.',
+      bio: rounds['16'].D.bio,
+      screening: '16.11.2026. W przejrzanych wynikach nie znaleziono marki o dokładnym zapisie. W turystyce występuje podobne Varia Tour. Rejestry nie zwróciły wpisów dla .com, .pl i .film. Status znaków towarowych pozostaje nieustalony.'
+    }
+  };
+  rounds['23'] = {
+    A: {
+      name: 'Variant93',
+      language: 'en',
+      blend: 'variant + 93',
+      bridge: 'Wariant ujęcia i końcówka roku urodzenia',
+      construction: 'Variant zachowuje motyw różnych wersji obrazu i skojarzenie z var w programowaniu. Liczba 93 odwołuje się do roku urodzenia autora i może przywodzić na myśl lata dziewięćdziesiąte.',
+      meaning: 'Nazwa łączy autorską historię ze sposobem pracy nad obrazem. Bez objaśnienia 93 można też odczytać jako numer wersji lub modelu.',
+      strength: 'Dziewięć znaków. Cyfry nadają zapisowi wyraźny rytm i ułatwiają stylizację na oznaczenie z lat dziewięćdziesiątych. Angielskie słowo variant jest rozpoznawalne.',
+      risk: 'Proponowany angielski odczyt to VAIR-ee-uhnt ninety-three. Na głos jest dłuższy od Varianture, a zapis ze słuchu może rozpaść się na Variant 93. Cyfry mogą kojarzyć się z nazwą użytkownika albo produktem.',
+      bio: rounds['16'].D.bio,
+      screening: '16.11.2026. W przejrzanych wynikach nie znaleziono marki filmowej o dokładnym zapisie. Variant93 występuje już jako identyfikator w kodzie i jako pseudonim na forum. Rejestry nie zwróciły wpisów dla .com, .pl i .film. Status znaków towarowych pozostaje nieustalony.'
+    },
+    B: {
+      ...rounds['16'].D,
+      strength: 'Płynny zapis jednego słowa i czytelny związek z różnymi wersjami obrazu. Łatwo połączyć tę nazwę z nowoczesnym studiem twórczym.',
+      risk: 'Proponowana wymowa angielska to VAIR-ee-uhn-chur. Końcówka może wymagać podpowiedzi. Bez oprawy wizualnej i opowieści nazwa słabiej przywołuje lata dziewięćdziesiąte.'
+    }
+  };
+  rounds['24'] = {
+    A: { ...rounds['16'].D, credit: 'A Varianture film' },
+    B: {
+      name: 'Varianture Films',
+      language: 'en',
+      meaning: 'Films wskazuje bezpośrednio, co powstaje pod marką Varianture.',
+      strength: 'Rekomendowana wersja rozszerzona. Jasno i naturalnie brzmi w podpisie studia filmowego.',
+      risk: 'Dopisek można stosować wtedy, gdy odbiorca potrzebuje kontekstu. Krótka forma sprawdza się w głównym logo.',
+      bio: rounds['16'].D.bio,
+      credit: 'Produced by Varianture Films'
+    },
+    C: {
+      name: 'Varianture Studio',
+      language: 'en',
+      meaning: 'Studio twórcze skupione wokół marki Varianture.',
+      strength: 'Prosta forma o szerokim zastosowaniu, także przy animacji lub projektowaniu.',
+      risk: 'Bez dodatkowego opisu odbiorca może pomyśleć o designie, fotografii lub wynajmie studia.',
+      bio: rounds['16'].D.bio,
+      credit: 'Produced by Varianture Studio'
+    },
+    D: {
+      name: 'Varianture Studios',
+      language: 'en',
+      meaning: 'Nazwa o bardziej instytucjonalnym charakterze.',
+      strength: 'Brzmi jak szyld organizacji produkcyjnej i zostawia przestrzeń na zróżnicowaną działalność.',
+      risk: 'Może sugerować większą organizację lub zaplecze studyjne. Przy niezależnych krótkich metrażach daje mniej osobisty ton.',
+      bio: rounds['16'].D.bio,
+      credit: 'Produced by Varianture Studios'
+    },
+    E: {
+      name: 'Varianture Film',
+      language: 'en',
+      meaning: 'Film w liczbie pojedynczej jako element pełnej nazwy.',
+      strength: 'Krótki zapis i jasne odniesienie do kina.',
+      risk: 'W podpisie A Varianture film pojedyncze film określa konkretny utwór. Pełna nazwa Varianture Film brzmi mniej naturalnie niż Varianture Films.',
+      bio: rounds['16'].D.bio,
+      credit: 'Produced by Varianture Film'
+    },
+    F: {
+      name: 'Varianture Pictures',
+      language: 'en',
+      meaning: 'Pictures przywołuje klasyczny szyld wytwórni filmowej.',
+      strength: 'Preferowana przez autora forma z dopiskiem. Pictures przywołuje klasyczną wytwórnię filmową.',
+      risk: 'Zastrzeżenie autora dotyczy samego Varianture. Nazwa opisuje koncepcję, ale brakuje jej osobistego znaczenia.',
+      bio: rounds['16'].D.bio,
+      credit: 'Produced by Varianture Pictures'
+    }
+  };
+  rounds['25'] = {
+    A: {
+      name: 'Else, Actually',
+      language: 'en',
+      blend: 'else + fragment tytułu Boundless, actually',
+      bridge: 'Alternatywna gałąź i przewrotny tytuł',
+      construction: 'Z tytułu Boundless, actually zostają przecinek i actually. Else przenosi do nazwy pomysł alternatywnej gałęzi w kodzie.',
+      meaning: 'Historia może potoczyć się inaczej, niż zapowiada klasyczna sytuacja wyjściowa.',
+      strength: 'Łączy konkretny ślad z Twojej filmografii, programowanie i miejsce na absurd.',
+      risk: 'Brzmi jak fragment wypowiedzi lub tytuł filmu. W adresie przecinek zniknie.',
+      bio: rounds['16'].D.bio,
+      credit: 'Produced by Else, Actually',
+      screening: 'Wstępne wyszukiwanie nie ujawniło marki filmowej o dokładnym zapisie. Rejestr elseactually.com zwrócił brak rekordu.'
+    },
+    B: {
+      name: 'Saturday Exception',
+      language: 'en',
+      blend: 'Saturday + exception',
+      bridge: 'Sobota z własnego filmu i wyjątek od reguły',
+      construction: 'Saturday przychodzi z tytułu Saturday cleaning. Exception przywołuje zdarzenie odbiegające od oczekiwań, a w kodzie obsługę sytuacji wyjątkowej.',
+      meaning: 'Wyjątek w znajomym dniu. Zwykła sytuacja nagle wymaga innego odczytania.',
+      strength: 'Napięcie jest wyczuwalne bez znajomości kodu. Nazwa ma konkretny punkt wyjścia w Twoim filmie.',
+      risk: 'Exception może kojarzyć się z błędem programu. Pełna forma z Pictures byłaby długa.',
+      bio: rounds['16'].D.bio,
+      screening: 'Wstępne wyszukiwanie nie ujawniło marki filmowej o dokładnym zapisie. Rejestr saturdayexception.com zwrócił brak rekordu.'
+    },
+    C: {
+      name: 'Inevitable Saturday',
+      language: 'en',
+      article: 'an',
+      blend: 'słowa z opisu Saturday cleaning',
+      bridge: 'Znajomy dzień i nieuchronność',
+      construction: 'Zdanie „The Saturday is inevitable” z opisu filmu zmienia się w dwuwyrazową nazwę.',
+      meaning: 'Ktoś robi coś zwyczajnego. Sama zapowiedź tego dnia już wywołuje niepokój.',
+      strength: 'Najbardziej bezpośredni ślad z Twojej filmografii, z czytelnym nastrojem thrillera.',
+      risk: 'Może brzmieć jak tytuł pojedynczego filmu. Inevitable jest dłuższe i trudniejsze do zapisania po usłyszeniu.',
+      bio: rounds['16'].D.bio,
+      screening: 'Wstępne wyszukiwanie nie ujawniło marki filmowej o dokładnym zapisie. Rejestr inevitablesaturday.com zwrócił brak rekordu.'
+    }
+  };
+  rounds['26'] = {
+    A: {
+      name: 'Tower Lady Pictures',
+      language: 'en',
+      blend: 'tower + lady + pictures',
+      bridge: 'Legenda Halszki z rodzinnych Szamotuł',
+      construction: 'Tower i Lady przywołują postać z opowieści związanej z Basztą Halszki. Pictures nadaje nazwie klasyczny filmowy charakter.',
+      meaning: 'Kobieta, wieża i pytanie o jej historię. Osobisty rodowód wynika z miejsca, z którego pochodzi autor.',
+      strength: 'Proste angielskie słowa składają się na konkretny obraz. Nazwa niesie mroczny, lekko retro ton i daje punkt wyjścia do znaku studia.',
+      risk: 'Postać i wieża mogą prowadzić skojarzenia w stronę gotyckiej baśni lub kina kostiumowego. W branży występuje zbliżone Tower Pictures.',
+      bio: rounds['16'].D.bio,
+      credit: 'Produced by Tower Lady Pictures',
+      screening: 'W przejrzanych wynikach nie znaleziono studia o dokładnym zapisie. Znaleziono podobne nazwy Tower Pictures i The Tower Pictures. Źródła oraz domeny są w notatce rundy.'
+    },
+    B: { ...rounds['24'].F },
+    C: { ...rounds['15'].A, bio: rounds['16'].D.bio },
+    D: { ...rounds['21'].B, bio: rounds['16'].D.bio, credit: 'Produced by Last Familiar Pictures' },
+    E: { ...rounds['12'].A, bio: rounds['16'].D.bio },
+    F: { ...rounds['13'].A, bio: rounds['16'].D.bio },
+    G: { ...rounds['12'].B, bio: rounds['16'].D.bio }
+  };
+  const films = [
+    { title: 'Saturday cleaning', year: '2021', duration: 'ok. 2 min' },
+    { title: 'Akabei', year: '2024', duration: '11:31' },
+    { title: 'Boundless, actually', year: '2025', duration: '4:40' }
+  ];
+  const params = new URLSearchParams(location.search);
+  let currentRound = Object.hasOwn(rounds, params.get('round')) ? params.get('round') : '1';
+  let candidates = rounds[currentRound];
+  let keys = Object.keys(candidates);
+  const roundSelect = document.querySelector('#round');
+  const nameSelect = document.querySelector('#name');
+  const contextSelect = document.querySelector('#context');
+  const filmSelect = document.querySelector('#film');
+  const stage = document.querySelector('#stage');
+  const query = params.get('variant');
+  let active = keys.includes(query) ? query : 'A';
+  function add(tag, value, className) {
+    const node = document.createElement(tag);
+    node.textContent = value;
+    if (className) node.className = className;
+    stage.append(node);
+  }
+  function render() {
+    const c = candidates[active];
+    const f = films[Number(filmSelect.value)];
+    const context = contextSelect.value;
+    const construction = document.querySelector('#construction');
+    construction.hidden = !c.blend;
+    construction.open = false;
+    document.querySelector('#construction-text').textContent = c.blend ? c.blend + ' · ' + c.bridge + '. ' + c.construction : '';
+    document.querySelector('#round-analysis').hidden = currentRound !== '3';
+    document.querySelector('#memory-exercise').hidden = currentRound !== '4';
+    document.querySelector('#round-direction').hidden = !['5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26'].includes(currentRound);
+    document.querySelector('#round-avantreel-familiar').hidden = currentRound !== '21';
+    document.querySelector('#round-varianture-variantour').hidden = currentRound !== '22';
+    document.querySelector('#round-homecoming').hidden = currentRound !== '20';
+    document.querySelector('#round-sound').hidden = currentRound !== '7';
+    document.querySelector('#round-concept').hidden = currentRound !== '8';
+    document.querySelector('#round-myth').hidden = currentRound !== '9';
+    document.querySelector('#round-myth-world').hidden = currentRound !== '10';
+    document.querySelector('#round-film').hidden = currentRound !== '11';
+    document.querySelector('#round-comparison').hidden = currentRound !== '12';
+    document.querySelector('#meaning-label').textContent = ['9', '10'].includes(currentRound) ? 'Patronat — nasza kreacja' : currentRound === '7' ? 'Brzmienie' : 'Punkt wyjścia';
+    const decision = {
+      'Tower Lady Pictures': 'Wybrana nazwa',
+      Varianture: 'Wcześniejszy faworyt z zastrzeżeniem dotyczącym osobistego znaczenia',
+      'Varianture Pictures': 'Wcześniej preferowana forma z dopiskiem',
+      Altertake: 'Krótka lista, zastrzeżenie dotyczące oryginalności',
+      Fictension: 'Krótka lista',
+      Elsecut: 'Krótka lista',
+      Avantreel: 'Krótka lista, wcześniejszy faworyt',
+      'Last Familiar Pictures': 'Krótka lista'
+    }[c.name] ?? 'Do oceny';
+    document.querySelector('#candidate-status').textContent = c.name + ' · ' + decision;
+    roundSelect.value = currentRound;
+    nameSelect.replaceChildren(...keys.map(key => {
+      const option = document.createElement('option');
+      option.value = key;
+      option.textContent = key + ' · ' + candidates[key].name;
+      return option;
+    }));
+    nameSelect.value = active;
+    stage.className = context;
+    stage.replaceChildren();
+    if (context === 'title') {
+      add('div', c.name.toUpperCase(), 'brand');
+      add('p', c.language === 'pl' ? 'przedstawia' : 'presents', 'minor');
+      add('h2', f.title);
+    } else if (context === 'profile') {
+      add('div', c.name, 'brand');
+      add('p', c.bio, 'minor');
+      add('p', 'Saturday cleaning · Akabei · Boundless, actually', 'minor');
+    } else {
+      add('h2', f.title);
+      add('p', f.year + ' · ' + f.duration, 'minor');
+      const credit = c.credit ?? (c.language === 'en' ? (c.article ?? 'a') + ' ' + c.name + ' film' : c.name);
+      add('div', credit, 'brand');
+    }
+    document.querySelector('#meaning').textContent = c.meaning;
+    document.querySelector('#strength').textContent = c.strength;
+    document.querySelector('#risk').textContent = c.risk;
+    document.querySelector('#current').textContent = (keys.indexOf(active) + 1) + '/' + keys.length + ' · ' + c.name;
+    document.querySelector('#round-heading').textContent = 'Runda ' + currentRound.padStart(2, '0') + ' · prototyp roboczy';
+    document.querySelector('#round-notes').href = currentRound === '12' ? '../docs/rebranding/name-originality-check.md' : '../docs/rebranding/naming-round-' + currentRound.padStart(2, '0') + '.md';
+    document.querySelector('#state').textContent = 'STAN PROTOTYPU\n' + JSON.stringify({ runda: currentRound, variant: active, nazwa: c.name, kontekst: context, film: f, przeglad: c.screening, decyzja: decision, zapis: 'runda i nazwa w URL' }, null, 2);
+    document.title = c.name + ' · prototyp nazwy';
+  }
+  function choose(key) {
+    active = key;
+    const url = new URL(location.href);
+    url.searchParams.set('round', currentRound);
+    url.searchParams.set('variant', active);
+    history.replaceState(null, '', url);
+    render();
+  }
+  function cycle(step) { choose(keys[(keys.indexOf(active) + step + keys.length) % keys.length]); }
+  document.querySelector('#previous').addEventListener('click', () => cycle(-1));
+  document.querySelector('#next').addEventListener('click', () => cycle(1));
+  nameSelect.addEventListener('change', () => choose(nameSelect.value));
+  roundSelect.addEventListener('change', () => {
+    currentRound = roundSelect.value;
+    candidates = rounds[currentRound];
+    keys = Object.keys(candidates);
+    choose('A');
+  });
+  contextSelect.addEventListener('change', render);
+  filmSelect.addEventListener('change', render);
+  window.addEventListener('popstate', () => {
+    const params = new URLSearchParams(location.search);
+    currentRound = Object.hasOwn(rounds, params.get('round')) ? params.get('round') : '1';
+    candidates = rounds[currentRound];
+    keys = Object.keys(candidates);
+    const value = params.get('variant');
+    active = keys.includes(value) ? value : 'A';
+    render();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.target.closest('input, textarea, select, button, [contenteditable]') || event.altKey || event.ctrlKey || event.metaKey) return;
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      cycle(event.key === 'ArrowRight' ? 1 : -1);
+    }
+  });
+  render();
+</script>
+</html>
