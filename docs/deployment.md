@@ -49,7 +49,7 @@ Zastąp dotychczasowy rekord A `@` wskazujący na `2.57.91.91` i CNAME `www` wsk
 
 `astro.config.mjs` ma produkcyjne `site: "https://towerlady.com"` i `base: "/"`. Ścieżki są gotowe do publikacji na własnej domenie. Przed podpięciem domeny podgląd `github.io/code-motion/` ma inną ścieżkę bazową. [Konfiguracja Astro dla Pages](https://docs.astro.build/en/guides/deploy/github/)
 
-Katalog główny otwiera `/pl/` za pomocą `location.replace()`. Dokument startowy ma czarne tło zapisane w HTML i pustą treść. Zachowuje parametry adresu oraz fragment po `#`. Przy wyłączonym JavaScripcie przekierowanie wykonuje znacznik `meta refresh` z czasem 0 s. GitHub Pages automatycznie obsługuje plik `404.html` jako stronę błędu ze statusem 404. [Strona 404 w Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
+Katalog główny wybiera język na podstawie `navigator.languages[0]`, a gdy ta wartość jest niedostępna — `navigator.language`. Polski (`pl`, `pl-PL`) otwiera `/pl/`, każdy inny język lub brak informacji otwiera `/en/`. Przekierowanie używa `location.replace()` i zachowuje parametry adresu oraz fragment po `#`. Dokument startowy ma czarne tło zapisane w HTML i pustą treść, a skrypt działa bez pobierania dodatkowych plików. Przy wyłączonym JavaScripcie znacznik `meta refresh` z czasem 0 s otwiera `/pl/`. Wykrywanie języka dotyczy wyłącznie katalogu głównego; adresy `/pl/`, `/en/` i ich podstrony nie zmieniają języka automatycznie. GitHub Pages automatycznie obsługuje plik `404.html` jako stronę błędu ze statusem 404. [Strona 404 w Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
 
 ## Kolejne wydania
 

@@ -1,0 +1,116 @@
+---
+import { aboutStory } from "../about";
+import type { Locale } from "../content";
+import { playIcon, type Film } from "../films";
+import saturdayPoster from "../../prototypes/tower-lady/assets/saturday-cleaning.jpg?url";
+
+interface Props {
+  film: Film;
+  locale: Locale;
+}
+
+const { film, locale } = Astro.props;
+const t = aboutStory[locale];
+const title = t.filmTitles[film.id];
+const videoId = new URL(film.url).searchParams.get("v");
+---
+
+<figure class="story-film">
+  <div class="film-embed" data-video-id={videoId} data-language={locale} data-player-title={t.player.title(title)}>
+    <a class="film-embed-preview" href={film.url} aria-label={t.player.play(title)}>
+      <img src={film.image ?? saturdayPoster} width="1280" height="720" alt="" loading="lazy" decoding="async" />
+      <span class="film-embed-play" aria-hidden="true">
+        <img src={playIcon} width="24" height="24" alt="" />
+      </span>
+    </a>
+  </div>
+  <figcaption>
+    <span><strong>{title}</strong> · {film.year}</span>
+    <a class="text-link" href={film.url} aria-label={`${t.player.watch}: ${title}`}>{t.player.watch}</a>
+  </figcaption>
+</figure>
+
+<script>
+  document.querySelectorAll<HTMLAnchorElement>(".film-embed-preview").forEach(preview => {
+    preview.addEventListener("click", event => {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+      const embed = preview.closest<HTMLElement>(".film-embed")!;
+      const iframe = document.createElement("iframe");
+      const source = new URL(`https://www.youtube-nocookie.com/embed/${embed.dataset.videoId}`);
+      source.searchParams.set("autoplay", "1");
+      source.searchParams.set("playsinline", "1");
+      source.searchParams.set("hl", embed.dataset.language!);
+      iframe.title = embed.dataset.playerTitle!;
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
+      iframe.referrerPolicy = "strict-origin-when-cross-origin";
+      iframe.src = source.href;
+
+      event.preventDefault();
+      preview.replaceWith(iframe);
+      iframe.focus();
+    });
+  });
+</script>
+
+<style>
+  .story-film { margin: 1.25rem 0 2.25rem; }
+  .film-embed {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 200px;
+    overflow: hidden;
+    border: 1px solid #9a845940;
+    border-radius: 6px;
+    background: #101010;
+  }
+  .film-embed-preview, .film-embed-preview > img, .film-embed :global(iframe) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .film-embed-preview {
+    display: grid;
+    place-items: center;
+  }
+  .film-embed-preview > img { object-fit: cover; }
+  .film-embed-preview::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #0002;
+  }
+  .film-embed-preview:focus-visible { outline-offset: -5px; }
+  .film-embed-play {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid #f5ebd37a;
+    border-radius: 50%;
+    background: var(--brass);
+    box-shadow: 0 2px 24px #0005;
+  }
+  .film-embed-play img { margin-inline-start: 3px; }
+  .film-embed-preview:hover .film-embed-play,
+  .film-embed-preview:focus-visible .film-embed-play { background: #d6b67c; }
+  .film-embed :global(iframe) { border: 0; }
+  figcaption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: .2rem 1rem;
+    margin-top: .6rem;
+    color: var(--muted);
+    font-size: .8125rem;
+    line-height: 1.6;
+  }
+  figcaption strong { font-weight: 500; color: var(--ivory); }
+  figcaption a { padding-block: .35rem; }
+</style>
