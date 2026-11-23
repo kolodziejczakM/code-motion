@@ -25,8 +25,9 @@ Wpisz `/design/` bezpośrednio w adresie strony. Na podglądzie ścieżka to `/p
 
 ### Przed publikacją
 
-- Zatwierdź treść **O nas / About** oraz kadry i linki do wszystkich filmów.
-- Serwuj zawartość `dist/` pod `https://towerlady.com/`. Skieruj HTTP i ewentualny adres `www` na domenę kanoniczną. Na serwerze ustaw stałe przekierowanie `/` → `/pl/` i serwuj `404.html` ze statusem 404. Plikom z hashem w `/_astro/` można ustawić długi cache.
+- Docelowy hosting to GitHub Pages pod `https://towerlady.com/`. [Instrukcja konfiguracji GitHuba i DNS w Hostingerze](docs/deployment.md) opisuje pierwsze wdrożenie i kolejne wydania.
+- Workflow [Deploy GitHub Pages](.github/workflows/deploy-pages.yml) publikuje zawartość `dist/` po każdej zmianie na `main`. Można go też uruchomić ręcznie dla `main`.
+- Prywatne repozytorium na koncie osobistym wymaga planu GitHub Pro do publikowania przez Pages. Treść **O nas / About** została zaakceptowana do publikacji w bieżącej wersji.
 - Sprawdź obie wersje językowe, przekierowania, widok mobilny w Safari oraz kartę udostępniania na publicznym adresie.
 - Po uruchomieniu zweryfikuj domenę w Google Search Console, zgłoś `/sitemap.xml` i sprawdź inspekcję URL dla `/pl/` i `/en/`.
 
