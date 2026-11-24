@@ -119,9 +119,11 @@ i tę instrukcję. Pełna wersja dołącza również Inter z licencją.
 
 ## Źródło i jakość
 
-Źródłem pozostaje istniejący `prototypes/tower-lady/assets/brand-artwork.webp`
-(1487 x 1058 px), a kadr ilustracji ma około 500 x 580 px. Nie wygenerowano
-nowego rysunku i nie zmieniono jego kształtu. Rozdzielczość Canvas dopasowuje
+Wersja **1.0.1** używa `prototypes/tower-lady/assets/brand-artwork-clean.webp`
+(1487 x 1058 px). Usunięto tylko wystający spod dolnego łuku początek kolejnego
+poziomu wieży. Kadr ilustracji (około 500 x 580 px), proporcje, ruch włosów
+i przesunięcie emblematu w intro o 2% pozostały bez zmian. Nie wygenerowano
+nowego rysunku. Rozdzielczość Canvas dopasowuje
 się do rozdzielczości hosta; nie zwiększa to szczegółowości bitmapy. Do dużego
 logo w finalnym intro 4K warto później dostarczyć osobny obraz w większej
 rozdzielczości lub wektor i dostosować do niego kadr oraz maskę deformacji.
@@ -129,7 +131,7 @@ rozdzielczości lub wektor i dostosować do niego kadr oraz maskę deformacji.
 `wind.mjs` przenosi matematykę z `src/scripts/hair-motion.js`. `graphic.mjs`
 obsługuje cykl życia OGraf, lokalny zasób i czas hosta w milisekundach. Funkcja
 renderująca zawsze korzysta z niezmiennych pikseli źródłowych. Kod produkcyjnej
-strony pozostaje bez zmian.
+strony korzysta z tego samego poprawionego obrazu.
 
 `intro.mjs` rozszerza działający komponent emblematu o gotową kompozycję
 HTML/CSS i lokalny font. Korzysta z tego samego zegara, maski włosów i obsługi

@@ -49,6 +49,19 @@ python3 prototypes/tower-lady-ograf/package.py --variant intro
 opisuje format oraz ograniczenia obecnej bitmapy. Strona produkcyjna nie
 ładuje paczki intro ani podkładu muzycznego.
 
+Logo na stronie, w obu OGrafach (wersja 1.0.1) i w materiałach social korzysta
+z poprawionego obrazu `brand-artwork-clean.webp`. Usunięto wystający fragment
+u dołu wieży, zachowując kadr, proporcje i wybraną animację włosów. Korektę
+z oryginału i kopię obrazu dla OGraf można odtworzyć poleceniem
+`node prototypes/tower-lady/assets/clean-logo.mjs` po `npm ci`.
+
+### Materiały na Facebook i YouTube
+
+Wybrany **zestaw C** zawiera kadry trzech filmów oraz angielskie hasło
+„Stories without walls. Always original.”. [Podgląd i pobranie zestawu](https://vps.tailfb5686.ts.net:8766/prototypes/tower-lady-social/?variant=C)
+oraz [instrukcja eksportów](prototypes/tower-lady-social/README.md) obejmują
+banery i wspólny avatar obu platform. Warianty A i B zachowano do porównań.
+
 ### Przed publikacją
 
 - Docelowy hosting to GitHub Pages pod `https://towerlady.com/`. [Instrukcja konfiguracji GitHuba i DNS w Hostingerze](docs/deployment.md) opisuje pierwsze wdrożenie i kolejne wydania.

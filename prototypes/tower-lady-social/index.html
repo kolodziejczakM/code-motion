@@ -1,0 +1,138 @@
+<!doctype html>
+<!-- Throwaway: three social-media kits from the existing logo system. Select ?variant=A|B|C. -->
+<html lang="pl">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Tower Lady Pictures - social media</title>
+<style>
+  @font-face { font-family: Inter; src: url('../tower-lady/assets/inter.woff2'); font-weight: 100 900; font-display: block; }
+  * { box-sizing: border-box; }
+  :root { color-scheme: dark; font: 16px/1.6 Inter,sans-serif; background: #141414; color: #f5ebd3; }
+  body { max-width: 1220px; margin: auto; padding: 30px 26px 120px; }
+  h1 { font-size: clamp(26px,4vw,40px); line-height: 1.15; margin: 0 0 16px; font-weight: 600; }
+  h2 { font-size: 23px; margin: 0 0 12px; font-weight: 600; }
+  p { color: #d8cebb; margin: 8px 0 18px; max-width: 85ch; }
+  a { color: #f0ca80; }
+  section { padding: 28px 0; border-top: 1px solid #493e2d; }
+  button,select,.download { min-height: 44px; font: inherit; color: #f5ebd3; border: 1px solid #756449; background: #222; padding: 8px 13px; border-radius: 5px; }
+  button { cursor: pointer; }
+  :focus-visible { outline: 2px solid #f5d499; outline-offset: 3px; }
+  .downloads,.controls,.avatars { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .download { text-decoration: none; display: inline-flex; align-items: center; }
+  .primary { background: #bd9b5f; color: #090704; border-color: #bd9b5f; font-weight: 700; }
+  #avatar-square { width: 196px; height: 196px; }
+  .avatar-circle { border-radius: 50%; background: #000; display: block; }
+  .avatars figure { margin: 0 25px 0 0; }
+  figcaption { margin-top: 8px; color: #d8cebb; font-size: 13px; }
+  .canvas-host canvas { display: block; width: 100%; height: auto; background: #000; }
+  #facebook-full { max-width: 851px; }
+  #facebook-narrow { max-width: 390px; }
+  #youtube-crop[data-view="mobile"] { max-width: 390px; }
+  #youtube-crop[data-view="tv"] { max-width: 850px; }
+  .controls { margin: 16px 0; }
+  .reference { font-size: 14px; }
+  .switcher { position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); display: flex; gap: 7px; padding: 8px; background: #27383d; border: 1px solid #7e979f; border-radius: 13px; z-index: 5; box-shadow: 0 8px 30px #0009; }
+  .switcher button,.switcher select { background: #17262b; border-color: #7e979f; }
+  #error { color: #ffb0a0; }
+  @media(max-width:600px) { body { padding: 20px 14px 120px; } .switcher { max-width: calc(100% - 24px); } .switcher select { width: 190px; min-width: 0; } #avatar-square { width: 150px; height: 150px; } }
+</style>
+<h1>Tower Lady Pictures / social media</h1>
+<p id="description">Przygotowanie podglądu…</p>
+<p>Wspólny avatar na obu platformach. Hasło po angielsku: <strong>Stories without walls. Always original.</strong></p>
+<p class="downloads"><a id="kit-download" class="download primary" href="exports/tower-lady-social-A.zip" download>Pobierz zestaw A - 4 pliki PNG</a><a href="README.md">Wymiary i źródła</a></p>
+<section>
+  <h2>Avatar Facebook / YouTube</h2>
+  <div class="avatars">
+    <figure><div id="avatar-square" class="canvas-host"></div><figcaption>Plik kwadratowy 1080 × 1080</figcaption></figure>
+    <figure><img id="avatar-large" class="avatar-circle" width="176" height="176" alt="Avatar po przycięciu do koła"><figcaption>Kadr kołowy · 176 px</figcaption></figure>
+    <figure><img id="avatar-small" class="avatar-circle" width="98" height="98" alt="Avatar w małym rozmiarze"><figcaption>Mały rozmiar · 98 px</figcaption></figure>
+    <figure><img id="avatar-tiny" class="avatar-circle" width="40" height="40" alt="Avatar przy komentarzu"><figcaption>Miniatura · 40 px</figcaption></figure>
+  </div>
+  <p><a href="exports/common/facebook-avatar.png" download>Avatar Facebook</a> · <a href="exports/common/youtube-avatar.png" download>Avatar YouTube</a></p>
+</section>
+<section>
+  <h2>Facebook / baner</h2>
+  <div id="facebook-full" class="canvas-host"></div>
+  <p><a id="facebook-download" href="exports/A/facebook-cover.png" download>Pobierz PNG · 1702 × 630</a></p>
+  <p class="reference">Poniżej symulacja węższego kadru centralnego. To konserwatywny podgląd projektu; ostateczne kadrowanie potwierdź w kadratorze Facebooka.</p>
+  <div id="facebook-narrow" class="canvas-host"></div>
+</section>
+<section>
+  <h2>YouTube / baner</h2>
+  <div class="controls"><label>Widok <select id="youtube-view"><option value="mobile">Telefon</option><option value="desktop">Szeroki ekran</option><option value="tv">Pełny plik / TV</option></select></label><label><input id="guides" type="checkbox"> Pokaż obszar treści w pełnym pliku</label></div>
+  <div id="youtube-crop" class="canvas-host" data-view="mobile"></div>
+  <p><a id="youtube-download" href="exports/A/youtube-banner.png" download>Pobierz PNG · 2560 × 1440</a></p>
+  <p class="reference">Plik do wgrania zawsze ma 2560 × 1440. Obszar tekstu i logo wyliczony z oficjalnych 1235 × 338 przy pliku 2048 × 1152. Kolorowe prowadnice występują wyłącznie w podglądzie.</p>
+</section>
+<p id="error" role="alert"></p>
+<nav class="switcher" aria-label="Wariant zestawu">
+  <button id="previous" aria-label="Poprzedni wariant">←</button>
+  <select id="variant" aria-label="Wariant"><option value="A">A · Nazwa studia</option><option value="B">B · Hasło</option><option value="C">C · Filmy</option></select>
+  <button id="next" aria-label="Następny wariant">→</button>
+</nav>
+<script type="module">
+  import { loadResources, createAvatar, createBanner, cropCanvas, variants, formats, colors } from './artwork.mjs';
+  const resources = await loadResources();
+  const avatar = createAvatar(resources);
+  document.querySelector('#avatar-square').append(avatar);
+  const avatarUrl = avatar.toDataURL('image/png');
+  for (const id of ['avatar-large','avatar-small','avatar-tiny']) document.getElementById(id).src = avatarUrl;
+  let variant = new URL(location.href).searchParams.get('variant') || 'C';
+  if (!variants[variant]) variant = 'C';
+  let current;
+  function youtubePreview() {
+    const view = document.querySelector('#youtube-view').value;
+    const safe = formats.youtube.safe;
+    const crop = view === 'mobile' ? safe : view === 'desktop' ? { x: 0, y: safe.y, width: 2560, height: safe.height } : { x: 0, y: 0, width: 2560, height: 1440 };
+    const preview = cropCanvas(current.youtube.canvas, crop);
+    if (view === 'tv' && document.querySelector('#guides').checked) {
+      const ctx = preview.getContext('2d'); ctx.strokeStyle = '#57c9c8'; ctx.lineWidth = 3;
+      ctx.strokeRect(safe.x, safe.y, safe.width, safe.height);
+    }
+    const host = document.querySelector('#youtube-crop'); host.dataset.view = view; host.replaceChildren(preview);
+  }
+  function render(key) {
+    variant = key;
+    current = { facebook: createBanner(resources, 'facebook', key), youtube: createBanner(resources, 'youtube', key) };
+    document.querySelector('#facebook-full').replaceChildren(current.facebook.canvas);
+    document.querySelector('#facebook-narrow').replaceChildren(cropCanvas(current.facebook.canvas, { x: 291, y: 0, width: 1120, height: 630 }));
+    youtubePreview();
+    document.querySelector('#description').textContent = `${key} · ${variants[key].name}. ${variants[key].description}`;
+    document.querySelector('#variant').value = key;
+    document.querySelector('#facebook-download').href = `exports/${key}/facebook-cover.png`;
+    document.querySelector('#youtube-download').href = `exports/${key}/youtube-banner.png`;
+    document.querySelector('#kit-download').href = `exports/tower-lady-social-${key}.zip`;
+    document.querySelector('#kit-download').textContent = `Pobierz zestaw ${key} - 4 pliki PNG`;
+    const url = new URL(location.href); url.searchParams.set('variant', key); history.replaceState(null, '', url);
+    window.socialState = { variant, formats, colors, critical: { facebook: current.facebook.critical, youtube: current.youtube.critical } };
+  }
+  function cycle(delta) { const keys = Object.keys(variants); render(keys[(keys.indexOf(variant) + delta + keys.length) % keys.length]); }
+  document.querySelector('#variant').addEventListener('change', event => render(event.target.value));
+  document.querySelector('#previous').addEventListener('click', () => cycle(-1));
+  document.querySelector('#next').addEventListener('click', () => cycle(1));
+  document.querySelector('#youtube-view').addEventListener('change', youtubePreview);
+  document.querySelector('#guides').addEventListener('change', youtubePreview);
+  document.addEventListener('keydown', event => {
+    if (event.target.closest('input,textarea,select,[contenteditable]')) return;
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); cycle(event.key === 'ArrowLeft' ? -1 : 1); }
+  });
+  window.exportSocialAssets = () => {
+    const files = [
+      { path: 'common/facebook-avatar.png', canvas: avatar },
+      { path: 'common/youtube-avatar.png', canvas: avatar },
+    ];
+    const metadata = {};
+    for (const key of Object.keys(variants)) {
+      metadata[key] = {};
+      for (const platform of ['facebook','youtube']) {
+        const result = createBanner(resources, platform, key);
+        files.push({ path: `${key}/${platform === 'facebook' ? 'facebook-cover.png' : 'youtube-banner.png'}`, canvas: result.canvas });
+        metadata[key][platform] = { ...result.format, critical: result.critical };
+      }
+    }
+    return { files: files.map(({path,canvas}) => ({ path, width: canvas.width, height: canvas.height, data: canvas.toDataURL('image/png') })), metadata };
+  };
+  render(variant);
+</script>
+</html>
