@@ -33,11 +33,18 @@ wybraną animację włosów na przezroczystym tle oraz zatwierdzony podkład
 importujemy jako klip graficzny, a WAV jako osobną ścieżkę audio. Użytkownik potwierdził
 działanie animacji w Resolve.
 
+Druga paczka, `tower-lady-intro.ograf.json`, zawiera gotowy układ A z napisami
+TOWER LADY, PICTURES i PRESENTS oraz korektą emblematu 2% w lewo.
+Dołączony lokalny Inter nie wymaga instalowania fontów ani ręcznego ustawiania
+napisów w Resolve.
+
 ```sh
 python3 prototypes/tower-lady-ograf/package.py
+python3 prototypes/tower-lady-ograf/package.py --variant intro
 ```
 
 [Podgląd animacji i pobranie ZIP w Tailscale](https://vps.tailfb5686.ts.net:8766/prototypes/tower-lady-ograf/).
+[Gotowy układ z napisami](https://vps.tailfb5686.ts.net:8766/prototypes/tower-lady-ograf/?graphic=intro).
 [Notatka techniczna o OGraf i wynikach sprawdzeń](docs/ograf-logo-animation.md)
 opisuje format oraz ograniczenia obecnej bitmapy. Strona produkcyjna nie
 ładuje paczki intro ani podkładu muzycznego.

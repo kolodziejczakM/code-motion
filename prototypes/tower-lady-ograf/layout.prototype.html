@@ -1,0 +1,219 @@
+<!doctype html>
+<!-- Throwaway: the author selected composition A around the existing OGraf logo.
+     Refine its optical emblem alignment via ?variant=A&shift=-2 (percent of frame width).
+     Text stays fixed; B/C remain as references. No change to the OGraf export. -->
+<html lang="pl">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Tower Lady - układ intra / prototyp</title>
+<style>
+  @font-face { font-family: Inter; src: url('../tower-lady/assets/inter.woff2') format('woff2'); font-weight: 100 900; font-display: block; }
+  * { box-sizing: border-box; }
+  :root { color-scheme: dark; font: 15px/1.5 Inter, sans-serif; color: #f5ebd3; background: #141414; }
+  body { max-width: 1440px; margin: 0 auto; padding: 28px 28px 110px; }
+  h1 { font-size: 24px; margin: 0 0 8px; font-weight: 600; }
+  p { margin: 8px 0 16px; color: #d8cebb; max-width: 85ch; }
+  a { color: #f0ca80; }
+  button, select { border: 1px solid #756449; background: #202020; color: #f5ebd3; font: inherit; min-height: 44px; border-radius: 5px; padding: 8px 14px; }
+  button { cursor: pointer; }
+  :focus-visible { outline: 2px solid #f5d499; outline-offset: 3px; }
+  .tools { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin: 18px 0; }
+  .optical-controls { border: 0; padding: 0; margin: 0 0 20px; }
+  .optical-controls legend { margin-bottom: 8px; font-weight: 600; }
+  .optical-controls input { width: min(100%, 360px); min-height: 44px; vertical-align: middle; }
+  .optical-controls output { display: block; margin-top: 7px; color: #d8cebb; font-variant-numeric: tabular-nums; }
+  #viewport { position: relative; width: 100%; overflow: hidden; background: #000; }
+  #frame { position: absolute; left: 0; top: 0; width: 3840px; height: 2160px; transform-origin: 0 0; overflow: hidden; background: #000; font-family: Inter, sans-serif; }
+  .emblem { position: absolute; inset: 0; transform-origin: center; }
+  .title, .detail, .presents { position: absolute; white-space: nowrap; text-align: center; transform: translateX(-50%); margin: 0; line-height: 1; color: #f5ebd3; }
+  .title { font-weight: 700; letter-spacing: .15em; padding-left: .15em; }
+  .detail { display: flex; align-items: center; gap: 35px; font-size: 58px; font-weight: 700; letter-spacing: .42em; }
+  .detail span { padding-left: .42em; }
+  .detail::before, .detail::after { content: ''; height: 2px; width: 136px; background: #9a8459; }
+  .presents { font-weight: 400; font-size: 44px; letter-spacing: .35em; padding-left: .35em; color: #d8cebb; }
+  .variant-a .emblem { transform: translate(var(--emblem-shift, -76.8px), -302.4px) scale(.60); }
+  .variant-a .title { left: 1920px; top: 1430px; font-size: 112px; }
+  .variant-a .detail { left: 1920px; top: 1585px; }
+  .variant-a .presents { left: 1920px; top: 1820px; }
+  .variant-b .emblem { transform: translate(-729.6px, 0) scale(.70); }
+  .variant-b .title { left: 2572.8px; top: 810px; font-size: 112px; }
+  .variant-b .detail { left: 2572.8px; top: 965px; }
+  .variant-b .presents { left: 2572.8px; top: 1300px; }
+  .variant-c .emblem { transform: translate(0, -302.4px) scale(.70); }
+  .variant-c .title { left: 1920px; top: 1550px; font-size: 84px; font-weight: 600; letter-spacing: .18em; padding-left: .18em; }
+  .variant-c .presents { left: 1920px; top: 1840px; }
+  .guides { position: absolute; inset: 108px 192px; border: 2px solid #57c9c84d; pointer-events: none; display: none; }
+  .guides::before, .guides::after { content: ''; position: absolute; background: #57c9c84d; }
+  .guides::before { left: 50%; top: -108px; bottom: -108px; width: 2px; }
+  .guides::after { top: 50%; left: -192px; right: -192px; height: 2px; }
+  #frame[data-guides="true"] .guides { display: block; }
+  #spec { margin-top: 24px; }
+  #spec h2 { font-size: 20px; margin-bottom: 6px; }
+  .scroll { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; min-width: 620px; text-align: left; }
+  th, td { border-bottom: 1px solid #39352e; padding: 11px 14px 11px 0; vertical-align: top; }
+  th { color: #d8cebb; font-weight: 500; font-size: 13px; }
+  td { font-size: 14px; }
+  .switcher { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 7px; padding: 8px; background: #27383d; border: 1px solid #7e979f; border-radius: 14px; box-shadow: 0 6px 30px #0009; z-index: 5; }
+  .switcher button, .switcher select { background: #17262b; border-color: #7e979f; }
+  #error { color: #ffb0a0; }
+  @media (max-width: 600px) { body { padding: 18px 12px 120px; } h1 { font-size: 21px; } .switcher { max-width: calc(100% - 24px); } .switcher select { min-width: 0; width: 190px; } }
+</style>
+<h1>Układ filmowego intra</h1>
+<p>Wybrany układ A z optyczną korektą emblematu w lewo. Napisy pozostają na środku. Kadr 16:9, wzorzec 3840 × 2160; podgląd bez wejść i wyjść montażowych.</p>
+<div id="viewport"><div id="frame"></div></div>
+<div class="tools">
+  <button id="play" type="button" disabled>Odtwórz włosy</button>
+  <label><input id="guides" type="checkbox"> Osie i margines 5%</label>
+  <span>Podgląd proporcji; bez dźwięku.</span>
+</div>
+<fieldset id="optical-controls" class="optical-controls">
+  <legend><label for="optical-shift">Korekta samego emblematu w wariancie A</label></legend>
+  <input id="optical-shift" type="range" min="-4" max="0" step="0.25" value="-2">
+  <button id="compare-zero" type="button" aria-pressed="false">Pokaż bez korekty</button>
+  <output id="shift-readout" for="optical-shift"></output>
+</fieldset>
+<section id="spec" aria-live="polite"></section>
+<p>Rozmiary w tabeli to stopień pisma w makiecie UHD. W Full HD podziel je przez 2. W Resolve odtwórz przede wszystkim proporcje: suwak Size nie musi używać pikseli. Kolory są referencją sRGB; efekt w materiale oceniaj w docelowej przestrzeni barw projektu.</p>
+<p>Font do instalacji w systemie: <a href="https://rsms.me/inter/" target="_blank" rel="noreferrer">Inter - oficjalna strona</a>. Logotyp zachowuje Inter Bold (700); PRESENTS używa Inter Regular (400).</p>
+<p id="error" role="alert"></p>
+<nav class="switcher" aria-label="Wariant kompozycji">
+  <button id="previous" type="button" aria-label="Poprzedni wariant">←</button>
+  <select id="variant" aria-label="Wariant"><option value="A">A · Pionowy znak</option><option value="B">B · Sygnatura pozioma</option><option value="C">C · Jeden wiersz</option></select>
+  <button id="next" type="button" aria-label="Następny wariant">→</button>
+</nav>
+<script type="module">
+  import Graphic from './graphic.mjs';
+  customElements.define('tower-lady-layout-logo', Graphic);
+  const graphic = new Graphic();
+  const frame = document.querySelector('#frame');
+  const viewport = document.querySelector('#viewport');
+  const select = document.querySelector('#variant');
+  const variants = {
+    A: {
+      title: 'A · Pionowy znak',
+      description: 'Wybrany układ. Emblemat jest przesunięty optycznie w lewo, aby zrównoważyć twarz i basztę po prawej. Nazwa, Pictures i Presents pozostają na wspólnej osi kadru.',
+      markup: '<div class="emblem"></div><div class="title">TOWER LADY</div><div class="detail"><span>PICTURES</span></div><div class="presents">PRESENTS</div>',
+      rows: [
+        ['Emblemat', 'Wybrana animacja', '48% wysokości kadru', 'Środek: X 48%, Y 36%'],
+        ['TOWER LADY', 'Inter Bold · 700', '112 px / Full HD: 56 px', '#F5EBD3 · tracking +0,15 em'],
+        ['PICTURES', 'Inter Bold · 700', '58 px / Full HD: 29 px', '#F5EBD3 · tracking +0,42 em'],
+        ['PRESENTS', 'Inter Regular · 400', '44 px / Full HD: 22 px', '#D8CEBB · tracking +0,35 em'],
+        ['Linie przy PICTURES', 'Opcjonalny element logotypu', '136 × 2 px każda', '#9A8459'],
+        ['Tło', 'Jednolite', 'Cały kadr', '#000000'],
+      ],
+      positions: 'Środki wierszy (od góry): TOWER LADY ok. 69%, PICTURES ok. 75%, PRESENTS ok. 85%. Wszystkie napisy na osi X 50%. Dół emblematu ok. 60% wysokości kadru. Na klipie OGraf: Zoom 0,60; przesuń środek warstwy w górę o 14% wysokości kadru. Korekta pozioma dotyczy wyłącznie warstwy emblematu.',
+    },
+    B: {
+      title: 'B · Sygnatura pozioma',
+      description: 'Duży emblemat po lewej, nazwa i Presents po prawej. Kompozycja wykorzystuje szerokość obrazu i daje więcej miejsca animacji włosów.',
+      markup: '<div class="emblem"></div><div class="title">TOWER LADY</div><div class="detail"><span>PICTURES</span></div><div class="presents">PRESENTS</div>',
+      rows: [
+        ['Emblemat', 'Wybrana animacja', '56% wysokości kadru', 'Środek: X 31%, Y 50%'],
+        ['TOWER LADY', 'Inter Bold · 700', '112 px / Full HD: 56 px', '#F5EBD3 · tracking +0,15 em'],
+        ['PICTURES', 'Inter Bold · 700', '58 px / Full HD: 29 px', '#F5EBD3 · tracking +0,42 em'],
+        ['PRESENTS', 'Inter Regular · 400', '44 px / Full HD: 22 px', '#D8CEBB · tracking +0,35 em'],
+        ['Tło', 'Jednolite', 'Cały kadr', '#000000'],
+      ],
+      positions: 'Tekst na osi X 67%; środki wierszy: ok. 40%, 46%, 61%. Linie przy Pictures takie jak w wariancie A. Na klipie OGraf: Zoom 0,70; środek warstwy przesuń z X 50% na 31%.',
+    },
+    C: {
+      title: 'C · Jeden wiersz',
+      description: 'Najprostsza sygnatura: cały napis TOWER LADY PICTURES w jednym wierszu, bez ozdobnych linii. Więcej miejsca dla emblematu, mniej podziałów tekstu.',
+      markup: '<div class="emblem"></div><div class="title">TOWER LADY PICTURES</div><div class="presents">PRESENTS</div>',
+      rows: [
+        ['Emblemat', 'Wybrana animacja', '56% wysokości kadru', 'Środek: X 50%, Y 36%'],
+        ['TOWER LADY PICTURES', 'Inter SemiBold · 600', '84 px / Full HD: 42 px', '#F5EBD3 · tracking +0,18 em'],
+        ['PRESENTS', 'Inter Regular · 400', '44 px / Full HD: 22 px', '#D8CEBB · tracking +0,35 em'],
+        ['Tło', 'Jednolite', 'Cały kadr', '#000000'],
+      ],
+      positions: 'Wiersz nazwy na osi X 50%, środek ok. 74% wysokości kadru. Presents ok. 86%. Na klipie OGraf: Zoom 0,70; środek warstwy w górę o 14% wysokości kadru.',
+    },
+  };
+  let variant = new URL(location.href).searchParams.get('variant') || 'A';
+  if (!variants[variant]) variant = 'A';
+  const requestedShift = Number(new URL(location.href).searchParams.get('shift') ?? -2);
+  let opticalShift = Number.isFinite(requestedShift) ? Math.max(-4, Math.min(0, Math.round(requestedShift * 4) / 4)) : -2;
+  let compareZero = false;
+  const shiftInput = document.querySelector('#optical-shift');
+  const compareButton = document.querySelector('#compare-zero');
+  let playing = false;
+  let animationId;
+  let previous = 0;
+  let timestamp = 1000;
+  const play = document.querySelector('#play');
+  function renderVariant(key) {
+    variant = key;
+    const config = variants[key];
+    frame.className = 'variant-' + key.toLowerCase();
+    frame.innerHTML = config.markup + '<div class="guides"></div>';
+    frame.querySelector('.emblem').append(graphic);
+    select.value = key;
+    updateOpticalShift();
+  }
+  function updateOpticalShift() {
+    const shift = compareZero ? 0 : opticalShift;
+    const format = number => number.toLocaleString('pl-PL', { maximumFractionDigits: 2 });
+    frame.style.setProperty('--emblem-shift', `${shift * 38.4}px`);
+    shiftInput.value = opticalShift;
+    document.querySelector('#optical-controls').disabled = variant !== 'A';
+    compareButton.setAttribute('aria-pressed', String(compareZero));
+    compareButton.textContent = compareZero ? 'Przywróć korektę' : 'Pokaż bez korekty';
+    document.querySelector('#shift-readout').value = `${format(shift)}% szerokości kadru · UHD ${format(shift * 38.4)} px / Full HD ${format(shift * 19.2)} px · środek emblematu X ${format(50 + shift)}%`;
+    const config = variants[variant];
+    const rows = config.rows.map(row => variant === 'A' && row[0] === 'Emblemat'
+      ? [...row.slice(0, 3), `Środek: X ${format(50 + shift)}%, Y 36%`] : row);
+    document.querySelector('#spec').innerHTML = `<h2>${config.title}</h2><p>${config.description}</p><div class="scroll"><table><thead><tr><th>Element</th><th>Krój</th><th>Rozmiar UHD / 4K</th><th>Kolor i odstępy</th></tr></thead><tbody>${rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}</tbody></table></div><p>${config.positions}</p>`;
+    const url = new URL(location.href);
+    url.searchParams.set('variant', variant);
+    url.searchParams.set('shift', shift);
+    history.replaceState(null, '', url);
+  }
+  function cycle(delta) {
+    const keys = Object.keys(variants);
+    renderVariant(keys[(keys.indexOf(variant) + delta + keys.length) % keys.length]);
+  }
+  function fit() {
+    const width = viewport.clientWidth;
+    viewport.style.height = `${width * 2160 / 3840}px`;
+    frame.style.transform = `scale(${width / 3840})`;
+  }
+  renderVariant(variant);
+  new ResizeObserver(fit).observe(viewport);
+  fit();
+  document.querySelector('#previous').addEventListener('click', () => cycle(-1));
+  document.querySelector('#next').addEventListener('click', () => cycle(1));
+  select.addEventListener('change', () => renderVariant(select.value));
+  shiftInput.addEventListener('input', () => { opticalShift = Number(shiftInput.value); compareZero = false; updateOpticalShift(); });
+  compareButton.addEventListener('click', () => { compareZero = !compareZero; updateOpticalShift(); });
+  document.querySelector('#guides').addEventListener('change', event => { frame.dataset.guides = event.target.checked; });
+  document.addEventListener('keydown', event => {
+    if (event.target.closest('input, textarea, select, [contenteditable]')) return;
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); cycle(event.key === 'ArrowLeft' ? -1 : 1); }
+  });
+  function pause() { playing = false; cancelAnimationFrame(animationId); play.textContent = 'Odtwórz włosy'; }
+  async function tick(now) {
+    timestamp += now - previous;
+    previous = now;
+    await graphic.goToTime({ timestamp });
+    if (playing) animationId = requestAnimationFrame(tick);
+  }
+  try {
+    const loaded = await graphic.load({ renderType: 'non-realtime', renderCharacteristics: { resolution: { width: 1920, height: 1080 } } });
+    if (loaded.statusCode !== 200) throw new Error(loaded.statusMessage);
+    await graphic.setActionsSchedule({ schedule: [{ timestamp: 0, action: { type: 'playAction', params: {} } }] });
+    await graphic.goToTime({ timestamp });
+    await document.fonts.ready;
+    play.disabled = false;
+    play.addEventListener('click', () => {
+      if (playing) return pause();
+      playing = true;
+      previous = performance.now();
+      play.textContent = 'Zatrzymaj włosy';
+      animationId = requestAnimationFrame(tick);
+    });
+    document.addEventListener('visibilitychange', () => { if (document.hidden) pause(); });
+  } catch (error) { document.querySelector('#error').textContent = error.message; }
+</script>
+</html>
