@@ -49,10 +49,19 @@ python3 prototypes/tower-lady-ograf/package.py --variant intro
 opisuje format oraz ograniczenia obecnej bitmapy. Strona produkcyjna nie
 ładuje paczki intro ani podkładu muzycznego.
 
-Logo na stronie, w obu OGrafach (wersja 1.0.1) i w materiałach social korzysta
-z poprawionego obrazu `brand-artwork-clean.webp`. Usunięto wystający fragment
-u dołu wieży, zachowując kadr, proporcje i wybraną animację włosów. Korektę
-z oryginału i kopię obrazu dla OGraf można odtworzyć poleceniem
+Logo na stronie, w obu OGrafach (wersja 1.1.1) i w materiałach social korzysta
+z obrazu `brand-artwork-clean.webp`. Trzon wieży uproszczono według wizualizacji
+autora: szersze okno, większe detale pod gzymsem i gładka lewa krawędź. W 1.1.1
+dopasowano całą twarz bezpośrednio z nowej referencji autora, wraz z brwiami,
+powiekami, nosem i ustami. Poza obszarem twarzy zachowano piksele wersji 1.1.0,
+w tym otaczające włosy, koronę i zaakceptowaną wieżę. Kadr, proporcje i wybrana
+animacja włosów są bez zmian; fragment u dołu usunięty w 1.0.1 nadal nie występuje.
+`simplified-tower.svg` jest edytowalnym źródłem nowego fragmentu, a
+`tower-simplification-reference.png` zachowuje propozycję autora. Oba pliki są
+w `prototypes/tower-lady/assets/`. `face-reference.png` przechowuje referencję
+twarzy przekazaną przez autora, a `replace-face.mjs` wycina ją i dopasowuje do istniejącej głowy
+i chroni sąsiadujące włosy oraz koronę. Twarz jest kopiowana z referencji,
+bez ręcznego przerysowywania rysów. Złożenie z oryginałem i kopię dla OGraf można odtworzyć poleceniem
 `node prototypes/tower-lady/assets/clean-logo.mjs` po `npm ci`.
 
 ### Materiały na Facebook i YouTube
