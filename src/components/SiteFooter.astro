@@ -1,5 +1,6 @@
 ---
 import { copy, hrefFor, type Locale } from "../content";
+import ExternalLink from "./ExternalLink.astro";
 
 interface Props {
   locale: Locale;
@@ -33,7 +34,7 @@ const contacts = [
       <ul class="footer-socials" role="list">
         {contacts.map(contact => (
           <li>
-            <a class="footer-social-link" href={contact.href} aria-label={contact.label} title={contact.label}>
+            <ExternalLink locale={locale} class="footer-social-link" indicator="corner" href={contact.href} aria-label={contact.label} title={contact.label}>
               <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 {contact.name === "Facebook" && (
                   <path d="M14 21v-8h3l.5-4H14V7c0-1 .5-1.5 1.7-1.5H18V2.2L15.1 2C12 2 10 3.9 10 7v2H7v4h3v8Z" fill="currentColor" />
@@ -51,7 +52,7 @@ const contacts = [
                   </>
                 )}
               </svg>
-            </a>
+            </ExternalLink>
           </li>
         ))}
       </ul>
@@ -89,6 +90,10 @@ const contacts = [
     padding: 0;
   }
   .footer-social-link {
+    --new-tab-inset: .2rem;
+    --new-tab-marker-size: .5rem;
+    --new-tab-icon-size: .5rem;
+    --new-tab-marker-background: transparent;
     display: grid;
     place-items: center;
     width: 44px;

@@ -8,6 +8,11 @@ Portfolio w Astro obejmuje stronę główną opartą na wybranej makiecie, filmo
 
 Treść artykułu w obu językach jest w `src/about.ts`, a jego wstęp i metadane w `src/content.ts`. Trzy filmy w historii studia mają lokalne miniatury; odtwarzacz YouTube jest ładowany dopiero po kliknięciu. Bez JavaScriptu miniatura prowadzi bezpośrednio do filmu. Nazwy festiwali pozostają w oryginale, a rodzaje wyróżnień są tłumaczone. Zgodnie z decyzją autora nie dodajemy lat wyróżnień ani dodatkowych kategorii.
 
+Bezpośrednie linki do YouTube i profili społecznościowych używają `ExternalLink.astro`:
+otwierają nową kartę, mają ikonę ↗, `rel="noopener"` i komunikat dla czytników
+ekranu w PL/EN. Nawigacja wewnętrzna, e-mail i uruchamianie osadzonego odtwarzacza
+pozostają w bieżącym kontekście.
+
 ### Praca nad portfolio
 
 Użyj Node.js 22.22 lub nowszego.

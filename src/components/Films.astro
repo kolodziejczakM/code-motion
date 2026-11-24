@@ -1,6 +1,7 @@
 ---
 import { copy, type Locale } from "../content";
 import { brandArtwork, films, playIcon } from "../films";
+import ExternalLink from "./ExternalLink.astro";
 
 interface Props {
   locale: Locale;
@@ -23,10 +24,10 @@ const more = [
       <p class="film-meta">
         {featured.year} · Thriller / {t.absurd} · <time datetime={featured.isoDuration}>{featured.duration}</time>
       </p>
-      <a class="button" href={featured.url} aria-label={t.watchOnYouTube(featured.title)}>
+      <ExternalLink locale={locale} class="button" href={featured.url} aria-label={t.watchOnYouTube(featured.title)}>
         <img src={playIcon} width="22" height="22" alt="" />
         {t.watch}
-      </a>
+      </ExternalLink>
     </div>
   </section>
 
@@ -36,7 +37,7 @@ const more = [
       {more.map((film) => (
         <article id={film.id} class="film-entry">
           <h3>
-            <a class="film-poster" href={film.url} aria-label={t.watchOnYouTube(film.title)}>
+            <ExternalLink locale={locale} class="film-poster" indicator="corner" href={film.url} aria-label={t.watchOnYouTube(film.title)}>
               {film.image ? (
                 <img src={film.image} width="1280" height="720" alt="" />
               ) : (
@@ -47,14 +48,14 @@ const more = [
                 </span>
               )}
               <span>{film.title}</span>
-            </a>
+            </ExternalLink>
           </h3>
           <p class="film-meta">
             {film.year} · Thriller / {t.darkDrama} · {film.approximate ? `${t.approximate} ` : ""}
             <time datetime={film.isoDuration}>{film.duration}</time>
           </p>
           <p class="film-description">{film.description}</p>
-          <a class="text-link" href={film.url}>{t.watchOnYouTube(film.title)}</a>
+          <ExternalLink locale={locale} class="text-link" href={film.url}>{t.watchOnYouTube(film.title)}</ExternalLink>
         </article>
       ))}
     </div>

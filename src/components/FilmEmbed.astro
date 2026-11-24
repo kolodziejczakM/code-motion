@@ -3,6 +3,7 @@ import { aboutStory } from "../about";
 import type { Locale } from "../content";
 import { playIcon, type Film } from "../films";
 import saturdayPoster from "../../prototypes/tower-lady/assets/saturday-cleaning.jpg?url";
+import ExternalLink from "./ExternalLink.astro";
 
 interface Props {
   film: Film;
@@ -26,7 +27,7 @@ const videoId = new URL(film.url).searchParams.get("v");
   </div>
   <figcaption>
     <span><strong>{title}</strong> · {film.year}</span>
-    <a class="text-link" href={film.url} aria-label={`${t.player.watch}: ${title}`}>{t.player.watch}</a>
+    <ExternalLink locale={locale} class="text-link" href={film.url} aria-label={`${t.player.watch}: ${title}`}>{t.player.watch}</ExternalLink>
   </figcaption>
 </figure>
 
