@@ -1,0 +1,117 @@
+---
+import { copy, hrefFor, type Locale } from "../content";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = copy[locale];
+const contacts = [
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/CODE.MOTION.FILM/",
+    label: "Facebook - Tower Lady Pictures",
+  },
+  {
+    name: "Telegram",
+    href: "https://t.me/kolodziejczakM",
+    label: "Telegram - Marcin Kołodziejczak",
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/m-kolodziejczak/",
+    label: "LinkedIn - Marcin Kołodziejczak",
+  },
+];
+---
+
+<footer id="footer" class="site-footer wrap">
+  <div class="footer-content">
+    <a class="footer-home" href={hrefFor(locale, "home")} aria-label={t.homeLabel}>Tower Lady Pictures</a>
+    <nav class="footer-contact" aria-label={t.footer.contact}>
+      <ul class="footer-socials" role="list">
+        {contacts.map(contact => (
+          <li>
+            <a class="footer-social-link" href={contact.href} aria-label={contact.label} title={contact.label}>
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                {contact.name === "Facebook" && (
+                  <path d="M14 21v-8h3l.5-4H14V7c0-1 .5-1.5 1.7-1.5H18V2.2L15.1 2C12 2 10 3.9 10 7v2H7v4h3v8Z" fill="currentColor" />
+                )}
+                {contact.name === "Telegram" && (
+                  <>
+                    <path d="m3 10 18-7-4 18-6-6-4 3 1-6Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                    <path d="m8 12 9-5-6 8" fill="none" stroke="currentColor" stroke-width="1.6" />
+                  </>
+                )}
+                {contact.name === "LinkedIn" && (
+                  <>
+                    <rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" />
+                    <circle cx="7.5" cy="7.5" r="1.2" fill="currentColor" />
+                    <path d="M7.5 10.5v7m4-7v7m0-4.5c0-3 5-3 5 0v4.5" fill="none" stroke="currentColor" stroke-width="1.8" />
+                  </>
+                )}
+              </svg>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <a class="footer-top" href="#top">
+      {t.footer.top}
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M12 19V5m-6 6 6-6 6 6" />
+      </svg>
+    </a>
+  </div>
+</footer>
+
+<style>
+  .footer-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: .75rem 1.25rem;
+  }
+  .footer-home, .footer-top {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    text-decoration: none;
+  }
+  .footer-home { justify-self: start; }
+  .footer-contact { justify-self: center; }
+  .footer-socials {
+    display: flex;
+    align-items: center;
+    gap: .625rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-social-link {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #9a845940;
+    border-radius: 50%;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .footer-social-link:hover {
+    border-color: var(--brass);
+    background: #bd9b5f14;
+    color: var(--ivory);
+  }
+  .footer-top { justify-self: end; gap: .4rem; white-space: nowrap; }
+  .footer-home:hover, .footer-top:hover {
+    color: var(--ivory);
+    text-decoration: underline;
+    text-underline-offset: .25em;
+  }
+  @media (max-width: 620px) {
+    .footer-content { grid-template-columns: minmax(0, 1fr); gap: .5rem; }
+    .footer-home, .footer-contact, .footer-top { justify-self: center; }
+  }
+</style>
