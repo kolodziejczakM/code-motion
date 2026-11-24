@@ -1,10 +1,12 @@
-// Remove the detached start of the next tower level and the mockup divider.
-// Keep the original artwork for provenance and preserve all crop coordinates.
+// Replace only the tower shaft, then remove remnants at the bottom crop.
+// The original woman, hair, crown, parapets and all crop coordinates stay intact.
 import sharp from "sharp";
 import { copyFile } from "node:fs/promises";
 
 const source = new URL("./brand-artwork.webp", import.meta.url);
 const output = new URL("./brand-artwork-clean.webp", import.meta.url);
+const tower = new URL("./simplified-tower.svg", import.meta.url);
+
 const cleanup = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1487" height="1058">
   <path fill="#000" d="M1055 609H1205L1220 624H1055Z"/>
   <!-- Prevent the mockup's divider from bleeding into the small CSS mask. -->
@@ -12,7 +14,10 @@ const cleanup = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1487
 </svg>`);
 
 await sharp(source.pathname)
-  .composite([{ input: cleanup }])
+  .composite([
+    { input: tower.pathname },
+    { input: cleanup },
+  ])
   .webp({ lossless: true })
   .toFile(output.pathname);
 await copyFile(output, new URL("../../tower-lady-ograf/assets/brand-artwork.webp", import.meta.url));

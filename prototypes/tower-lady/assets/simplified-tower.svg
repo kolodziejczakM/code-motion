@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1487" height="1058" viewBox="0 0 1487 1058">
+  <!-- Only the tower shaft changes. The woman and both parapets stay original.
+       Geometry follows the author's tower-simplification-reference.png.
+       Coordinates are registered to the unchanged 1487 x 1058 source mockup. -->
+  <!-- Old shaft envelope with a curved bottom; 2px padding removes antialiasing
+       while keeping the adjacent lower parapet clear. -->
+  <path fill="#000" stroke="#000" stroke-width="4" stroke-linejoin="round"
+    d="M1098 416 1100 415 1119 411 1124 410 1148 408 1155 408
+      1185 412 1190 413 1215 422 1219 425 1226 434 1229 438
+      1230 440 1231 443 1231 447 1229 566 1228 566
+      C1189 544 1144 537 1098 545Z"/>
+  <defs>
+    <linearGradient id="ivory" x1="519" y1="675" x2="746" y2="948" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fcedcf"/>
+      <stop offset="1" stop-color="#fdefd1"/>
+    </linearGradient>
+  </defs>
+  <g transform="matrix(.5787037037 0 0 .5787037037 797.6527778 17.8)">
+    <path fill="url(#ivory)" d="M519 681 527 679 529 702 555 696 555 674
+      Q573 671 590 672 L590 693 618 694 618 675 Q636 676 652 682
+      L652 699 677 703 677 682 701 691 701 715 Q724 721 736 733
+      L737 712 Q754 728 748 745 C734 812 735 881 746 948
+      C673 914 596 902 519 912Z"/>
+    <path fill="#000" d="M610 842V769 C610 742 624 723 645 723
+      C670 723 685 745 685 776V855 Q650 846 610 842Z"/>
+    <path fill="url(#ivory)" d="M640 734 C659 737 667 755 667 778V840
+      L677 844V778 C677 752 662 729 640 734Z"/>
+  </g>
+</svg>

@@ -6,57 +6,57 @@
       "path": "common/facebook-avatar.png",
       "width": 1080,
       "height": 1080,
-      "bytes": 304387,
-      "sha256": "50f7a3f75048ca04139a44d141372c1c2041ec3a1c633cee7e430d4397decfcd"
+      "bytes": 287697,
+      "sha256": "1525752b2a3897c21b626128363a38b1ff2ea2c3fda7264e15d5d309dbebc9d6"
     },
     {
       "path": "common/youtube-avatar.png",
       "width": 1080,
       "height": 1080,
-      "bytes": 304387,
-      "sha256": "50f7a3f75048ca04139a44d141372c1c2041ec3a1c633cee7e430d4397decfcd"
+      "bytes": 287697,
+      "sha256": "1525752b2a3897c21b626128363a38b1ff2ea2c3fda7264e15d5d309dbebc9d6"
     },
     {
       "path": "A/facebook-cover.png",
       "width": 1702,
       "height": 630,
-      "bytes": 279699,
-      "sha256": "13ba9ae303ffb5b38eb05e4b820d2f114a04b57be7b280ef697bc9d1ce6eb773"
+      "bytes": 273587,
+      "sha256": "84078810935f1b645468d1aa59d00806a08cfc6da07a7d76e240c3bb4908beee"
     },
     {
       "path": "A/youtube-banner.png",
       "width": 2560,
       "height": 1440,
-      "bytes": 608782,
-      "sha256": "f2c2f5e1d9a9ac8135a399d6b2612c395d16f96a79e34b93a8a8faf1bc824121"
+      "bytes": 603480,
+      "sha256": "36bc8b8c741fcd485ed61e37806dec192306a97799877491a2c9af329ba4709e"
     },
     {
       "path": "B/facebook-cover.png",
       "width": 1702,
       "height": 630,
-      "bytes": 288101,
-      "sha256": "fedcc7cdf1b460a5d95f2a981c05daa75cb28937b1a3b34bf61f1533ced4a548"
+      "bytes": 282833,
+      "sha256": "63d753309156bd7e526105ec6b19cf458bb3f008659dc2a6a5505e4bc3d5678c"
     },
     {
       "path": "B/youtube-banner.png",
       "width": 2560,
       "height": 1440,
-      "bytes": 620125,
-      "sha256": "2fbc8bcdb496b3c0e195978cc38f6ac9be2ae004510fadf9152a2cbbd7fe0298"
+      "bytes": 615707,
+      "sha256": "27a35fa1908a6e4584fe7818e54f166341957e7e859f730d7704cd3045d67733"
     },
     {
       "path": "C/facebook-cover.png",
       "width": 1702,
       "height": 630,
-      "bytes": 570522,
-      "sha256": "19fa9da5d075b96b879408aa2694777d28a0cb53f374dfdf7061cb97ef1d28c0"
+      "bytes": 569674,
+      "sha256": "901f66e64d9ab4222ad486bc9f4b458dbc7fc0bad37f20ff8e521aa8ea3ed7a8"
     },
     {
       "path": "C/youtube-banner.png",
       "width": 2560,
       "height": 1440,
-      "bytes": 1315386,
-      "sha256": "4f0827f7f8b07b9127921e2134b6d1617638cc5ca786dbaa284344c6e19dd368"
+      "bytes": 1314517,
+      "sha256": "c5795c3c735b040617db9d4a3969a27729a505523ab583e50ddc636a25fb915f"
     }
   ],
   "variants": {
@@ -307,11 +307,11 @@
       }
     }
   },
-  "version": "1.0.1",
+  "version": "1.1.0",
   "selectedVariant": "C",
   "artwork": "prototypes/tower-lady/assets/brand-artwork-clean.webp",
   "avatarCircle": {
-    "visiblePixels": 185821,
+    "visiblePixels": 184511,
     "clippedPixels": 0,
     "maxInkRadius": 528.1216715871448,
     "cropRadius": 540

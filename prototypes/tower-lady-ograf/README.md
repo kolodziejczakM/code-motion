@@ -119,11 +119,14 @@ i tę instrukcję. Pełna wersja dołącza również Inter z licencją.
 
 ## Źródło i jakość
 
-Wersja **1.0.1** używa `prototypes/tower-lady/assets/brand-artwork-clean.webp`
-(1487 x 1058 px). Usunięto tylko wystający spod dolnego łuku początek kolejnego
-poziomu wieży. Kadr ilustracji (około 500 x 580 px), proporcje, ruch włosów
-i przesunięcie emblematu w intro o 2% pozostały bez zmian. Nie wygenerowano
-nowego rysunku. Rozdzielczość Canvas dopasowuje
+Wersja **1.1.0** używa `prototypes/tower-lady/assets/brand-artwork-clean.webp`
+(1487 x 1058 px) z uproszczonym trzonem wieży: szerszym oknem, większymi
+detalami pod gzymsem i gładką lewą krawędzią. Zmiana opiera się na wizualizacji
+autora; edytowalny fragment to `assets/simplified-tower.svg` w katalogu źródeł
+strony. Góra logo, ramię oraz oba duże gzymsy zachowują oryginalne piksele.
+Kadr ilustracji (około 500 x 580 px), proporcje, ruch włosów i przesunięcie
+emblematu w intro o 2% pozostały bez zmian. Nadal usunięty jest fragment
+następnego poziomu u dołu wieży, oczyszczony w 1.0.1. Rozdzielczość Canvas dopasowuje
 się do rozdzielczości hosta; nie zwiększa to szczegółowości bitmapy. Do dużego
 logo w finalnym intro 4K warto później dostarczyć osobny obraz w większej
 rozdzielczości lub wektor i dostosować do niego kadr oraz maskę deformacji.
