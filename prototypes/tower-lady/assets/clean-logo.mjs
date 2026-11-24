@@ -1,11 +1,13 @@
-// Replace only the tower shaft, then remove remnants at the bottom crop.
-// The original woman, hair, crown, parapets and all crop coordinates stay intact.
+// Apply the reference face and selected tower edit, then clean the bottom crop.
+// Preserve the original artwork outside these edits and all crop coordinates.
 import sharp from "sharp";
 import { copyFile } from "node:fs/promises";
+import { faceLayers } from "./replace-face.mjs";
 
 const source = new URL("./brand-artwork.webp", import.meta.url);
 const output = new URL("./brand-artwork-clean.webp", import.meta.url);
 const tower = new URL("./simplified-tower.svg", import.meta.url);
+const reference = new URL("./face-reference.png", import.meta.url);
 
 const cleanup = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1487" height="1058">
   <path fill="#000" d="M1055 609H1205L1220 624H1055Z"/>
@@ -15,6 +17,7 @@ const cleanup = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1487
 
 await sharp(source.pathname)
   .composite([
+    ...await faceLayers(source.pathname, reference.pathname),
     { input: tower.pathname },
     { input: cleanup },
   ])

@@ -2,9 +2,11 @@
 
 Stan: autor wybrał **wariant C - filmy** i angielskie hasło na obu platformach:
 **Stories without walls. Always original.** Warianty A i B zachowano do porównań.
-Wydanie **1.1.0** korzysta z uproszczonego trzonu wieży według wizualizacji autora:
-szersze okno, większe detale pod gzymsem i gładka lewa krawędź. Góra logo jest
-identyczna z poprzednią wersją. Fragment u dołu usunięty w 1.0.1 nadal nie występuje.
+Wydanie **1.1.1** przenosi całą twarz z referencji autora, wraz z brwiami,
+powiekami, nosem i ustami, bez przerysowywania rysów. Poza obszarem twarzy
+zachowuje piksele 1.1.0, w tym uproszczony trzon wieży:
+szersze okno, większe detale pod gzymsem i gładką lewą krawędź. Fragment u dołu
+usunięty w 1.0.1 nadal nie występuje.
 
 [Podgląd wybranego zestawu C w Tailscale](https://vps.tailfb5686.ts.net:8766/prototypes/tower-lady-social/?variant=C).
 Parametr `variant=A`, `B` lub `C` wybiera zestaw. Dolny pasek przełącza warianty.
@@ -58,9 +60,10 @@ niedostępny bez logowania, więc nie traktujemy tej symulacji jako specyfikacji
 ## Spójność marki i źródła
 
 - Emblemat: `brand-artwork-clean.webp`, ten sam obraz i renderer co w stronie
-  i OGraf, statyczny czas 0. `simplified-tower.svg` zmienia tylko trzon wieży;
-  poza nim zachowano piksele poprzedniej wersji. Kadr i proporcje znaku
-  pozostały bez zmian.
+  i OGraf, statyczny czas 0. `simplified-tower.svg` zmienia tylko trzon wieży,
+  a `replace-face.mjs` dopasowuje twarz z `face-reference.png` do oryginalnej
+  głowy. Poza obszarem twarzy zachowano piksele wersji 1.1.0.
+  Kadr i proporcje znaku pozostały bez zmian.
 - Paleta: `#000000`, `#F5EBD3`, `#D8CEBB`, `#BD9B5F`, `#9A8459`.
 - Fonty: lokalny Inter i Cormorant Garamond z istniejących zasobów projektu.
 - Tło: motyw z `src/components/Backdrop.astro`, dopasowany do proporcji banera.
