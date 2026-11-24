@@ -20,8 +20,9 @@
   :focus-visible { outline: 2px solid #bd9b5f; outline-offset: 3px; }
   #error { color: #ffb0a0; }
 </style>
-<h1>Tower Lady Pictures - animowane logo</h1>
-<p>Wybrany podmuch ze strony: okres 5,5 s, siła 30 / 14. Przezroczysta grafika i osobny podkład WAV w paczce.</p>
+<h1 id="heading">Tower Lady Pictures - animowane logo</h1>
+<nav aria-label="Wersja OGraf"><a href="?graphic=logo">Sam emblemat</a> · <a href="?graphic=intro">Emblemat i napisy - układ A</a></nav>
+<p id="description">Wybrany podmuch ze strony: okres 5,5 s, siła 30 / 14. Przezroczysta grafika i osobny podkład WAV w paczce.</p>
 <div id="stage" data-background="black"></div>
 <div id="controls">
   <button id="play" type="button" disabled>Odtwórz</button>
@@ -31,7 +32,7 @@
 </div>
 <label for="time">Przewijanie animacji</label>
 <input id="time" type="range" min="0" max="10999" step="1" value="0" disabled>
-<p><a href="../tower-lady/astro/downloads/tower-lady-animated-logo-ograf.zip" download>Pobierz animację OGraf do Resolve</a>. Rozpakuj folder i zaimportuj <code>tower-lady.ograf.json</code>; pozostałe pliki pozostaw obok.</p>
+<p><a id="download" href="../tower-lady/astro/downloads/tower-lady-animated-logo-ograf.zip" download>Pobierz animację OGraf do Resolve</a>. Rozpakuj folder i zaimportuj <code id="manifest">tower-lady.ograf.json</code>; pozostałe pliki pozostaw obok.</p>
 <p><strong>Podkład: Tower Queen</strong> - 6 s, stereo, 48 kHz. Odsłuch poniżej jest niezależny od przycisków animacji. W Resolve dodaj <code>audio/tower-queen.wav</code> na osobnej ścieżce od początku klipu.</p>
 <audio controls preload="metadata" aria-label="Odsłuch podkładu Tower Queen" style="max-width:100%">
   <source src="audio/tower-queen.wav" type="audio/wav">
@@ -40,8 +41,18 @@
 <p>To ten sam rysunek rastrowy i kadr co na stronie. Wyższa rozdzielczość renderowania nie zwiększa szczegółowości źródła. Początek zachowuje rozruch podmuchu ze strony, więc klip nie jest bezszwową pętlą.</p>
 <p id="error" role="alert"></p>
 <script type="module">
-  import Graphic from './graphic.mjs';
-  customElements.define('tower-lady-animated-logo', Graphic);
+  import Logo from './graphic.mjs';
+  import Intro from './intro.mjs';
+  const isIntro = new URL(location.href).searchParams.get('graphic') === 'intro';
+  const Graphic = isIntro ? Intro : Logo;
+  customElements.define(isIntro ? 'tower-lady-complete-intro' : 'tower-lady-animated-logo', Graphic);
+  if (isIntro) {
+    document.querySelector('#heading').textContent = 'Tower Lady Pictures - kompletne intro';
+    document.querySelector('#description').textContent = 'Wybrany układ A: emblemat z korektą 2% w lewo oraz TOWER LADY, PICTURES i PRESENTS. Font Inter jest częścią paczki. Przezroczyste tło; osobny WAV.';
+    document.querySelector('#manifest').textContent = 'tower-lady-intro.ograf.json';
+    document.querySelector('#download').href = '../tower-lady/astro/downloads/tower-lady-intro-ograf.zip';
+    document.querySelector('#download').textContent = 'Pobierz kompletny układ OGraf do Resolve';
+  }
   const graphic = new Graphic();
   const stage = document.querySelector('#stage');
   stage.append(graphic);

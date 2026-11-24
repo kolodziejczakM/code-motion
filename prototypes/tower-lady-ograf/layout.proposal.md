@@ -36,6 +36,8 @@ barw projektu. Font: [Inter](https://rsms.me/inter/), ten sam co w logotypie str
 - PRESENTS: środek wiersza około 85% wysokości.
 - Wszystkie napisy pozostają na osi X 50%; korekta optyczna dotyczy tylko emblematu.
 
-To referencja do montażu istniejącego OGraf i osobnych napisów w Resolve.
+Gotowy eksport `tower-lady-intro.ograf.json` zawiera tę kompozycję jako jeden
+klip OGraf, z lokalnym fontem Inter. Nie wymaga ręcznego układania napisów.
+[Podgląd kompletnego eksportu](https://vps.tailfb5686.ts.net:8766/prototypes/tower-lady-ograf/?graphic=intro).
 Animacja wejścia i wyjścia oraz synchronizacja z 6-sekundowym podkładem
-pozostają częścią montażu autora. Prototyp pokazuje wszystkie napisy jednocześnie.
+pozostają częścią montażu autora. Wszystkie napisy są widoczne jednocześnie.

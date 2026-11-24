@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ograf.ebu.io/v1/specification/json-schemas/graphics/schema.json",
+  "id": "com.towerlady.complete-intro",
+  "version": "1.0.0",
+  "name": "Tower Lady Pictures - complete intro (layout A)",
+  "description": "The approved layout A: animated emblem shifted 2% left, TOWER LADY, PICTURES and PRESENTS. Local Inter font, transparent background, 11-second Play range. Audio supplied separately.",
+  "main": "intro.mjs",
+  "supportsRealTime": false,
+  "supportsNonRealTime": true,
+  "stepCount": 1,
+  "actionDurations": [
+    { "type": "playAction", "duration": 11000 },
+    { "type": "stopAction", "duration": 0 }
+  ],
+  "author": { "name": "Tower Lady Pictures", "url": "https://towerlady.com" }
+}

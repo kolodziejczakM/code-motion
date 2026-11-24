@@ -157,3 +157,45 @@ Canvas. Animacja zachowuje 11 s; przy intro o długości podkładu można przyci
 ją do 6 s. [Skrypt pakujący](../prototypes/tower-lady-ograf/package.py) dołącza
 manifest, moduły JS, obraz, WAV i instrukcję do jednego ZIP. Pakiet i dźwięk
 nie są ładowane przez produkcyjne podstrony portfolio.
+
+## Drugi OGraf: pełna kompozycja z napisami
+
+[Manifest kompletnego intra](../prototypes/tower-lady-ograf/tower-lady-intro.ograf.json)
+uruchamia [komponent `intro.mjs`](../prototypes/tower-lady-ograf/intro.mjs).
+Rozszerza on działający komponent emblematu, zachowując jego renderer włosów,
+cykl życia i zegar OGraf. Dodaje zaakceptowany układ A w HTML/CSS: emblemat
+przesunięty o 2% szerokości kadru w lewo i napisy TOWER LADY, PICTURES, PRESENTS.
+Warstwa emblematowa pozostaje na X 48%, napisy na X 50% kadru 16:9.
+
+Do paczki dołączono ten sam lokalny Inter WOFF2 co na stronie oraz jego licencję
+OFL. Komponent ładuje font przez `FontFace`, rejestruje go pod własną nazwą
+i zgłasza gotowość dopiero po zakończeniu ładowania. Usuwa swoją instancję
+fontu przy `dispose`. Nie wymaga instalowania fontu w systemie.
+[API FontFace](https://developer.mozilla.org/en-US/docs/Web/API/FontFace/FontFace),
+[FontFaceSet dokumentu](https://developer.mozilla.org/en-US/docs/Web/API/Document/fonts).
+
+Kompozycja ma przestrzeń projektową 3840 x 2160. Dopasowuje ją proporcjonalnie
+do rozdzielczości hosta; przy innych proporcjach centruje kadr 16:9 bez
+rozciągania. Tekst nie jest zapisany jako bitmapa. Tło zachowuje alpha.
+Wszystkie elementy podlegają wspólnym akcjom Play/Stop, bez wejść i wyjść
+montażowych. Metadane Play pozostają ustawione na 11 s.
+
+Sprawdzenia w Chromium:
+
+- Pełny kadr 1920 x 1080 przy czasie 1000 ms porównano z wybranym prototypem
+  A, `shift=-2`, bez jego paska sterowania. Obrazy są identyczne pikselowo:
+  maksymalna różnica kanału 0/255.
+- Potwierdzono rzeczywiste załadowanie dołączonego fontu i grubości 700/400,
+  identyczne położenie i wymiary wszystkich napisów oraz kolory z prototypu.
+- Powtórzone czasy `0, 1000, 2750, 5500, 10999, 1000, 0` ms dają identyczne
+  obrazy pełnej kompozycji. Sprawdzono wspólne Play/Stop, ponowny Play,
+  podmianę harmonogramu i czyszczenie zasobów wraz z fontem.
+- W UHD położenie i wymiary napisów są dokładnie dwukrotnością Full HD.
+  Przy 4096 x 2160 scena 3840 x 2160 pozostaje wyśrodkowana z marginesami
+  po 128 px. Obejrzano kompozycję nad kolorowym tłem.
+
+Pełna paczka jest budowana przez `package.py --variant intro` i zawiera
+manifest, moduły, obraz, font z licencją, oryginalny WAV i instrukcję.
+Wcześniejszy manifest samego emblematu i jego renderer pozostają bez zmian.
+Import pełnej wersji z napisami w Resolve pozostaje do potwierdzenia przez
+użytkownika; dotychczasowe potwierdzenie dotyczy wariantu bez tekstu.
