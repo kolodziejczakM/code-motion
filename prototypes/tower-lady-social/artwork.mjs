@@ -33,7 +33,7 @@ export async function loadResources() {
     return face;
   };
   const [brand, boundless, akabei] = await Promise.all([
-    image("../tower-lady/assets/brand-artwork.webp"),
+    image("../tower-lady/assets/brand-artwork-clean.webp"),
     image("../tower-lady/assets/boundless.jpg"),
     image("../tower-lady/assets/akabei.jpg"),
     font("TowerLadySocialInter", "../tower-lady/assets/inter.woff2", "100 900"),

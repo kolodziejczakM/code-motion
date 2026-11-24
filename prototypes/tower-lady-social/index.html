@@ -78,8 +78,8 @@
   document.querySelector('#avatar-square').append(avatar);
   const avatarUrl = avatar.toDataURL('image/png');
   for (const id of ['avatar-large','avatar-small','avatar-tiny']) document.getElementById(id).src = avatarUrl;
-  let variant = new URL(location.href).searchParams.get('variant') || 'A';
-  if (!variants[variant]) variant = 'A';
+  let variant = new URL(location.href).searchParams.get('variant') || 'C';
+  if (!variants[variant]) variant = 'C';
   let current;
   function youtubePreview() {
     const view = document.querySelector('#youtube-view').value;

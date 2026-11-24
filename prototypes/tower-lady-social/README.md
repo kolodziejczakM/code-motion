@@ -1,10 +1,10 @@
 # Tower Lady Pictures - zestawy Facebook / YouTube
 
-Stan: propozycje do wyboru. Autor potwierdził angielskie hasło na obu platformach:
-**Stories without walls. Always original.** Wariant A jest rekomendacją,
-ostateczny wybór układu banerów pozostaje do potwierdzenia.
+Stan: autor wybrał **wariant C - filmy** i angielskie hasło na obu platformach:
+**Stories without walls. Always original.** Warianty A i B zachowano do porównań.
+Wydanie **1.0.1** korzysta z logo bez wystającego fragmentu u dołu wieży.
 
-[Podgląd trzech zestawów w Tailscale](https://vps.tailfb5686.ts.net:8766/prototypes/tower-lady-social/?variant=A).
+[Podgląd wybranego zestawu C w Tailscale](https://vps.tailfb5686.ts.net:8766/prototypes/tower-lady-social/?variant=C).
 Parametr `variant=A`, `B` lub `C` wybiera zestaw. Dolny pasek przełącza warianty.
 Podgląd jest statyczny i udostępniany przez istniejący Caddy, tak jak pozostałe
 prototypy. Nie zmienia produkcyjnej strony ani kont społecznościowych.
@@ -55,7 +55,9 @@ niedostępny bez logowania, więc nie traktujemy tej symulacji jako specyfikacji
 
 ## Spójność marki i źródła
 
-- Emblemat: ten sam obraz i renderer co w stronie i OGraf, statyczny czas 0.
+- Emblemat: `brand-artwork-clean.webp`, ten sam obraz i renderer co w stronie
+  i OGraf, statyczny czas 0. Usunięto tylko początek kolejnego poziomu wieży
+  wystający spod dolnego łuku. Kadr i proporcje znaku pozostały bez zmian.
 - Paleta: `#000000`, `#F5EBD3`, `#D8CEBB`, `#BD9B5F`, `#9A8459`.
 - Fonty: lokalny Inter i Cormorant Garamond z istniejących zasobów projektu.
 - Tło: motyw z `src/components/Backdrop.astro`, dopasowany do proporcji banera.
@@ -81,4 +83,4 @@ python3 prototypes/tower-lady-social/package.py
 
 Polecenie tworzy `exports/tower-lady-social-A.zip`, `B.zip` i `C.zip` z istniejących
 PNG. Po zmianie kodu kompozycji trzeba najpierw ponownie wyrenderować PNG.
-Prototyp pozostaje na osobnej gałęzi do momentu wyboru wariantu.
+Wariant C jest zatwierdzonym kierunkiem; A i B pozostają materiałem porównawczym.
