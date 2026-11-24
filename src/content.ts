@@ -27,6 +27,7 @@ export const copy = {
     skip: "Przejdź do treści",
     homeLabel: "Tower Lady Pictures, strona główna",
     languageLabel: "Czytaj po polsku",
+    opensInNewTab: "otwiera się w nowej karcie",
     footer: {
       contact: "Kontakt i profile społecznościowe",
       top: "Do góry",
@@ -68,6 +69,7 @@ export const copy = {
     skip: "Skip to content",
     homeLabel: "Tower Lady Pictures, home",
     languageLabel: "Read in English",
+    opensInNewTab: "opens in a new tab",
     footer: {
       contact: "Contact and social profiles",
       top: "Back to top",
