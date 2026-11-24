@@ -27,6 +27,10 @@ export const copy = {
     skip: "Przejdź do treści",
     homeLabel: "Tower Lady Pictures, strona główna",
     languageLabel: "Czytaj po polsku",
+    footer: {
+      contact: "Kontakt i profile społecznościowe",
+      top: "Do góry",
+    },
     home: {
       title: "Niezależne krótkie metraże z Polski",
       description: "Tower Lady Pictures tworzy niezależne krótkie metraże z pogranicza thrillera, mrocznego dramatu i absurdu.",
@@ -64,6 +68,10 @@ export const copy = {
     skip: "Skip to content",
     homeLabel: "Tower Lady Pictures, home",
     languageLabel: "Read in English",
+    footer: {
+      contact: "Contact and social profiles",
+      top: "Back to top",
+    },
     home: {
       title: "Independent short films from Poland",
       description: "Tower Lady Pictures makes independent short films where suspense meets dark drama or the absurd.",

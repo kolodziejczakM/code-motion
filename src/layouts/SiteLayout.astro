@@ -3,6 +3,7 @@ import { copy, hrefFor, type Locale, type Page } from "../content";
 import { brandArtwork } from "../films";
 import Backdrop from "../components/Backdrop.astro";
 import SiteMeta from "../components/SiteMeta.astro";
+import SiteFooter from "../components/SiteFooter.astro";
 import inter from "../../prototypes/tower-lady/assets/inter.woff2?url";
 import interExtended from "../../prototypes/tower-lady/assets/inter-latin-ext.woff2?url";
 import cormorant from "../../prototypes/tower-lady/assets/cormorant.woff2?url";
@@ -73,7 +74,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   <body class:list={["portfolio-page", { "films-page": page === "films" }]}>
     <Backdrop />
     <a class="skip-link" href="#main">{t.skip}</a>
-    <header class="site-header wrap">
+    <header id="top" class="site-header wrap" tabindex="-1">
       <a class="brand" href={hrefFor(locale, "home")} aria-label={t.homeLabel} aria-current={page === "home" ? "page" : undefined}>
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="wordmark" aria-hidden="true">
@@ -90,6 +91,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
       </nav>
     </header>
     <slot />
-    <footer class="site-footer wrap">Tower Lady Pictures</footer>
+    <SiteFooter locale={locale} />
   </body>
 </html>
