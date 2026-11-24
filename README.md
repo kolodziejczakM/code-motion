@@ -25,6 +25,23 @@ npm run dev
 
 Wpisz `/design/` bezpośrednio w adresie strony. Na podglądzie ścieżka to `/prototypes/tower-lady/astro/design/`. Strona pokazuje paletę, role i rozmiary typografii, odstępy, wzorce elementów oraz zasady ruchu. Ma `noindex` i jest dostępna przez bezpośredni adres.
 
+### Animacja logo do DaVinci Resolve
+
+Samowystarczalna [paczka OGraf](prototypes/tower-lady-ograf/README.md) zawiera
+wybraną animację włosów na przezroczystym tle oraz zatwierdzony podkład
+`audio/tower-queen.wav` (6 s, stereo, PCM 16-bit, 48 kHz). Manifest OGraf
+importujemy jako klip graficzny, a WAV jako osobną ścieżkę audio. Użytkownik potwierdził
+działanie animacji w Resolve.
+
+```sh
+python3 prototypes/tower-lady-ograf/package.py
+```
+
+[Podgląd animacji i pobranie ZIP w Tailscale](https://vps.tailfb5686.ts.net:8766/prototypes/tower-lady-ograf/).
+[Notatka techniczna o OGraf i wynikach sprawdzeń](docs/ograf-logo-animation.md)
+opisuje format oraz ograniczenia obecnej bitmapy. Strona produkcyjna nie
+ładuje paczki intro ani podkładu muzycznego.
+
 ### Przed publikacją
 
 - Docelowy hosting to GitHub Pages pod `https://towerlady.com/`. [Instrukcja konfiguracji GitHuba i DNS w Hostingerze](docs/deployment.md) opisuje pierwsze wdrożenie i kolejne wydania.

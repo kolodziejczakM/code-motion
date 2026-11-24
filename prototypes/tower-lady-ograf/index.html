@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pl">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Animacja Tower Lady - OGraf</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0 auto; max-width: 1280px; padding: 24px; background: #101010; color: #f5ebd3; font: 16px/1.5 system-ui, sans-serif; }
+  h1 { font-size: 24px; margin-top: 0; }
+  a { color: #bd9b5f; }
+  #stage { position: relative; aspect-ratio: 16/9; background: #000; overflow: hidden; }
+  #stage[data-background="checker"] { background-color: #243640; background-image: repeating-conic-gradient(#ffffff12 0% 25%, transparent 0% 50%); background-size: 32px 32px; }
+  #stage[data-background="light"] { background: #b3b9bc; }
+  #controls { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin: 18px 0 8px; }
+  button, select { border: 1px solid #9a8459; border-radius: 5px; padding: 9px 14px; background: #1a1a1a; color: #f5ebd3; font: inherit; }
+  button, a, select, input { min-height: 44px; }
+  input { width: 100%; }
+  output { font-variant-numeric: tabular-nums; }
+  :focus-visible { outline: 2px solid #bd9b5f; outline-offset: 3px; }
+  #error { color: #ffb0a0; }
+</style>
+<h1>Tower Lady Pictures - animowane logo</h1>
+<p>Wybrany podmuch ze strony: okres 5,5 s, siła 30 / 14. Przezroczysta grafika i osobny podkład WAV w paczce.</p>
+<div id="stage" data-background="black"></div>
+<div id="controls">
+  <button id="play" type="button" disabled>Odtwórz</button>
+  <button id="restart" type="button" disabled>Od początku</button>
+  <label>Tło <select id="background"><option value="black">Czarne</option><option value="checker">Szachownica</option><option value="light">Jasne</option></select></label>
+  <output id="readout">0.000 / 11.000 s</output>
+</div>
+<label for="time">Przewijanie animacji</label>
+<input id="time" type="range" min="0" max="10999" step="1" value="0" disabled>
+<p><a href="../tower-lady/astro/downloads/tower-lady-animated-logo-ograf.zip" download>Pobierz animację OGraf do Resolve</a>. Rozpakuj folder i zaimportuj <code>tower-lady.ograf.json</code>; pozostałe pliki pozostaw obok.</p>
+<p><strong>Podkład: Tower Queen</strong> - 6 s, stereo, 48 kHz. Odsłuch poniżej jest niezależny od przycisków animacji. W Resolve dodaj <code>audio/tower-queen.wav</code> na osobnej ścieżce od początku klipu.</p>
+<audio controls preload="metadata" aria-label="Odsłuch podkładu Tower Queen" style="max-width:100%">
+  <source src="audio/tower-queen.wav" type="audio/wav">
+  <a href="audio/tower-queen.wav">Pobierz podkład WAV</a>
+</audio>
+<p>To ten sam rysunek rastrowy i kadr co na stronie. Wyższa rozdzielczość renderowania nie zwiększa szczegółowości źródła. Początek zachowuje rozruch podmuchu ze strony, więc klip nie jest bezszwową pętlą.</p>
+<p id="error" role="alert"></p>
+<script type="module">
+  import Graphic from './graphic.mjs';
+  customElements.define('tower-lady-animated-logo', Graphic);
+  const graphic = new Graphic();
+  const stage = document.querySelector('#stage');
+  stage.append(graphic);
+  const input = document.querySelector('#time');
+  const play = document.querySelector('#play');
+  const restart = document.querySelector('#restart');
+  let playing = false;
+  let frameId;
+  let previous;
+  let timestamp = 0;
+  async function draw() {
+    await graphic.goToTime({ timestamp });
+    input.value = timestamp;
+    document.querySelector('#readout').value = `${(timestamp / 1000).toFixed(3)} / 11.000 s`;
+  }
+  function pause() {
+    playing = false;
+    cancelAnimationFrame(frameId);
+    play.textContent = 'Odtwórz';
+  }
+  async function tick(now) {
+    timestamp = Math.min(11000, timestamp + now - previous);
+    previous = now;
+    await draw();
+    if (timestamp >= 11000) pause();
+    else if (playing) frameId = requestAnimationFrame(tick);
+  }
+  try {
+    const result = await graphic.load({ renderType: 'non-realtime', renderCharacteristics: { resolution: { width: 1920, height: 1080 } } });
+    if (result.statusCode !== 200) throw new Error(result.statusMessage);
+    await graphic.setActionsSchedule({ schedule: [
+      { timestamp: 0, action: { type: 'playAction', params: {} } },
+      { timestamp: 11000, action: { type: 'stopAction', params: {} } },
+    ] });
+    await draw();
+    play.disabled = restart.disabled = input.disabled = false;
+    play.addEventListener('click', async () => {
+      if (playing) return pause();
+      if (timestamp >= 11000) timestamp = 0;
+      previous = performance.now();
+      playing = true;
+      play.textContent = 'Pauza';
+      frameId = requestAnimationFrame(tick);
+    });
+    restart.addEventListener('click', async () => { pause(); timestamp = 0; await draw(); });
+    input.addEventListener('input', async () => { pause(); timestamp = Number(input.value); await draw(); });
+    document.querySelector('#background').addEventListener('change', event => { stage.dataset.background = event.target.value; });
+    document.addEventListener('visibilitychange', () => { if (document.hidden) pause(); });
+  } catch (error) { document.querySelector('#error').textContent = error.message; }
+</script>
+</html>

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ograf.ebu.io/v1/specification/json-schemas/graphics/schema.json",
+  "id": "com.towerlady.resolve-compatibility-probe",
+  "name": "Tower Lady - OGraf compatibility test",
+  "description": "Transparent Canvas with a deterministic moving circle and host time counter. Compatibility probe, not the final logo.",
+  "main": "graphic.mjs",
+  "supportsRealTime": false,
+  "supportsNonRealTime": true,
+  "stepCount": 1,
+  "actionDurations": [
+    { "type": "playAction", "duration": 10000 },
+    { "type": "stopAction", "duration": 0 }
+  ],
+  "author": { "name": "Tower Lady Pictures" }
+}

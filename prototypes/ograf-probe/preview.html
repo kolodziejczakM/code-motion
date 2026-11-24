@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pl">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Próba OGraf - Tower Lady Pictures</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0 auto; max-width: 1100px; padding: 24px; background: #101010; color: #f5ebd3; font: 17px/1.6 system-ui, sans-serif; }
+  h1 { font-size: 26px; }
+  a { color: #bd9b5f; }
+  #stage { position: relative; aspect-ratio: 16/9; background-color: #243640; background-image: repeating-conic-gradient(#ffffff09 0% 25%, transparent 0% 50%); background-size: 32px 32px; }
+  label { display: block; margin-top: 16px; }
+  input { width: 100%; }
+</style>
+<h1>Próba zgodności OGraf</h1>
+<p>To test techniczny, jeszcze bez animacji logo. Przesuń suwak: obraz zależy wyłącznie od wybranego czasu. Szachownica jest tłem podglądu, poza grafiką.</p>
+<div id="stage"></div>
+<label for="time">Czas: <output id="readout">0.000</output> s</label>
+<input id="time" type="range" min="0" max="9999" step="1" value="0">
+<p><a href="../tower-lady/astro/downloads/tower-lady-ograf-probe.zip" download>Pobierz ZIP do testu w Resolve</a>. Rozpakuj cały folder i zaimportuj <code>tower-lady-test.ograf.json</code>. Podgląd w przeglądarce nie potwierdza działania importera Resolve.</p>
+<script type="module">
+  import Graphic from './graphic.mjs';
+  customElements.define('tower-lady-ograf-probe', Graphic);
+  const graphic = new Graphic();
+  document.querySelector('#stage').append(graphic);
+  await graphic.load({ renderType: 'non-realtime', renderCharacteristics: { resolution: { width: 1920, height: 1080 } } });
+  await graphic.setActionsSchedule({ schedule: [
+    { timestamp: 0, action: { type: 'playAction', params: {} } },
+    { timestamp: 10000, action: { type: 'stopAction', params: {} } },
+  ] });
+  const input = document.querySelector('#time');
+  async function draw() {
+    const timestamp = Number(input.value);
+    await graphic.goToTime({ timestamp });
+    document.querySelector('#readout').value = (timestamp / 1000).toFixed(3);
+  }
+  input.addEventListener('input', draw);
+  await draw();
+</script>
+</html>

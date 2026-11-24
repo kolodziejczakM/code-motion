@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ograf.ebu.io/v1/specification/json-schemas/graphics/schema.json",
+  "id": "com.towerlady.animated-logo",
+  "version": "1.0.0",
+  "name": "Tower Lady Pictures - animated logo",
+  "description": "The website's selected hair gust, on a transparent background. Two 5.5-second cycles with the original 0.65-second wind onset. No titles, fades or audio.",
+  "main": "graphic.mjs",
+  "supportsRealTime": false,
+  "supportsNonRealTime": true,
+  "stepCount": 1,
+  "actionDurations": [
+    { "type": "playAction", "duration": 11000 },
+    { "type": "stopAction", "duration": 0 }
+  ],
+  "author": { "name": "Tower Lady Pictures", "url": "https://towerlady.com" }
+}
