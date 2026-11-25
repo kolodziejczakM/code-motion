@@ -11,6 +11,7 @@ import scenePlan from "../assets/about/boundless-scene-plan.gif?url";
 import scenePlanPoster from "../assets/about/boundless-scene-plan-poster.webp";
 import akabeiTests from "../assets/about/akabei-test-shoot.jpg";
 import screening from "../assets/about/boundless-screening.jpg";
+import submissions from "../assets/about/filmfreeway-submissions.png";
 
 interface Props {
   locale: Locale;
@@ -60,6 +61,7 @@ const contactLinks = [
           {index === 1 && <StoryFigure image={akabeiTests} alt={t.media.akabeiTests.alt} caption={t.media.akabeiTests.caption} locale={locale} />}
         </Fragment>
       ))}
+      <StoryFigure image={submissions} alt={t.media.submissions.alt} caption={t.media.submissions.caption} locale={locale} />
     </section>
 
     <section aria-labelledby="studio-team">

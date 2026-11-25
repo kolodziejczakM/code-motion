@@ -75,6 +75,10 @@ export const aboutStory = {
         alt: "Widzowie oglądają film W zasadzie bez granic na ekranie projekcyjnym.",
         caption: "„W zasadzie bez granic” na dużym ekranie podczas pokazu dla publiczności.",
       },
+      submissions: {
+        alt: "Panel FilmFreeway ze zgłoszeniami naszych filmów na festiwale i statusami zgłoszeń.",
+        caption: "Praca po premierze: zgłoszenia naszych filmów na festiwale przez FilmFreeway.",
+      },
     },
     team: {
       heading: "Zespół",
@@ -189,6 +193,10 @@ export const aboutStory = {
       screening: {
         alt: "An audience watching Boundless, actually on a projection screen.",
         caption: "Boundless, actually on the big screen during an audience screening.",
+      },
+      submissions: {
+        alt: "The FilmFreeway dashboard showing our films’ festival submissions and their statuses.",
+        caption: "After the premiere: submitting our films to festivals through FilmFreeway.",
       },
     },
     team: {

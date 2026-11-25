@@ -20,7 +20,8 @@ zachowuj istniejące identyfikatory, żeby udostępnione adresy nadal działały
 
 Materiały w `src/assets/about/` uzupełniają sekcję „Jak pracuję” i wyróżnienia:
 animowany plan sceny z „W zasadzie bez granic”, porównanie ujęć ze zdjęć testowych
-„Akabei” oraz zdjęcie projekcji dla publiczności. `StoryFigure.astro` optymalizuje
+„Akabei”, panel zgłoszeń festiwalowych FilmFreeway oraz zdjęcie projekcji dla
+publiczności. `StoryFigure.astro` optymalizuje
 zdjęcia do responsywnych WebP i dodaje podpisy PL/EN. GIF zachowuje pełne 23 s
 klipu (960 × 840 px, 12 kl./s), ładuje się po wejściu w obszar widoczny i ma
 przycisk zatrzymania. Poza ekranem oraz przy preferencji ograniczonego ruchu
