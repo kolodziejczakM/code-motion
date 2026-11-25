@@ -6,6 +6,11 @@ import FilmEmbed from "./FilmEmbed.astro";
 import ExternalLink from "./ExternalLink.astro";
 import HeadingLink from "./HeadingLink.astro";
 import ReadingProgress from "./ReadingProgress.astro";
+import StoryFigure from "./StoryFigure.astro";
+import scenePlan from "../assets/about/boundless-scene-plan.gif?url";
+import scenePlanPoster from "../assets/about/boundless-scene-plan-poster.webp";
+import akabeiTests from "../assets/about/akabei-test-shoot.jpg";
+import screening from "../assets/about/boundless-screening.jpg";
 
 interface Props {
   locale: Locale;
@@ -48,7 +53,13 @@ const contactLinks = [
     <section aria-labelledby="studio-approach">
       <h2 id="studio-approach"><HeadingLink id="studio-approach" text={t.approach.heading} locale={locale} /></h2>
       <p class="studio-byline">{t.approach.byline}</p>
-      {t.approach.paragraphs.map(text => <p>{text}</p>)}
+      {t.approach.paragraphs.map((text, index) => (
+        <Fragment>
+          <p>{text}</p>
+          {index === 0 && <StoryFigure image={scenePlanPoster} animation={scenePlan} alt={t.media.scenePlan.alt} caption={t.media.scenePlan.caption} locale={locale} />}
+          {index === 1 && <StoryFigure image={akabeiTests} alt={t.media.akabeiTests.alt} caption={t.media.akabeiTests.caption} locale={locale} />}
+        </Fragment>
+      ))}
     </section>
 
     <section aria-labelledby="studio-team">
@@ -66,6 +77,7 @@ const contactLinks = [
 
     <section aria-labelledby="studio-festivals">
       <h2 id="studio-festivals"><HeadingLink id="studio-festivals" text={t.festivals.heading} locale={locale} /></h2>
+      <StoryFigure image={screening} alt={t.media.screening.alt} caption={t.media.screening.caption} locale={locale} portrait />
       {festivalAppearances.map(group => {
         const film = films.find(film => film.id === group.filmId)!;
         return (

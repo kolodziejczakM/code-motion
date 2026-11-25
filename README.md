@@ -8,7 +8,7 @@ Portfolio w Astro obejmuje stronę główną opartą na wybranej makiecie, filmo
 
 Treść artykułu w obu językach jest w `src/about.ts`, a jego wstęp i metadane w `src/content.ts`. Trzy filmy w historii studia mają lokalne miniatury; odtwarzacz YouTube jest ładowany dopiero po kliknięciu. Bez JavaScriptu miniatura prowadzi bezpośrednio do filmu. Nazwy festiwali pozostają w oryginale, a rodzaje wyróżnień są tłumaczone. Zgodnie z decyzją autora nie dodajemy lat wyróżnień ani dodatkowych kategorii.
 
-Artykuł ma ręcznie ustalony czas czytania 4 minuty i mosiężny pasek postępu przy
+Artykuł ma ręcznie ustalony czas czytania 2 minuty i mosiężny pasek postępu przy
 górnej krawędzi ekranu. Pasek pojawia się podczas lektury i mierzy sam artykuł,
 bez nagłówka strony i stopki. `HeadingLink.astro` zapewnia natywne odnośniki do
 śródtytułów, działające również bez JavaScriptu. Tytuł artykułu pozostaje zwykłym
@@ -17,6 +17,15 @@ do sekcji; w nagłówkach z tytułami filmów znajduje się obok linku do YouTub
 Identyfikatory są stałe w PL/EN, np. `/pl/o-nas/#studio-approach` prowadzi do
 „Jak pracuję”, a `/en/about/#studio-approach` do „How I work”. Przy zmianach treści
 zachowuj istniejące identyfikatory, żeby udostępnione adresy nadal działały.
+
+Materiały w `src/assets/about/` uzupełniają sekcję „Jak pracuję” i wyróżnienia:
+animowany plan sceny z „W zasadzie bez granic”, porównanie ujęć ze zdjęć testowych
+„Akabei” oraz zdjęcie projekcji dla publiczności. `StoryFigure.astro` optymalizuje
+zdjęcia do responsywnych WebP i dodaje podpisy PL/EN. GIF zachowuje pełne 23 s
+klipu (960 × 840 px, 12 kl./s), ładuje się po wejściu w obszar widoczny i ma
+przycisk zatrzymania. Poza ekranem oraz przy preferencji ograniczonego ruchu
+wyświetla statyczny kadr. Przy ograniczonym ruchu użytkownik może uruchomić
+animację przyciskiem. Bez JavaScriptu pozostaje statyczny kadr.
 
 Bezpośrednie linki do YouTube i profili społecznościowych używają `ExternalLink.astro`:
 otwierają nową kartę, mają ikonę ↗, `rel="noopener"` i komunikat dla czytników
