@@ -1,0 +1,97 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import { aboutStory } from "../about";
+import type { Locale } from "../content";
+
+interface Props {
+  image: ImageMetadata;
+  alt: string;
+  caption: string;
+  locale: Locale;
+  animation?: string;
+  portrait?: boolean;
+}
+
+const { image, alt, caption, locale, animation, portrait = false } = Astro.props;
+const t = aboutStory[locale].media;
+const widths = [400, 800, 1200, image.width].filter(width => width <= image.width);
+---
+
+<figure class:list={["story-media", { "story-media-portrait": portrait }]}>
+  <div class="story-media-frame" data-animation={animation} data-play-label={animation ? t.play : undefined} data-pause-label={animation ? t.pause : undefined}>
+    {animation
+      ? <img src={image.src} data-poster={image.src} width={image.width} height={image.height} alt={alt} loading="lazy" decoding="async" />
+      : <Image src={image} alt={alt} widths={widths} sizes={portrait ? "(max-width: 480px) calc(100vw - 40px), 416px" : "(max-width: 800px) calc(100vw - 40px), 736px"} format="webp" quality={85} loading="lazy" decoding="async" />}
+    {animation && (
+      <button class="story-animation-toggle" type="button" aria-label={t.pause} hidden>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false">
+          <path class="pause-icon" d="M6 4h4v16H6zm8 0h4v16h-4z" />
+          <path class="play-icon" d="m7 4 13 8-13 8z" />
+        </svg>
+      </button>
+    )}
+  </div>
+  <figcaption>{caption}</figcaption>
+</figure>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-animation]").forEach(frame => {
+    const image = frame.querySelector("img")!;
+    const button = frame.querySelector("button")!;
+    const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+    let shouldPlay = !reducedMotion.matches;
+    let inView = false;
+
+    const update = () => {
+      const playing = shouldPlay && inView;
+      const source = playing ? frame.dataset.animation! : image.dataset.poster!;
+      if (image.getAttribute("src") !== source) image.src = source;
+      button.dataset.playing = String(playing);
+      const label = shouldPlay ? frame.dataset.pauseLabel! : frame.dataset.playLabel!;
+      button.setAttribute("aria-label", label);
+      button.title = label;
+    };
+    const observer = new IntersectionObserver(([entry]) => {
+      inView = entry.isIntersecting;
+      update();
+    });
+    observer.observe(frame);
+    button.addEventListener("click", () => {
+      shouldPlay = !shouldPlay;
+      update();
+    });
+    reducedMotion.addEventListener("change", () => {
+      shouldPlay = !reducedMotion.matches;
+      update();
+    });
+    update();
+    button.hidden = false;
+  });
+</script>
+
+<style>
+  .story-media { margin: 1.4rem 0 2.25rem; }
+  .story-media-portrait { max-width: 26rem; margin-inline: auto; }
+  .story-media-frame { position: relative; }
+  .story-media-frame > img { display: block; width: 100%; height: auto; border-radius: 6px; }
+  figcaption { margin-top: .6rem; color: var(--muted); font-size: .8125rem; line-height: 1.6; }
+  .story-animation-toggle {
+    position: absolute;
+    inset: auto .6rem .6rem auto;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid #f5ebd37a;
+    border-radius: 50%;
+    background: #101010e6;
+    color: var(--ivory);
+    cursor: pointer;
+  }
+  .story-animation-toggle:not([hidden]) { display: grid; }
+  .story-animation-toggle:hover { background: #312b21; }
+  .story-animation-toggle .pause-icon { display: none; }
+  .story-animation-toggle[data-playing="true"] .pause-icon { display: block; }
+  .story-animation-toggle[data-playing="true"] .play-icon { display: none; }
+</style>

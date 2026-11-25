@@ -60,15 +60,41 @@ export const aboutStory = {
         "Po premierze nadal zajmuję się filmem: promuję go, szukam odbiorców i zgłaszam na festiwale. Każdej produkcji poświęcam uwagę również wtedy, gdy zdjęcia i montaż są już dawno zakończone.",
       ],
     },
+    media: {
+      play: "Odtwórz animację",
+      pause: "Wstrzymaj animację",
+      scenePlan: {
+        alt: "Schemat ruchu postaci i rozmieszczenia kamer w scenie z filmu W zasadzie bez granic.",
+        caption: "Animowany plan sceny z „W zasadzie bez granic”: ruch postaci i ustawienia kamer przygotowane przed zdjęciami.",
+      },
+      akabeiTests: {
+        alt: "Dwa ujęcia we wnętrzu samochodu: po lewej wersje przed zmianami, po prawej po zmianach. W kadrze członkowie ekipy filmu Akabei.",
+        caption: "„Akabei” - porównanie ujęć przed zmianami i po zmianach podczas zdjęć testowych. W kadrze są członkowie ekipy, nie aktorzy z obsady filmu.",
+      },
+      zombieEffects: {
+        alt: "Czarno-białe ujęcie mężczyzny przy oknie, którego twarz zmienia się w twarz zombie.",
+        caption: "Test efektu zombie z wykorzystaniem AI na materiale z planu.",
+      },
+      screening: {
+        alt: "Widzowie oglądają film W zasadzie bez granic na ekranie projekcyjnym.",
+        caption: "„W zasadzie bez granic” na dużym ekranie podczas pokazu dla publiczności.",
+      },
+      submissions: {
+        alt: "Panel FilmFreeway ze zgłoszeniami naszych filmów na festiwale i statusami zgłoszeń.",
+        caption: "Praca po premierze: zgłoszenia naszych filmów na festiwale przez FilmFreeway.",
+      },
+    },
     team: {
       heading: "Zespół",
       members: [
         {
+          id: "marcin-kolodziejczak",
           name: "Marcin Kołodziejczak",
           roles: "Reżyseria, scenariusz, montaż, dźwięk",
           text: "Założyciel Tower Lady Pictures. Rozwija pomysły, pisze scenariusze i prowadzi filmy od przygotowań po montaż i publikację. Szczególną satysfakcję czerpie z pracy z aktorami i montażu.",
         },
         {
+          id: "karolina-kolodziejczak",
           name: "Karolina Kołodziejczak",
           roles: "Zdjęcia, scenografia, kostiumy",
           text: "Od 2021 roku odpowiada za zdjęcia do kolejnych filmów studia. Współtworzy ich oprawę wizualną, przygotowuje scenografię i kostiumy oraz konsultuje scenariusze.",
@@ -157,15 +183,41 @@ export const aboutStory = {
         "My work on a film continues after its release. I promote it, look for audiences and submit it to festivals. Each production continues to receive attention long after shooting and editing have finished.",
       ],
     },
+    media: {
+      play: "Play animation",
+      pause: "Pause animation",
+      scenePlan: {
+        alt: "A diagram of character movement and camera positions for a scene in Boundless, actually.",
+        caption: "An animated scene plan for Boundless, actually: character movement and camera positions prepared before filming.",
+      },
+      akabeiTests: {
+        alt: "Two car interior shots, with the before versions on the left and the after versions on the right. Members of the Akabei crew appear in the frames.",
+        caption: "Akabei - before-and-after comparisons from test shoots. The people in these frames are crew members rather than the film’s cast.",
+      },
+      zombieEffects: {
+        alt: "A black-and-white shot of a man by a window whose face transforms into a zombie’s face.",
+        caption: "An AI visual-effects test: transforming a character into a zombie using footage from the set.",
+      },
+      screening: {
+        alt: "An audience watching Boundless, actually on a projection screen.",
+        caption: "Boundless, actually on the big screen during an audience screening.",
+      },
+      submissions: {
+        alt: "The FilmFreeway dashboard showing our films’ festival submissions and their statuses.",
+        caption: "After the premiere: submitting our films to festivals through FilmFreeway.",
+      },
+    },
     team: {
       heading: "The team",
       members: [
         {
+          id: "marcin-kolodziejczak",
           name: "Marcin Kołodziejczak",
           roles: "Directing, screenwriting, editing, sound",
           text: "Founder of Tower Lady Pictures. Marcin develops ideas, writes screenplays and takes films from preparation through editing and release. He particularly enjoys working with actors and editing.",
         },
         {
+          id: "karolina-kolodziejczak",
           name: "Karolina Kołodziejczak",
           roles: "Cinematography, production design, costumes",
           text: "Karolina has been responsible for cinematography on the studio’s films since 2021. She helps shape their visual identity, prepares sets and costumes, and contributes feedback on screenplays.",
