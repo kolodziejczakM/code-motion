@@ -24,4 +24,5 @@ await sharp(source.pathname)
   .webp({ lossless: true })
   .toFile(output.pathname);
 await copyFile(output, new URL("../../tower-lady-ograf/assets/brand-artwork.webp", import.meta.url));
-console.log("Updated the website artwork and its self-contained OGraf copy.");
+await import("./extract-web-assets.mjs");
+console.log("Updated the approved artwork, website images and self-contained OGraf copy.");

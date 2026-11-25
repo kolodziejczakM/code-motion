@@ -16,6 +16,9 @@
 }
 
 .home-art-graphic { position: absolute; inset: 0; overflow: hidden; }
+/* The shared prototype stylesheet crops a mockup; the website uses standalone images. */
+.portfolio-page .home-art img { inset-inline-start: 0; top: 0; width: 100%; height: 100%; }
+.portfolio-page .saturday-art img { position: static; width: 100%; height: auto; }
 .hair-motion-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 
 .featured { --featured-fade: linear-gradient(to bottom, #000 72%, transparent 100%); }
