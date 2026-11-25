@@ -24,7 +24,7 @@ const more = [
       <p class="film-meta">
         {featured.year} · Thriller / {t.absurd} · <time datetime={featured.isoDuration}>{featured.duration}</time>
       </p>
-      <ExternalLink locale={locale} class="button" href={featured.url} aria-label={t.watchOnYouTube(featured.title)}>
+      <ExternalLink locale={locale} class="button" indicator="corner" href={featured.url} aria-label={t.watchOnYouTube(featured.title)}>
         <img src={playIcon} width="22" height="22" alt="" />
         {t.watch}
       </ExternalLink>
