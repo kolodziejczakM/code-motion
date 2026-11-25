@@ -1,0 +1,51 @@
+---
+import { copy, type Locale } from "../content";
+
+interface Props {
+  id: string;
+  text: string;
+  locale: Locale;
+  iconOnly?: boolean;
+}
+
+const { id, text, locale, iconOnly = false } = Astro.props;
+const label = `${copy[locale].about.sectionLink}: ${text}`;
+const [, leading = "", lastWord = text] = text.match(/^(.*?)(\S+)$/s) ?? [];
+---
+
+<a
+  class:list={["heading-link", { "heading-permalink": iconOnly }]}
+  href={`#${id}`}
+  aria-label={iconOnly ? label : undefined}
+  title={label}
+>
+  {iconOnly
+    ? <span class="heading-marker" aria-hidden="true">#</span>
+    : <>{leading}<span class="heading-tail">{lastWord}<span class="heading-marker" aria-hidden="true">#</span></span></>}
+</a>
+
+<style>
+  .heading-link { color: inherit; text-decoration: none; }
+  .heading-tail { white-space: nowrap; }
+  .heading-marker {
+    display: inline-block;
+    margin-inline-start: .35rem;
+    color: var(--rule);
+    font: 400 clamp(.875rem, .5em, 1.25rem) / 1 var(--sans);
+    letter-spacing: 0;
+    vertical-align: .1em;
+  }
+  .heading-link:hover .heading-marker,
+  .heading-link:focus-visible .heading-marker { color: var(--ivory); }
+  :global(:is(h1, h2, h3):target) > .heading-link { color: var(--brass); }
+  .heading-permalink {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    vertical-align: baseline;
+  }
+  .heading-permalink .heading-marker { margin: 0; }
+</style>

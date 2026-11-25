@@ -8,6 +8,15 @@ Portfolio w Astro obejmuje stronę główną opartą na wybranej makiecie, filmo
 
 Treść artykułu w obu językach jest w `src/about.ts`, a jego wstęp i metadane w `src/content.ts`. Trzy filmy w historii studia mają lokalne miniatury; odtwarzacz YouTube jest ładowany dopiero po kliknięciu. Bez JavaScriptu miniatura prowadzi bezpośrednio do filmu. Nazwy festiwali pozostają w oryginale, a rodzaje wyróżnień są tłumaczone. Zgodnie z decyzją autora nie dodajemy lat wyróżnień ani dodatkowych kategorii.
 
+Artykuł ma ręcznie ustalony czas czytania 4 minuty i mosiężny pasek postępu przy
+górnej krawędzi ekranu. Pasek pojawia się podczas lektury i mierzy sam artykuł,
+bez nagłówka strony i stopki. `HeadingLink.astro` zapewnia natywne odnośniki do
+wszystkich nagłówków, działające również bez JavaScriptu. Znak `#` wskazuje link
+do sekcji; w nagłówkach z tytułami filmów znajduje się obok linku do YouTube.
+Identyfikatory są stałe w PL/EN, np. `/pl/o-nas/#studio-approach` prowadzi do
+„Jak pracuję”, a `/en/about/#studio-approach` do „How I work”. Przy zmianach treści
+zachowuj istniejące identyfikatory, żeby udostępnione adresy nadal działały.
+
 Bezpośrednie linki do YouTube i profili społecznościowych używają `ExternalLink.astro`:
 otwierają nową kartę, mają ikonę ↗, `rel="noopener"` i komunikat dla czytników
 ekranu w PL/EN. Nawigacja wewnętrzna, e-mail i uruchamianie osadzonego odtwarzacza

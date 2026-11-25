@@ -64,11 +64,13 @@ export const aboutStory = {
       heading: "Zespół",
       members: [
         {
+          id: "marcin-kolodziejczak",
           name: "Marcin Kołodziejczak",
           roles: "Reżyseria, scenariusz, montaż, dźwięk",
           text: "Założyciel Tower Lady Pictures. Rozwija pomysły, pisze scenariusze i prowadzi filmy od przygotowań po montaż i publikację. Szczególną satysfakcję czerpie z pracy z aktorami i montażu.",
         },
         {
+          id: "karolina-kolodziejczak",
           name: "Karolina Kołodziejczak",
           roles: "Zdjęcia, scenografia, kostiumy",
           text: "Od 2021 roku odpowiada za zdjęcia do kolejnych filmów studia. Współtworzy ich oprawę wizualną, przygotowuje scenografię i kostiumy oraz konsultuje scenariusze.",
@@ -161,11 +163,13 @@ export const aboutStory = {
       heading: "The team",
       members: [
         {
+          id: "marcin-kolodziejczak",
           name: "Marcin Kołodziejczak",
           roles: "Directing, screenwriting, editing, sound",
           text: "Founder of Tower Lady Pictures. Marcin develops ideas, writes screenplays and takes films from preparation through editing and release. He particularly enjoys working with actors and editing.",
         },
         {
+          id: "karolina-kolodziejczak",
           name: "Karolina Kołodziejczak",
           roles: "Cinematography, production design, costumes",
           text: "Karolina has been responsible for cinematography on the studio’s films since 2021. She helps shape their visual identity, prepares sets and costumes, and contributes feedback on screenplays.",

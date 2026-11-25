@@ -56,6 +56,8 @@ export const copy = {
       title: "O nas",
       description: "Poznaj Marcina i Karolinę Kołodziejczaków oraz historię Tower Lady Pictures: autorskie krótkie filmy, pracę na planie i wyróżnienia festiwalowe.",
       heading: "O studiu",
+      readingTime: "Czas czytania: 4 minuty",
+      sectionLink: "Link do sekcji",
       intro: [
         "Tower Lady Pictures to niezależne studio filmowe założone przez Marcina Kołodziejczaka.",
         "Tworzymy autorskie filmy krótkometrażowe, najczęściej thrillery, z miejscem na mroczny dramat i absurd.",
@@ -98,6 +100,8 @@ export const copy = {
       title: "About",
       description: "Meet Marcin and Karolina Kołodziejczak and discover Tower Lady Pictures: our original short films, filmmaking process and festival recognition.",
       heading: "About the studio",
+      readingTime: "Reading time: 4 minutes",
+      sectionLink: "Link to section",
       intro: [
         "Tower Lady Pictures is an independent film studio founded by Marcin Kołodziejczak.",
         "We make original short films, primarily thrillers, with room for dark drama and the absurd.",

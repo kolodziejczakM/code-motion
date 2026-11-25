@@ -4,6 +4,8 @@ import { aboutStory, festivalAppearances } from "../about";
 import { films } from "../films";
 import FilmEmbed from "./FilmEmbed.astro";
 import ExternalLink from "./ExternalLink.astro";
+import HeadingLink from "./HeadingLink.astro";
+import ReadingProgress from "./ReadingProgress.astro";
 
 interface Props {
   locale: Locale;
@@ -20,16 +22,18 @@ const contactLinks = [
 ];
 ---
 
+<ReadingProgress />
 <main id="main" class="wrap">
-  <article class="studio-story" aria-labelledby="story-title">
-    <h1 id="story-title">{meta.heading}</h1>
+  <article class="studio-story" aria-labelledby="story-title" data-reading-content>
+    <p class="reading-time">{meta.readingTime}</p>
+    <h1 id="story-title"><HeadingLink id="story-title" text={meta.heading} locale={locale} /></h1>
     <div class="studio-intro">
       {meta.intro.map(paragraph => <p class="story-intro">{paragraph}</p>)}
     </div>
     <p class="studio-origin">{t.origin}</p>
 
     <section aria-labelledby="studio-history">
-      <h2 id="studio-history">{t.history.heading}</h2>
+      <h2 id="studio-history"><HeadingLink id="studio-history" text={t.history.heading} locale={locale} /></h2>
       {t.history.entries.map(entry => {
         const film = films.find(film => film.id === entry.filmId);
         return (
@@ -42,17 +46,17 @@ const contactLinks = [
     </section>
 
     <section aria-labelledby="studio-approach">
-      <h2 id="studio-approach">{t.approach.heading}</h2>
+      <h2 id="studio-approach"><HeadingLink id="studio-approach" text={t.approach.heading} locale={locale} /></h2>
       <p class="studio-byline">{t.approach.byline}</p>
       {t.approach.paragraphs.map(text => <p>{text}</p>)}
     </section>
 
     <section aria-labelledby="studio-team">
-      <h2 id="studio-team">{t.team.heading}</h2>
+      <h2 id="studio-team"><HeadingLink id="studio-team" text={t.team.heading} locale={locale} /></h2>
       <div class="studio-team">
         {t.team.members.map(member => (
           <div class="studio-person">
-            <h3>{member.name}</h3>
+            <h3 id={member.id}><HeadingLink id={member.id} text={member.name} locale={locale} /></h3>
             <p class="studio-role">{member.roles}</p>
             <p>{member.text}</p>
           </div>
@@ -61,12 +65,12 @@ const contactLinks = [
     </section>
 
     <section aria-labelledby="studio-festivals">
-      <h2 id="studio-festivals">{t.festivals.heading}</h2>
+      <h2 id="studio-festivals"><HeadingLink id="studio-festivals" text={t.festivals.heading} locale={locale} /></h2>
       {festivalAppearances.map(group => {
         const film = films.find(film => film.id === group.filmId)!;
         return (
           <div class="studio-festival-group">
-            <h3><ExternalLink locale={locale} class="text-link" href={film.url}>{t.filmTitles[film.id]}</ExternalLink></h3>
+            <h3 id={`studio-festivals-${film.id}`}><ExternalLink locale={locale} class="text-link" href={film.url}>{t.filmTitles[film.id]}</ExternalLink><HeadingLink id={`studio-festivals-${film.id}`} text={t.filmTitles[film.id]} locale={locale} iconOnly /></h3>
             <ul class="studio-festivals" role="list">
               {group.entries.map(entry => (
                 <li>
@@ -81,7 +85,7 @@ const contactLinks = [
     </section>
 
     <section aria-labelledby="studio-contact">
-      <h2 id="studio-contact">{t.contact.heading}</h2>
+      <h2 id="studio-contact"><HeadingLink id="studio-contact" text={t.contact.heading} locale={locale} /></h2>
       <p>{t.contact.text}</p>
       <ul class="studio-contact-links" role="list">
         {contactLinks.map(link => (
@@ -99,6 +103,11 @@ const contactLinks = [
 </main>
 
 <style>
+  .studio-story .reading-time {
+    margin-bottom: 1rem;
+    font: 400 .8125rem / 1.6 var(--sans);
+  }
+  .studio-story :is(h1, h2, h3) { scroll-margin-top: 1rem; }
   .studio-intro .story-intro + .story-intro { margin-top: .65em; }
   .studio-origin { margin-top: 1.4rem; }
   .studio-story > section { margin-top: clamp(2.5rem, 5vw, 4rem); }
@@ -127,7 +136,13 @@ const contactLinks = [
   }
   .studio-story .studio-role + p { margin-top: .6rem; }
   .studio-festival-group + .studio-festival-group { margin-top: 2rem; }
-  .studio-festival-group h3 { margin-bottom: .75rem; }
+  .studio-festival-group h3 {
+    display: flex;
+    align-items: baseline;
+    gap: .15rem;
+    margin-bottom: .75rem;
+  }
+  .studio-festival-group h3 > :global(.external-link) { min-width: 0; }
   .studio-festivals { margin: 0; padding: 0; list-style: none; }
   .studio-festivals li {
     display: flex;
