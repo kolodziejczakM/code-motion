@@ -26,7 +26,7 @@ const contactLinks = [
 <main id="main" class="wrap">
   <article class="studio-story" aria-labelledby="story-title" data-reading-content>
     <p class="reading-time">{meta.readingTime}</p>
-    <h1 id="story-title"><HeadingLink id="story-title" text={meta.heading} locale={locale} /></h1>
+    <h1 id="story-title">{meta.heading}</h1>
     <div class="studio-intro">
       {meta.intro.map(paragraph => <p class="story-intro">{paragraph}</p>)}
     </div>

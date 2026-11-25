@@ -11,7 +11,8 @@ Treść artykułu w obu językach jest w `src/about.ts`, a jego wstęp i metadan
 Artykuł ma ręcznie ustalony czas czytania 4 minuty i mosiężny pasek postępu przy
 górnej krawędzi ekranu. Pasek pojawia się podczas lektury i mierzy sam artykuł,
 bez nagłówka strony i stopki. `HeadingLink.astro` zapewnia natywne odnośniki do
-wszystkich nagłówków, działające również bez JavaScriptu. Znak `#` wskazuje link
+śródtytułów, działające również bez JavaScriptu. Tytuł artykułu pozostaje zwykłym
+tekstem. Znak `#` wskazuje link
 do sekcji; w nagłówkach z tytułami filmów znajduje się obok linku do YouTube.
 Identyfikatory są stałe w PL/EN, np. `/pl/o-nas/#studio-approach` prowadzi do
 „Jak pracuję”, a `/en/about/#studio-approach` do „How I work”. Przy zmianach treści
