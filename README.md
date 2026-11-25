@@ -20,13 +20,15 @@ zachowuj istniejące identyfikatory, żeby udostępnione adresy nadal działały
 
 Materiały w `src/assets/about/` uzupełniają sekcję „Jak pracuję” i wyróżnienia:
 animowany plan sceny z „W zasadzie bez granic”, porównanie ujęć ze zdjęć testowych
-„Akabei”, panel zgłoszeń festiwalowych FilmFreeway oraz zdjęcie projekcji dla
-publiczności. `StoryFigure.astro` optymalizuje
-zdjęcia do responsywnych WebP i dodaje podpisy PL/EN. GIF zachowuje pełne 23 s
-klipu (960 × 840 px, 12 kl./s), ładuje się po wejściu w obszar widoczny i ma
-przycisk zatrzymania. Poza ekranem oraz przy preferencji ograniczonego ruchu
-wyświetla statyczny kadr. Przy ograniczonym ruchu użytkownik może uruchomić
-animację przyciskiem. Bez JavaScriptu pozostaje statyczny kadr.
+„Akabei”, test efektu zombie z wykorzystaniem AI, panel zgłoszeń festiwalowych
+FilmFreeway oraz zdjęcie projekcji dla publiczności. `StoryFigure.astro`
+optymalizuje zdjęcia do responsywnych WebP i dodaje podpisy PL/EN. GIF planu sceny
+zachowuje pełne 23 s klipu (960 × 840 px, 12 kl./s), a test efektu zombie około
+6 s (800 × 450 px, 10 kl./s). Obie animacje ładują się po wejściu w obszar
+widoczny i mają osobne przyciski zatrzymania. Poza ekranem oraz przy preferencji
+ograniczonego ruchu wyświetlają statyczne kadry. Przy ograniczonym ruchu
+użytkownik może uruchomić wybraną animację przyciskiem. Bez JavaScriptu pozostają
+statyczne kadry.
 
 Bezpośrednie linki do YouTube i profili społecznościowych używają `ExternalLink.astro`:
 otwierają nową kartę, mają ikonę ↗, `rel="noopener"` i komunikat dla czytników

@@ -12,6 +12,8 @@ import scenePlanPoster from "../assets/about/boundless-scene-plan-poster.webp";
 import akabeiTests from "../assets/about/akabei-test-shoot.jpg";
 import screening from "../assets/about/boundless-screening.jpg";
 import submissions from "../assets/about/filmfreeway-submissions.png";
+import zombieEffects from "../assets/about/zombie-ai-effects.gif?url";
+import zombieEffectsPoster from "../assets/about/zombie-ai-effects-poster.webp";
 
 interface Props {
   locale: Locale;
@@ -59,6 +61,7 @@ const contactLinks = [
           <p>{text}</p>
           {index === 0 && <StoryFigure image={scenePlanPoster} animation={scenePlan} alt={t.media.scenePlan.alt} caption={t.media.scenePlan.caption} locale={locale} />}
           {index === 1 && <StoryFigure image={akabeiTests} alt={t.media.akabeiTests.alt} caption={t.media.akabeiTests.caption} locale={locale} />}
+          {index === 3 && <StoryFigure image={zombieEffectsPoster} animation={zombieEffects} alt={t.media.zombieEffects.alt} caption={t.media.zombieEffects.caption} locale={locale} />}
         </Fragment>
       ))}
       <StoryFigure image={submissions} alt={t.media.submissions.alt} caption={t.media.submissions.caption} locale={locale} />

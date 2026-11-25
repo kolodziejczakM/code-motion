@@ -71,6 +71,10 @@ export const aboutStory = {
         alt: "Dwa ujęcia we wnętrzu samochodu: po lewej wersje przed zmianami, po prawej po zmianach. W kadrze członkowie ekipy filmu Akabei.",
         caption: "„Akabei” - porównanie ujęć przed zmianami i po zmianach podczas zdjęć testowych. W kadrze są członkowie ekipy, nie aktorzy z obsady filmu.",
       },
+      zombieEffects: {
+        alt: "Czarno-białe ujęcie mężczyzny przy oknie, którego twarz zmienia się w twarz zombie.",
+        caption: "Test efektu zombie z wykorzystaniem AI na materiale z planu.",
+      },
       screening: {
         alt: "Widzowie oglądają film W zasadzie bez granic na ekranie projekcyjnym.",
         caption: "„W zasadzie bez granic” na dużym ekranie podczas pokazu dla publiczności.",
@@ -189,6 +193,10 @@ export const aboutStory = {
       akabeiTests: {
         alt: "Two car interior shots, with the before versions on the left and the after versions on the right. Members of the Akabei crew appear in the frames.",
         caption: "Akabei - before-and-after comparisons from test shoots. The people in these frames are crew members rather than the film’s cast.",
+      },
+      zombieEffects: {
+        alt: "A black-and-white shot of a man by a window whose face transforms into a zombie’s face.",
+        caption: "An AI visual-effects test: transforming a character into a zombie using footage from the set.",
       },
       screening: {
         alt: "An audience watching Boundless, actually on a projection screen.",
