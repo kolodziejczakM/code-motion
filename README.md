@@ -48,7 +48,7 @@ npm run dev
 
 - `npm run build` zapisuje pliki do `dist/`, gotowe do serwowania w katalogu głównym domeny.
 - `npm run build:preview` zapisuje pliki pod `prototypes/tower-lady/astro/` z oznaczeniem `noindex`. Po wykonaniu tego polecenia na VPS działający Caddy od razu udostępnia nowy build w Tailscale.
-- [Pierwotna makieta HTML](https://vps.tailfb5686.ts.net:8766/prototypes/tower-lady/index.html) jest nadal dostępna do porównań. Astro korzysta z jej zasobów graficznych i stylów.
+- [Pierwotna makieta HTML](https://vps.tailfb5686.ts.net:8766/prototypes/tower-lady/index.html) jest nadal dostępna do porównań. Astro korzysta ze wspólnych stylów i osobnych obrazów znaku oraz miniatury filmu.
 
 ### Design system
 
@@ -78,8 +78,13 @@ python3 prototypes/tower-lady-ograf/package.py --variant intro
 opisuje format oraz ograniczenia obecnej bitmapy. Strona produkcyjna nie
 ładuje paczki intro ani podkładu muzycznego.
 
-Logo na stronie, w obu OGrafach (wersja 1.1.1) i w materiałach social korzysta
-z obrazu `brand-artwork-clean.webp`. Trzon wieży uproszczono według wizualizacji
+Zatwierdzonym źródłem logo pozostaje `brand-artwork-clean.webp`, używanym przez
+oba OGrafy (wersja 1.1.1) i materiały social. Strona korzysta z wydzielonego
+`brand-mark.webp` (500 × 580 px) w nagłówku, hero i animacji oraz osobnego
+`saturday-cleaning-still.webp` (443 × 240 px) na kartach filmu. Pełna makieta nie
+trafia do produkcyjnego buildu. `extract-web-assets.mjs` wycina oba obrazy z
+zatwierdzonego źródła; można go uruchomić osobno przez
+`node prototypes/tower-lady/assets/extract-web-assets.mjs`. Trzon wieży uproszczono według wizualizacji
 autora: szersze okno, większe detale pod gzymsem i gładka lewa krawędź. W 1.1.1
 dopasowano całą twarz bezpośrednio z nowej referencji autora, wraz z brwiami,
 powiekami, nosem i ustami. Poza obszarem twarzy zachowano piksele wersji 1.1.0,
@@ -90,7 +95,7 @@ animacja włosów są bez zmian; fragment u dołu usunięty w 1.0.1 nadal nie wy
 w `prototypes/tower-lady/assets/`. `face-reference.png` przechowuje referencję
 twarzy przekazaną przez autora, a `replace-face.mjs` wycina ją i dopasowuje do istniejącej głowy
 i chroni sąsiadujące włosy oraz koronę. Twarz jest kopiowana z referencji,
-bez ręcznego przerysowywania rysów. Złożenie z oryginałem i kopię dla OGraf można odtworzyć poleceniem
+bez ręcznego przerysowywania rysów. Złożenie z oryginałem, obrazy dla strony i kopię dla OGraf można odtworzyć poleceniem
 `node prototypes/tower-lady/assets/clean-logo.mjs` po `npm ci`.
 
 ### Materiały na Facebook i YouTube

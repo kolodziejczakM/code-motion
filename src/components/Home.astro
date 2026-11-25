@@ -1,6 +1,6 @@
 ---
 import { copy, hrefFor, type Locale } from "../content";
-import { brandArtwork, films } from "../films";
+import { brandMark, saturdayArtwork, films } from "../films";
 
 interface Props {
   locale: Locale;
@@ -20,7 +20,7 @@ const filmsHref = hrefFor(locale, "films");
     </div>
     <div class="home-art" aria-hidden="true">
       <div class="home-art-graphic">
-        <img src={brandArtwork} width="1487" height="1058" alt="" crossorigin />
+        <img src={brandMark} width="500" height="580" alt="" crossorigin />
         <canvas class="hair-motion-canvas" hidden></canvas>
       </div>
     </div>
@@ -35,7 +35,7 @@ const filmsHref = hrefFor(locale, "films");
             <img src={film.image} width="1280" height="720" alt="" />
           ) : (
             <span class="saturday-art" aria-hidden="true">
-              <img src={brandArtwork} width="1487" height="1058" alt="" crossorigin />
+              <img src={saturdayArtwork} width="443" height="240" alt="" />
             </span>
           )}
           <span>{film.title}</span>
