@@ -12,6 +12,8 @@ Bezpośrednie linki do YouTube i profili społecznościowych używają `External
 otwierają nową kartę, mają ikonę ↗, `rel="noopener"` i komunikat dla czytników
 ekranu w PL/EN. Nawigacja wewnętrzna, e-mail i uruchamianie osadzonego odtwarzacza
 pozostają w bieżącym kontekście.
+W tekście oznaczenie skaluje się do czcionki; przyciski, plakaty i ikony stopki
+używają wariantu `indicator="corner"` z ciemnym boxem w prawym górnym rogu.
 
 ### Praca nad portfolio
 

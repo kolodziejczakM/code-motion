@@ -21,16 +21,21 @@ const hint = copy[locale].opensInNewTab;
   aria-label={label ? `${label} (${hint})` : undefined}
   title={title ? `${title} (${hint})` : hint}
 >
-  <slot /><span class="new-tab-notice"><svg class="new-tab-icon" width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 11 13 3M6 3h7v7" /></svg>{!label && <span class="new-tab-hint"> ({hint})</span>}</span>
+  <slot /><span class="new-tab-notice"><svg class="new-tab-icon" width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 13 13 3M5 3h8v8" /></svg>{!label && <span class="new-tab-hint"> ({hint})</span>}</span>
 </a>
 
 <style>
-  .new-tab-notice { display: inline-block; margin-inline-start: .25em; white-space: nowrap; line-height: 1; }
-  .new-tab-icon {
+  .new-tab-notice {
     display: inline-block;
-    width: var(--new-tab-icon-size, .75rem);
-    height: var(--new-tab-icon-size, .75rem);
-    vertical-align: -.05em;
+    margin-inline-start: .25em;
+    white-space: nowrap;
+    line-height: 0;
+    vertical-align: .02em;
+  }
+  .new-tab-icon {
+    display: block;
+    width: var(--new-tab-icon-size, .65em);
+    height: var(--new-tab-icon-size, .65em);
   }
   .new-tab-hint {
     position: absolute;
@@ -44,6 +49,7 @@ const hint = copy[locale].opensInNewTab;
     border: 0;
   }
   .external-link[data-indicator="corner"] { position: relative; }
+  .button[data-indicator="corner"] { padding-inline-end: max(1.77em, 2.25rem); }
   [data-indicator="corner"] .new-tab-notice {
     position: absolute;
     inset-block-start: var(--new-tab-inset, .4rem);
@@ -53,7 +59,13 @@ const hint = copy[locale].opensInNewTab;
     width: var(--new-tab-marker-size, 1.25rem);
     height: var(--new-tab-marker-size, 1.25rem);
     margin: 0;
+    border: var(--new-tab-marker-border, 0);
     border-radius: 2px;
     background: var(--new-tab-marker-background, #000a);
+    color: var(--ivory);
+  }
+  [data-indicator="corner"] .new-tab-icon {
+    width: var(--new-tab-icon-size, .75rem);
+    height: var(--new-tab-icon-size, .75rem);
   }
 </style>
