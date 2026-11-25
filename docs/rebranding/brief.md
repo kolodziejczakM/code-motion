@@ -47,7 +47,7 @@ Wniosek dla marki: warto łączyć filmowe pochodzenie materiału, autorskie dec
 | [Akabei](https://www.youtube.com/watch?v=DUy4jVqBocA) | 2024 | thriller / dark drama | 11:31 | Kobieta pragnąca stabilnego związku planuje zemstę na partnerze, który marnuje jej czas. |
 | [Boundless, actually](https://www.youtube.com/watch?v=AIIpG5RpMbc) | 2025 | thriller / absurd | 4:40 | Początek II wojny światowej, gabinet detektywa i propozycja przekraczająca przyjęte normy. |
 
-Profile: [YouTube](https://www.youtube.com/@code-motion1156), [Facebook](https://www.facebook.com/CODE.MOTION.FILM).
+Profile: [YouTube](https://www.youtube.com/@towerlady), [Facebook](https://www.facebook.com/towerlady).
 Narzędzie przeglądające nie uzyskało treści podlinkowanych filmów i profili. Aktualnego logo nie obejrzano. Wnioski kreatywne bazują na briefie i opisach, nie na analizie filmów.
 
 ## Hipoteza pozycjonowania do oceny
