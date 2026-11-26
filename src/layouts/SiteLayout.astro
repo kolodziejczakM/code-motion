@@ -92,5 +92,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     </header>
     <slot />
     <SiteFooter locale={locale} />
+    {import.meta.env.PROD && !__TAILNET_PREVIEW__ && (
+      <script
+        is:inline
+        type="module"
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token": "322a768839b0442dbf0cb49548192101"}'
+      ></script>
+    )}
   </body>
 </html>
